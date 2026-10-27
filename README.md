@@ -1,2 +1,0 @@
-# archivosdemilitancia
-Archivos de militancia
