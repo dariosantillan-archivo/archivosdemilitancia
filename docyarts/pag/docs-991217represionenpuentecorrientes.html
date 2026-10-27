@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Represión de Gendarmería en el puente: el 17 de Diciembre</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Represión de Gendarmería en el puente: el 17 de Diciembre</h1><p class="ficha-doc">Fecha: 17 de diciembre de 1999 <span class="sep">|</span> 942 palabras</p></header>
+<main class="texto"><p>Represión de Gendarmería en el puente</p><p>el 17 de Diciembre</p><p>Transcripción de lo que se difundía ese día por los medios locales con móviles en el puente.</p><p>La Gendarmería inició una represión a los empleados que habían cortado el tráfico en el puente Gral. Belgrano reclamando el pago de los sueldos adeudados que a la fecha ya suman 5 meses.</p><p>La represión se inició a las 4:00 am, violando lo expresado en el Pacto de Costa Rica que prohibe todo tipo de represión en horario nocturno.</p><p>El comandante de Gendarmería Chiappe dice haber actuado por si mismo sin recibir órdenes del Poder Ejecutivo Nacional ni del juez federal.</p><p>Se interrumpió el suministro de energía electrica durante la represión como parte de la salvaje estrategia utilizada por efectivos de Gendarmería.</p><p>Gendarmería Nacional prohibió a los medios nacionales transmitir la represión en directo amenazando con confiscar los equipos de transmisión.</p><p>Gendarmería está ingresando a las casas de particulares de los alrededores y tirando gases lagrimogenos alli adentro.</p><p>La Policia de la provincia se niega a actuar en contra del pueblo, Gendarmería acusa a la Policía de sedición</p><p>Hasta este momento hay tres muertos y varios heridos.</p><p>Fue herido con balas de plomo calibre 22 uno de los corresponsales de Radio Libre</p><p>Personal del Hospital Escuela infoman que ya no tienen capacidad para atender a mas heridos.</p><p>El gobernador Perie dió órdenes a la Policía de que no reprima al pueblo.</p><p>Fueron heridos periodistas de TN y de Cronica y amenazados para que interrumpan las transmisiones</p><p>Gendarmería secuestró el equipo de exteriores de Radio City para impedir la transmisión de lo que estaba sucediendo en el puente.</p><p>Fueron detenidos por Gendarmería periodistas que estaban cubriendo los acontecimientos.</p><p>(11:51)La Policía recibió órdenes de interceder entre Gendarmería y el pueblo.</p><p>(11:57)Hay helicopteros sobrevolando la zona...</p><p>(12:00)Gendarmería está tirando gases lagrimógenos dentro de domicilios particulares.</p><p>Gendarmería realiza tareas de inteligencia filmando todo en video, y realizo operativos en los domicilios particulares de la gente que esta en el puente.</p><p>(12:15) Hay 52 detenidos hasta el momento.</p><p>(13:47) El Ministro de Gobierno solicita al Juez Federal que ordene un alto el fuego a Gendarmería.</p><p>(13:58) Estan reunidos el Ministro de Gobierno y la Gendarmería en la carcel que esta enfrente del puente.</p><p>(14:13) La Policía formaría en instantes un cordón entre la Gendarmería y los manifestantes.</p><p>(14:47) Hay personas que afirman que la Gendarmería realizó disparos con balas de plomo calibre 22 hacia los civiles para evitar ser responsabilizada por estos disparos ya que este calibre no figura entre el armamento convencional de estas fuerzas..</p><p>(14:55) La Gendarmería inicia la retirada de la avenida 3 de Abril para ubicarse en el acceso al puente.</p><p>(16:03) La Policía de la Provincia se encuentra formando un cordon entre la Gendarmería y los manifestantes. Cesaron los disparos por el momento.</p><p>(17:44) Se reconoció oficialmente la existencia de dos muertos y 28 personas detenidas.</p><p>(18:53) Se mantiene una tensa calma en la zona con la Policía mediando entre Gendarmería y los manifestantes.</p><p>(19:20) El Gobierno de la Provincia sugirió que Gendarmería se retire de la zona de conflicto y que la Policía de la Provincia se haga cargo de la custodia del puente, lo que ayudaría descomprimir la situación ya que la Policía cuenta con el apoyo de la gente, no así los gendarmes.</p><p>(19:40) Gendarmería espera la llegada de 300 gendarmes mas y cajas con armas y municiones, lo que solo conseguiría agravar la situación en vez calmar los ánimos.</p><p>(19:50) En una de la filmaciones que pasaron por TN Noticias se puede apreciar claramente un gendarme disparando con un FAL, lo que confirma la hipótesis de que se utilizaron balas de plomo ya que no se fabrican balas de goma para este tipo de armas porque su cañon estriado hace imposible el uso con este tipo de balas.</p><p>(20:18) Acaba de llegar al aeropuerto de Corrientes un avión Hercules con 100 efectivos de la Gendarmería y se espera la llegada de 600 mas.</p><p>(21:03) Habría nuevas amenazas a los medios nacionales por parte de Gendarmería para que no filmen los inminentes acontecimientos.</p><p>(21:06) Hay denuncias de dirigentes de los manifestantes de que se estan realizando persecuciones en los domicilios particulares de estos por parte de la Gendarmería, y se consideran que este es un trato adecuado para delincuentes y no para gente que reclama sus legítimos derechos.</p><p>(21:10) Confirman que la Linea 11 de colectivos perteneciente a la empresa Santa Ana puso a disposición de la Gendarmeria sus colectivos para trasladar las armas y los gendarmes hasta el centro de la Ciudad. La operación fue coordinada por el Sr.Baez propietario de dicha empresa. Un hecho para tener en cuenta en el futuro.</p><p>(21:22) Los efectivos de Gendarmería recien llegados están en el Hogar Escuela sobre la avenida 3 de Abril y se espera que se realice una operación &quot;pinza&quot; junto con los que están en la bajado del puente, lo que dejaria encerrados a los manifestantes que se encuentran en la avenida. Hay medios nacionales que se encuentran entre los manifestantes.</p><p>(21:52) Existe la posibilidad de que se realize un corte de luz en la ciudad para facilitar una represión a los manifestantes por parte de la Gendarmería la represión, utilizando un método similar al utilizado para la represión realizada a las 4:00 am.</p><p>(21:56) La cantidad de efectivos de Gendarmería que llegaron a la ciudad ya superan los 1000. Continuan llegando aviones Hercules al aeropuerto.</p><p>(22:23) Cuatro colectivos de la Linea 11 transportando efectivos de Gendarmería llegaron al Hogar Escuela sobre la avenida 3 de abril.</p><p>(22:45) Los policias que se encuentran entre los gendarmes y los manifestantes estan desarmados.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs__991217represionenpuentecorrientes.htm" download>Descargar el archivo original</a> (docs__991217represionenpuentecorrientes.htm).</footer>
+</div></body></html>

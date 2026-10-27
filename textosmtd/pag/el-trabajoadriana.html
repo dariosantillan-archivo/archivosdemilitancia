@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>¿Quién produce?</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>¿Quién produce?</h1><p class="ficha-doc">Fecha: 13 de marzo de 2003 (aprox.) <span class="sep">|</span> 1.931 palabras</p></header>
+<main class="texto"><p>¿QUIÉN PRODUCE?</p><p>El
+hombre</p><p>¿CÓMO
+PRODUCE?</p><p>Combinando
+la materia que se saca de la tierra, de la naturaleza por medio del
+trabajo</p><p>¿QUÉ
+ES LA NAURALEZA?</p><p>Es
+la que brinda lo que el hombre necesita para vivir</p><p>¿QUÉ
+ES EL TRABAJO?</p><p>Es
+lo que produce las riquezas humanas necesarias.</p><p>“el
+trabajo es el padre y la naturaleza la madre de toda creación
+humana”</p><p>TODO
+LO QUE NECESITAMOS PARA VIVIR LO BRINDAN LA TIERRA</p><p>Y
+EL TRABAJO. ENTONCES EL QUE DOMINE LA TIERRA</p><p>Y
+EL TRABAJO TENDRÁ EL PODER ECONÓMICO.</p><p>A
+lo largo de la historia el hombre se relacionó con la naturaleza de
+diferentes formas para sacarle mejor provecho a las riquezas
+naturales. El
+TRABAJO fue, es y será la única y verdadera fuente de riquezas del
+ser humano,
+es el TRABAJO algo que diferencia al hombre del resto de los animales
+en su contacto con la naturaleza. Es en el acto mismo de trabajar (de
+hacer y de pensar) que el hombre se realiza como ser humano.</p><p>Durante
+toda su historia, los hombres conocieron diferentes formas de trabajo
+y hay 2 que son las más representativas:</p><p>EL
+TRABAJO LIBRE Y COMPARTIDO:
+es el que lleva a una comunidad de hombres, socialmente iguales, a
+que se unan para trabajar a la par. En esa relación nace el afecto,
+la solidaridad y la paz, el hombre es hermano del hombre. El
+individuo se une a la sociedad, es parte de ella.</p><p>EL
+TRABAJO EXPLOTADO:
+es posible en una sociedad socialmente diferente, donde unos explotan
+a otros y cada vez menos hombres viven del trabajo de cada vez más
+hombres explotados. Del trabajo explotado de una clase por otra,
+surge el odio, el egoísmo y la guerra. Se tiende a separar al
+individuo de la sociedad, a encerrarlo en sí mismo, unos pocos viven
+del “morir” de muchos, el hombre es lobo del hombre.</p><p>¿QUÉ
+SON LOS MEDIOS DE PRODUCCIÓN?</p><p>Los
+animales, las máquinas, las tierras, las herramientas y todos los
+elementos que el hombre utiliza para transformar a la naturaleza,
+para trabajar. Los medios de producción no son un invento de un
+señor, son un producto social que los hombres construyen desde que
+comenzaron a usar las primeras lanzas para cazar o pescar. No son el
+resultado de la imaginación de nadie sino respuestas que la
+comunidad de hombres socialmente iguales da para mejorar los
+productos de las riquezas naturales. La pesca, la caza, la
+agricultura, el tejido, la construcción de viviendas, el
+mejoramiento de la conservación de los alimentos, todo lo que
+conforma los medios de producción son un producto social como el
+idioma, las costumbres, la cultura, la música.</p><p>EL
+CAPITALISMO</p><p>En
+el capitalismo el hombre que tenía una forma de trabajo libre y
+compartida, pasa a ser explotado por un señor que se apoderó de los
+medios de producción. Esos señores imponen la propiedad privada de
+los medios de producción y los hombres, privados de éstos se ven
+obligados a vender su capacidad física de trabajo (su fuerza de
+trabajo) a cambio de un salario. Los capitalistas “privatizaron”,
+robaron un producto social en su beneficio personal.</p><p>“La
+gran masa de fábricas, máquinas, rutas, represas, vías férreas,
+puertos, hangares... todo ese inmenso volumen de riquezas no es otra
+cosa que la materialización de las riquezas creadas por los obreros;
+no es otra cosa que la materialización del trabajo no retribuido
+(realizado por millones de obreros) que ha sido transformado en
+propiedad privada. Todo esto (más las propiedades personales de los
+capitalistas), constituye una prueba colosal del robo al que ha sido
+sometida la clase obrera mediante la instauración del trabajo
+asalariado, desde los orígenes de la sociedad capitalista” (Ernest
+Mandel.
+Introducción
+a la teoría económica marxista).</p><p>¿CÓMO
+SE ENRIQUECEN LOS CAPITALISTAS?</p><p>El
+enriquecimiento capitalista, el PLUSVALOR proviene de la posesión
+conjunta del capital y la fuerza de trabajo.</p><p>Alquilando
+la única mercadería capaz de producir más valor (PLUSVALOR)
+del que cuesta mantenerla: alquilando la capacidad física o mental
+de trabajo (fuerza de trabajo) de los obreros.</p><p>Hay
+3 formas de capital:</p><p>CAPITAL
+ PRODUCTIVO.
+ Es el único genuino, único capaz de producir algo que antes no
+ existía.</p><p>CAPITAL
+ FINANCIERO.
+ Coloca el dinero a interés (alquileres y rentas). Presta 100 para
+ cobrar 110).</p><p>CAPITAL
+ COMERCIAL
+ (transporte y servicios). Coloca el dinero en bocas de expendio. Se
+ queda con parte del plusvalor
+ como pago por el servicio de ventas.</p><p>¿QUIÉN
+LE DA MÁS VALOR A LA MATERIA PRIMA?</p><p>EL
+TRABAJADOR que transforma, por ejemplo, la harina en pan.</p><p>Este
+NUEVO VALOR se lo apropia, se lo queda el capitalista</p><p>¿Por
+qué se lo apropia el capitalista?</p><p>Porque
+el trabajo del asalariado origina una mercadería con un valor tal
+que, una vez vendida, permite al capitalista:</p><p>reponer
+ todo o que gastó en su producción</p><p>crear
+ 2 NUEVOS VALORES: el salario del obrero y el valor excedente o
+ ganancia o plusvalor.</p><p>SEIS
+ELEMENTOS DE LA PRODUCCIÓN CAPITALISTA</p><p>(1)
+MATERIA PRIMA (2)
+MEDIOS DE PRODUCCIÓN</p><p>(3)
+ENERGIA (4)
+FUERZA DE TRABAJO</p><p>La
+fuerza de trabajo(4) usa los medios de producción(2) que movidos por
+la energía(3) actúan sobre la materia prima(1). Este proceso
+origina 2 nuevos elementos que antes no existían:</p><p>(5)
+LA MERCADERÍA (O MERCANCÍA) (6)
+PLUSVALOR</p><p>¿QUE
+PERTENECE AL CAPITALISTA? ¿QUE PERTENECE AL TRABAJADOR?</p><p>(1)
+(2) (3) (5) y (6) 
+ (4)</p><p>Solo
+con la venta en el mercado de las mercancías, es donde los
+capitalistas recuperan el dinero que invirtió y el que le agregaron
+los asalariados con su trabajo. Ese valor agregado, ese plusvalor que
+generaron los trabajadores es la ganancia que el patrón se queda en
+su bolsillo. Este plusvalor que se queda el capitalista, está
+encerrado en las mercaderías y deben venderlas para “hacerlo salir
+a la luz del sol”. “El
+modo de producción capitalista no es solamente producción de
+mercaderías, sino fundamentalmente producción de más valor, es
+decir, de ganancias.”
+(Karl Marx, El
+Capital).
+Como siempre son las ganancias las que generan más ganancias, una
+parte de ellas son invertidas por los patrones en nuevas máquinas,
+materias primas y salarios.</p><p>ALGUNAS
+DIFERENCIAS ENTRE CAPITALISTA Y ASALARIADO</p><p>ASALARIADO 
+ CAPITALISTA</p><p>-gasta
+su salario para poder vivir -emplea el capital para tener más</p><p>de
+lo que tenía</p><p>-gasta
+todo lo que tiene -invierte lo que le sobra</p><p>-gasta -acumula</p><p>-trabaja -se
+enriquece</p><p>-vende
+su fuerza de trabajo -compra fuerza de trabajo</p><p>-está
+obligado a vender su fuerza de trabajo -compra fuerza de trabajo
+porque en</p><p>cada operación gana más</p><p>de lo que tenía antes</p><p>-vende
+su vida en beneficio del patrón -capitaliza su vida y la de los
+obreros</p><p>en beneficio propio.</p><p>-trabaja
+para reproducir el capital del patrón -reproduce el capital.</p><p>VENDE 
+ COMPRA</p><p>SIEMPRE
+SU FUERZA DE TRABAJO FUERZA DE TRABAJO A OTROS</p><p>EL
+SALARIO. HACIENDO UN POCO DE HISTORIA</p><p>Desde
+la antigüedad, el valor de cada producto se fijaba según la
+cantidad de trabajo (medido en tiempo) acumulado en aquél. Por
+ejemplo, una mesa que llevaba 5 horas de trabajo, valía la mitad de
+una que llevaba 10 hora. En la Edad Media (antes de la irrupción del
+capitalismo), el artesano pagaba al jornalero un salario cuyo valor
+equivalía al valor del trabajo realizado. Con la aparición de la
+burguesía capitalista y habiendo una gran masa de trabajadores
+obligados a alquilarse por un plato de sopa, el burgués capitalista
+puede pagar un salario que ya no tiene que ver con lo producido, se
+trata de un salario que sólo tiene que ver con la mera necesidad de
+sobrevivir del obrero.</p><p>Con
+este NUEVO VALOR DEL SALARIO, los capitalistas sientan las bases para
+la nueva organización social que permite a unos pocos multiplicar
+indefinidamente sus riquezas, obligando a otros, a la mayoría, a
+permanecer indefinidamente en la miseria. En la sociedad capitalista
+entonces, quien aparece como “dador” de trabajo, es en realidad
+“quitador” de trabajo y podemos decir que más que trabajo
+asalariado debería llamarse “trabajo estafado”.</p><p>LA
+MERCANCÍA CAPITALISTA: UNION CARNAL</p><p>En
+el proceso productivo el señor capitalista tiene a “su señora”
+(los medios de producción) y los asalariados en cambio sólo tienen
+la soledad de sus brazos, su fuerza de trabajo. Como los capitalistas
+no quieren ensuciarse las manos, entregan a “su señora” en
+brazos de los asalariados, que al cabo de un tiempo de “trabajo”
+le hacen hijos: la mercancía. Esos hijos no quedan en manos de sus
+legítimos padres (los asalariados) sino de sus padres ilegítimos
+(los capitalistas). Con esa posesión ilegítima, el señor
+capitalista vende la mercancía en el mercado a cambio de más dinero
+del que gastó en “producirla” y con el que él se queda. Ese más
+dinero, redunda a su vez en un nuevo embarazo del capital que siempre
+queda en manos del padre ilegítimo.</p><p>PLUSVALOR
+Y TECNOLOGIA</p><p>Todo
+asalariado no sólo produce lo que precisa para vivir (el salario),
+sino que además produce lo que precisa el capitalista para seguir
+siendo capitalista (el plusvalor). Entonces con su trabajo el
+asalariado produce en el mismo tiempo 2 cosas: (a) su salario y la
+ganancia de su patrón (plusvalor). Entonces el capitalista exigirá
+que cada vez tarde menos en producir su salario y le dedique más
+tiempo a la producción de plusvalor. Esto intenta imponer el
+capitalista, pero no es tan lineal y fácil su dominio, porque desde
+que el capitalismo existe también existe una lucha entre el señor
+capitalista y el trabajador. Uno que quiere más ganancia cada vez y
+otro que lucha por conseguir sus conquistas: menos tiempo de trabajo,
+mejores condiciones de trabajo, obra social, jubilación,
+participación proporcional en las ganancias. A lo largo de la
+historia del capitalismo, unos u otros van imponiendo más sus
+exigencias con sus estrategias. El asalariado con la única
+herramienta que posee: su cuerpo, su lucha, su protesta, así
+consigue arrebatarle al capitalista mejoras. El capitalista por su
+lado, cede algunas cosas y se esfuerza para que las conquistas no
+redunden en la reproducción del capital. Por ejemplo, los
+asalariados consiguen después de casi un siglo de luchas, que la
+jornada laboral sea de 8 horas. Los capitalistas necesitan aumentar
+el rendimiento del trabajo para que la relación salario-plusvalor no
+sea tocada, vuelca la tecnología a su favor porque ésta permite en
+el mismo tiempo producir más cantidad de mercancía. Entonces la
+reducción de la jornada laboral no afectó la reproducción del
+capital, al contrario, casi siempre contribuyó a disimular su
+crecimiento.</p><p>MAS GANANCIAS EN MENOS TIEMPO</p><p>JORNADA
+LABORAL DE UN ASALARIADO EN EL SIGLO XIX:</p><p>Tiempo
+de trabajo dedicado a generar su salario: 6 horas </p><p>Tiempo
+de trabajo dedicado a generar plusvalor: 6 horas </p><p>Al
+cabo de una jornada laboral de 12
+horas
+el obrero genera su propio salario y deja en manos del patrón, el
+equivalente de otro salario </p><p>JORNADA
+LABORAL DE UN ASALARIADO CON MODERNOS MEDIOS DE PRODUCCIÓN</p><p>Tiempo
+de trabajo dedicado a generar su salario: 2 horas </p><p>Tiempo
+de trabajo dedicado a generar plusvalor: 6 horas </p><p>Al
+cabo de una jornada laboral de 8
+horas
+el obrero genera su propio salario y deja en manos del patrón, el
+equivalente a otros tres salarios </p><p>A
+medida que avanza la tecnología, esto no redunda en mejor bienestar
+del trabajador. Hoy en día, si tiene trabajo gana menos de lo que
+ganaba su padre o su abuelo, por eso aumenta la pobreza. Porque
+cambiaron los medios de producción pero el modo de producción, la
+explotación sigue siendo la misma. Es que el capitalismo es una
+sociedad donde la producción solo es producción para permitir la
+reproducción del capital; donde “el capital (y no el hombre) es el
+punto de partida y el punto de llegada” de todos los esfuerzos
+humanos.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../EL TRABAJOadriana.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (EL TRABAJOadriana.pdf).</footer>
+</div></body></html>

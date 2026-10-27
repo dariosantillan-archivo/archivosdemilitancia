@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Algo sobre el cambio social</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Algo sobre el cambio social</h1><p class="ficha-doc">Fecha: 28 de septiembre de 2002 (aprox.) <span class="sep">|</span> 1.142 palabras</p></header>
+<main class="texto"><p>ALGO
+SOBRE EL CAMBIO SOCIAL</p><p>La
+represión desatada el 26 de junio en el puente Avellaneda contra la
+Coordinadora Aníbal Verón, con el asesinato de los Compañeros
+Darío Santillán y Maximiliano Costeki, mostró, por un lado el
+rostro más sangriento de la represión, pero por otro lado, los
+valores que hacen a la calidad humana de estos compañeros. Así 
+Darío demostró que su sentido de la solidaridad y el compañerismo,
+estaba presente hasta en su última gota de sangre.</p><p>Frente
+a la decadencia de los valores de la individualidad y el egoísmo que
+genera el capitalismo, desgraciadamente la muerte en este caso, se
+encargó de transparentar ante la sociedad, los nuevos valores de los
+compañeros de los MTD, que no son otra cosa que aquellos que se van 
+conformando con el Cambio
+Social. De
+ello queremos decir algunas cosas, sin pretender agotar el tema, sino
+iniciar una reflexión.</p><p>Vivimos
+momentos de rupturas, de cambios y de gestación de nuevos valores
+que se expresan desde la lucha social y desde el pensamiento autónomo
+más precisamente.</p><p>El
+siglo pasado se ha cerrado dando sepultura a la ilusión de producir
+cambios sociales profundos desde la toma del poder en el Estado. Esta
+limitación la mostraron todas las revoluciones existentes del siglo
+pasado. Actualmente se va abriendo paso un nuevo pensamiento, una
+nueva práctica social, una nueva radicalidad, que busca realizar un
+profundo cambio social.</p><p>El
+pensamiento autónomo cuestiona entonces, que en el Estado radique
+la suma del poder político como se creía y sostiene que observamos
+al Estado, solo como un nudo importante del poder, y afirma que en
+última instancia, el poder se condensa en las relaciones sociales
+que establece el conjunto del sistema. Y de allí, cada individuo,
+portador de los valores del capitalismo, reproduce constantemente las
+relaciones de explotación, apropiación, acumulación, consumismo,
+adoración de la mercancía , represión y violencia, patriarcado,
+exclusión y desprecio por los verdaderos valores humanos, etc.</p><p>Por
+lo tanto sin la constitución extendida socialmente de nuevas
+relaciones sociales, no se podrá terminar con el poder que ha
+establecido el capitalismo.</p><p>Se
+trata entonces de luchar para la destrucción de todas las formas de
+poder como lo han establecido hasta aquí las sociedades modernas.
+Porque la existencia del poder presupone siempre la subordinación de
+unos sobre otros, es decir la existencia de la discriminación, de la
+desigualdad, de la explotación, etc. Y lo que tratamos de construir
+es una nueva civilización donde haya un lugar de realización plena
+para toda la humanidad.</p><p>Para
+pensar la destrucción del poder se trata de avanzar en la
+constitución de un Poder hacer popular, o un contra poder popular,
+asentado en nuevas relaciones sociales.</p><p>Y
+aquí aparece la cuestión del cambio social, ligado directamente a
+la constitución de nuevas relaciones sociales que hagan a la
+existencia de un contrapoder popular.</p><p>Dicho
+esto, lo que hace a un cambio social verdadero y profundo, solamente
+lo entendemos desde estas visiones. Creemos que no se podrá entender
+la cuestión del Cambio social, o tendrá otra aceptación, y será
+otra cosa entonces, desde el pensamiento que sigue encuadrado en la
+verticalidad de los partidos políticos, los sindicatos y de la toma
+del poder en el Estado. Para nosotros un cambio social no es un
+cambio de gobierno, sea éste de cualquier tenor. Tampoco es un
+cambio social, el cambio de un modelo del capitalismo y mucho menos
+es un cambio social las acciones que se encuadran en las políticas
+para la toma del poder en el estado, sea mediante elecciones o por
+otra vía.</p><p>Desde
+el pensamiento autónomo, creemos que el Cambio social, es decir el
+establecimiento de nuevas relaciones sociales basadas en los valores
+de solidaridad, ayuda mutua, integración colectiva y social, 
+compañerismo y en suma la revalorización del ser humano como lo más
+importante de la vida, se va construyendo desde una práctica
+cotidiana, diaria, permanente y en lucha contra los valores del
+capitalismo que niegan la vida.</p><p>Por
+lo tanto, la construcción del cambio social o una nueva
+sociabilidad, no la postergamos para mas adelante, para el momento de
+la toma del poder como tienen por objetivo los revolucionarios, sino
+es algo que lo vamos construyendo desde ahora y permanentemente, por
+siempre.</p><p>Entendemos
+que estos nuevos valores que hacen al cambio social lo vamos
+construyendo colectivamente desde una nueva práctica, que establece
+una relación social distinta, constructora de la horizontalidad, la
+democracia directa, la asamblea y el protagonismo colectivo, que se
+aleja de todo encuadramiento institucional del estado capitalista. 
+Es decir que se desarrolla por afuera del sistema, estableciendo un
+tiempo que es propio del movimiento transformador. Que no está
+atado a las coyunturas políticas del Estado y que no sigue la agenda
+estatal. Estos nuevos valores se gestan también desde la lucha y el
+enfrentamiento al poder establecido. Lucha fundamentalmente para
+erradicar del pensamiento de cada uno de nosotros, los valores que le
+ha impreso el capitalismo. También con la lucha se trata de resolver
+todos los problemas que hacen a nuestra existencia, sin esperar de
+las soluciones de la
+política
+de los partido o del Estado. Lucha que niega la propiedad como forma
+de apoderarse de lo que nos corresponde. Lucha colectiva, social por
+lo tanto que toma lo que entiende que es necesario para la
+subsistencia o para dar soluciones a los angustiantes problemas de
+los compañeros. Autogestión productiva para construir una economía
+alternativa al capitalismo.</p><p>Un
+cambio social presupone asumir desde cada uno un cambio radical de
+valores, desde donde asumir una vocación de servicio más que
+servirse del movimiento o de la sociedad.</p><p>Presupone
+también la generación de valores desde un trabajo que dignifique a
+la persona, sin la existencia de los patrones y de la explotación,
+sea estatal o privada. Se trata de pensarse como trabajadores
+autónomos, de liberarse de las formas alienantes del trabajo
+capitalista y asumir el trabajo desde la perspectiva de un acto de
+creación humana, que se realiza para al beneficio social, y no
+individual o de algún patrón o del Estado.</p><p>Un
+cambio social es para nosotros también la generación de valores
+desde la producción social de nuevos conocimientos y su
+socialización. Hablamos de la constitución del conocimiento útil
+para el cambio social, enfrentado al conocimiento inútil del sistema
+que solo sirve para la regimentación del pensamiento, el
+disciplinamiento social y la reproducción de relaciones
+capitalistas. Se trata entonces de avanzar en el cambio social cuando
+nos formamos, diaria y cotidianamente en nuevos conocimientos y en la
+destrucción de ese conocimiento inútil impuesto por el sistema.</p><p>Se
+trata también de significar el Cambio social desde estas visiones
+que hacen a la insurgencia social, fundadora de nuevas relaciones
+sociales, constituidas desde una practica social profundamente
+transformadora del ser humano, gestada desde la ruptura y la libertad
+conquistada, esa que NO QUERÍA PERDER DARIO Y QUE POR ESO DECIDIÓ
+QUEDARSE JUNTO AL COMPAÑERO PARA AYUDARLO.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../ALGO SOBRE EL CAMBIO SOCIALR.N..pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (ALGO SOBRE EL CAMBIO SOCIALR.N..pdf).</footer>
+</div></body></html>

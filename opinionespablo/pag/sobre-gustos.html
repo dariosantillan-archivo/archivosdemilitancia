@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Sobre gustos: escribir</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2002-apuntes-pablo.html">&larr; 2001-2002 — Apuntes y opiniones</a>
+<h1>Sobre gustos: escribir</h1><p class="ficha-doc">Fecha: 9 de octubre de 2002 (aprox.) <span class="sep">|</span> 381 palabras</p></header>
+<main class="texto"><p>SOBRE
+ GUSTOS...</p><p>Escribir</p><p>Por
+ María Cristina Alonso *</p><p>Escribir
+ es como hacer el amor. Primero surge una vaga idea, la ambigua
+ imagen de lo que va a ser el texto. Este primer instante es
+ inspirado e inconsciente, como esa primordial mirada que empieza
+ a prometer algún tipo de intimidad pero que todavía no es nada
+ definido, una ligera emoción, sólo eso.</p><p>Después
+ vienen los rodeos, los encuentros con la palabra, los
+ acercamientos y las distancias, las dudas, las ganas de huir de
+ las complicaciones que el texto va a imponer, que la relación
+ con el otro va a implicar.</p><p>Pero
+ uno sigue, empiezan los borradores. En el comienzo del texto como
+ en los comienzos de una historia de amor entran a pesar las
+ experiencias previas, el recuerdo de otros textos que uno ha
+ escrito, el recuerdo de otros amores. Surge el pánico de
+ continuar, porque cuando uno arma un proyecto piensa
+ inevitablemente en el éxito, pero también en el temor de no
+ encontrar las palabras exactas, las caricias apropiadas sobre ese
+ papel, o ese cuerpo, que es desconocido y que se va haciendo a
+ medida que uno desliza las manos por las teclas, o por la
+ piel.</p><p>Hay
+ un momento, cuando el texto crece y la excitación aumenta, en
+ que uno sabe que no va a poder parar, y es entonces cuando uno se
+ entrega a esa magia del encuentro con el lenguaje, y se mete en
+ él, y empieza a descubrir quién es uno de verdad. Es la etapa
+ del gozo, el momento en el que el mundo se borra, y uno queda
+ desnudo y se deja llevar por el descontrol de la imaginación.
+ Las palabras suben y bajan, vuelven atrás, se rectifican,
+ cambian de posiciones, retoman ideas inconclusas, se mojan y
+ transpiran, se detienen, se derraman.</p><p>La
+ página ya no está en blanco, el texto, tendido como los
+ cuerpos, reposa hasta el próximo encuentro. Su relectura reanuda
+ el placer de la escritura, como esas imágenes que los amantes
+ repasan en la soledad de la noche, intentando con la memoria
+ recuperar la suave textura de las caricias, esa música que sale
+ del cuerpo, pero que se queda en el alma.</p><p>*
+ Lectora.</p><p>Los
+ lectores que deseen participar de esta columna pueden dirigirse a
+ placer@pagina12.com.ar (pueden firmar con seudónimo, pero
+ firmen).</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../SOBRE GUSTOS.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (SOBRE GUSTOS.pdf).</footer>
+</div></body></html>

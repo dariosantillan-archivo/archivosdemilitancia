@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>DE LA RUA &quot;no va a permitir&quot; los cortes de rutas</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>DE LA RUA &quot;no va a permitir&quot; los cortes de rutas</h1><p class="ficha-doc">Fecha: 6 de agosto de 2001 <span class="sep">|</span> Publicado en La Nación <span class="sep">|</span> 937 palabras</p></header>
+<main class="texto"><p>6 de agosto de 2001</p><p>Fuente: LA NACION LINE</p><p>DE LA RUA &quot;no va a permitir&quot; los cortes de rutas</p><p>El presidente Fernando de la Rúa señaló hoy durante una entrevista televisiva que el Gobierno &quot;no va a permitir&quot; que se corten las rutas, y que pondrá &quot;todos los medios del Estado para asegurar la libre circulación&quot; mañana cuando se inicie una protesta de 48 horas de piqueteros de todo el país.</p><p>&quot;No va a haber intentos de corte. No lo vamos a permitir&quot;, expresó el jefe del estado en un reportaje al noticiero del canal Telefé, y advirtió que &quot;no se puede forzar a la gente&quot;.</p><p>Asimismo, De la Rúa explicó: &quot;Vamos a poner todo los medios del Estado para asegurar la libre circulación&quot;, en tanto cuestionó a quienes &quot;están manipulando el plan Trabajar para obligarles a hacer lo que no quieren&quot;.</p><p>La defensa del ajuste</p><p>El primer mandatario también se refirió a la visita de John Taylor y de los problemas económicos por los que pasa el país. Se mostró optimista en cuanto al futuro de la economía y manifestó al respecto que la llegada del número dos del Tesoro norteamericano &quot;señala la importancia que se da a la Argentina&quot;.</p><p>Enfatizó que el apoyo recibido de ese y otros funcionarios &quot;se muestra en el anticipo de la cuota de setiembre&quot; por 1.200 millones de pesos del FMI y consideró que esto &quot;debe llevar calma a los mercados y confianza a la gente&quot;.</p><p>Al ser consultado sobre la posibilidad de dolarización, De la Rúa la descartó y señaló que &quot;debemos manejarnos con la Ley de Convertibilidad y reafirmar el principio de la Convertibilidad. Esta -sostuvo- es la base de nuestra seguridad&quot;.</p><p>Insistió, una vez más, que el país es objeto de &quot;ataques especulativos&quot;, en tanto descartó un retiro masivo de depósitos bancarios ante la situación de incertidumbre económica que aun persiste en la plaza financiera.</p><p>&quot;De ninguna manera -dijo, al referirse a esa posibilidad-. Está garantizada la convertibilidad y la consistencia económica&quot;, destacó, para agregar que &quot;hay expresiones de apoyo internacional y los que siembran dudas -advirtió- son parecidos a los especuladores. Repudiémoslos!&quot;, exhortó.</p><p>Respecto a la posibilidad de que el recorte a jubilados y asalariados pueda llegar a 20 por ciento, como sugirió el viceministro de Economía, Daniel Marx, De la Rúa lo relativizó: &quot;no ha reconocido esto, le han hecho una pregunta teórica&quot;, según dijo. En cuanto a la lucha contra la evasión, en reiteradas oportunidades el presidente efectuó una convocatoria &quot;a que la gente nos ayude&quot; reclamando la boleta de sus compras, para garantizar el cobro del IVA, y pidió a los contribuyentes &quot;que no evadan impuestos, porque están causando dolores a otros; nos están poniendo en esta situación de crisis&quot;, advirtió.</p><p>De la Rúa admitió que es de &quot;absoluta injusticia&quot; rebajar sueldos y jubilaciones por culpa de los evasores, a los que calificó de &quot;criminales&quot;. Recordó que &quot;hay una justicia especial para perseguirlos y castigarlos&quot; y señaló que &quot;lo que hay que hacer es detectarlos, y procesarlos&quot;.</p><p>No obstante esto, De la Rúa afirmó que &quot;la nación tiene un déficit (cero) previsto, que lo vamos a cubrir absolutamente&quot;, pero advirtió que &quot;mientras tanto, el esfuerzo de las provincias deben ser mayores para equilibrar también sus cuentas&quot;.</p><p>En tal sentido, sostuvo que &quot;debe quedar en claro que a las provincias le hemos girado todos los fondos que les corresponde&quot; y afirmó en ese sentido que &quot;ninguna provincia puede decir que la nación no le ha mandado&quot; esos recursos.</p><p>Dijo, por otra parte, que &quot;me preocupa hoy más específicamente la situación de algunos sectores que tienen ingresos bajos, como las Fuerzas Armadas y de Seguridad&quot;, así como los recursos que se necesitan para atender emergencias.</p><p>Asimismo, enfatizó su convocatoria &quot;a los argentinos a hacer el esfuerzo&quot; y reclamó su &quot;ayuda para salir adelante&quot;. Enseguida agregó, con optimismo: &quot;vamos a salir adelante&quot;.</p><p>Fuente: DyN</p><p>Bullrich dijo que habrá 485 auditores que asegurarán los planes Trabajar</p><p>La titular de la cartera de Trabajo anticipó que quienes asistan a los piquetes no perderán los planes</p><p>La ministra de Trabajo, Patricia Bullrich, comenzó una conferencia de prensa leyendo cartas de denunciantes sobre presuntas presiones de piqueteros para que beneficiarios de planes se sumen a las protestas.</p><p>Bullrich ratificó que habrá inspectores en distintos puntos del país para que no existan esas presiones y para &quot;garantizar que las personas que quieran ir a su trabajo normalmente puedan hacerlo y no sean coaccionadas para no hacerlo&quot;.</p><p>&quot;No puede haber ningún tipo de coacción. Estén absolutamente tranquilos de que van a recibir su programa&quot;, manifestó Bullrich, quien informó que quienes eventualmente sufran apremios, pueden comunicarse a las siguientes líneas telefónicas: 0-800-222-2220 y 0-800-666-4100.</p><p>Bullrich aclaró que este procedimiento &quot;no tiene carácter represivo, sino que se realiza para garantizar que puedan concurrir&quot; los beneficiarios a las organizaciones no gubernamentales que les encargan tareas &quot;y reciban los planes Trabajar&quot;.</p><p>La ministra llevó tranquilidad a los beneficiarios para asegurar que las sanciones no serán para ellos sino para los organizadores de los piquetes ante eventuales presiones.</p><p>Además anticipó que los auditores hablarán con la gente para llevarles calma y además elevarán formularios que pasarán directamente a la Subsecretaría de Trabajo.</p><p>A continuación, detalló cómo estarán distribuidos los 485 inspectores:</p><p>En Capital Federal y Gran Buenos Aires, 150 y en el resto de la provincia, 59; Litoral (Entre Ríos y Santa Fe), 55; Cuyo (Mendoza, San Luis y San Juan), 30; Salta Jujuy y Tucumán, 48; Noreste (Corrientes, Formosa y Chaco), 29; Centro (Córdoba y San Luis), 40; Noroeste ( Catamarca, Santiago del Estero y La Rioja), 22; Patagonia, 18; Neuquén y Río Negro, 26.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010806amenazasbulrichdelaruasegundajornada.htm" download>Descargar el archivo original</a> (docs_010806amenazasbulrichdelaruasegundajornada.htm).</footer>
+</div></body></html>

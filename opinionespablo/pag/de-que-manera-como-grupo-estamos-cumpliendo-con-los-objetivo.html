@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Línea política – Planificación: de qué manera como grupo estamos cumpliendo con los objetivos definidos para la etapa</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2002-apuntes-pablo.html">&larr; 2001-2002 — Apuntes y opiniones</a>
+<h1>Línea política – Planificación: de qué manera como grupo estamos cumpliendo con los objetivos definidos para la etapa</h1><p class="ficha-doc">Fecha: 2 de julio de 2001 (aprox.) <span class="sep">|</span> 2.941 palabras</p></header>
+<main class="texto"><p>4</p><p>Línea
+política – Planificación</p><p>de
+ qué manera como grupo estamos cumpliendo con los objetivos
+ definidos para la etapa:</p><p>primeramente,
+creo que nuestra existencia como grupo data de muy corto tiempo como
+para hacer una evaluación sobre si estamos cumpliendo con los
+objetivos previstos y cómo. Haría falta un período de tiempo más
+extenso para poder evaluar el acierto o no de la política definida.
+Si embargo, creo que podemos evaluar si estamos en el camino correcto
+hacia esos objetivos.</p><p>generar
+ la imprescindible organización de base: en este punto creo que
+ evidenciamos aspectos positivos y negativos:</p><p>Positivos:
+nuestra desición de encarar la tarea, aunque no sepamos muy bien
+cómo por no tener demasiada experiencia en la militancia
+territorial, tanto en el caso de Darío en Don Orione, Mariano en el
+primer mes en La Matera y de Florencia en el Pel en Lanús.</p><p>Nuestra
+desisión de aprender y adaptarnos nosotros a la línea aunque en
+algunos aspectos de entrada nos resulte ajena, y no tergiversar la
+lectura de la realidad para adaptar la línea a nuestras
+conveniencias.</p><p>Creo
+que, una vez definida la línea en enero, fue también una virtud
+habernos acercado a companeros que tuvieran más experiencia en el
+desarrollo de la política que definieramos (Solano – Varela), ya
+que esta relación se convirtió en una fuente de aprendizaje para
+nosotros. Creo que debemos cultivar la humildad de reconocerlo y
+valorarlo, y sobre todo permanecer dispuestos a seguir aprendiendo de
+las mejores experiencias, provengan de donde provengan.</p><p>Negativos:
+la falta de experiencia en la militancia territorial, y en la
+militancia en general, creo que muchas veces nos hace tener una
+visión apresurada de los trabajos militantes, y a veces la ansiedad
+nos lleva a buscar resultados más rápido de lo que se dan. Debemos
+recordar que en el movimiento de masas los tiempos son los del pueblo
+haciendo su experiencia, y no los de cierta militancia impaciente.</p><p>Creo
+que el desarrollo de esta línea de movimiento de masas nos llevó,
+incluso, a comprender términos como el protagonsimo popular en las
+medidas de lucha, el desarrollo de la consciencia en el pueblo al
+calor de las luchas, y el verdadero rol de Vanguardia, legítimo y
+necesario, que se ratifica en la práctica cotidiana.</p><p>b)
+sobre las instancias de coordinación que exedan lo propio:</p><p>creo
+que, para nosotros fueron fundamentales, tal vez más que para los
+otros grupos con los que coordinamos. Quizás eso explique nuestro
+mayor esfuerzo a consolidarlos respecto a los otros grupos, que por
+momentos parecen subestimar la coordinación que nosotros tanto
+valoramos.</p><p>sobre
+ la formación militante: respecto a la línea de formación que
+ desarrollábamos en MPV, creo que esta nueva política de movimiento
+ de masas nos implica también un cambio en las líneas de formación:
+ creo que el principal lugar de formación nos está resultando la
+ práctica que expresamos en el punto 1), es decir, el aprendizaje
+ concreto junto a nuestro pueblo, que esta planificación es parte de
+ esa formación, y que, para no quedar reducida a un aspecto parcial,
+ el Estrella Federal complementa el otro gran aspecto de la
+ formación, es decir, una visión general de la política,
+ estrategia inclusive. Creo que los demás aspectos formativos son
+ secundarios respecto a estos dos grandes ejes, y que irán tomando
+ más envergadura en la medida en que la realidad lo demande, y que
+ nuestra experiencia se vea acrecentada y dé como frutos más brazos
+ militantes que permitan que algunos companeros dediquen asfuerzos a
+ tareas secundarias pero necesarias.</p><p>sobre
+ los cursos de acción que marquen claridad al conjunto: creo que
+ esto, por la falta de maduración de los puntos anteriores, debemos
+ fijarlo necesariamente en el mediano plazo. Desde este punto de
+ vista, el primero de mayo fue un fracaso, y unaconvocatoria
+ apresurada a un Encuentro Nacional de Desocupados también lo sería.</p><p>Sobre
+ la propuesta para un MTD nacional, creo que en el cuaderno hay más
+ letra que experiencia desarrollada, así que, a darle pa’delante
+ nomás.</p><p>Como
+síntesis, creo que la forma de estar cumpliendo con los objetivos
+definidos en esta etapa es estar en el camino correcto, apoyándonos
+en las mejores experiencias para aprender, y sin perder de vista la
+visión global de la política. A la vez, sabiendo que los plazos
+para poder evaluar si los objetivos propuestos fueron hacertados al
+calor de la práctica deberán ser bastante más largos que los pocos
+meses transcurridos desde enero. Como diría mazzeo, tenemos línea
+para rato.</p><p>mis
+ responsabilidades concretas, en orden de prioridades:</p><p>para
+garantizar la integralidad de la línea, definimos como criterio
+general la centralidad de los esfuerzos en el desarrollo del
+movimiento de masas, sin descuidar tareas de coordinación más allá
+de la base, elaboración y relaciones específicamente políticas,
+etc. En la distribución de tareas para garantizar esta integralidad,
+mi responsabilidad principal es cubrir las tareas accesorias a los
+trabajos de base, para que el resto de los companeros puedan centrar
+los esfuerzos en sus bases, sin por eso perder el equilibrio
+colectivo.</p><p>Esas
+tareas accesorias son:</p><p>Tareas
+de superestructura respecto al movimiento de desocupados:</p><p>coordinación</p><p>elaboración
+ de boletines, comunicados, e mails, etc.</p><p>relaciones
+ con el interior y otros grupos y sectores (Chaco, CTA, Pacha)</p><p>Tareas
+propias como grupo, específicamente políticas:</p><p>Estrella
+ federal</p><p>Balances
+ del paro</p><p>Materiales
+ de discusión propios</p><p>Relaciones
+ políticas</p><p>En
+segundo plano, tengo como responsabilidad acompanar el desarrollo del
+trabajo de base en lanús, secundando a flor en el desarrollo y
+consolidación.</p><p>Aclaración:
+el hecho de de las tareas accesorias tengan una prioridad en mi
+militancia, no quiere decir que deban estar ausentes en la militancia
+del resto de los companeros: creo que, a la inversa de mi caso, deben
+ser desarrolladas, en un plano secundario. En este sentido van, por
+ejemplo, la participación en la elaboración del balance del paro
+del 9 de Mariano y Darío, y la colaboración de Flor en algunas
+tareas específicas (archivo, mails, tipeado).</p><p>organización
+ de base:</p><p>como
+acabo de aclarar, mi rol respecto al trabajo de base es secundario,
+de acompanamiento. Aún así, creo tener el involucramiento
+suficiente como para opinar:</p><p>Creo
+que el trabajo político en el barrio está entre la etapa de
+insersión y consolidación. Si nos guiamos por la participación
+constante de algunos vecinos más allá de su necesidad (algunos que
+consiguieron trabajo hace más de un ano siguen participando),
+podríamos decir que la etapa es de consolidación. Sin embargo, esta
+constancia es frágil, tanto porque son pocos los vecinos con esa
+estabilidad, como porque es básico el nivel de cosnciencia que
+logramos desarrollar hasta ahora. Un indicador de que todavía
+debemos insertarnos políticamente, es que aún no logramos una
+segunda línea en la que delegar: si no está flor difícilmente se
+trabaje por las mananas, si no estoy yo no se hace la casita, aunque
+es poco el conocimiento técnico que aporto: este requerimiento de
+que yo esté evidencia que queda un vacío si no estamos, lo que hace
+difícil que hablemos de consolidación. Más aún: creo que, para
+hablar de consolidación de un trabajo político, habría que ver qué
+es lo que queda asentado después de un derrota. Todavía no pasamos
+por esa situación, y debemos poner esfuerzo en acumular mejores
+condiciones antes de que nos pase.</p><p>Cuadro
+de situación (aparte)</p><p>Coordinación:</p><p>En
+zona sur: Como dije más arriba, creo que para nosotros como grupo,
+son fundamentales. Desde el punto de vista del movimiento de masas,
+tiene un aspecto no tan favorable, que es que la realidad en los
+municipos de Quilmes y Varela es muy diferente a la de Lanús, por lo
+que querer trasladar algunas experiencias puede ser forzado: pensar
+en 6 barrios movilizándose en el municipio de Lanús, es poco menos
+que insurgente para el quietismo asistencialista de quindimil.</p><p>Con
+el interior: Creo que mantener las relaciones con el interior es una
+apuesta a futuro, y por lo tanto, tiene sentido donde podamos
+consolidar una relación política, como el caso de marcela de chaco,
+o los companeros del MRP. POr eso no deberíamos albergar grandes
+expectativas de coordinación inmediata, a no ser que todo estalle y
+la necesidad nos desborde. El esfuerzo en tiempo y dinero que
+implica mantener estas relaciones, entonces, creo que tienen que ver
+con una apuesta a mediano plazo, a la vez que nos permite una
+información de primera mano del interior.</p><p>Otros:
+la Cátedra Walsh es un ejemplo de la coordinación con ötros”, y
+creo que fue acertado encararlo. Era algo concreto sobre lo que
+convocar a los secundarios, retruco-glew, solano, y hasta redacción,
+en un ámbito que terminó discutiendo la necesidad de ocupar un
+espacio vacante desde las organizaciones populares respecto a un
+planteo político ante la crisis, discusión que introducimos
+nosotros. Creo que esos elementos son los necesarios para encarar
+estas relaciones: algo concreto, con discusión política más allá
+de los sectores. Pacha es otro ejemplo. En todos casos, no debemos
+perder la ocasión para insistir e intentar convencer con nuestra
+propuesta del MTD grande, como por ejemplo lo acemos a través del
+estrella federal.</p><p>Formación:
+ creo que hay un plano de la formación que es el fundamental, como
+ decía al principio: la práctica en función de una línea con sus
+ balances y planificaciones (trabajo de base), y por otro, la
+ discusión y reelaboración de la línea al calor de una visión
+ integral de la política (estrella). Estos ejes creo que no debemos
+ relegarlos ni ponerlos a consideración por las relaciones con otros
+ grupos, por el contraario, creo que tenemos que militarlos hacia
+ fuera con entusiasmo, buscando convencer.</p><p>Ahora
+bien, más allá de esto, creo que hay espacio para abrir el juego, y
+sería bueno hacerlo. Otros aspectos de la formación como teoría,
+historia, o aspectos complementarios del trabajo de base como
+formación sindical o educación popular, creo que sería bueno poder
+abordarlos en forma conjunta con algunos de los companeros
+mencionados, según dé el caso. Creo que incluso puede ser un
+espacio de homogeneización política, y que podríamos tomarnos los
+tiempos necesarios para el mejor aprovechamiento con los otros
+grupos.</p><p>6)
+ Cursos de acción que aporten:
+también como decía al principio, creo que sólo podemos pensarlo a
+mediano plazo. En cuanto a las características de los cursos de
+acción, creo que difílmente pudan alcanzarse, desde el gran buenos
+aires, niveles de confrontación como en tartagal , o niveles de
+descomposición institucional como en corrientes. Creo sin embargo
+que hay un aporte que puede hacerse desde la “autoridad” y el
+“peso político” que tiene buenos aires, y es un aporte más
+político, de proyecto. Pero este lugar de enunciación, para
+aprovechar esa autoridad, debe estar a la altura básica de los
+conflictos: un corte de ruta firme en varela por unos días puede no
+ser un “varelazo”, pero puede presentar nuevas características,
+como evidenciar niveles de organización y convocar desde ahí a
+otros sectores, logrando repercusión. Lo mismo alguna acción
+directamente en Capital. Creo que estamos en ese camino, habrá que
+seguir andando y haciendo los deberes para cuando nos llegue la hora,
+o si nos equivocamos en la apreciación, la hora le llegará a otros
+e igualmente deberemos estar preparados para acompanar con modestia.</p><p>Cuadro
+de situación – Planificacion del trabajo de base</p><p>Situación
+de barrio:
+Barrio precario pero estable, con necesidades pero sin grandes
+demandas. Esto se explica por la política del municipio de lanús,
+asistencialismo intensivo, desde una estructura de gobierno
+enquistada hace 16 anos en el poder. La zona, monte chingolo, tiene
+las mismas características, lo que por un lado ofrece la posibilidad
+de que la fe, pueda convertirse en un ejemplo, a la vez que nos
+alerta que el desarrollo nos requerirá importantes esfuerzos para
+convertir la pasividad en movilización.</p><p>No hay
+otros sectores en lucha, ni territoriales ni sindicales. Por la
+respuesta que tuvimos nosotros mismos, sabemos de la preocupación
+del Municipio por absorver cualquier conato de protesta. Hay que
+mencionar a los companeros de quebracho, que lamentablemente no
+podemos tenerlos muy en cuenta por su escaso desarrollo fruto de sus
+propias limitaciones, lo que hace que arrastren más descrédito que
+aporte a la lucha.</p><p>b)
+fuerza propia:</p><p>contamos
+con un militante y medio, flor y yo acompanando</p><p>como
+parte del activo, con distintas características, podemos senalar a
+Claudia y Luisa, del PEL a olga, marcela y marcela, ariel y piter, y
+la rubia. Y de los muchachos, diego.</p><p>Como
+participación de masas, podemos senalar una participación estable
+de 20 companeros, y otros 20 de participación más reciente.</p><p>Como
+aliados, en casos puntuales como la necesidad de un micro, lista.</p><p>Estado:</p><p>En
+este momento, después de haber conseguido unos puestos más además
+de los primeros 10, creo que, por una cuestión reivindicativa
+(puestos de trabajo), movilizaríamos 40 companeros, mientras que a
+una actividad más política, entre 15 y 20 si ponemos todo el
+esfuerzo.</p><p>Respecto
+a medidas más violentas, contamos con los muchachos (ariel, piter,
+diego) , y algunas mujeres decididas, como luisa, y algunas otras que
+acompanen con aceptación pero más pasividad. De plantearse
+determinado nivel de violencia en una movilización masiva,
+deberíamos trabajar previamente el clima con estos companeros que
+mencionamos, para que su involucramiento decidido genere confianza o
+por lo menos contenga al resto. En esto estamos en déficit, pero
+también es cierto que deberemos avanzar ante hipótesis concretas.</p><p>Respecto
+a la calidad: creo que acá si hay un déficit, que en la medida en
+que lo cubramos podremos estar hablando de consolidación del trabajo
+político: necesitamos un espacio de formación más allá de las
+asambleas semanales. Si bien tenemos la inquietud presente, aún no
+acertamos a desarrollarlo.</p><p>c)
+fuerza del enemigo</p><p>la
+actitud del municipio hacia nosotros y en general es muy habil: su
+objetivo es contener, evitar la participacion y el protagonismo
+popular, en base al asistencialismo intensivo paternalista. Así,
+prefieren ceder en cuentagotas, sabiendo que eso al común de la
+gente la contiene, y evitar así motivos para justificar una lucha
+contra ellos. Contra esta política habil remamos, y para no hacer
+cagadas que nos pongan en un nivel de confrontación que no podamos
+sostener o perdamos base, en esta etapa en que el objetivo principal
+es acumular fuerzas, es que elegimos y necesitamos confrontar en
+otros lados, llámese nacion o provincia.</p><p>Por
+la situación de nuestra fuerza, sería un error generar niveles de
+confrontación que nos impliquen la acción de patotas o la rivalidad
+de punteros, que los hay de los dos tipos. Estamos solos en lanús,
+nuestra principal fuerza en el barrio es una companera con un hijo, y
+cualquier nivel de confrontación en el territorio nos implicaría
+una situación difícil de sostener, poniendo en riesgo nustra propia
+presencia en el barrio. Por eso, peleamos contra la desocupación y
+no contra los punteros, aspiramos a que la gente se movilice y no que
+tome partido por una disyuntiva entre nosotros y los otros, que hoy
+resulta ajena.</p><p>Sabemos
+de una tenue existencia del Frepaso en Chingolo, que aún no
+aprovechamos.</p><p>d)
+balance hasta la fecha:</p><p>creo
+que el balance comienza a ser positivo recién cuando empezamos a ser
+rigurosos con las asambleas semanales, y cuando flor se integra al
+PEL. El balance de la etapa anterior es negativo, ya que no acertamos
+a desarrollar un práctica constante, por falta de claridad y de
+dedicación. Sin embargo, el 3 que nos sacamos si tenemos que evaluar
+en escala de 1 a 10 esa primer etapa, es lo que nos permitió no
+empezar de cero esta segunda etapa. Creo que esta experiencia en que
+revertimos un balance negativo en positivo, que pasamos de criterios
+de trabajo erróneos a otros acertados, tienen un hilo conductor, que
+es la persistencia en la militancia tras un objetivo. De entrada
+sabíamos que en la Fe, más allá de sus particularidades, se podía
+generar organización, y que los que no acertábamos éramos
+nosotros. Ese reconocimiento y esa persistencia nos permitieron
+reemontar una mala experiencia. Esta reflexión la uno con la
+reflexión inicial, acerca de la impaciencia con que a veces
+esperamos ver resultados, y reafirmo la idea que los tiempos de
+verificación de la línea al calor de una experiencia junto a
+nuestro pueblo, son bastante más largos que nuestra impaciencia.</p><p>e)
+objetivos y plan de acción: (aporte para ser elaborado con Flor)</p><p>de
+máxima,: Consolidar la Fe y proyectarlo como ejemplo para el
+desarrollo del movimiento de desocupados en otros barrios de lanús.</p><p>De
+mínima: consolidar la fe y seguir participando de la coordinación
+junto a solano- varela –don orione.</p><p>Al
+hablar de plazos concretos, creo que para aspirar a los objetivos de
+máxima tendríamos que estar hablando de 1 ano, con viento a favor.</p><p>Igualmente
+para los objetivos de mínima.</p><p>En
+el transcurso, habrá indicadores parciales, como la participación,
+la capacidad de movilización, que no están exentos de sufrir
+altibajos.</p><p>Plan
+de acción:</p><p>Propongo
+algunas tareas que apunten a ir consolidando el trabajo político:</p><p>Propagandización
+ de los logros y convocatoria a la participación masiva; una
+ herramienta para esto puede ser un boletincito propio, donde se
+ cuenten las conquistas, se arengue a la lucha y se detallen las
+ asambleas y actividades.</p><p>Consolidar
+ una segunda línea de dos o tres responsables, para ir delegando.
+ Conseguir otro proyecto de nación puede servir para eso.</p><p>referenciar
+ un lugar en el barrio más allá de la casa de tal o cual vecino, lo
+ que ya está en marcha con la casita.</p><p>generar
+ un espacio semanal de formación, al margen de las asambleas
+ semanales</p><p>movilizar
+ en el corto plazo por más puestos (no depende sólo de nosotros)
+ para que los que se sumen entiendan la importancia de la lucha y no
+ de la espera como forma de resolver los problemas</p><p>ir
+ viendo, de a poco, los conocidos de otros barrios, o parientes, para
+ tratar de hacer reuniones allí y ampliar el laburo.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../de qué manera como grupo estamos cumpliendo con  los objetivo.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (de qué manera como grupo estamos cumpliendo con  los objetivo.pdf).</footer>
+</div></body></html>

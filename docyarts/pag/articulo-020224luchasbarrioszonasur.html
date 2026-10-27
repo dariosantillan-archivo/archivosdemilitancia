@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Movimientos de Trabajadores Desocupados: fuertes luchas barriales en el Sur del Gran Buenos Aires</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Movimientos de Trabajadores Desocupados: fuertes luchas barriales en el Sur del Gran Buenos Aires</h1><p class="ficha-doc">Fecha: 24 de febrero de 2002 <span class="sep">|</span> 1.305 palabras</p></header>
+<main class="texto"><p>24 de febrero de 2002</p><p>Movimientos de Trabajadores Desocupados:</p><p>Fuertes luchas barriales en el Sur del Gran Buenos Aires</p><p>Continúa firme la ocupación de tierras por parte de 28 familias, que con apoyo vecinal y de organizaciones de desocupados neutralizaron los intentos de desalojo en el Barrio La Fe, Lanús.</p><p>Después de dos días de corte de la Avenida Monteverde, fue restituída la vivienda a familia desalojada en San Francisco Solano, Quilmes.</p><p>Se realizó la segunda movilización por el Asesinato del Piquetero Javier Barrionuevo, con participación de alrededor de mil personas, en El Jaguel, Esteban Echeverría.</p><p>Los cacerolazos nacionales, movilizaciones en homenaje a los caídos el 20 de diciembre y en reclamo de justicia, se alternan con luchas barriales, cada vez más contundentes y organizadas.</p><p>Así se vio en los últimos días, en los hechos que señalamos:</p><p>En Lanús, el distrito más densamente poblado del gran Buenos Aires, la lucha por una parcela de tierra para construir sus viviendas dignas, es un desafío importante para las jóvenes familias humildes que se resisten a tener que buscar un lugar para vivir alejados kilómetros de su grupo familiar. Esto sucede con los jóvenes que, tras criarse en la casa de sus padres, al constituir sus propias familias y tras vivir con sus pequeños hijos algún tiempo &quot;de prestado&quot; en la casa de sus parientes, se vuelcan a conquistar un terreno para su propia vivienda. Están al frente de estas familias generalmente jóvenes desocupados, que la única forma de tener su vivienda digna, saben, será a través de la lucha; y que sin posibilidades económicas, sí cuentan, en cambio, con experiencia de lucha en piquetes y cortes de ruta en reclamo de trabajo. Estos jóvenes desocupados, integrantes del MTD, organizaron la ocupación de un predio abandonado, que el Intendente Quindimil utilizaba para almacenar chatarra mientras las familias no tenían un lugar donde vivir dignamente.</p><p>El viernes por la noche, un oficial de la comisaría 6º de Lanús, se acercó, en actitud intimidatoria, buscando identificar a los ocupantes para &quot;procesarlos por el delito de usurpación de propiedad privada&quot;, anunciando que estaba próxima la orden de desalojo. Cayendo la noche, otro policía, desde su patrullero a unos 50 metros de la toma, apuntaba su arma sobre las precarias carpas que se habían montado en los terrenos, pero con una particularidad: una mira infrarroja marcaba los posibles &quot;blancos&quot;, dando por entendido que podían utilizar ese recurso para una represión nocturna. Ante estos hechos, más vecinos y compañeros del MTD se acercaron a reforzar la seguridad; todo el perímetro se reforzó con cubiertas, que se fueron encendiendo gradualmente; compañeros de otros distritos, como el MTD de Solano y el MTD de Almirante Brown, a los pocos minutos estuvieron presentes para brindar su solidaridad activa; compañeros abogados se interesaron por la situación legal, y en pocos minutos se supo que no había motivos legales para preocuparse esa misma noche: todo se trataba de presión e intimidación policial. Como decía un compañero del barrio: &quot;nos están provocando para ver cómo reaccionamos, pero tienen que saber que esta toma, en el medio del barrio, es muy difícil que puedan levantarla; si reprimen acá, seguro que no se la llevan gratis&quot;, marcando que, si bien pueden entrar al barrio con sus patrulleros, difícilmente puedan salir ilesos después de un intento represivo.</p><p>En el barrio Monteverde, de San Francisco Solano, los vecinos y compañeros del MTD comenzaron a ponerle un freno a la impunidad: el jueves por la tarde, la Policía Bonaerense, como es su costumbre, ingresó por la fuerza a la casa humilde de un matrimonio que vivía allí con sus cinco hijos, golpeó a la pareja y los llevó detenidos. Alegaban una supuesta orden de desalojo que nunca apareció. Lo que sí se supo, en cambio, es que sobre ese terreno desde hace tiempo una Empresa Maderera que tiene su local principal cruzando la Avenida, tenía interés en apropiárselo para agrandar sus instalaciones comerciales. Y que el dueño de la maderera, solía hacer acuerdos con la Policía Bonaerense para, por ejemplo, desalojar impunemente a una familia trabajadora y quedarse con su vivienda. Pero este echo que tal vez hace un tiempo atrás hubiera pasado sin una reacción del resto de los vecinos, por miedo o indiferencia, hoy resulta intolerable para quienes, a fuerza de luchas, aprendieron a hacerse respetar: más de doscientos vecinos salieron el mismo jueves a cortar la circulación de la Avenida, muchos ellos integrantes del MTD. Los piquetes, firmes, contenían la furia de las patrullas de la Policía Bonaerense que había sido &quot;ofendida&quot; en su impunidad por la reacción vecinal. El corte de ruta se repitió el viernes, aumentando la presión: distintas organizaiciones sociales acercaron su presencia y solidaridad, no sólo los movimientos de desocupados de la zona; compañeros abogados acompañaron las presentaciones judiciales para que le sea restituída la vivienda; incluso, los vecinos más enfurecidos, rociaron con nafta parte de las intalaciones de la maderera, amenazando con acercar un fósforo...</p><p>El viernes terminó con un triunfo vecinal, la vivienda repuesta a la familia, y la algarabía popular en las calles antes de levantar, satisfechos, el corte de la avenida.</p><p>En el barrio El Jaguel, en Esteban Echeverría, la tensión no bajó desde que asesinaron, hace 20 días, al Piquetero Javier Barrionuevo. La primer movilización, al día siguiente a su asesinato en un piquete, logró el encarcelamiento del asesino, que había sido liberado en un primer momento por la misma Policía Bonaerense. En este caso, el sábado por la mañana, alrrededor de mil vecinos y desocupados marcharon por la ruta, desde el lugar del asesinato, hasta la comisaría primero, y hasta la Casa de Comidas propiedad del asesino, para garantizar que no vuelva a ser reabierta. Frente a la comisaría, las pintadas con aerosol en las paredes llamaban a las cosas por su nombre: &quot;ASESINOS&quot;. Al finalizar el homenaje y la exigencia de castigo a los culpables, se retificó la voluntad de continuar con los escraches y movilizaciones, constituír un comisión antirrepresiva que atraviese a todos los sectores sociales en lucha sin distinción, y participar solidariamente de todos los actos y luchas de repudio a la represión.</p><p>Estas fuertes luchas que se extienden por los barrios, al igual que las asambleas vecinales, son muestra de un poder popular que se extiende y se consolida. La consciencia, en muchos casos, va más allá de la decisión de resolver los propios problemas sin esperar que nadie lo haga por nosotros: los compañeros que participaron de la ocupación de tierras en Lanús, por ejemplo, planificaron hacerlo el miércoles a la noche y no antes, porque debían participar de la moviliación en homenaje a los compañeros caídos el 20 de diciembre; los compañeros de Solano, después de dos días de intensa lucha en su barrio, a pesar del cansancio no dudaron en llenar la camioneta de compañeros dispuestos a luchar cuando se enteraron, el viernes a la noche, de una posible represión en Lanús; los compañeros del MTD de Almirante Brown, movilizaron el sábado para la marcha en Esteban Echeverría por Javier Barrionuevo tantos o más compañeros que los que movilizan por sus propios reclamos...</p><p>La extensión de las luchas en los barrios, el compromiso con la situación política del país, la solidaridad con todas las luchas populares, la creciente organización, la responsabilidad de no delegar en nadie la solución a nuestros problemas, marcan crecientes niveles de consciencia que hacen prever un desenlace auspicioso para el actual proceso de protagonismo popular en curso en nuestro país.</p><p>Para solidarizarse o interesarse por la situación de las familias del Barrio La Fe (Lanús) que aún siguen resistiendo en los terrenos ocupados,</p><p>Tel. (011) 15- 5140- 7894, Darío (desde teléfono de línea)</p><p>Por Trabajo, Dignidad y Cambio Social!!!</p><p>MTD Lanús</p><p>MTD Lanús:</p><p>Mtd_lanus@yahoo.com.ar</p><p>MTD Solano:</p><p>Mtd_solano@hotmail.com</p><p>MTD Alte. Brown :</p><p>Mtdbrown@yahoo.com</p><p>En la COORDINADORA DE TRABAJADORES DESOCUPADOS &quot;ANIBAL VERÓN&quot;</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_020224luchasbarrioszonasur.htm" download>Descargar el archivo original</a> (articulo_020224luchasbarrioszonasur.htm).</footer>
+</div></body></html>

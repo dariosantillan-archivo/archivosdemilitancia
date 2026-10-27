@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>DRI. El poder popular</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>DRI. El poder popular</h1><p class="ficha-doc">Fecha: 30 de julio de 2003 (aprox.) <span class="sep">|</span> 841 palabras</p></header>
+<main class="texto"><p>DRI. El poder popular</p><p>Desde los MTD nos proponemos
+echar luz sobre los procesos sociales transformadores también como
+reflejo de nuestra práctica. Queremos interpretar los procesos dando
+prioridad al protagonismo popular, a las instancias colectivas que
+explican esos procesos. No queremos apelar a una brillantez
+intelectual sino que también como parte de nuestra práctica y
+nuestra historia, queremos decir las cosas por nosotros, sin nombres
+particulares.</p><p>En estos talleres de formación
+nos proponemos estudiar las ideas de diferentes intelectuales
+revolucionarios y los procesos sociales que dieron origen a esas
+ideas revolucionarias. Tenemos presente también que los MTD formamos
+parte de nuevas prácticas que conviven con viejas prácticas de la
+izquierda y es en ese contexto en el que desarrollamos la política y
+el pensamiento.</p><p>Nos afirmamos en el marxismo
+en cuanto a que es el ser social el que determina la conciencia
+teniendo presente las condiciones objetivas y subjetivas de ese ser.
+Damos importancia a lo subjetivo pero no acordamos con el
+hipersubjetivismo de muchos que plantean que lo más importante es
+que la gente piense mejor y que así se irán articulando prácticas
+diferentes y dispersas. Este planteo no tiene en cuenta las
+condiciones materiales que van generando conciencia y por tanto
+pensamientos. Por otro lado, tenemos a los más puros que no plantean
+concretamente cómo hacer las cosas, como se hace política (ejemplos
+de ambas posiciones serían Negri y holloway con todos sus seguidores
+locales).</p><p>Lo que sí tenemos en la
+práctica del MTD y está presente es que “el hombre se produce a
+sí mismo, no lo produjo nadie”, es la idea que los hombres y
+mujeres nos producimos colectivamente. Es importante para nosotros
+que las nuevas relaciones de trabajo en el MTD se hagan con una
+práctica de trabajo y producción no capitalista que ayuden a poder
+concebir un cambio de la base material. Porque si los cambios
+sociales fueran posibles solo por las ideas y no en la base material,
+mañana vienen otras ideas que convencen mejor y cualquiera las toma.</p><p>Pero no alcanza con la
+práctica diferente ni con las relaciones sociales y de producción
+diferentes sino que hay que acompañar todo este proceso con
+reflexión, si no un compañero puede estar años laburando en la
+panadería comunitaria y no crecer en conciencia. Porque la
+conciencia queda, pueden sacar los planes, se puede acabar el
+movimiento pero surgirá otra organización como producto de esa
+conciencia. Por eso rescatábamos una frase que hay escrita en el MTD
+de Lugano que refiere a que la pobreza no genera acción política,
+lo que genera conciencia es la movilización y la conciencia de esa
+pobreza.</p><p>LOS CRITERIOS</p><p>En las nuevas relaciones
+sociales nos están faltando en el MTD sanciones concretas, algo que
+se reclama una y otra vez. Tenemos que producir un código de
+sanciones y de represión de las minorías que debe ser masivo,
+mayoritario y expresado con indignación por esas mayorías. Debemos
+evitar que una comisión de organización imponga reglas y sanciones,
+es la indignación de masas la que debe provocar la reacción.</p><p>Los criterios no pueden ser
+hoy firmes porque el MTD quedaría reducido a muy pocos y esto es
+contradictorio con una definición de masificación porque si no cómo
+cortás una ruta, cómo se sigue la lucha, con quiénes.</p><p>Debemos pensar también que
+echar a un compañero porque no labura, es un problema porque muchos
+compañeros tienen limitaciones físicas, están subalimentados y
+muchas veces no pueden hacer más. Lo importante es que al ser del
+MTD muchos compañeros dejaron de sentirse marginados. Por eso en la
+organización hay que bancarlo en el contexto general que vivimos.
+Porque no es posible una isla socialista en Chingolo ni tampoco se
+puede creer que con los productivos solamente vamos a cambiar las
+relaciones sociales. Es una alternativa social y política que
+construimos todos los días y debemos buscar cómo la construimos.</p><p>En el contexto de construcción
+de poder popular la lucha es permanente porque si no el enemigo
+avanza, la lucha entonces es constitutiva de nuestra política junto
+con la consolidación interna. En eso que nosotros no construimos,
+avanza el enemigo, no hay espacios neutros no ocupados por nadie. El
+enemigo es fuerte y no se lo vence si echamos al que no labura; esta
+lógica es individualista y fragmenta socialmente. Está bueno eso de
+condenar socialmente pero teniendo presente que esa condena sirve si
+es para mejorar la organización, para crecer en el barrio, para
+consolidarnos.</p><p>Porque las nuevas relaciones
+laborales del MTD van de la mano de la pelea económica y social en
+que nos enmarcamos, en el proyecto político que estamos
+construyendo. Tenemos que crecer más en el barrio para que seamos
+más discutiendo, reflexionando, formándonos. Porque los criterios
+sirven si hay compañeros formados si no son coercitivos,
+autoritarios y reproducen relaciones de dominación.</p><p>Lo mismo sucede con la
+necesidad de romper con las disputas de barrios que poco fortalecen
+al MTD. Acá cabe al Area de formación pensar cosas integradoras que
+rompan la dinámica barrial y lo más importante es plantearse adónde
+queremos llegar.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../DRIpoderpopular.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (DRIpoderpopular.pdf).</footer>
+</div></body></html>

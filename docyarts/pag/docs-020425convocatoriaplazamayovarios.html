@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>1- Comunicado Agencia &quot;Diarios y Noticias&quot;</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>1- Comunicado Agencia &quot;Diarios y Noticias&quot;</h1><p class="ficha-doc">Fecha: 25 de abril de 2002 <span class="sep">|</span> 1.968 palabras</p></header>
+<main class="texto"><p>1- Comunicado Agencia &quot;Diarios y Noticias&quot;, sobre la movilización a Plaza de Mayo</p><p>2- Palabras de Hebe de Bonafini en la ronda de las Madres en Plaza de Mayo</p><p>3- Comunicado sobre fuertes luchas en el interior del país</p><p>¡Que se vayan todos, que no quede ni uno solo!</p><p>¡Por Tabajo, Dignidad y un Cambio Social!</p><p>MTD Lanús en la CTD Anibal Verón</p><p>mtd_lanus@yahoo.com.ar</p><p>1. Cable Agencia DyN</p><p>DESOCUPADOS, PIQUETEROS, MADRES Y ASAMBLEAS BARRIALES RECLAMARON LA RENUNCIA DE DUHALDE EN PLAZA DE MAYO -</p><p>MARCHA-MATUTINOS</p><p>DESOCUPADOS, PIQUETEROS, MADRES Y ASAMBLEAS BARRIALES</p><p>RECLAMARON LA RENUNCIA DE DUHALDE EN PLAZA DE MAYO</p><p>BUENOS AIRES, abr 25 (DyN) - Agrupaciones que nuclean a</p><p>desocupados y piqueteros, sectores de izquierda, Madres y asambleas</p><p>barriales confluyeron hoy en Plaza de Mayo para rechazar la política</p><p>económica del gobierno nacional, reclamar una ruptura con el FMI y</p><p>exigir la renuncia del presidente Eduardo Duhalde.</p><p>Una gruesa columna, encabezada por banderas de la Coordinadora</p><p>de Trabajadores Desocupados Aníbal Verón y asambleas barriales,</p><p>ingresó minutos antes de las 18 a la Plaza por Avenida de Mayo,</p><p>custodiada por un importante operativo policial que protegió la Casa</p><p>de Gobierno.</p><p>La columna mostró una primera línea donde se agrupaban</p><p>personas encapuchadas con palos en las manos, que quedaron frente a</p><p>frente con la policía, sólo separados por un extenso vallado metálico.</p><p>Autoridades de la Coordinadora Aníbal Verón aclararon a DyN</p><p>que se implementaron capuchas en la primera línea de manifestantes,</p><p>que tiene como tarea mantener la &quot;seguridad&quot; de la marcha, para</p><p>&quot;evitar la individualización de la policía y las persecuciones</p><p>posteriores&quot;.</p><p>&quot;La utilización de las capuchas es por razones de seguridad,</p><p>para evitar la individualización de la policía, porque la policía</p><p>en zona sur, donde hay casos probados, persigue a quienes aparecen</p><p>en televisión&quot;, señaló la Coordinadora.</p><p>Asimismo, manifestaron que los palos que pudieron verse en la</p><p>movilización se utilizan para &quot;proteger a la marcha de posibles</p><p>infiltrados&quot; y responsabilizaron a la Secretaría de Seguridad</p><p>Interior, que encabeza Juan José Alvarez, por la &quot;tensión&quot; que rodeó a</p><p>la movilización.</p><p>En ese contexto, los manifestantes entonaron el Himno Nacional</p><p>batiendo los palos ante la mirada de las fuerzas de seguridad,</p><p>que concluyó al grito de &quot;Argentina, Argentina&quot;.</p><p>En la marcha, con un claro predominio de la Coordinadora</p><p>Aníbal Verón y el Bloque Piquetero Nacional, confluyeron otros sectores</p><p>como las asambleas barriales de Capital Federal y Gran Buenos</p><p>Aires, Madres de Plaza de Mayo, Polo Obrero y agrupaciones de</p><p>izquierda, entre ellas el Movimiento Socialista de los Trabajadores,</p><p>Partido Obrero, Movimiento al Socialismo, Partido de los Trabajadores</p><p>Socialistas y Quebracho.</p><p>También participaron los trabajadores de la textil Brukman y</p><p>los ceramistas de Zanón y la Unión Ferroviaria de Haedo.</p><p>Los manifestantes llegaron a la Plaza con tres consignas</p><p>excluyentes: rechazo a la política económica, ruptura con el Fondo</p><p>Monetario Internacional y renuncia de Duhalde, tras una decisión que</p><p>se adoptó durante una asamblea, el martes a la noche en la sede de</p><p>Madres.</p><p>Otros de los puntos que llevó adelante la marcha reclama la</p><p>estatización de las empresas privadas, reapertura de las fábricas y</p><p>empresas cerradas, libertad de los &quot;presos por luchar&quot; y</p><p>desprocesamiento de los &quot;más de mil luchadores sociales perseguidos</p><p>judicialmente&quot;.</p><p>El operativo policial protegió especialmente la Casa de</p><p>Gobierno y cortó las principales arterias de acceso a la Plaza, como</p><p>Avenida de Mayo a la altura de Chacabuco, que permaneció interrumpida</p><p>desde el mediodía.</p><p>La desconcentración en Plaza de Mayo comenzó poco antes de las</p><p>19, en forma pacífica, con el desplazamiento de las columnas de</p><p>la Coordinadora Aníbal Verón y los partidos de izquierda.</p><p>La protesta había comenzado ya en la ruta nacional 3, a la</p><p>altura de la localidad bonaerense de Isidro Casanova, en La Matanza,</p><p>donde unos 500 desocupados realizaron un &quot;piquete&quot; en reclamo de</p><p>planes de trabajo.</p><p>DYN 19:34 04-25-02</p><p>2. Palabras de Hebe de Bonafini</p><p>JUEVES EN LA PLAZA, CON LAS MADRES</p><p>Tras la Marcha de las Madres del jueves 25 de Abril, habló la compañera Hebe de Bonafini:</p><p>El día martes a la noche en la Casa de las Madres, en la Universidad, se reunieron los compañeros piqueteros, con los partidos políticos de izquierda, con las organizaciones barriales, en fin, una cantidad de grupos para organizar una actividad hoy, una respuesta hoy a lo que está pasando.</p><p>Tener o no tener ministro de economía da lo mismo, porque el tema es que acá manda el Fondo. No importa qué ministro de economía tengamos. Este Remes u otro es lo mismo, este Lavagna que viene va a hacer exactamente lo mismo. No es que si cambia el ministro cambian las cosas.</p><p>Duhalde dice que va a dar elecciones en ciento veinte días. ¿Quién vendrá? Otro peor. Mi hijo mayor me decía: &quot;Mami, siempre puede venir uno peor&quot;, y es verdad.</p><p>Lo que estamos haciendo con los compañeros, lo que pedimos es que se vayan, que tratemos de ver qué podemos hacer, que estamos muy lejos de hacer la revolución, que estamos muy lejos de poner a alguien que valga la pena. Por ahora las figuritas de cambio son la Carrió, estos locos que fueron ministros de economía, Reutteman... nombran cada uno que a uno de le espanto. Entonces venga quien venga - porque la Carrió, más sirviente de Estados Unidos otra no hay - tiene unas muy buenas condiciones. Por lo tanto, no hay expectativas en eso.</p><p>Lo que sí tenemos que pensar es que nos tenemos que seguir formando, en que nos tenemos que seguir preparando, en que nos tienen que seguir pasando cosas, y el otro día en esa reunión los compañeros decidieron ir hoy a Plaza Congreso y después venir para aquí, para Plaza de Mayo a las 18 hs. Hicieron cortes esta mañana, cortes de ruta, cortes de trenes, cortes de autopistas, realmente se hizo un día de lucha muy fuerte.</p><p>Por eso se convocó al Consejo de Seguridad. Al Consejo de Seguridad no lo convocan cuando viene el Fondo Monetario Internacional, que son los terroristas más grandes, que más nos atacan y que más matan. Ahí no llaman a esos consejos, pero bueno, así estamos, hoy están asustados, cagados de miedo, de qué va a pasar porque la gente sale a la calle.</p><p>Las Madres tenemos la inauguración de nuestras &quot;Sensaciones&quot;, en Recoleta, que no tiene nada que ver con una muestra, ni con una puesta ni con las exposiciones, sino que tiene que ver con lo que nos pasó, que está hecho para los jóvenes, que tiene que ver con lo que sufrió nuestro pueblo en el ’76, así que a las siete de la tarde vamos a estar ahí.</p><p>Vamos a esperar a los piqueteros en Plaza Congreso, pero después para acá (Plaza de Mayo) no podemos venir. Pero todo el que quiera a las cinco en Plaza Congreso y a las seis acá.</p><p>Los compañeros también están preparando el 1° de mayo. Creo que están pasando muchísimas cosas. Y el martes nuestra marcha, nuestro concierto va a tener la fuerza que tiene siempre, porque cada vez que las Madres preparamos algo fuerte e importante pasan tantas cosas que esta Plaza convoca, reúne y une, porque es la respuesta a lo que nos están haciendo. Esta Plaza siempre responde, antes de lo que ellos , de los movimientos populares, vienen los compañeros Sin Tierra, de Brasil. Viene un compañero de los Grupos de Solidaridad y las Madres para los discursos finales. Y para el concierto, un concierto que siempre tiene que ver con lo combativo, con lo comprometido, Rafael Amor, Teresa Parodi, Léón Gieco, Daniel Viglietti, el coro de la Universidad y un grupo de compañeros que enseñan música en la Universidad de las Madres, que hacen una música deliciosa, que yo los encontré y ellos todavía no hacían música en público, se llaman Morelos y la voz de Son del Sur.</p><p>Así que va a haber un concierto que tiene que ver con el compromiso político, un concierto para anunciar que cumplimos veinticinco años el 30 de abril sin faltar un solo jueves a esta plaza, aunque esta vez toque martes y elegimos el 30 porque es nuestro día.</p><p>Es el día de nuestros hijos, y les digo que cuando hoy fui a ver qué pasaba, cómo estaban organizando los chicos lo de Recoleta y vi las fotos de los chicos que están presentes, las ví como siempre, cada vez más alto, cada vez más grandes, hasta parece que laten, hasta parece que nos dicen algo.</p><p>Entonces, ese compromiso que asumimos las Madres, esa responsabilidad enorme que asumimos las Madres de no darlos nunca por muertos, de ser su voz y de latir con su corazón, la cumplimos al pie puntillas y les decimos siempre: &quot;queridos hijos: ¡pa’ lo que manden... y hasta la victoria siempre!&quot;</p><p>3. Cable de Agencia sobre fuertes luchas en el interior del País</p><p>17:35</p><p>Protestas: en el interior, desocupados y estatales volvieron a hacer oír sus reclamos</p><p>Las protestas de desocupados, estatales y jubilados continuaron hoy en distintas provincias del país y se agudizaron en Jujuy tras la detención esta mañana de dos dirigentes de la Corriente Clasista y Combativa (CCC).</p><p>Veintiún cortes de rutas se realizaron desde las siete de la mañana en Jujuy, en demanda de la libertad de Juan Bejarano y Lucas Arias, dirigentes detenidos por la policía por orden del juez Mario Humberto González.</p><p>Ambos están acusados de &quot;daños, lesiones y violación de domicilio en el grado de participación criminal&quot;, por los incidentes ocurridos ayer durante una marcha de estatales y desocupados.</p><p>Los cortes de rutas impiden el normal funcionamiento del aeropuerto jujeño y mantienen bloqueado el tránsito hacia Bolivia.</p><p>En Bariloche, un grupo de docentes, empleados judiciales y estatales, se instaló este mediodía en la Sala de Prensa de la municipalidad y amenazó con tomar el Concejo Deliberante.</p><p>El grupo acorraló a los ediles en la sede del Ejecutivo y los intimó a suscribir el pedido de juicio político al gobernador Pablo Verani, en protesta por la paralización de la justicia, la educación y la salud.</p><p>Además, los gremios estatales agrupados en la Central de Trabajadores Argentinos (CTA) reclaman el pago de salarios de febrero y marzo y el aguinaldo 2001.</p><p>En tanto, los trabajadores estatales sanjuaninos, continuaron hoy con medidas de fuerza en reclamo del pago de sueldos atrasados y se concentraron en la Plaza 25 de mayo de esta ciudad, donde instalaron una olla popular, mientras que los docentes decretaron un nuevo paro por 48 horas en las escuelas públicas y los judiciales cortaron la calle en la puerta de Tribunales.</p><p>En Catamarca, trabajadores municipales que reclaman el pago de sueldos y desocupados que exigen puestos de empleo y planes sociales, realizaron cortes en cuatro tramos de las rutas nacionales 33 y 38, según fue confirmado por la policía de la provincia.</p><p>Los municipales de Valle Viejo, distrito ubicado a unos 7 kilómetros de la capital catamarqueña, realizaron dos cortes en la ruta nacional 33 a la altura del paraje Tres Puentes y en la ruta nacional 38, en el sector barrial de Sumalao.</p><p>Los empleados de la Municipalidad de Huillapima y otras delegaciones de esa jurisdicción cumplen hoy la tercera jornada de corte en la ruta nacional 38, en el río Ongolí, a unos 30 kilómetros de la capital catamarqueña.</p><p>En la localidad bonaerense de San Nicolás, en tanto, un centenar de personas reclamó que el municipio entregue planes de trabajo y una canasta básica de alimentos.</p><p>Una columna de manifestantes ingresó al interior del edificio municipal y dijeron que se mantendrán en el lugar hasta obtener una respuesta.</p><p>El secretario de gobierno de San Nicolás, Damián Cebey explicó a Télam que el municipio &quot;en ningún momento estuvo tomado por los desocupados&quot; y precisó que &quot;sólo ingresaron al patio central para realizar la protesta pero no se produjeron escenas de violencia&quot;.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_020425convocatoriaplazamayovarios.htm" download>Descargar el archivo original</a> (docs_020425convocatoriaplazamayovarios.htm).</footer>
+</div></body></html>

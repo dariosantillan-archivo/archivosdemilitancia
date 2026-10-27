@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Los criterios de trabajo en nuestro movimiento: producción y economia alternativa</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Los criterios de trabajo en nuestro movimiento: producción y economia alternativa</h1><p class="ficha-doc">Fecha: 18 de junio de 2003 (aprox.) <span class="sep">|</span> 621 palabras</p></header>
+<main class="texto"><p>Los criterios de trabajo en
+nuestro movimiento</p><p>PRODUCCIÓN
+Y ECONOMIA ALTERNATIVA</p><p>La producción y la economía
+en el MTD es comunitaria, libre y compartida. El fin no es acumular
+riquezas sino satisfacer nuestras necesidades integrales.</p><p>Así lo expresamos en un
+taller de educación popular:</p><p>“Nosotros producimos
+para mejorar la alimentación de todos, para ser mas compañeros,
+para compartir el trabajo, para no depender de nadie, ser autónomos,
+tomamos las decisiones entre todos, no tenemos jefe ni patrón. Esto
+lo llamamos trabajo libre y compartido o comunitario. Esta forma de
+trabajo tiene que ver con el cambio social que dice en nuestras
+banderas. Lo comparamos con el trabajo con patrón al que llamamos
+trabajo explotado”</p><p>“El trabajo
+comunitario es el que nos relaciona a mujeres y hombres socialmente
+iguales que nos unimos para trabajar a la par. Todo lo que producimos
+es para satisfacer nuestras necesidades. En esa relación nace el
+afecto, la solidaridad, la paz y la libertad. Mujeres y hombres
+hermanados en una nueva sociedad.”</p><p>El trabajo COMUNITARIO expresa
+valores opuestos al capitalismo</p><p>La solidaridad:
+ver la necesidad del otro como si fuera propia, sentirse bien
+ayudando a los demás, y cosechando la ayuda de los compañeros
+cuando la necesitamos.</p><p>El compromiso:
+sentirse protagonista, entre todos, a la hora de resolver los
+problemas de todos. No tener una actitud pasiva mientras haya
+necesidades e injusticias. Sentirse bien sabiendo que aportamos
+nuestro granito de arena.</p><p>La honestidad:
+cualquier ventaja individual que saquemos de un beneficio común, es
+un daño a quien tenemos al lado. Ser honestos es, sobre todo, ser
+justos con nuestros compañeros y no sacar ventajas.</p><p>La alegría:
+el trabajo comunitario genera un clima de compañerismo, amistad y
+alegría. Aleja la competencia y la especulación, y nos hace sentir
+útiles en lo que hacemos, si todos trabajamos parejo.</p><p>La libertad: en
+el movimiento intentamos construir espacios que rompan con la 
+dominación. La libertad no significa hacer lo que se me da la gana,
+sino, consiste en buscar el bien de la comunidad.</p><p>Queremos un trabajo LIBRE,
+COMPARTIDO, RESPONSABLE Y CONCIENTE RADICALMENTE OPUESTO AL
+CAPITALISMO.</p><p>Algunos proyectos del MTD son:
+panaderia, huerta integral, bloquera, talleres de oficio, talleres de
+educación popular, talleres de salud, serigrafia, murgas, murales,
+artesanias, producción de alimentos.</p><p>ECONOMIA SOLIDARIA &amp;
+ECONOMIA CAPITALISTA</p><p>La producción en el MTD es popular y solidaria. El fin es
+satisfacer nuestras necesidades y mejorar calidad de vida de todos.
+Es opuesta al capitalismo que solo busca la acumulacion de riquezas,
+y esas riquezas siempre quedan en manos de unos pocos</p><p>Estas formas de produccion estan basadas en valores y actitudes
+tambien opuestos.</p><p>ECONOMIA SOLIDARIA</p><p>El objetivo es generar un
+beneficio para todos</p><p>El objetivo es el beneficio
+individual,</p><p>sin importar los demás</p><p>El egoísmo</p><p>Las críticas destructivas</p><p>ECONOMIA CAPITALISTA</p><p>El objetivo es el beneficio
+individual, sin importar los demás</p><p>El egoísmo</p><p>Las críticas destructivas</p><p>La falta de autoestima</p><p>El rumor y la mentira</p><p>VALORES QUE
+SOSTENEMOS EN NUESTRA FORMA DE PRODUCIR</p><p>Para poder llevar adelante una
+economía popular solidaria basada en nuestro trabajo en el MTD
+necesitamos luchar en la calle, en el piquete. Pero también todos
+los días, con los compañeros y los vecinos debemos pelear contra
+los valores negativos que tiran para atrás y no nos ayudan a crecer
+como organización y como personas.</p><p>Debemos apostar a los
+BENEFICIOS COLECTIVOS y
+no a salidas individualistas buscando más SOLIDARIDAD
+y derrotando al egoísmo.</p><p>Nos tenemos que comprometer para
+llevar adelante lo que creemos dejando de lado las críticas
+destructivas Tenemos que ser HONESTOS
+y levantarnos la AUTOESTIMA.</p><p>El rumor y la mentira no pueden
+existir entre nosotros ni con los vecinos.</p><p>La ALEGRIA
+tiene que estar presente entre nosotros, la fiesta de estar
+construyendo el CAMBIO
+SOCIAL que nos
+merecemos.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../produccionAlernativanota.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (produccionAlernativanota.pdf).</footer>
+</div></body></html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Liberaron a los campesinos detenidos: en Santiago del Estero</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Liberaron a los campesinos detenidos: en Santiago del Estero</h1><p class="ficha-doc">Fecha: 15 de marzo de 2002 <span class="sep">|</span> 927 palabras</p></header>
+<main class="texto"><p>LIBERARON A LOS CAMPESINOS DETENIDOS</p><p>EN SANTIAGO DEL ESTERO</p><p>EL MO.CA.SE. DENUNCIA UN PLAN PERSECUTORIO DEL GOBIERNO PROVINCIAL.</p><p>A las organizaciones latinoamericanas.</p><p>Ahora comienza la segunda etapa:</p><p>Agradecer la solidaridad a quienes la solicitaron</p><p>Solicitar al Subsecretario de DDHH del ministerio del interior que se investigue hasta llegar a la cadena de mando las responsabilidades de los autores ideológicos y las cometidas en el esenario de los hechos, es decir los actores materiales: el accionar de 15 policías vestidos de policías y 2 civiles extraños con ametralladoras.</p><p>Esta semana haremos las Denuncias contra los autores materiales, señalando como sospechoso al gobierno de la provincia que ha montado un plan sistemático de persecusión y aniquilamiento del MOCASE.</p><p>Los hechos fueron:</p><p>1- Fueron puestos en libertad a las 22,30 hs. del viernes 15 de marzo, lo que muestra a las claras, por la celeridad de la misma, que se trató de un nuevo hecho de persecusión política, desarmada por la contuntencia del sinnúmero de mails y llamadas telefónicas de organismos y personas del mundo entero reclamando a la Subsecretaría de DDHH de la Nación, dependiente del Ministerio del Interior, una investigación profunda y duradera de los hechos. La prensa del sábado, incluído El Liberal, no hace mención de la libertad.</p><p>Pone la versión del Sub jefe de policía de Monte Quemado Apolo Silva, quien fue el único que se identificaba, aunque nunca monstró ninguna orden escrita. Poco a poco estamos consiguiendo la identidad de los otros 14 vestidos de policías y de dos civiles con ametralladoras.</p><p>2- Durante el procedimiento golpearon a mujeres, amedrentaron a niños y ancianos, hicieron disparos al aire para intimidar a toda la población circundante, rodearon a punta de armas los ranchos de las familias campesinas, entraron a golpes sin exhibir ninguna orden y revolvieron los bienes del interior de la casa sin ningún respeto por la intimidad de las personas.</p><p>3- Violaron de forma sistemática los derechos del niño contemplada en la Declaración Universal de los Derechos Humanos aprobada y ratificada año a año por la ONU, la OEA y asumida por los países miembros. Por una causa civil (como se trata de una disputa de posesión versus titulo de dominio), actúo un juez penal (incompetente)...</p><p>Han dejado una secuela de miedo, dolor, llanto y rabia en los niños, puesto que acturon innecesariamente con total violencia.</p><p>4- Fueron 17 personas las que realizaron el operativo de terror de estado, dos de las cuales estaban vestidas de civil y con ametralladoras, llegando violenta y sorpresivamente en dos vehiculos de Pereyra, en este caso los &quot;Terratenientes&quot; de turno.En los mapas catastrales figura la visabuela de las familias violentadas.</p><p>5- Fueron trasladados hasta la comisaría Nº 22 de Monte Quemado, en el Dpto. Copo de nuestra golpeada provincia en un Camión de supuesta propiedad del ex Intendente de Monte Quemado y actual Diputado Provincial Elías Hassam, conocido por la extracción de maderas y destrucción de partes de la Reserva Nacional del Parque de Copo.</p><p>6- Durante todo el día viernes llovieron mails y llamadas telefónicas de organismos del mundo entero, lo que fue torciendo la ideologízada versión, que hace aparecer como delincuentes a campesinos que no tienen ningún antecedente y son reconocidos por todas las comunidades y parajes de la región como personas de bien, de producción y trabajo. Nobles, idóneos y constantes en el derechos a organizarse con objetivos justos, libres, legítimos y humanistas.7- Los mantuvieron detenidos por más de 24 hs. en una pieza cerrada y sin ventilación. No se les proveyó ni de agua.</p><p>8- Técnicamente tendrían que haber sido trasladados a declarar delante del Juez Ibáeñez el lunes por la mañana. Sin embargo, pasando por arriba de toda reglamentación, los pusieron en libertad sin declarar. Otra muestra de que es una decisión política perversa y no una orden judicial.</p><p>9. Había policías de Quimilí. Se pretende mandar todo un mensaje a la conducción, a los miembros del MOCASE y a la población. &quot;Estamos en guerra total contra quien se rebele contra el poder establecido&quot;</p><p>10. El mismo día, el Juez García de Añatuya, multa a abogados del MOCASE, por una supuesta falta de respeto a su investidura, en un supuesto escrito. Dos acciones directas contra el MOCASE en el mismo día, lo cual habla de una acción diseñada y coordinada por los mismos autores ideológicos: EL genocida Muza Azar. Una vez hecho el recorrido de nuestro contrataque sobre los Hechos de Las Lomitas, solicitaremos nuevos mensajes de repudio al accionar del Juez García de Añatuya, quien detuvo el 5 de diciembre a 8 miembros del MOCASE, entre los que se encontraba un menor de 11 meses. Hay que prepararse para exigir a Fappiano una acción directa contra esos policías, el Juez Ibáñez y el Juez Gracía, que han respondido al mandato de alguna orden de arriba...</p><p>Como el hecho de Las Lomitas tiene un alto cúmulo de desprolijidades jurídicas y de alta violencia ilegal e ilegítima (aún cuando la orden hubiera existido) en el prodedimiento de detención. Hay que inmovilizar a los estrategas exigiendo que esos policías sean indagados, detenidos por su propio accionar (más allá de la orden técnica de detener, la orden no puede violar los derechos y garantías de las personas) para que declaren si actuaron por su propio desequilibrio sicológico, o por un &quot;montaje&quot; de escena preparado y ensayado para dejar una secuela de miedo y aleccionadora sobre toda aquella persona que se atreva a reclamar organizadamente sus legítimos derechos...</p><p>hágase correr por las redes de solidaridad del mundo entero.</p><p>Secretaría de comunicación del MOCASE ( Santiago del Estero)</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_020315liberancampesinosMOCASE.htm" download>Descargar el archivo original</a> (docs_020315liberancampesinosMOCASE.htm).</footer>
+</div></body></html>

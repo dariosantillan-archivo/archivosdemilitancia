@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>El movimiento: es la herramienta de organización del pueblo. Desde allí el pueblo encara sus luchas reivindicativas</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2002-apuntes-pablo.html">&larr; 2001-2002 — Apuntes y opiniones</a>
+<h1>El movimiento: es la herramienta de organización del pueblo. Desde allí el pueblo encara sus luchas reivindicativas</h1><p class="ficha-doc">Fecha: 15 de agosto de 2002 (aprox.) <span class="sep">|</span> 591 palabras</p></header>
+<main class="texto"><p>El movimiento: es la herramienta de organización del pueblo. Desde
+allí el pueblo encara sus luchas reivindicativas, sus anhelos de
+transformación social, se expresa culturalmente, etc. Podemos decir
+que aspiramos a que el movimiento sea el pueblo organizado. Cuando
+decimos que la herramienta de organización del pueblo es el
+MOVIMIENTO, estamos diciendo que no lo es el PARTIDO, ni el
+SINDICATO, ni la ORGANIZACIÓN. Aunque existen partidos, sindicatos y
+organizaciones de carácter popular y que defienden consecuentemente
+los intereses del pueblo, incluso en una perspectiva revolucionaria,
+consideramos que son herramientas insuficientes para expresar la
+riqueza y potencialidad de la fuerza del pueblo, y en algunos casos,
+más allá de las declamaciones y propósitos, objetivamente son
+herramientas que enajenan del pueblo su capacidad de acción, de
+creación y elaboración política, poniéndose en un lugar de
+reemplazo de las masas.</p><p>El movimiento, por lo tanto, es de carácter popular; abierto,
+democrático. Aun así, el movimiento como forma de organización
+popular, debe definir su orientación, sus objetivos, sus
+metodologías.</p><p>Sus objetivos: perseguimos el cambio social, lo que en buen
+romance quiere decir REVOLUCIÓN. Esa revolución tiene como objetivo
+acabar con la explotación del hombre por el hombre, es decir, el
+CAPITALISMO, y construir una nueva sociabilidad, donde primen la
+igualdad y la justicia, es decir el SOCIALISMO. Esta lucha
+revolucionaria tiene su batalla cotidiana en el enfrentamiento a los
+valores individualistas, jerárquicos, etc, y en la puesta en
+práctica de la solidaridad, el compromiso, la entrega. Esta idea la
+expresa mejor la frase &quot;puesta en práctica y construcción de
+nuevas formas de socialismo&quot;, para despegar de la noción
+clásica del socialimso vinculada a las experiencias del siglo XX de
+las que tomamos distancia. Esta concepción del socialismo que puede
+empezar a construirse aquí y ahora cambia el eje de gravitación de
+la estrategia revolucionaria, descentrándolo del eje TOMA DEL PODER
+DEL ESTADO-HERRAMIENTA PARA LA TOMA DEL PODER, VANGUARDIA, al eje
+CONSTRUCCIÓN COTIDIANA DE UNA NUEVA SOCIABILIDAD NO
+CAPITALISTA-MOVIMIENTO COMO HERRAMIENTA PARA ESA CONSTRUCCIÓN.</p><p>Su organización: los criterios de AUTONOMÍA, HORIZONTALIDAD,
+DEMOCRACIA DIRECTA, se imponen con fuerza. Por antagónicos tienen a
+la idea de SUBORDINACIÓN, JERARQUÍA, REPRESENTACIÓN. Esto cobra
+una relevancia especial por la carga de frustraciones que décadas de
+experiencias de centralización organizativa, liderazgos y
+vanguardias generaron en el pueblo y los sectores más autocríticos
+de la militancia popular. Sobre cómo madurarán estos criterios en
+la medida que el proyecto crezca y que los sectores populares busquen
+seguir creciendo, es un sendero desconocido, y asumimos el desafío
+de hacer camino al andar. Lo cierto es que lo recorrido en los
+últimos tiempos ratifica la certeza de esta línea de organización
+y el estancamiento y escasa incidencia de quienes se obstinan en
+organizarse en base al centralismo democrático en la construcción
+de organizaciones externas al movimiento de masas.</p><p>Sus métodos de lucha: la concepción de que se acumula
+fuerzas y consciencia en las masas en base a la confrontación con el
+enemigo, que no hay avance de la consciencia sin práctica que la
+sustente, llevó a que la lucha contra el sistema se exprese en
+formas concretas de antagonismo social, como los cortes de ruta. Por
+otra parte, esto es inmanente a un movimiento de masas: no hay forma
+de madurar un movimiento de masas si no es a través de la práctica.
+La búsqueda de la construcción de la nueva sociabilidad en el
+devenir cotidiano, lleva a que el TRABAJO se convierta en un eje de
+lucha, al igual que EL PIQUETE. El trabajo libre en función de una
+economía solidaria, no capitalista, blabla</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../APUNTES DE AGOSTO.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (APUNTES DE AGOSTO.pdf).</footer>
+</div></body></html>

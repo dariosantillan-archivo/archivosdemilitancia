@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Campaña de denuncias, difamación y represión: sobre los piqueteros</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Campaña de denuncias, difamación y represión: sobre los piqueteros</h1><p class="ficha-doc">Fecha: 9 de agosto de 2001 <span class="sep">|</span> 1.629 palabras</p></header>
+<main class="texto"><p>Campaña de denuncias, difamación y represión</p><p>sobre los piqueteros:</p><p>¿Dónde apunta la estrategia del gobierno?</p><p>En momentos en que se desarrollaban los cortes de ruta por 48 hs en todo el país, los distintos movimientos de desocupados y sectores en lucha estamos sufriendo la profundización de una ofensiva perfectamente planificada por el gobierno para aislar políticamente, demonizar socialmente y reprimir con impunidad la creciente resistencia popular, respondiendo así servilmente a la voracidad del poder económico que reclama más muertes, por desnutrición</p><p>de nuestros pibes o por las balas de la gendarmería ante las mejores expresiones de resistencia de nuestro pueblo.</p><p>Esta ofensiva se desarrolla en distintos planos: aislamiento político, presión económica, desarticulación organizativa y represión. Cada uno de los resortes del poder juega su rol en esta estrategia: los medios de comunicación, es decir, los medios de expresión de las grandes corporaciones económicas que los manejan (como el Grupo Clarín) o los voceros tradicionales de la oligarquía y el poder económico (como La Nación, ahora Radio 10, Ämbito Financiero), vienen haciendo lo suyo con precisión y esmero: demonizar al movimiento de desocupados en lucha, vincular al piquetero con el delito, resaltar los perjuicios de los cortes de ruta, etc, y en ningún caso &quot;recordar&quot; la justeza de los reclamos que originan estas crecientes luchas. Sobre esta base que hace tiempo se viene desarrollando, ahora el gobierno avanza con el &quot;cerco económico&quot; y el intento de &quot;desarticulación organizativa&quot; de los movimientos de desocupados: ese es el objetivo de la campaña de &quot;denuncias&quot; dadas a conocer el lunes 6 de agosto por la Ministra de Trabajo en conferencia de prensa: se acusa a los movimientos de desocupados de &quot;coaccionar&quot; sobre los beneficiarios de los planes de empleo para ir a los cortes de ruta, y basta una denuncia en ese sentido (sea cierta o no), para que el ministerio &quot;retire los proyectos del control de los responsables de esas irregularidades&quot;. La estrategia se completa, obviamente, con la represión, que será aplicada a todo aquel que se revele ante cada uno de los zarpazos que el gobierno sigue haciendo día a día sobre las conquistas y derechos de los trabajadores, ocupados o desocupados. Y mucho más encarnizada y brutal será la represión cuanto más hayan logrado previamente desprestigiar la lucha y los movimientos en lucha, y debilitar sus organizaciones por las pernanentes presiones sobre la continuidad de los planes, como pasó la semana pasada con el MTR en La Plata.</p><p>Seguramente el aspecto menos conocido de esta estrategia sea la presión económica y el debilitamiento organizativo que el gobierno busca generar a través de la creciente campaña de &quot;denuncias masivas&quot; lanzadas en contra de los movimientos de desocupados. Veamos:</p><p>&quot;Vamos a alentar el surgimiento de organismos autónomos que administren los planes de empleo, para cortar la corrupción de la mayor parte de los Municipios, que roban subsidios, y usan a la gente de los planes para sus actos partidarios&quot;.</p><p>Este espíritu &quot;progresista&quot; era expresado por el Gerente del Area de empleo del conurbano bonaerense del Ministerio de la Nación, apenas la Alianza asumió el gobierno en diciembre de 1999.</p><p>Así fue que, por medio de asociaciones civiles, los movimientos de desocupados, en muchos casos, elaboramos proyectos productivos, microemprendimientos, y a fuerza de movilizaciones y cortes de ruta, íbamos negociando la incorporación de beneficiarios a los proyectos que nosotros elaborábamos, administrábamos y llevábamos a cabo con autonomía del poder municipal.</p><p>Así, poníamos en marcha pequeñas panaderías familiares y talleres de herrería, consturíamos salones comunitarios, hacíamos mejoras para el barrio, dábamos alfabetización y educación para adultos, en contraste con poner a 20 personas a barrer una vereda o a pintar cordones, como suelen hacer los municipios con los planes que ellos administran.</p><p>Esta labor comunitaria fue la que generó el prestigio del que hoy gozamos en los barrios los movimientos de desocupados.</p><p>Pero claro, como estos desocupados habíamos conseguido una posibilidad de empleo, aunque sea miserables 160 pesos, por medio de la lucha, sabíamos que sólo así lograríamos las renovaciones, y nuevas incorporaciones de compañeros sin trabajo.</p><p>Por eso, empujados por la crisis social, nuestros movimientos se constituyeron en una escuela de lucha, resistencia y dignidad.</p><p>A la vez, la solidaridad ante luchas en las que nos veíamos reflejados y que eran salvajemente reprimidas, como en Mosconi, fueron acelerando el necesario proceso de unidad, que llevó hace pocos días al primer encuetro nacional &quot;piquetero&quot;, que reclamaba como puntos centrales la liberación de los presos por luchar y la derogación del nuevo ajuste.</p><p>Tardaron poco los funcionarios del ministerio de trabajo en ir perdiendo el &quot;progresismo&quot; inicial: había que anular el desarrollo social y político de los movimientos de desocupados, era preferible volver a la corrupción e inutilidad social de la partidocracia en el manejo de los planes, a que nuestros movimientos &quot;piqueteros&quot; se transformen en referencia de lucha para todo el pueblo.</p><p>Acuerdo entre el Gobierno de De la Rua y los Gobernadores e Intendentes del PJ para aniquilar los movimientos de desocupados.</p><p>Las declaraciones de la Ministra de Trabajo fueron claras: &quot;se les quitará el control de los planes a quienes se les comprueben irregularidades por presionar a la gente para que vaya a los cortes de ruta, sin afectar a los beneficiarios. La sanción será contra quienes los administran&quot;.</p><p>El acuerdo y la puesta en marcha de esta parte del plan, ya estaban definidos: los intendentes (la gran mayoría del PJ) se encargarían del trabajo sucio, es decir, generar un clima hostil en los barrios donde se desarrollan los movimientos de desocupados, e incitar, fomentar o directamente inventar las denuncias, que darían pie a las acciones del Ministerio de Trabajo, para que &quot;anule&quot; la gestión de los planes por medio de los organismos intermedios vinculados a los movimientos de desocupados.</p><p>El &quot;premio&quot; que se ganan de esta forma los intendentes, sería el &quot;traspaso&quot; de beneficiarios al control del municipio, con lo que, además de debilitar la estructura organizativa y el trabajo comunitario de los movimientos de desocupados, podrían seguir echando personal no docente de las escuelas, o de mantenimiento en los hospitales, y reemplarlo por encargados, cocineras o electricistas que trabajan por 160 pesos en un plan, sin estabilidad, obra social, aguinaldo</p><p>ni vacaciones... Menos organización popular, más despedidos, más precarización laboral... Pero, les va a resultar así de fácil? No, habrá resistencia, fuertes luchas por parte de los movimientos de desocupados, y sabemos que seguirá la campaña de desprestigio, aislamiento y represión...</p><p>Tampoco es seguro que el Gobierno tenga todas las de ganar en una coyuntura en la que pocas cosas pueden predecirse en cuanto al desarrollo del conflicto social...</p><p>Pero, de dónde surgen las denuncias contra los piqueteros? ¿Los vecinos se ven obligados a ir a los cortes de ruta?</p><p>Desde el sentido común, cabría preguntarse cómo podrían ser obligadas diez mil personas a movilizarse en La Matanza, o cómo explicar que la heroica resistencia del pueblo de Mosconi, enfrentando con gomeras o con la virgen a una gendarmería militarizada y dispuesta a matar, puediera haberse dado bajo &quot;coacción&quot; por parte de la UTD sobre el conjunto del pueblo.</p><p>Pero aún así, veamos las denuncias: en el MTD de Lanús, desde hace una semana se viene preparando esta situación: una denuncia &quot;trucha&quot; redactada por la directora de empleo en un despacho municipal con membrete municipal, y llevada a los barrios para &quot;juntar firmas&quot; bajo versiones de desarticulación del MTD por medio de encarcelamientos e intervenciones ministeriales, fue la forma en que el PJ juntó unas pocas firmas a modo de denuncia, y que fue presentada en el Ministerio de Trabajo. Así de sucia, torpe y grotesca es la campaña originada por el &quot;pacto de gobernabilidad&quot;, es decir, enfrentar juntos al pueblo que lucha, que tejieron el Gobierno Nacional con el PJ.</p><p>Desde el lugar en el que estemos, siempre se puede aportar...</p><p>A romper el aislamiento de los sectores en lucha,</p><p>Clarificar la confusión, difamación y &quot;demonización&quot; oficial sobre la lucha popular,</p><p>Denunciar estas maniobras, así como la persecución y represión en cualquiera de sus formas sobre cualquiera de los sectores en lucha.</p><p>TRABAJO, DIGNIDAD Y CAMBIO SOCIAL</p><p>- M.T.D. Lanús -</p><p>En la Coordinadora de Trabajadores Desocupados ANIBAL VERON.</p><p>TE: 4- 230- 8357</p><p>Iniciamos esta juntada de firmas para ejercer un amplio marco de &quot;presión política&quot; que acompañe nuestras luchas zonales, con esta solicitada que será publicada en los medios locales. Agradecemos a quienes puedan confirmar su adhesión.</p><p>Al Sr. Intendente de Lanús</p><p>Don Manuel Quindimil:</p><p>Nos dirigimos a Usted para transmitirle nuestra preocupación por la campaña de difamación, persecuciones y denuncias lanzadas por altos funcionarios de su gobierno municipal en contra del Movimiento de Trabajadores Desocupados de Lanús.</p><p>Tomamos conocimiento de falsas denuncias de supuestos vecinos, que en realidad fueron redactadas en el despacho de la Directora de Promoción y Asistencia Social, Sra. Mónica Berutti, en hojas con el membrete oficial del Municipio de Lanús; y posteriormente, en el Polideportivo de Monte Chingolo, el Sr. Omar López, director de Deportes y su responsable político en la zona, incitaba a vecinos que participan del Movimiento a firmar dichas denuncias bajo engaño, ya que decía que era para anotarse en planes de empleo estables, porque el Movimiento de Trabajadores Desocupados sería desarticulado por el Municipio y sus referentes encarcelados.</p><p>Ante la ola de persecuciones y encarcelamientos que impulsa el Gobierno Nacional contra quienes luchan por trabajo y dignidad, le solicitamos aclare Usted en forma personal y pública esta situación, desautorizando a los funcionarios mencionados, y reconociendo la importante labor social que se realiza desde el Movimiento de Trabajadores Desocupados, y que Usted conoce.</p><p>Demás está aclarar que si esto no sucediera, hacemos responsable a Usted de la continuidad de los Planes de Empleo que gestiona con responsabilidad dicho Movimiento, así como de la integridad física y seguridad de sus referentes</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_010809campañadenuncias.htm" download>Descargar el archivo original</a> (articulo_010809campañadenuncias.htm).</footer>
+</div></body></html>

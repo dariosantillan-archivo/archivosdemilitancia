@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Organización de base del MTD: el barrio</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2002-apuntes-pablo.html">&larr; 2001-2002 — Apuntes y opiniones</a>
+<h1>Organización de base del MTD: el barrio</h1><p class="ficha-doc">Fecha: 21 de septiembre de 2001 (aprox.) <span class="sep">|</span> 580 palabras</p></header>
+<main class="texto"><p>Organización de base del MTD: el barrio.</p><p>El MTD se organiza, principalmente, en los
+barrios. Allí se encuentran los trabajadores y trabnajadoras
+desocupados y desocupadas, los jóvenes, y los chicos que participan
+de nuestro movimiento. Por eso es fundamental organizarnos bien desde
+la base. En forma democrática, participativa, aútónoma, y a la vez
+ágil para la lucha.</p><p>Asambleas: son el lugar donde el conjunto de
+los compañeros se reúne para discutir los problemas, informarse, y
+tomar las decisiones que sean avaladas por la mayoría. Semanal</p><p>Dentro del barrio: la organización por
+delegados de grupo de trabajo. En la medida en que los planes de
+trabajo así lo permitan, debemos mantener y consolidar este esquema
+organizativo</p><p>Cuerpo de delegados: reunión semanal de los
+delegados de cada grupo del barrio, con los responsables del barrio.</p><p>Responsables o coordinadores de barrio:
+compañeros que tengan la capacidad organizativa, legitimidad y
+respeto del resto de los compañeros.</p><p>Integrantes de áreas: al menos un compañero
+de cada barrio deberá integrar algunas áreas, que son de
+importancia estratégica para el movimiento, como ser Seguridad,
+Administración, Productivos</p><p>Por lo tanto, cada barrio deberá tener, de
+mínima:</p><p>Una asamblea semanal, con fecha y hora fija y
+por todos conocida</p><p>Una reunión de delegados, semanal, con fecha y
+hora fijas</p><p>Dos coordinadores de barrio</p><p>Un responsable de: Seguridad, Administración,
+Productivo</p><p>Barrios grandes: en caso de barrios con mucha
+participación, como la fe, convendrá desdoblar las asambleas, por
+ejemplo, por turno de trabajo.</p><p>La organización del MTD a nivel local:</p><p>En la zona de Monte chingolo, lanús, el MTD
+está desarrollado en tres barrios. Por lo tanto, hay tareas que son
+generales y van más allá de cada barrio. Esto no tiene que hacer
+perder de vista el carácter democrático de las instancias
+organizativas y la participación de todos en las tomas de
+decisiones:</p><p>Asamblea General: se convoca por motivos
+extraordinarios, como previo a una movilización de importancia, a
+alguna jornada colectiva, o para tomar decisiones de urgencia que
+requieran indefectiblemente la participación activa de todos (como
+cuando nos hicieron las denuncias, o cuando decidimos la movilización
+a lanús). En la práctica, esto se da cada mes/mes y medio.</p><p>Areas de interés general: Administración</p><p>Productivos (integrada por al menos un
+responsable de cada barrio)</p><p>Seguridad</p><p>Finanzas</p><p>Infraestructura / Logística</p><p>Formacíon</p><p>Legal</p><p>Relaciones de coordinación /
+Institucionales</p><p>Prensa</p><p>Estas áreas desarrollan tareas de organización
+del conjunto del movimiento, por lo tanto, su responsabilidad está
+por encima del barrio al cual el compañero responsable pertenece. Lo
+ideal es que cada barrio tenga algún responsable en cada área, pero
+de mínima, cada área debe tener un responsable general que
+garantice su puesta en marcha y funcionamiento.</p><p>Mesa de coordinación general: se reúne como
+mínimo una vez por semana. Está integrada por: los coordinadores de
+barrio y los responsables de área. Así, contando con dos
+responsables por barrio y uno por área, estaríamos hablando de 15
+compañeros con responsabilidad, como base.</p><p>Mesa de coordinación general</p><p>Barrio la fe</p><p>Asamblea de barrio:</p><p>Turno Mañana:</p><p>Turno Tarde:</p><p>Reunión de delegados:</p><p>Coordinadores de barrio:</p><p>Responsable admin.</p><p>Respons. Segurid.</p><p>Respons. prod</p><p>Barrio Urquiza</p><p>Asamblea de barrio:</p><p>Reunión de delegados:</p><p>Coordinadores de barrio:</p><p>Responsable admin.</p><p>Respons. Segurid.</p><p>Respons. prod</p><p>Barrio la torre</p><p>Asamblea de barrio:</p><p>Reunión de delegados:</p><p>Coordinadores de barrio:</p><p>Responsable admin.</p><p>Respons. Segurid.</p><p>Respons. prod</p><p>Area Administrativa:</p><p>-</p><p>-</p><p>-</p><p>Seguridad: -</p><p>-</p><p>-</p><p>Productivo: -</p><p>-</p><p>-</p><p>Formación: -</p><p>Finanzas: -</p><p>Infraestructura -</p><p>Legal -</p><p>Prensa -</p><p>Coordinación/Institucionales</p><p>-</p><p>Lugar, fecha y horario</p><p>Lugar, fecha y horario</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../Organización de base del MTD.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (Organización de base del MTD.pdf).</footer>
+</div></body></html>

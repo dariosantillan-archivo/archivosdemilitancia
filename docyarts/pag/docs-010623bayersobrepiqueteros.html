@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Los héroes y los maulas: por Osvaldo Bayer</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Los héroes y los maulas: por Osvaldo Bayer</h1><p class="ficha-doc">Fecha: 23 de junio de 2001 <span class="sep">|</span> Publicado en Página/12 <span class="sep">|</span> 1.117 palabras</p></header>
+<main class="texto"><p>Página 12; 23/6/2001</p><p>Los héroes y los maulas</p><p>Por Osvaldo Bayer</p><p>Los argentinos estamos asistiendo a un capítulo de la historia obrera que nos transporta a las décadas más heroicas de las luchas de los hombres y mujeres del trabajo. ¡Ahh! Dirán fastidiados señores y señoras apoltronados en sus lecturas diarias, ¡si estamos en pleno período de la globalización! Sí, oh sorpresa, en pleno período de globalización surgen de pronto los piqueteros. Hermoso nombre, piquetero, que contiene estoicismo, coraje, justicia. Ya en esas tierras salteñas hay hombres de la calle que se han puesto al frente, como los nuevos Hijos del Pueblo -aquellos héroes que eran cantados por las canciones anarquistas de principios de siglo–. Salen con sus mujeres y niños para decir: aquí estamos, existimos, queremos dignidad, no tenemos nada, sólo las manos limpias y las piedras –como los héroes de la Revolución Francesa– para enfrentar al poder ladrón, egoísta, mezquino, criminal, de los funcionarios de turno que defienden el sistema con diversos discursos, mímicas, y siempre el garrote escondido.</p><p>Piqueteros, el hermoso nombre. Hijos de la tierra, hablan en norteño y tienen el rostro del suelo fértil. Piqueteros; no tienen nada, pero el alma grande y el pecho abierto. Y justo hoy la historia se repite. Como en el ‘21, con los gauchos patagónicos, a caballo y con sus banderas de Tierra y Libertad, y como los hombres del quebracho, también en el ‘21, o los hombres de las calles de la Semana Trágica, que cayeron pero consiguieron las ocho horas de trabajo. Y justo como hoy, los radicales en el poder, con mucha palabra de equidad y democracia en los labios, pero prontos a arrasar a tiro limpio el pedido de justicia de los de abajo.</p><p>Hoy se tiene y se usa a la Gendarmería Nacional. Cuando se sospecha de alguna protesta en el interior del país, ahí está de inmediato la Gendarmería. Con sus bocas de fuego, sus gases lacrimógenos, sus balas de goma. Es un cuerpo de represión contra los movimientos populares. Su historia comienza con la llamada Gendarmería volante, que creara Yrigoyen para enviar a Santa Cruz y reprimir las huelgas de las peonadas patagónicas. Por supuesto, luego tuvieron que mandar al ejército, porque la conducta de tal Gendarmería fue bochornosa. El archivo de la Justicia está lleno de crímenes y robos cometidos por la soldadesca. Los radicales también organizaron la Gendarmería volante para la represión de los hacheros de La Forestal en el norte santafecino. Sobre los crímenes y torturas cometidas contra los obreros, la historia ha dado su testimonio.</p><p>Ahora se ha repetido la historia. El radical secretario de Seguridad actual, doctor Mathov, dijo que los piqueteros eran unos &quot;asesinos&quot;. Nos da lástima mencionar tanto cinismo. Claro, siempre conviene acusar a los que no tienen poder. En cualquier otra latitud, el señor Mathov ya estaría destituido y con un juicio por calumnias e injurias. Aquí se pone presos a los que piden pan como Alí. La de Mathov fue una avivada para ganar la batalla de la información. Más cuando lo mismo fue corroborado por el ministro del Interior, señor Mestre, quien calificó a los rebeldes de &quot;delincuentes&quot;. Así de sencillo. No, no se averigua por qué esa gente salió a la ruta en medio del frío y las balas. No, desde ya, por protestar son delincuentes, asesinos. Es que son pobres y, además, lejanos. Es que nuestros funcionarios han aprendido las leyes en el comité. Hay que encontrar justo el pretexto para zafar. Por ejemplo, el ministro Mestre cuando recibió a Hebe de Bonafini, y ésta le denunció lo que desconocidos habían hecho con su hija, el inefable ministro, respondió: &quot;no es mi jurisdicción, señora&quot;. Claro, lo mismo declaró Poncio Pilatos. Un hombre con conciencia de la moral y la justicia podría haber respondido por lo menos: &quot;señora, ya mismo me pongo en contacto con el gobernador Ruckauf para ofrecerle mi colaboración y hacer las investigaciones hasta llegar a apresar a los torturadores&quot;. No, claro, si no es de su jurisdicción, para qué. Además sería meterse con la propia gente de uno, con la mano de obra desocupada-ocupada. En cambio, eso sí, con los piqueteros todo el rigor, aunque estén en Salta, en una jurisdicción en la cual que cada uno se arregle como pueda. Tierra de nadie. O mejor dicho del gobernador Romero,que ha superado todo lo creíble. En el tratamiento de un tema que le corresponde directamente, él no habla con gentuza de las carreteras, son todos comunistas. Romero parece cortado por la misma tijera que aquellos gobernadores del tiempo de la Década Infame. Para los amigos, todo; para los rebeldes que exigen pan y trabajo, que vayan a pedírselos a la Gendarmería. Porque son sediciosos, extranjeros, pagados no se sabe por quién. Además de ser el dueño de la provincia, Romero es el patrón. Pero tal vez quien produjo el análisis más portentoso de toda esta crisis argentina fue la ministra de Trabajo, Patricia Bullrich. Dijo que ella no tenía ningún problema en Salta porque su ministro había pagado todos los planes Trabajar. Claro, los demás, que arreen. La burocracia cumplió, los demás que se busquen soluciones, pero nada de piquetes. Creemos que en cualquier país civilizado, el ministro de Trabajo, por razones de humanidad, se hubiera trasladado al lugar de la crisis, hubiese conversado con la gente, ver las probabilidades de legítimas fuentes de trabajo. Exigir de su propio gobierno todo un plan para toda esa gente que también es argentina. No, pero claro, si se cumplió con el Plan Trabajar, para qué más. Eso es lo que se llama burocracia a la suprema. (Qué le dirías Patricia a Rodolfo Walsh si te encontraras con él, tú que tanto lo admiraste en otras épocas, le dirías algo así como &quot;a los del Plan Trabajar, todo, a los de manos vacías, nada).</p><p>Las Madres de Plaza de Mayo y los organismos de derechos humanos fueron a estrechar en un abrazo a los piqueteros y a sus familias en medio del frío y la soledad. Fue la respuesta de la dignidad ante el egoísmo y la estupidez. Y la amenazante represión de los bien alimentados argentinos uniformados.</p><p>En medio de las inmensidades del desierto patagónico se levanta en Santa Cruz el monumento a Facón Grande, el gaucho entrerriano, piquetero eterno de los derechos del trabajador. Lo fusiló el ejército radical. Los políticos de Buenos Aires creyeron que guardando silencio y haciéndose los sordos la cosa iba a ser olvidada. No fue así. Como los piqueteros salteños pasarán a la historia regional como vigías del progreso, como representantes de la protesta y desnudadores de la burocracia de los pequeños políticos con su moral nacida en los comités.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010623BAYERsobrepiqueteros.htm" download>Descargar el archivo original</a> (docs_010623BAYERsobrepiqueteros.htm).</footer>
+</div></body></html>

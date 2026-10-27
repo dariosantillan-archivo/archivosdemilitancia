@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Marchamos al Ministerio de Trabajo: los Trabajadores Desocupados no aguantamos más</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Marchamos al Ministerio de Trabajo: los Trabajadores Desocupados no aguantamos más</h1><p class="ficha-doc">Fecha: 16 de marzo de 2000 <span class="sep">|</span> 680 palabras</p></header>
+<main class="texto"><p>16-03-2000</p><p>Comunicado de prensa</p><p>MARCHAMOS AL MINISTERIO DE TRABAJO</p><p>Los Trabajadores Desocupados no aguantamos más...</p><p>EL JUEVES 16 DE MARZO MARCHAMOS AL MINISTERIO DE TRABAJO A PARTIR DE 11:00 hs</p><p>Desde el mes de diciembre del año pasado que los desocupados de distintos municipios del Gran Buenos Aires venimos padeciendo mentira tras mentira de parte de los funcionarios del ministerio de Trabajo, y decimos BASTA!!!</p><p>Ante la grave situación de hambre y miseria que como parte de este pueblo postergado venimos padeciendo, y ante la incertidumbre de la continuidad de los Planes Transitorios de Empleo que aplicó el anterior gobierno para aplacar el descontento social, el 13 de diciembre pasado 300 desocupados de distintos municipios del Gran Buenos Aires nos movilizamos al Ministerio de Trabajo, reclamando la continuidad de los Planes y la incorporación de 300 nuevos desocupados a estos planes de empleo. Desde entonces, fuimos víctimas del engaño, el manoseo y la mentira por parte de la Sra. Graciela Rochi primero, el responsable de la Gerencia del Conurbano Bonaerense, sr. Alberto Briosso después, y de distintos funcionarios que se turnaban para desentenderse de los compromisos asumidos el día de nuestra movilización.</p><p>Desde entonces, cumplimos con todos los requisitos solicitados, teniendo por respuesta final el engaño y el desprecio.</p><p>Se nos pidió que presentásemos proyectos de trabajo, avalados por alguna Asociación Civil y por personal técnico capacitado; juntando peso sobre peso tramitamos las personerías jurídicas (sólo este trámite nos costó 135$), conseguimos los avales necesarios, y cumplimos con los plazos de las presentaciones.</p><p>La Sra. Graciela Rocchi nos dijo que a mediados de Febrero contaríamos con asistencia técnica y con la aprobación de, por lo menos, la mitad de los proyectos acordados: para 150 desocupados.</p><p>Cumplimos con esa presentación, no se nos asesoró, y en cambio se nos pidió que, de los 150, marquemos la mitad &quot;de mayor urgencia&quot;. ¡Como si entre quienes nos postulamos para trabajar por 160 pesos hubiera alguno sin &quot;urgencia&quot;! Aún sintiéndonos burlados, cumplimos con ese requisito, a la espera de ver aprobados al menos 80 puestos para principios de marzo.</p><p>A principios de marzo se nos informa que, en total, habían aprobado sólo 3 proyectos, para 30 personas: 20 correspondientes al Municipìo de Florencio Varela, y diez a Lanús. Nuestra indignación fue creciendo, y la bronca también.</p><p>Aún así, cumplimos con la presentación de los últimos requisitos para que al menos esos 30 desocupados, de los 300 acordados en diciembre, empezaran a trabajar en marzo. En el momento del inicio, nos informan, con cara de piedra y total desprecio por la gente, que el proyecto ya aprobado para Lanús finalmente no saldría. Sin más explicaciones.</p><p>Y el colmo de las mentiras y el desprecio por los humildes: nos dicen que presentemos los proyectos nuevamente hasta el 10 de marzo, y cierran la recepción de proyectos dos días antes, el 8 de marzo.</p><p>Nos cuesta realizar cada viaje desde el gran Buenos Aires hasta el ministerio en Capital, y lo hicimos decenas de veces. Nos cuestan los trámites burocráticos, y cumplimos con todos y cada uno de los que pidieron.</p><p>Sabemos que aplicaron la misma metodología de la mentira y el engaño hacia las organizaciones independientes de desocupados, privilegiando, al igual que el gobierno anterior, la estructura política para manejar los Planes de Empleo como prebenda y acuerdos políticos. Esto pasa en cada uno de nuestros municipios.</p><p>Pero nos estamos cansando. Como desocupados, no tenemos nada que perder, sólo nos queda seguir luchando por la dignidad para nuestras familias y nuestros hijos. Estos señores que gobiernan engañando a la gente deberían recordar que nuestra paciencia tiene un límite.</p><p>Los proyectos fueron recibidos en el mes de febrero con los números:</p><p>07, 08, 09, 16, 25, 27, 35, 36, 37, 38, 39, 40, 41, 42</p><p>Movimiento de Trabajadores Desocupados &quot;Teresa Rodriguez&quot; de Varela</p><p>Movimiento de Trabajadores Desocupados &quot;Teresa Rodriguez&quot; de Solano, Quilmes</p><p>Comisiones Vecinales de los Barrios &quot;La Fe&quot; y &quot;Villa Ofelia&quot;, Monte Chingolo, Lanús.</p><p>Comisión de Trabajadores Desocupados del Barrio Km 35, La Matanza</p><p>Agradecemos su interés y difusión. Tel. 15- 4082- 8140 15- 4485- 8147</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_000316marchaministerio.htm" download>Descargar el archivo original</a> (docs_000316marchaministerio.htm).</footer>
+</div></body></html>

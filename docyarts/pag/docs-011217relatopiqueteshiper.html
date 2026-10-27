@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Un relato del piquete masivo: frente a cuatro hipermercados en Quilmes,</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Un relato del piquete masivo: frente a cuatro hipermercados en Quilmes,</h1><p class="ficha-doc">Fecha: 17 de diciembre de 2001 <span class="sep">|</span> Publicado en Rebelión <span class="sep">|</span> 719 palabras</p></header>
+<main class="texto"><p>17 de diciembre de 2001</p><p>Un relato del piquete masivo</p><p>frente a cuatro hipermercados en Quilmes,</p><p>dos dias antes de la rebelion popular del 19 y 20 de diciembre</p><p>El lunes 17, la CTD (Coordinadora de Trabajadores Desocupados) Aníbal</p><p>Verón, realizó un corte de ruta en un lugar verdaderamente estratégico:</p><p>varias de las largas cuadras de la Avenida Calchaquí, en Quilmes, provincia</p><p>de Buenos Aires. Este corte implicó paralizar la actividad no sólo de una</p><p>ruta provincial y una nacional (para reclamar el pago de los Planes Trabajar</p><p>de provincia y nación), sino también la de 3 importantes hipermercados (a</p><p>los que se les pedía bolsones de comida), un banco, y una estación de</p><p>servicio YPF.</p><p>La cantidad de efectivos policiales movilizados fue realmente</p><p>impresionante. Cuando al atardecer, por decisión de la asamblea se levantó</p><p>la medida, mientras nos íbamos escuché que una piquetera les gritaba &quot;¡Hoy</p><p>sí que se ganaron el sueldo!&quot;.</p><p>Policías, perros, representantes del ministerio de trabajo, y los gerentes</p><p>de todos los supermercados afectados se mantuvieron reunidos largas horas</p><p>del otro lado de las protectoras rejas del hipermercado Auchán, mientras</p><p>sobre Calchaquí los tambores no paraban de sonar, algunos chicos jugaban con</p><p>una pelota, y a cada rato la gente de cada MTD de cada barrio se reunía en</p><p>asambleas que, por democracia directa, tomaban las decisiones necesarias</p><p>para la posterior negociación con las autoridades.</p><p>Las horas pasaban y los supermercados no cedían más de lo que habían</p><p>ofrecido en un primer momento. Por la radio llegaban las noticias de la</p><p>represión en Rosario y de los saqueos y conflictos en Buenos Aires, uno de</p><p>los cuales se desarrollaba a unas diez cuadras del piquete de la CTD Aníbal</p><p>Verón. En las veredas de enfrente, la gente se sentaba a la sombra, y en</p><p>cada punta del corte los piqueteros, tapando sus caras con remeras,</p><p>vigilaban las barricadas. Uno a uno iban llegando los medios de</p><p>comunicación. Las negociaciones seguían duras, y las asambleas seguían</p><p>decidiendo quedarse, hasta que, terminando la tarde, el fiscal les advirtió</p><p>que ya había orden de reprimir a los trabajadores desocupados que seguían</p><p>ahí, y, consecuentemente, también a sus chicos.</p><p>Casi con sorpresa descubrí que la mayoría de la gente no tenía miedo, pero</p><p>era sumamente pacífica, en contraste con lo que suelen decir por la tele.</p><p>Las negociaciones son conocidas por todos, y todos participan en la toma de</p><p>decisiones, organizándose en asambleas por barrio. A diferencia de otras</p><p>protestas, en ésta, si te acercabas a cualquier persona y le preguntabas por</p><p>qué estaba ahí, sabían con seguridad cuáles eran las consignas. No está en</p><p>duda que hay algunos que se prende solamente para cazar un Plan Trabajar y</p><p>zafar, pero la diferencia entre la actuación de las dos mil quinientas</p><p>personas que se movieron enmarcadas en la CTD Aníbal Verón, y las personas</p><p>que más tarde vi en la tele saquear un supermercado &quot;Día&quot; era notable: el</p><p>notero les preguntaba cómo se habían organizado para el reclamo y quiénes</p><p>lideraban y mientras una chica respondía &quot;fue entre todos&quot;, alguien de atrás</p><p>gritaba &quot;¡los punteros políticos!&quot;. Cuando el notero repreguntó, dijeron que</p><p>habían personas que organizaban pero que &quot;no sabía quiénes eran&quot;. Jamás se</p><p>me ocurriría juzgar a la gente que va a pedir comida e incluso justifico</p><p>algunas medidas violentas cuando lo que está en juego es si los pibes comen</p><p>o no esta noche, pero tengamos cuidado con la gente que las impulsa y</p><p>pensemos a quién le estamos haciendo el trabajo sucio, a qué sector le</p><p>conviene que a De la Rúa se le descontrole el país, y qué vamos a poner en</p><p>su lugar si sacamos a estos asesinos de escritorio, porque si este pueblo ya</p><p>sabe que cuando se va uno, del norte dicen que le toca el turno de matarnos</p><p>a otro, no podemos ignorar eso para volver a cometer viejos y graves</p><p>errores.</p><p>El lunes, la CTD Aníbal Verón consiguió que esta y la próxima semana estén</p><p>cobrando sus planes los desocupados, y consiguió comida, aunque no la</p><p>suficiente, pero también ganó cosas inmateriales tan o más importantes: dio</p><p>un paso más en la organización conciente y democrática del pueblo, que se</p><p>está cansando del papel de marioneta, y que hay algo que ya no está</p><p>dispuesto a perder: la dignidad.</p><p>Natasha.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_011217relatopiqueteshiper.htm" download>Descargar el archivo original</a> (docs_011217relatopiqueteshiper.htm).</footer>
+</div></body></html>

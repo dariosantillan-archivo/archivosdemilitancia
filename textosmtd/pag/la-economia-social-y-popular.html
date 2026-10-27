@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La economía social y popular: el Objetivo de estas líneas es</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>La economía social y popular: el Objetivo de estas líneas es</h1><p class="ficha-doc">Fecha: 14 de marzo de 2003 (aprox.) <span class="sep">|</span> 680 palabras</p></header>
+<main class="texto"><p>LA ECONOMÍA SOCIAL Y
+POPULAR</p><p>El Objetivo de estas líneas
+es</p><p>- empezar a pensar la politica
+de producción del MTD, y</p><p>- elaborar las ideas de
+economía social y popular (producción y consumo solidario)</p><p>ECONOMÍA CAPITALISTA O
+ECONOMÍA SOCIAL Y POPULAR</p><p>Vivimos en una sociedad
+capitalista.</p><p>El principal interés de
+la economía capitalista el EL CAPITAL, es decir, la acumulación del
+dinero.</p><p>Y para acumular más
+dinero, los capitalistas imponen su riqueza inicial para ser los
+dueños de las máquinas, y proponerle al trabajador que trabaje por
+un sueldo mínimo para que el dueño se enriquezca más. Esto se
+llama EXPLOTACIÓN.</p><p>En estos años, el
+capitalismo concentró tantas riquezas y todo el avance tecnológico
+en pocas manos, que ya les &quot;sobran&quot; trabajadores, y
+mientras en Puerto Madero y en Recoleta viven en la abundancia, en
+nuestros barrios la miseria y la desocupación es cada vez mayor.</p><p>Esa forma de trabajo es
+la que TODOS conocemos. Lo saben los CAPITALISTAS, porque se
+benefician de ello, y de la misma forma pensamos los trabajadores,
+porque es a lo que nos acostumbra la sociedad capitalista: a ser
+burros de trabajo, sin pensar demasiado no darnos cuenta que somos
+capaces de trabajar y producir sin necesitar patrones ni nadie que se
+enriquezca</p><p>La producción
+capitalista busca que los dueños de las empresas ganen más y más
+cada vez y eso provoca</p><p> que muchos del
+pueblo no cubramos nuestras necesidades</p><p> que no haya
+condiciones dignas de trabajo y salarios dignos</p><p> que no se respete la
+calidad de los productos y la salud de todos</p><p>Por eso una economía
+solidaria, la economía popular, debe apuntar a:</p><p>+ producir para vivir
+mejor TODOS y no para que unos pocos zafen.</p><p>+ que las herramientas y
+maquinas de trabajo sean propiedad social (sean de todos)</p><p>+ trabajar en buenas
+condiciones, teniendo claro qué hacemos, para qué, con qué y como.</p><p>+ producir para las
+necesidades de nuestros compañeros, cuidando la calidad del
+producto, cuidando la salud y la naturaleza.</p><p>+ favorecer el
+desarrollo de otros grupos de trabajo, de otros compañeros que
+puedan vivir de su trabajo, y con los que podemos intercambiar los
+productos.</p><p>+ consumir y comprar los
+productos que elaborar nuestros compañeros para fortalecer otros
+grupos de trabajo.</p><p>Una idea para pensar la
+economía SOCIAL Y POPULAR:</p><p>Las redes de producción
+y consumo solidaria</p><p>La idea de red es para
+graficar los grupos productivos y las relaciones entre ellos.</p><p>La red se basa en dos ideas:</p><p>El
+consumo solidario:
+cada persona que participa en la red consume cosas que se producen en
+la red aunque sean de igual precio que las que se pueden comprar en
+los comercios.</p><p>La
+producción libre y sana:
+el trabajo debe ser agradable y los productos deben ser de buena
+calidad.</p><p>Cada grupo productivo se
+compromete a comprar a los otros grupos los productos que necesita
+para vivir. Cada grupo de trabajo es un grupo de consumidores. Cuanto
+más compro yo a los miembros del grupo, más me beneficio, ya que
+ellos están en mejores condiciones de comprarme cosas a mi.</p><p>La
+red necesita de confianza y conciencia:
+necesitamos tener claro que comprarle a un compañero de otro grupo
+es mejor que ir al supermercado, donde no se sabe bien con qué están
+hechos los productos, aunque si se sabe quién se queda con mucha
+plata.</p><p>Una red puede estar compuesta
+por 5, 10 o cien grupos. Cuantos más sean, más fuerte es la red.</p><p>Un
+ejemplo
+con pocos grupos puede incluir una panadería (5 personas); un taller
+de costura (4 personas); una carpintería (3); una fábrica de
+conservas (6); un equipo de embolsado de alimentos a granel (6); una
+envasadora de productos de limpieza (4); una huerta (5 personas); y
+otros grupos. Solo con esos tenemos a 33 personas comprometidas a
+comprar pan, ropas, muebles, etc producidas en la red.</p><p>La red, por supuesto, se puede
+extender cada vez más, incorporando otros grupos de compañeros.</p><p>Cuantos más se sumen, más
+productos tenemos a disposición y más “compradores” se
+comprometen a usar lo que nosotros producimos.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../LA ECONOMÍA SOCIAL Y POPULAR.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (LA ECONOMÍA SOCIAL Y POPULAR.pdf).</footer>
+</div></body></html>

@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Opiniones sobre el funcionamiento organizativo del MTD: (elaborado por los responsables presentes en la reunión del lune</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2002-apuntes-pablo.html">&larr; 2001-2002 — Apuntes y opiniones</a>
+<h1>Opiniones sobre el funcionamiento organizativo del MTD: (elaborado por los responsables presentes en la reunión del lunes 3 de dic 2001</h1><p class="ficha-doc">Fecha: 7 de diciembre de 2001 (aprox.) <span class="sep">|</span> 1.807 palabras</p></header>
+<main class="texto"><p>Opiniones sobre el funcionamiento organizativo del MTD</p><p>(elaborado por los responsables presentes en la reunión del lunes
+3 de dic 2001</p><p>sobre la reunión de responsables:</p><p>Se opinó que se retome la dinámica de una reunión semanal,
+ porque genera cansancio la cantidad de reuniones que hay, y que la
+ formación de responsables por la cual se desdobló las reuniones
+ quedó trabada.</p><p>los delegados y responsables tienen que cumplir con los horarios, de
+ trabajo y de reuniones de organización, porque ese será el ejemplo
+ que después nos permita señalar a los demás compañeros que hay
+ que cumplir. Si no cumplimos con nuestras responsabilidades, no
+ vamos a ser creíbles cuando les digamos a los demás que las
+ cumplan</p><p>tienen que participar de la reuníón de responsables, al menos un
+ compañero de cada barrio y área: es decir, la torre, la fe turno
+ mañana, la fe turno tarde, urquiza; y áreas: administración,
+ productivos, finanzas, prensa, formación, relaciones,
+ infraestructura, seguridad.</p><p>Se sugiere que la reunión sea los lunes, porque nos permite
+ planificar la semana: el horario de inicio es 15 hs, y a las 15.10
+ se hace el temario y se empieza la reunión, que se planifica para
+ que alcance para esos temas. Si algun compañerro llega tarde, se
+ subordinará a lo acordado por los compañeros. El horario de
+ finalización queda fijado a las 18.10 hs.</p><p>Sobre la puntualidad: si todos acordamos un horario y sólo algunos
+ lo cumplen, quien no lo hace, quiera o no, está faltando el respeto
+ a quien sí cumple, y no es justo.</p><p>La reunión quedará dividida de la siguiente forma: 1 ½ hora para 
+ la Sitaución General, y otra 1 ½ hora para la situación
+ interna.</p><p>SOBRE LOS GRUPOS DE TRABAJO:</p><p>Los proyectos que vayan renovando, serán respetados en la tipología
+ que figura. Por un lado, porque van a volver a ser inspeccionados
+ por el ministerio. Y por otro, porque necesitamos estar mejor
+ organizados.</p><p>SOBRE LAS ÁREAS DE TRABAJO:</p><p>Cada área tiene que estar integrada por al menos un delegado de
+ cada barrio, indefectiblemente. El área elegirá un responsable,
+ teniendo en cuenta al compañero que se considere más capaz y
+ responsable para el desarrollo de las tareas del área. Este
+ compañero será el Responsable del área, y deberá participar en
+ la Mesa de Responsables, aunque la participación en esa instancia
+ también puede ser rotativa.</p><p>Reunión de delegados del barrio:</p><p>Participa al menos un delegado de cada grupo, los responsables de
+ barrio, y los delegados en cada área del barrio.</p><p>Criterios de funcionamiento del MTD: bases para un estatuto:</p><p>Contexto en el que surge este debate en el MTD de lanús:</p><p>El país vive una profunda crisis económica y política, que se
+profundiza día a día. El nivel de lucha popular se incrementó
+notablemente en los últimos tiempos, en cantidad y calidad. Se 
+avecinan días en que el sistema deberá tomar medidas que impliquen
+una visagra en el desarrollo de la crisis, ya que en esta lógica
+económica y política no hay salida no solamente para el pueblo,
+sino tampoco para los distintos intereses que atraviesan el bloque de
+poder. Este punto de inflexión se puede llamar Dolarización,
+renuncia de de la rua, gobierno de coalición, traspaso de mando,
+devaluación, estallido social, o muchos de estos factores
+combinados. Un análisis sereno de la correlación de fuerzas entre
+el campo del pueblo y el bloque de poder, nos muestra que ellos
+tienen aún condiciones para resolver esta crisis “Por derecha”,
+es decir, reforzando y reacomodando el sistema económico y político
+detrás de los intereses del sector del bloque de poder que gane la
+puja interna. Y cuando ellos se benefician, ya sebemos, es porque nos
+joden a nosotros. Cualquier reordenamiento político-institucional
+que implique un cambio de gobierno o algo así, será aprovechado
+para “anular” partidas sociales al estilo Bulrich y profundizar
+los recortes en salarios y prestaciones sociales. Del mismo modo
+cualquier reordenamiento económico. En este contexto, la lucha
+popular seguramente sea parte de la crisis, e incluso puede ser
+aprovachada por algún sector del bloque de poder que le convenga
+demostrar que “así no se puede seguir”. Pero lo que es seguro,
+que sea como fuera que resuelvan la crisis en los próximos meses, el
+reordenamiento económico y político será más agobiante que ahora,
+y para hacer la situación más estable, apelarán a mecanismos
+represivos que inhiban la lucha popular.</p><p>De a poco, los últimos meses van marcando este camino: los recortes
+salariales se consolidaron principalmente ante estatales y docentes,
+cuyas luchas conducidas por el reformismo de la CTA apenas hizo
+cosquillas al ajsute. Los desocupados resistimos y damos importantes
+luchas desde los sectores más combativos, mientras las partidas
+destinadas a planes de empleo se redujeron casi un 50 % en todo el
+país, sin que aparecieran más luchas que las conocidas. Como
+contraparte, la condena al Turquito Alí sigue firme, Castells va a
+nuevo juicio, los compañeros de Mosconi deberán responder ante la
+justicia por “sedición en concurso real” mientras su abogada,
+Mara Puntano, sigue recibiendo aprietes para que abandone la causa;
+los compañeros de la Plata deberán responder judicialmente por los
+echos de violencia del paro; en neuquén, la represión está a la
+orden del día ante las luchas que se consolidan...</p><p>En Lanús, sólo la idea de que debíamos recomponer fuerzas después
+del duro golpe de las denuncias y persecuciones de agosto, nos hizo
+bajar los decibeles de una espiral de confrontación que el
+municipio, por primera vez, parecía dispuesto a bancar.</p><p>Esta crisis y transición hacia una nueva situación política
+también atravieza nuestro movimento, y por lo tanto nuestra
+estructura organizativa.</p><p>Por eso, hace ya varias reuniones de responsables, comenzamos a
+hablar de EL NUEVO MTD, que deberíamos consolidar después de esta
+transisión que imaginamos de grandes luchas.</p><p>PRINCIPIOS ORGANIZATIVOS:</p><p>Estos criterios no son nuevos; en todo caso, lo nuevo será la
+necesidad de que todos los tengamos más asumidos, y el movimiento se
+muestre más sólido:</p><p>Nuestra consigna: TRABAJO, DIGNIDAD Y CAMBIO SOCIAL</p><p>Luchamos por trabajo porque, a pesar de nuestra condición de
+desocupados, somos Trabajadores, parte de la clase social que aspira
+a vivir de su trabajo, y que en este sistema capitalista sólo padece
+explotación y exclusión. Por eso, además de trabajar, nos
+proponemos generar nuevas relaciones sociales y económicas, que no
+reproduzcan la explotación sino que se basen en la solidaridad,
+justicia e igualdad. Por eso, además de trabajo luchamos por
+DIGNIDAD, por trabajos y una vida DIGNA. Esto que nos proponemos nos
+pone ante el desafío de conquistar un CAMBIO SOCIAL, es decir, un
+nuevo orden social que acabe con la explotación del hombre por el
+hombre y que construya una sociedad, un hombre y una mujer nuevos,
+donde no tengan cabida todos los vicios que genera la sociedad
+capitalista y que deforman al ser humano, como el individualismo,
+egoísmo, desprecio al prójimo... Este cambio social no es sólo una
+meta lejana, sino que se empieza a construir desde ahora, a través
+de las relaciones sociales que seamos capaces de transformar en
+nuestra experiencia cotidiana: nuestra organización, el movimiento,
+debe ser desde donde empecemos a poner en práctica los valores que
+predicamos, y donde empecemos a combatir y a dejar de lado todo lo
+malo que sabemos tanto daño nos hace.</p><p>Autonomía:</p><p>Eentendemos por autonomía la capacidad -según el diccionario- de
+“gobernarse por sus propias leyes”. En términos políticos y
+organizativos, esto quiere decir: las decisiones del MTD las toma el
+mismo MTD, y nadie más. De nadie depende el MTD para definir sus
+criterios más que de su propia voluntad. A diferencia de otras
+organizaciones populares tradicionales, el MTD no depende ni en lo
+económico, ni lo político ni lo organizativo, de ninguna estructura
+externa a su propia organización: ni partidos políticos, centrales
+sindicales, iglesias, ni de ninguna institución del estado.</p><p>Sin embargo, esto no implica
+“aislación”, “basismo”, o “anarquía” : el concepto de
+autonomía no nos impide relacionarnos
+con distintas instuciones, y tejer acuerdos: por ejemplo, respecto al
+Estado establecemos una relación de confrontación, que da como
+resultado conquistas y beneficios para el Movimiento; con determinada
+estructura sindical o política, podemos llegar a acuerdos puntuales
+de unidad en la lucha; la
+autonomía reside en la capacidad del MTD de decidir conscientemente
+esas relaciones, y velar porque éstas no vulneren el desarrollo y
+crecimiento autónomo: sería
+un error si, por ejemplo, el crecimiento del movimiento se basara
+únicamente en la conquista de los planes de empleo arrebatados por
+la lucha al Estado: si así fuera, por más confrontación y lucha,
+nuestro movimiento se convertiría en dependiente de los subsidios
+del estado (algo parecido le pasa a algunas organizaciones populares
+respecto a distintos subsidios, del estado u ONGs). Lo mismo respecto
+a la relación con determinada estructura social o política: si
+nuestra práctica se redujera a participar de medidas de lucha
+convocadas desde instancias externas, y no desarrolláramos los
+mecanismos de elaboración política y decisión propios, nuestra
+práctica sería dependiente de aquellas estructuras, y más que
+“alianzas” o “participación en tal espacio”, lo que se daría
+sería una dependencia de políticas ajenas.</p><p>¿y respecto a la Coordinadora “Anibal Verón”? El MTD tambíen
+se considera autónomo respecto a las organizaciones hermanas que
+integran la coordinadora? ¿Cómo se coordinan distintas
+organizaciones desde en criterio de autonomía?</p><p>Si la Coordinadora Anibal Verón (o
+cualquier otra instancia) se convirtiera en un organismo resolutivo
+con vida propia más allá de los mandatos que cada movimiento
+transmita, no estaríamos más que reprodujendo una estructura a la
+cual los movimientos que la integran no les quedaría más que
+subordinarse.
+ Y en cuanto en una estructura organizativa se comienza a subordinar
+determinados ámbitos a otros, empezamos a generar jerarquías,
+verticalidad en
+el funcionamiento, decisiones que “son bajadas”
+a las instancias “inferiores”.
+ Allí es cuando una organización popular reproduce mecanismos que
+debería combatir, porque atentan contra el protagonismo del pueblo
+como hacedor directo de su propio destino.</p><p>Por el contrario, bien puede funcionar
+una coordinadora de movimientos autónomos si se constituye como
+ámbito de socialización, intercambio y síntesis de las decisiones
+de base. Donde lo que vaya a decidir la coordinadora sea fruto de las
+propuestas
+de cada movimiento transmitidas por los delegados
+que participan de la mesa coordinadora,
+y no las decisiones de un puñado de dirigentes,
+que resuelven y bajan las propuestas a sus bases.</p><p>Por lo tanto, bien puede el MTD seguir reivindicando su carácter
+autónomo y el derecho a que nadie decida por el propio movimiento, a
+la vez que integrar una Coordinadora que respete estos criterios.</p><p>Articular, coordinar, hacer frentes o crear corrientes de lucha:
+cualquiera de estas construcciones pueden edificarse centralizando y
+verticalizando una instancia de “conducción”, o funcionar como
+espacio de socialización, intrcambio y síntesis para la acción
+respetando la autonomía, en tanto capacidad de decidir por sí
+mismo, de los movimientos que la integren.</p><p>Democracia Directa:</p><p>Formación y Estudio:</p><p>Organización:</p><p>Solidaridad, Unidad:</p><p>Lucha, confrontación</p><p>Articulación con otros sectores</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../Opiniones sobre el  funcionamiento organizativo del MTD.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (Opiniones sobre el  funcionamiento organizativo del MTD.pdf).</footer>
+</div></body></html>

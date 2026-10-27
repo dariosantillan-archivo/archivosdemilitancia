@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Casi 60 detenidos por tomar un ministerio</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Casi 60 detenidos por tomar un ministerio</h1><p class="ficha-doc">Fecha: 4 de agosto de 2001 <span class="sep">|</span> Publicado en La Nación <span class="sep">|</span> 1.018 palabras</p></header>
+<main class="texto"><p>Diario LA NACION (de la oligarquía)</p><p>4 de agosto de 2001</p><p>Casi 60 detenidos por tomar un ministerio</p><p>Miembros del Movimiento Teresa Rodríguez coparon durante seis horas la cartera de Trabajo bonaerense; la policía los reprimió</p><p>Entraron encapuchados y con palos El ministro no quiso abandonar el edificio El fiscal estudia posibles cargos contra los demorados, que permanecen apresados</p><p>LA PLATA.- Unos 200 miembros del Movimiento Teresa Rodríguez (MTR) de Florencio Varela, armados con palos y encapuchados, tomaron por seis horas la sede del Ministerio de Trabajo bonaerense para reclamar por planes de empleo.</p><p>Al desalojar el edificio, los manifestantes fueron reprimidos por la policía, que apresó a un total de 59 personas, que, al cierre de esta edición, permanecían detenidas.</p><p>Eran las 7.15 cuando el titular de la cartera laboral bonaerense, Aníbal Fernández, entró en el edificio donde funciona el ministerio, a unas diez cuadras del centro de la ciudad, sobre la avenida 7. Al bajar de su automóvil, no advirtió la presencia de personas sobre la vereda.</p><p>Sin embargo, alguien, ubicado estratégicamente, hizo una seña y desde la esquina comenzaron a brotar manifestantes que, en unos segundos, forzaron la puerta de acceso y ganaron el hall donde Fernández esperaba el ascensor.</p><p>Primero hubo insultos y un duro cruce de palabras que derivó en la propuesta del ministro para que un grupo se sentara a conversar con él en su despacho. Cinco delegados se plantaron en la espaciosa oficina con ventanales hacia la calle, donde un centenar de activistas había comenzado a interrumpir el tránsito.</p><p>En tanto, los pasillos de la cartera laboral se poblaron de niños y mujeres que portaban frazadas y otros elementos como para acampar en el lugar. &quot;No rompan nada ni toquen nada&quot;, contó Gladys Bravo que decían los intrusos. La mujer, que trabaja en el servicio de limpieza, fue una de las cinco personas, incluido el ministro, que estaban dentro del edificio a esa hora y permanecieron allí durante toda la toma por propia voluntad.</p><p>Los líderes de la protesta exigían 200 planes provinciales de empleo caídos y otros 180 nuevos puestos.</p><p>Despliegue policial</p><p>Pasaron sólo minutos para que se iniciara un impresionante despliegue policial del que participaron unos 200 agentes de los cuerpos de Infantería, Caballería, grupos especiales, bomberos, carros de asalto, más de 30 patrulleros que cercaron el edificio y prohibieron la circulación a dos cuadras a la redonda. No faltaron los móviles no identificables con efectivos vestidos de civil ostentando armas.</p><p>A menos de 30 metros de la formación policial una hilera de piqueteros con las caras cubiertas blandían palos, fierros y hondas, mientras rompían baldozas contra el piso en previsión de un eventual enfrentamiento. El clima de la mañana platense era por demás tenso cuando llegó al lugar el ministro de Seguridad provincial, Ramón Oreste Verón, que se mantuvo, durante las casi seis horas de la toma, al frente de los uniformados y en comunicación telefónica constante con el gobernador Carlos Ruckauf.</p><p>Ruckauf ya había hablado con Fernández y le había sugerido que saliera del edificio, a lo que el funcionario se negó: &quot;Esta es mi responsabilidad, yo no puedo dejar el ministerio en manos de unos encapuchados&quot;.</p><p>Según comentó luego el ministro, les dijo a los piqueteros: &quot;Desde un principio les aclaré que no iba a negociar en ese contexto y que no tenía problema para atender sus reclamos civilizadamente&quot;.</p><p>Fernández se mantuvo firme en esa tesitura durante las casi seis horas del copamiento. Minutos antes de las 13, el líder del grupo de manifestantes, Roberto Martino, anunció que se retiraban. &quot;Hemos encontrado una amplia receptibidad en el ministro, que va a evaluar la situación entendiendo la problemática social existente para luego darnos una respuesta&quot;, dijo.</p><p>El desbande</p><p>Cuando los desempleados -a los que se agregaron miembros de la Unión de Trabajadores Desocupados de Ensenada y Berisso (Utdeb) y del Partido de los Trabajadores por el Socialismo (PTS)- sólo habían transitado una cuadra, una precisa acción policial quebró en dos la columna, y varios efectivos de civil se lanzaron sobre Martino, que fue rápidamente reducido.</p><p>Esto produjo un desbande, tras el cual comenzaron los disparos con balas de goma y los forcejeos. Un grupo logró escapar de la policía y se refugió en la Facultad de Periodismo de la Universidad Nacional de La Plata, a unas cinco cuadras del lugar. Desde allí se repudió &quot;la brutal represión ordenada por el gobernador&quot;.</p><p>El fiscal interviniente, Leandro Heredia, dijo a LA NACION que fueron &quot;aprehendidas&quot; un total de 65 personas: 39 hombres, 20 mujeres y 6 menores. Estos últimos recuperaron la libertad inmediatamente. El fiscal estudiaba anoche los posibles cargos contra los demorados, que iban desde usurpación, daño y lesiones hasta privación ilegítima de la libertad.</p><p>Anoche, unos 500 manifestantes de distintas organizaciones estudiantiles y defensoras de los derechos humanos pidieron por la liberación de los detenidos frente a la comisaría 2a., donde estaban alojados los piqueteros.</p><p>Por Pablo Morosi</p><p>De la Corresponsalía La Plata</p><p>&quot;No somos más violentos que otros&quot;</p><p>El líder del Movimiento Teresa Rodríguez (MTR), Roberto Martino, que anoche continuaba detenido tras la toma del Ministerio de Trabajo bonaerense, había estado anteanoche en el programa &quot;Hora clave&quot;, de Mariano Grondona, donde había afirmado: &quot;Nosotros no somos más violentos que otros piqueteros&quot;. Martino dijo que los miembros de su agrupación actuaban encapuchados porque tenían miedo a ser reprimidos y justificó que algunos robaran porque, según dijo, estaban en una situación de &quot;extrema necesidad&quot;. Además, mantuvo un cruce verbal con el vocero del Gobierno, Juan Pablo Baylac, en el que el funcionario lo acusó de estar en contra del sistema democrático.</p><p>Un día de tensión y furia en La Plata</p><p>La jornada comenzó a las 7.15, cuando integrantes del movimiento de desocupados Teresa Rodríguez ingresaron en el edificio del Ministerio de Trabajo bonaerense para reclamar ante el titular de la cartera por planes laborales. Estuvieron por seis horas en el despacho de Aníbal Fernández, que dijo a LA NACION que no les ofreció nada a cambio. Cuando los manifestantes decidieron abandonar la sede ministerial fueron reprimidos por la policía, que apresó a 59 piqueteros, que anoche continuaban detenidos</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010804tomaministerioMTR.htm" download>Descargar el archivo original</a> (docs_010804tomaministerioMTR.htm).</footer>
+</div></body></html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Disparen a la Aníbal Verón</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Disparen a la Aníbal Verón</h1><p class="ficha-doc">Fecha: 5 de mayo de 2002 <span class="sep">|</span> Publicado en Página/12 <span class="sep">|</span> 1.486 palabras</p></header>
+<main class="texto"><p>domingo 5 de mayo de 2002</p><p>Diario Página12</p><p>las agresiones contra la coordinadora de trabajadores desocupados</p><p>Disparen a la Aníbal Verón</p><p>Uno fue asesinado. Otro tiene un balazo en un pulmón. Otros la sacaron más barata, con aprietes a mano armada o palizas de madrugada. El combativo grupo de piqueteros de Solano, que no se encolumna en ningún partido político o central sindical, viene recibiendo una serie de agresiones muy graves desde principios de enero.</p><p>Por Laura Vales</p><p>No fue difícil ubicar al barrio La Fe. Está al sur de la Capital, en el municipio de Lanús, una vez que terminan las calles de asfalto, justo al lado de un enorme basurero de chatarra. Una montaña de autos oxidándose al sol sirve de referencia para quien llegue por primera vez. El asentamiento tiene un sector nuevo, de casillas en construcción, todavía entremezcladas con el depósito de basura. Ahí vive Juan Arredondo, el piquetero baleado el 15 de abril en la puerta de la Municipalidad, mientras participaba de un corteen reclamo por el pago de los planes de empleo.</p><p>Arredondo es la última víctima de una serie de episodios de violencia registrados en la zonasur contra los desocupados que cortan rutas. El primero ocurrió a principios de enero, una noche en queLuis Salazar volvía de una protestaen el Puente Pueyrredón. Dos desconocidos lo interceptaron a metros de su casa y le hundieron un arma en el estómago.</p><p>&quot;¿Viste qué fácil?&quot;, le susurróuno de los matones al oído. &quot;Si te la</p><p>damos acá nadie te ve&quot;.El 6 de febrero siguiente, un conductor de nervios frágiles asesinó a Javier Barrionuevo en un piquete, en la localidad de Esteban Echeverría. En marzohubo un ataque más, esta vez contra Orlando Rivero, desocupado de Solano. Un grupo de desconocidos que se movía en dos automóviles le salió al cruce a las 5.30 de la mañana, cuando el muchacho iba camino a la panadería comunitaria del Movimiento de Trabajadores Desocupados de Solano. Le dieronuna golpiza y una advertencia: &quot;Tené cuidado con lo que andás haciendo&quot;. Y en abril pasó lo de Arredondo.</p><p>Igual queel asesinado Barrionuevo, los demás agredidos son integrantes de la Coordinadora Aníbal Verón, organización de desocupados fuerte en el sur del Gran Buenos Aires. La CTD-Aníbal Verón reúne a grupos de desocupados de Lanús, Solano, Esteban Echeverría, La Plata, Quilmes, Almirante Brown, Ezeiza y José C. Paz. Su característica distintiva es que no están vinculados a ningún partido político ni central sindical.</p><p>Tal vez esolos deje más expuestos a episodios de violencia, amenazasy zancadillas judiciales.</p><p>En Lanús</p><p>El municipio de Lanús tiene dos particularidades únicas. La primera es Manolo Quindimil, el intendente más reelecto de la historia argentina, leyenda viviente del peronismo. La segunda es que, por voluntad de Quindimil, todo el distrito está asfaltado.</p><p>Lanús se puede recorrer de arriba a abajo o de derecha izquierda siguiendo los itinerarios más caprichosos con el mismo resultado: hay asfalto por todas partes. Hasta la villa más pobre tiene sus calles de asfalto. Excepto por La Fe.</p><p>Juan Arredondo recibe a Página/12 en la puerta de su casa, que levantó a unos doscientos metros del obelisco de chatarra. En el lugar, un grupo de vecinos está limpiando de basura pequeñas parcelas de terreno para levantar, una vez que el barro del fondo se seque, las próximas casillas de madera, chapa y bolsas de nylon.</p><p>Para tener derecho a estas manzanas de suelos contaminados, los pobladores de La Fe tuvieron que enfrentarse a Quindimil y a una cooperativa denunciada por estafas. Su orgullo es haberlo conseguido. A las once de la mañana, el lugar resuena por los martillazos, por los clavos perforando el zinc y los serruchos cortando madera. El barrio está metido en ese proceso de transformación por el cual los cajones de manzanas se convierten en muebles, las chapas de los más diversos orígenes y edades pasan a ser paredes o techos, y cualquier cosa plana viene bien para tapar los agujeros que queden. En el aire hay un olor acre, producto delos desechos químicos tirados quién sabe desde dónde. Arredondo tiene orden médica de no hacer esfuerzos. La bala le entró por el costado derecho del tórax, atravesó un pulmón y salió por la espalda, a centímetros de la columna, sin tocar la médula, por lo que no quedaron</p><p>secuelas graves. Fue una cuestión de suerte. El motociclista que le disparó tras encolerizarse porque no lo dejaban atravesar el piquete frente a la Municipalidad es un agente del Servicio Penitenciario Federal de costumbres particulares. Cuando se le ocurrió cruzar por el medio de la manifestación que cortaba la calle llevaba puesto un chaleco antibalas y un arma no registrada en la cintura. Conducía además una moto sin patente. Arredondofue trasladado al hospital. Las primeras horas, su esposa Graciela y su hija Isabel esperaron en la puerta de la habitación donde quedó internado.A medianoche Graciela salió a comer algo y justo entonces un supuesto auxiliar de Justicia se presentó en el lugar para llevarse a la hija &quot;a declarar&quot;. La joven se negó y el funcionario abandonó el hospital; era casi la una de la madrugada. Minutos más tarde, un custodio del sanatorioavisó que había llegado &quot;el remise solicitado&quot; para que Isabel volviera a su casa. Ella tuvoque aclarar que no había pedido ningún auto. Por las dudas, las mujeres decidieron no moverse del hospital ni separarse hasta que se hiciera de día.</p><p>El piquetero pasó más de una semanainternado, hasta que le dieron el alta y lo mandaron a su casa sin antibióticos ni ambulancia. &quot;¿Te animás a caminar?&quot; le preguntó a su mujer como si la convaleciente fuera ella. Y se largaron a andar hasta la estación de trenes, despacio.</p><p>Una cuadra antes de llegar, desde dentro de un bar les salió al paso un hombre joven vestido contraje y corbata. &quot;Usted es Arredondo&quot;, los saludó antes deinvitarlos a &quot;conversar sobre lo que había pasado&quot; adentro de la confitería. El baleado se sorprendió porque su cara nunca había aparecido en televisión, ni su foto en los diarios, así que le preguntó a su interlocutor cómo lo había reconocido y qué hacía en esa esquina esperándolo. El otro hizo silencio, le ofreció una sonrisa y finalmente dijo &quot;acá todo se sabe&quot;.</p><p>&quot;A mí nunca me habían pasado tantas cosas raras en tan pocos días&quot;, dice ahora Arredondo. &quot;Ninguno de ellos volvió a aparecer&quot;.</p><p>Civiles, pero no tanto</p><p>Salazar, el desocupado al que le hundieron un arma en el estómago, vive a dos cuadras de allí. La noche del apriete andaba en bicicleta, escuchó que lo llamaban por su nombre desde un taxi y se acercó pensando que sería algún conocido.Salazar, que es uno de los fundadores del MTD de Lanús, la sacó barata, con nada más que un muy mal rato. Orlando Rivero, en cambio, tuvo menos suerte: con la golpiza que sufrió en Solano le tuvieron que dar varios puntos.</p><p>Los piqueteros dicen que es frecuente que en sus cortes sufran</p><p>provocaciones de autos de civil con personas armadas. El 23 de enero, en el Puente Pueyrredón, un hombre a bordo de un BMW se largó también a cruzar a través de la protesta mostrando una arma. Los manifestantes pudieron fotografiarlo y el sujeto se fue sin disparar. Algo similar pasó el 11 de febrero con una camioneta blanca en un reclamo sobre la autopista Buenos Aires-La Plata, que quedó fotografiada. En todos los casos había una custodia policial cortando el tránsito antes del piquete. Los conductores la sortearon sin que la policía se diera cuenta.</p><p>Jorge Bogado, el automovilista que mató de un disparo a Javier Barrionuevo está en su casa beneficiado con la prisión domiciliaria. Los piqueteros de Solano que quisieron movilizarse a Lanús para repudiar el ataque sufrido por Arredondo terminaron en la comisaría, una docena de adultos y chicos presos, ente ellos uno de tres años. También eso es parte de un orden de cosas en el que el acceso a la Justicia, a la seguridad, ala igualdad ante la ley se han convertido en bienes tan improbables como el trabajo y la comida.</p><p>En esos subsuelos todo se vuelve imprevisible e inestable, aún más de lo que ya lo es para el resto de los ciudadanos. Arredondo tuvo la suerte de que el proyectil no tocara su médula espinal. También se salvó de quedar entrampado en una causa judicial por el delito de interrumpir el tránsito. Mientras era llevado al hospital, una delegación acordó con la intendencia el pago de los planes de empleo que habían ido a reclamar. El fiscal Oscar Acevedo, presente en el lugar a raíz de los incidentes, amagó con &quot;oficializar&quot; este acuerdo incluyéndolo en un expedientejudicial. Con el mismo recurso, años atrás el mismo funcionario terminó encarcelando a Raúl Castells por pedir comida en elhipermercado Wal Mart de Avellaneda. Esta vez, los piqueteros habían convocado abogados a presenciar sus negociaciones. Asíevitaron la posibilidad de que la historia se repitiera</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_020505disparenveronpag12.htm" download>Descargar el archivo original</a> (articulo_020505disparenveronpag12.htm).</footer>
+</div></body></html>

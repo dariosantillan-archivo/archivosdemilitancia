@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>1º de mayo, día internacional del Trabajador: basta de explotación y marginación, basta de persecuciones y cárcel</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>1º de mayo, día internacional del Trabajador: basta de explotación y marginación, basta de persecuciones y cárcel</h1><p class="ficha-doc">Fecha: 1 de mayo de 2001 <span class="sep">|</span> 426 palabras</p></header>
+<main class="texto"><p>1º de mayo, día internacional del Trabajador</p><p>Basta de explotación y marginación, basta de persecuciones y cárcel</p><p>¡libertad a los presos por luchar! ¡libertad al Dr. Matoso, abogado de los Sin Techo!</p><p>MASIVO ACTO</p><p>DE LOS MOVIMIENTOS DE DESOCUPADOS</p><p>DE LA PROVINCIA DE BUENOS AIRES EN LANÚS</p><p>El primero de Mayo, miles de trabajadores, desocupados y &quot;sin techo&quot; de las localidades de La Plata, Florencio Varela, Quilmes, Almirante Brown, Lanús, y otras zonas del Gran Buenos Aires, realizaremos un masivo acto a metros de la comisaría 1º de lanús, donde se encuentra detenido el Dr. Matoso, abogado defensor de los &quot;sin techo&quot; de la zona sur, encarcelado por defender los intereses del pueblo y enfrentar la injusticia que día a día golpea a nuestras familias.</p><p>Mantendremos cortada la avenida Hipólito Yrigoyen (Pavón) al 4400 frente a la estación de Lanús, a partir de las 11 hs., para hacer oír nuestros reclamos.</p><p>¡Libertad a los presos por luchar! Reclamamos el desprocesamiento de los más de 3000 trabajadores y luchadores populares perseguidos y encarcelados, como Emilio Alí en Mar del Plata y el Dr. Matoso, abogado de los sin techo. Exigimos el cese de la represión a las luchas populares que deja en el camino asesinatos impunes como los de Teresa Rodríguez en Neuquén, Aníbal Verón en Salta, y tantos más.</p><p>¡por trabajo para todos! No más despidos, exigimos la continuidad y el aumento de los planes de empleo, el rechazo al reempadronamiento de los desocupados que impulsa el gobierno, que dejaría a miles de familias sin un ingreso. Por fuentes de trabajo genuinas, y planes sociales integrales que contemplen la alimentación, salúd, educación, tarifa social para los servicios escenciales (luz, gas, agua, transportes) y exepción de impuestos al desocupado.</p><p>¡por tierras y viviendas dignas para las cientos de miles de familias de trabajadores y desocupados que luchan por un techo!</p><p>en este primero de mayo, los trabajadores que padecemos todas estas consecuencias que genera este SISTEMA DE HAMBRE Y MISERIA, estamos en PIE DE LUCHA.</p><p>Sólo la unidad, la organización y la lucha harán que como pueblo trabajador recuperemos las conquistas históricas que nos vienen arrebatando, y construyamos una sociedad con justicia y dignidad.</p><p>¡¡POR TRABAJO, DIGNIDAD Y UN CAMBIO SOCIAL!!</p><p>Coordinadora de Trabajadores Desocupados (CTD) de La Plata, Lanús y Quilmes</p><p>Desocupados del Barrio San Rudecindo, Florencio Varela</p><p>Movimiento de Trabajadores Desocupados (MTD) de Almirante Brown</p><p>Movimiento de Trabajadores Desocupados Teresa Rodriguez (MTD TR) de Solano – Quilmes</p><p>Movimiento de Trabajadores Desocupados (MTD) de Lanús</p><p>Movimiento de Trabajadores Desocupados Teresa Rodriguez (MTD TR) de Florencio Varela</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010501pomatoso1mayo.htm" download>Descargar el archivo original</a> (docs_010501pomatoso1mayo.htm).</footer>
+</div></body></html>

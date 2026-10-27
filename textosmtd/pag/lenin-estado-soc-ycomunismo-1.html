@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>LENIN. Acerca de la democracia socialista</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>LENIN. Acerca de la democracia socialista</h1><p class="ficha-doc">Fecha: 30 de julio de 2003 (aprox.) <span class="sep">|</span> 1.519 palabras</p></header>
+<main class="texto"><p>LENIN.
+Acerca
+de la democracia socialista.</p><p>Del
+folleto “Las
+tareas del proletariado en nuestra revolución” (Proyecto de
+plataforma del partido proletario). El nuevo tipo de Estado que brota
+en nuestra revolución.</p><p>Los
+SOVIETS
+son clasistas y están conformados por soldados, campesinos y
+obreros. Representan un nuevo tipo de Estado, es un Estado
+democrático superior que va surgiendo con las épocas
+revolucionarias del S XIX.</p><p>Hasta
+entonces el Estado de la república democrática parlamentaria fue el
+superior aunque claro que en él la policía, el ejército y la
+burocracia se sitúan encima del pueblo que es la mayoría.</p><p>El
+antecedente de los SOVIETS es el estado de la Comuna de París en
+donde la policía, el ejército y la burocracia son sustituídos por
+el armamento en manos del pueblo.</p><p>Es
+recién con la revolución rusa que se afianza este nuevo tipo de
+Estado y que se va gestando en 1905 y 1917. Se conforma la república
+de los soviets y se crea la democracia nueva.</p><p>Lenin
+analiza entonces cómo ven al Estado las 3 corrientes dominantes de
+la época:</p><p>MARXISMO</p><p>ANARQUISMO</p><p>SOCIALDEMOCRATISMO</p><p>Reconoce
+ la NECESIDAD
+ del ESTADO
+ como instrumento de dominación de las mayorías a la minoría
+ capitalista, en la transición del capitalismo al socialismo</p><p>No
+ ve la necesidad del ESTADO</p><p>Entiende
+ que es el Estado
+ de la república
+ parlamentaria burguesa
+ el que garantiza la transformación social.</p><p>Es
+ una visión pequebú y oportunista como Plejanov y Kautsky</p><p>Desde
+la posición marxista abrazada por Lenin estudia pues cómo es el
+Estado democrático burgués y cómo el Estado del tipo de la comuna
+de París (el nuevo Estado en la vieja sociedad). Analiza
+características y funciones de cada uno.</p><p>ESTADO DEMOCRÁTICO
+ BURGUÉS</p><p>ESTADO TIPO COMUNA DE
+ PARÍS</p><p>-De la república
+ parlamentaria se vuelve fácilmente a la monarquía.</p><p>-la
+ maquinaria de opresión a las mayorías queda intacta.</p><p>-dificulta
+ y ahoga la vida política de las masas</p><p>-posee
+ una maquinaria opresiva y de fuerza contra las mayorías.</p><p>-es un Estado
+ auténticamente democrático en el que las armas están en el
+ pueblo.</p><p>-La
+ comuna y los soviets destruyen y eliminan la maquinaria opresiva
+ del Estado burgués.</p><p>-la
+ democracia se edifica de abajo hacia arriba</p><p>-“es
+ una forma política para llevar a cabo dentro de ella la
+ emancipación económica del trabajo” (Marx)</p><p>-no
+ se propone ni debe implantar ninguna transformación que no esté
+ madura en la realidad económica y en la conciencia de la mayoría</p><p>-cuando
+ el pueblo aún no tenga la organización se debe emprender la
+ labor de organizarlo a todo y no solo a los politiqueros
+ burgueses.</p><p>Del
+libro EL
+ESTADO Y LA REVOLUCIÓN.
+Cap. V: Las
+bases económicas de la extinción del Estado</p><p>El
+comunismo se desarrolla históricamente, es el resultado de una
+fuerza social que comienza a engendrarse en el capitalismo. En este
+desarrollo del Estado capitalista al socialista primero y a la
+sociedad comunista hay momentos en los que conviven lo viejo que no
+quiere dejar de morir y lo nuevo que no puede terminar de nacer
+(convivencia de lo viejo y lo nuevo). En el socialismo hay funciones
+análogas a las del capitalismo como las funciones del Estado, claro
+que en el capitalismo una minoría reprime a la mayoría obrera
+mientras que en el socialismo se reprime a la minoría capitalista.</p><p>E
+X T I N C I O N</p><p>ESTADO
+ actual</p><p>ESTADO SOCIALISTA</p><p>COMUNISMO</p><p>SOCIEDAD
+ BURGUESA</p><p>SOCIEDAD SOCIALISTA</p><p>COMUNISMO</p><p>DEMOCRACIA
+ BURGUESA</p><p>DICTADURA DEL PROLETARIADO</p><p>COMUNISMO</p><p>El
+Estado se extingue recién con la sociedad comunista, no hay
+necesidad de Estado. En el socialismo el Estado existe todavía. El
+Estado es una máquina especial de coerción.</p><p>Esta
+desarrollo y convivencia de lo viejo y lo nuevo también presenta
+resistencia por parte de los capitalistas explotadores. Es necesario
+romper esa resistencia y no hay otro camino para esto que una
+dictadura del proletariado.</p><p>QUÉ
+ES LA DICTADURA DEL PROLETARIADO?</p><p>Es
+la organización de la vanguardia de los oprimidos en clase dominante
+para reprimir a los opresores capitalistas, a través del Estado.</p><p>PARA
+QUÉ SIRVE LA DICTADURA DEL PROLETARIADO?</p><p>-para
+ampliar la democracia (para el pueblo, los pobres, etc) y restringir
+a la vez a los explotadores, capitalistas, opresores.</p><p>-para
+vencer por la fuerza la resistencia de los opresores</p><p>-para
+someter por el Estado a los opresores. “Cuando pueda hablarse de
+libertad el Estado se extinguirá”</p><p>CUÁNDO
+DESAPARECE EL ESTADO?</p><p>El
+Estado desaparece cuando no haya más clases sociales en pugna. Esto
+sucede solamente cuando no existen diferencias entre los miembros de
+la sociedad por su relación con los medios de producción. Hablar de
+extinción del Estado nos da la idea de un proceso gradual y también
+espontáneo. Porque “los seres humanos se habitúan a cumplir las
+reglas de convivencia que necesitan si no hay explotación, si no hay
+nada que indigne, provoque protestas y sublevaciones y haga
+imprescindible la represión.” (Lenin, op.cit.p.28)</p><p>La democracia también será completa
+sólo con el comunismo, cuando se extinga el Estado. Cuanto más
+completa sea, más rápido dejará de ser necesaria y se extinguirá
+por sí misma.</p><p>Completa
+Lenin el concepto del proceso de extinción del estado y el pasaje de
+la sociedad burguesa a la socialista y al comunismo. Para esto
+introduce una diferencia de grados o etapas de la sociedad comunista,
+una inferior y otra superior:</p><p>CAPITALISMO</p><p>FASE INFERIOR 
+ (SOCIALISMO)</p><p>FASE SUPERIOR
+ (COMUNISMO)</p><p>-ESTADO BURGUES en sentido
+ estricto</p><p>-PROPIEDAD
+ PRIVADA DE LOS MEDIOS DE PRODUCCIÓN</p><p>-REPRESIÓN
+ A LAS MAYORÍAS OBRERAS POR MINORÍAS CAPITALISTAS</p><p>-La
+ represión la lleva adelante la maquinaria represiva: policía,
+ ejército, burocracia</p><p>-No
+ hay democracia verdadera</p><p>-ESTADO DE TRANSICIÓN</p><p>(el
+ Estado comienza a extinguirse, de a poco)</p><p>-El
+ Estado controla la medida del trabajo y del consumo. (estado de
+ los soviets, de los obreros armados. No burocrático reemplaza la
+ violencia del Estado burgués)</p><p>-Propiedad
+ común de los medios de producción, fábricas y tierra</p><p>-No
+ hay explotación del hombre por el hombre.</p><p>-No
+ hay verdadera justicia, subsiste la desigualdad, las diferencias,
+ porque no todos los hombres son iguales; hay diferencia de
+ riquezas porque los productos se distribuyen según el trabajo y
+ no según las necesidades (rige en parte el derecho burgués)</p><p>-Rigen
+ los principios socialistas:</p><p>“a
+ igual cantidad de trabajo, igual cantidad de productos” y “ el
+ que no trabaja no come”.</p><p>-La
+ contabilidad y el control son muy importantes, la mayoría
+ participa en esto.</p><p>-Represión
+ a las minorías capitalistas por mayorías</p><p>-La
+ represión la llevan adelante las organizaciones de masas armadas
+ (soviets)</p><p>-Comienza
+ a extenderse la democracia</p><p>-empieza
+ a madurar el aspecto económico pero no es libre de las huellas
+ del capitalismo. Se liberan las fuerzas productivas para beneficio
+ común.</p><p>-Ya no existe el Estado.
+ Esta fuente de desigualdad finalmente se extingue (no hay plazos
+ ni tiempos, ni recetas) porque ya no hay desigualdad.</p><p>-Todo
+ el pueblo participa de las milicias</p><p>-propiedad
+ comunista</p><p>-no
+ hay más división del trabajo. El trabajo es la primer necesidad
+ vital y desaparece la diferencia entre trabajo intelectual y
+ trabajo manual.</p><p>-No
+ hay más derecho burgués:</p><p>“solo
+ cuando los hombres se desarrollan en todos sus aspectos, crezcan
+ las fuerzas productivas y fluyan las riquezas colectivas”</p><p>-rige
+ en plenitud otro principio: “de cada cual según su capacidad; a
+ cada cual según su necesidad”</p><p>-contabilidad
+ y control son meras tareas administrativas.</p><p>-No
+ hay más represión. No hay clases y por tanto no hay a quien
+ reprimir (sólo casos aislados)</p><p>-Surge
+ la democracia verdadera</p><p>-ya
+ se extingue todo vestigio del capitalismo.</p><p>-“la
+ necesidad de observar las reglas nada complicadas de toda
+ convivencia humana se convertirá en costumbre”</p><p>COMENTARIOS,
+preguntas, reflexiones, dudas, etc.</p><p>Muchos
+aspectos del Estado socialista los llevamos adelante (o intentamos
+hacerlo) en el MTD. Otros ya se empiezan a discutir en productivos
+como principios básicos (trabajar para las necesidades y el que no
+trabaja no tiene los mismos derechos de llevarse cosas que el que
+trabaja, se compromete y participa).</p><p>La
+extensión de la democracia interna del MTD.</p><p>No
+hay (o al menos intentamos que no haya) explotación de unos
+compañeros por otros</p><p>Hay
+una importante propiedad colectiva de los medios de producción,
+espacios de trabajo (más o menos).</p><p>Nos
+falta: la represión del socialismo, establecer un mecanismo de
+distribución de las riquezas (que todavía no tenemos pero esperamos
+tener). Una planificación más colectiva y más clara de la
+producción (qué, para qué, cómo, en qué tiempo qué cantidades,
+etc)</p><p>Una
+contabilidad más clara de todo el MTD que pueda consultar cualquier
+compañero de cualquier barrio, etc.</p><p>Creo
+que es importante que desarrollemos la producción con ganancia,
+porque es la que permite el desarrollo de las fuerzas productivas,
+crecer, etc.</p><p>Y
+me parece que leyendo esto, creo que en el MTD nos está faltando
+plantear al conjunto de todos los compañeros claramente que tenemos
+que pensar el hoy en función del mañana (planificar y ACUMULAR).</p><p>Con
+todo esto, pregunto: ¿estamos construyendo el socialismo? ¿es
+posible construirlo sin tener control del Estado? ¿o más bien es el
+modelo comuna de paris que nos guía espiritualmente?</p><p>Otro
+tema es el de la violencia</p><p>Otra
+cosa: El Estado nos da los planes (bárbaro porque nos permite
+crecer, masificar). Cómo se explica entonces que ese estado
+represivo sea el mismo que nos da los planes (sí con lucha), pero
+porqué nos los da?</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../LENIN,Estado soc.ycomunismo (1).pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (LENIN,Estado soc.ycomunismo (1).pdf).</footer>
+</div></body></html>

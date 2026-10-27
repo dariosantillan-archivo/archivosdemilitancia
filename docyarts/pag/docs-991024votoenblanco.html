@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Crecimiento de los votos en blanco, nulos y abstenciones: (elecciones presidenciales)</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Crecimiento de los votos en blanco, nulos y abstenciones: (elecciones presidenciales)</h1><p class="ficha-doc">Fecha: 24 de octubre de 1999 <span class="sep">|</span> 263 palabras</p></header>
+<main class="texto"><p>CRECIMIENTO DE LOS VOTOS EN BLANCO, NULOS Y ABSTENCIONES</p><p>(elecciones presidenciales)</p><p>1983</p><p>1989</p><p>1995</p><p>1999</p><p>En blanco</p><p>339.642</p><p>203.264</p><p>654.172</p><p>572.595</p><p>Nulos e impugnados</p><p>12.364</p><p>10.493</p><p>125.105</p><p>165.388</p><p>Abstenciones</p><p>3.378.161</p><p>3.083.400</p><p>3.988.859</p><p>4.871.240</p><p>Total</p><p>3.717.803 (17,4%)</p><p>3.286.664 (16,8%)</p><p>4.768.136 (21,5%)</p><p>5.609.223 (23,25)</p><p>VOTOS EN BLANCO, NULOS Y ABSTENCIONES</p><p>(Elecciones a diputados nacionales. En las cifras no se incluyen</p><p>las provincias de La Rioja, Misiones, Neuquén, San Luis y Tierra</p><p>del Fuego, que eligieron diputados antes del 24/10)</p><p>1999</p><p>En blanco</p><p>794.466</p><p>Nulos</p><p>159.099</p><p>Abstenciones</p><p>4.717.762</p><p>Total</p><p>5.671.327 (23,52%)</p><p>En blanco, nulos y abstenciones en las provincias</p><p>en las que fue mayor (porcentajes)</p><p>Blanco y nulos a Presidente</p><p>Blanco y nulos a Gobernador</p><p>Blanco y nulos a Diputados</p><p>Capital Federal</p><p>3.44</p><p>-</p><p>4.18</p><p>Buenos Aires</p><p>4.64</p><p>5.72</p><p>6.53</p><p>Córdoba</p><p>3.64</p><p>-</p><p>3.52</p><p>Chubut</p><p>6.62</p><p>9.62</p><p>11.84</p><p>Jujuy</p><p>2.26</p><p>4.06</p><p>8.23</p><p>La Pampa</p><p>4.22</p><p>4.5</p><p>6.78</p><p>Mendoza</p><p>6.81</p><p>2.57</p><p>4.36</p><p>Neuquén</p><p>3.11</p><p>-</p><p>-</p><p>Río Negro</p><p>5.22</p><p>-</p><p>10.16</p><p>Santa Cruz</p><p>3.21</p><p>-</p><p>10.17</p><p>Santa Fe</p><p>3.07</p><p>-</p><p>4.47</p><p>Tierra del Fuego</p><p>3.45</p><p>-</p><p>-</p><p>Tucumán</p><p>3.90</p><p>-</p><p>7.26</p><p>Cifras oficiales, frente a las cuales hay denuncias de falsedad.</p><p>Abstenciones en las provincias en las que fue más alta</p><p>(porcentajes)</p><p>Abstenciones a Presidente</p><p>Abstenciones a Gobernador</p><p>Abstenciones a Diputados</p><p>Catamarca</p><p>20.19</p><p>-</p><p>24.22</p><p>Corrientes</p><p>22.43</p><p>-</p><p>23.59</p><p>Chaco</p><p>23.84</p><p>-</p><p>26.99</p><p>Chubut</p><p>28.76</p><p>28.03</p><p>30.37</p><p>Formosa</p><p>26.30</p><p>-</p><p>28.00</p><p>Jujuy</p><p>25.50</p><p>29.39</p><p>26.95</p><p>Misiones</p><p>21.57</p><p>Salta</p><p>28.09</p><p>-</p><p>29.41</p><p>Santiago del E.</p><p>30.05</p><p>-</p><p>34.22</p><p>Tierra del Fuego</p><p>25.86</p><p>-</p><p>-</p><p>Tucumán</p><p>24.80</p><p>-</p><p>26.63</p><p>Cifras oficiales, frente a las cuales hay denuncias de falsedad.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs__991024votoenblanco.htm" download>Descargar el archivo original</a> (docs__991024votoenblanco.htm).</footer>
+</div></body></html>

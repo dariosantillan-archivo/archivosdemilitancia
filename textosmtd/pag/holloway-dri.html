@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>HOLLOWAY, 10 tesis acerca del poder</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>HOLLOWAY, 10 tesis acerca del poder</h1><p class="ficha-doc">Fecha: 30 de julio de 2003 (aprox.) <span class="sep">|</span> 1.559 palabras</p></header>
+<main class="texto"><p>Con diferentes lecturas
+encaramos la cuestion del PODER y del ESTADO. El Estado capitalista,
+el socialista y el comunismo (última etapa, el único momento en que
+se extingue el Estado según Lenin y la tradición marxista).</p><p>HOLLOWAY,
+10 tesis acerca del poder.</p><p>Encaramos
+esta lectura porque se trata de un crítico de la deformación más
+comun del marxismo que encara al poder como algo a lo que hay que ir
+a tomar. Nosotros nos preguntábamos críticamente hasta donde negar
+todo lo que se dijo y se hizo, si nada de lo que es la experiencia
+histórica acumulada por siglo sirve, o si por el contrario hay que
+mejorar, criticar.</p><p>Para
+Holloway desde ya que el Estado nada tiene que ver con el poder. El
+distingue entre dos tipos de poder: EL PODER SOBRE y el PODER HACER.
+Que lo que libera a los hombres es el PODER HACER que mientras que el
+poder hacer se mantenga los hombres son libres y adquieren verdadera
+conciencia porque cualquier instancia de PODER SOBRE es nociva. De
+alguna manera niega la posibilidad de tener una estructura
+organizativa mínima porque al ejercerse un poder sobre, ese poder
+sobre rompe la posibilidad del hacer.</p><p>Nos
+preguntábamos si no hay en la historia de los MTDs una combinación
+de PODER HACER y PODER SOBRE que no tiene porque ser opresivo. Por
+ejemplo, las decisiones de asamblea, la reunión de la coordinadora
+Verón, los $3 de aporte, no impiden el hacer, en todo caso son un
+poder sobre que expresa el poder hacer colectivo.</p><p>En
+la práctica concreta de una organización popular con niveles de
+participación y democracia como el MTD para que subsista la
+organización debe haber niveles de poder sobre, pero que tienen que
+ver con que el que no quiere decidir cosas, avanzar y entendiendo
+perfectamente cuál es esa decisión. Esos compañeros no respetan el
+poder hacer colectivo, lo que las mayorías quieren hacer. Y de
+alguna manera se ejerce un poder sobre que respeta esas decisiones
+colectivas.</p><p>Ese
+poder sobre es bueno que exista, porque permite convivir con
+contradicciones, diferencias que obligan a reformular prácticas y
+organización constantemente y no en nombre de la uniformidad sino en
+la de incluir las opiniones diferentes. Entonces el PODER SOBRE se
+relaciona con la construcción y la defensa de los intereses
+colectivos de un conjunto social dinámico.</p><p>Negar
+el poder sobre da lugar a afirmaciones de posturas individualistas
+que no aportan al poder hacer de muchos (ejemplo en la coordinadora
+cuando hay quienes no quieren definir una estructura organizativa más
+clara y definida).</p><p>Entendíamos
+también que reconocer el PODER HACER Y EL PODER SOBRE como
+necesarios y ricos tiene un planteo de acumulación de poder que está
+ausente en Holloway y que tiene que ver con la historia de los MTD y
+la historia de lucha de un pueblo en su país y en el mundo. Porque
+si alguna vez no se consolida en algo lo que se hace, no hay práctica
+política –lo que sobre todo hacemos en los mtd-. Si no se
+consolida lo que se hace en alguna organización, una estructura
+organizativa perfectible, modificable, etc. no avanzaríamos nunca,
+estaríamos en alguna suerte de asamblea permanente que no ejecuta
+demasiado nada. Entendemos que es exactamente al revés de planteo de
+holloway que el poder sobre es bueno y necesario en tanto se lo
+aplique en la posibilidad del poder hacer colectivo y que lo que
+tiene de rico el poder sobre es que por ejemplo, se toman decisiones
+con una mayoría que opina de una manera y una minoría de otra. Lo
+bueno es que el poder sobre respeta las decisiones colectivas y
+mayoritarias y permiten ir acumulando experiencia, conciencia, poder.
+Hay contradicciones que enriquecen y ayudan a esa acumulación.</p><p>La
+política siempre implica un riesgo, pero hay que tomarlo, y cada
+decisión que tomamos en los MTD implican un riesgo que tomamos para
+avanzar, crecer, consolidarnos. En los MTD hay hoy una disputa que
+está instalada en la Verón para apropiarse del capital político
+que se construyó hasta ahora.Y no está mal hacerlo en tanto
+tengamos presente que ese capital político no es individual que es
+una construcción COLECTIVA que es propiedad colectiva, que nadie
+puede llevarselo adonde se le cante. Ejemplificábamos con la vez esa
+que un grupo del menemismo quiso llevarse el capital político del
+MTD lanús, ahí ejercimos un poder sobre que fue defender la
+autonomía, la independencia de los mtd, los valores del movimiento.</p><p>Hay
+muchos temas que en holloway están ausentes y que son esenciales en
+los movimientos sociales en general y mucho más en los MTD: la
+legitimidad (compañeros que son referentes hacia fuera y hacia
+adentro de la organización), el consenso (no se imponen grandes
+decisiones si no están de acuerdo muchos compañeros) y la
+contradicción permanente entre el poder hacer y el poder sobre.</p><p>Desde
+el MTD proponemos una nueva sociabilidad, nuevos valores que deben ir
+imponiéndose a los viejos, es algo que tenemos como parte de nuestra
+construcción colectiva (más adelante en otros textos y debates
+avanzamos sobre otros aspectos que se relacionan con esto también;
+la libertad de debate, el disenso y la unidad en la acción)</p><p>Estamos de acuerdo en que en esta
+relación de ida y vuelta del PODER HACER Y EL PODER SOBRE, en la
+lucha antiopresión, antidominación, por el cambio social, es
+importante y fundamental que esté presente el poder hacer, que todos
+debemos poder hacer, que es legítimo ejercer el poder sobre pero
+cuando hay un poder hacer , un poder hacer colectivo (como los
+piketes, por ejemplo).</p><p>En
+el MTD aspiramos a que el poder sobre no sea una imposición y que el
+poder hacer se haga más real, que efectivamente todos podamos hacer.
+Para esto veíamos que es importante tener muchos compañeros
+formados e informados capaces de reflexionar y ejecutar con criterios
+colectivos que imponen aquello que es importante y que tienen también
+la posibilidad de impugnar para que no haya una escisión entre un
+grupo de compañeros que avanza (podríamos llamarlo vanguardia) y el
+movimiento de masas viene solito y a kilómetros. Que la formación,
+la capacidad de imponer decisiones y la posibilidad de impugnar
+permiten que esa vanguardia no se transforme en una “patrulla
+perdida” como decía compañero militante desaparecido Rodolfo
+Walsh. (volvemos con esto también en otro encuentro con otros
+autores).</p><p>Decíamos
+que esta contradicción vanguardia-movimiento de masas (o compañeros
+con más decision y compañeros que se comprometen y solo acompañan,
+asomando apenitas la nariz) nos puede llegar a acompañar por siglos.
+Y que se trata que los MTD vienen a ocupar el lugar de síntesis, de
+espacio donde se inviertan esos términos, donde debemos sintetizar
+mayores nivlees de justicia, equidad y libertad teniendo presente que
+por mucho camino nos va a acompañer esa contradicción, que falta
+mucho para TODOS vayamos a la par, porque reconocer las oportunidades
+es tambien un proceso como la toma de conciencia.</p><p>Ahora
+no todo son dudas, tenemos en el MTD muchas CERTEZAS:</p><p>1-las
+cosas se consiguen luchando muchos. El que lo ve se integra y al que
+no lo ve le seguimos diciendo nuestra verdad colectiva.</p><p>que
+es necesario que muchos luchen en muchos lados. Entendemos que es
+necesario que haya militantes dinamizando al movimiento de masas y es
+para eso que los MTD transmitimos nuestra experiencia colectiva,
+experiencia social acumulada. Las asambleas, el corte, la lucha, las
+negociaciones, la confrontación, el avance, el retroceso. Esta
+transmisión no es una receta ni un programa ni un manual de un
+partido, es experiencia social acumulada.</p><p>2-Las
+certezas siempre están acompañadas con dudas. Acompañamos a los
+compañeros de Brukman, su decisión aunque no estemos de acuerdo. Es
+su decisión pero los acompañamos aunque no estén de acuerdo.
+Respetamos la decisión pero podemos opinar diferente, discutir con
+ellos, con otros, proponer otras alternativas. Se planteó acá una
+diferencia acerca de si podemos opinar igual en brukman aunque no
+hayamos puesto el cuerpo. Algunos sostenían que sí, y otros que si
+no se estuvo bancando no se puede opinar.</p><p>3-Siempre
+que intervenimos en la realidad lo hacemos apostando al triunfo del
+movimiento de masas, no para capitalizarlo una parcialidad política
+(como por ejemplo los partidos de izquierda) y la política la
+hacemos desde la experiencia y la práctica concreta en la lucha.</p><p>Esa
+experiencia acumulada que es histórica, social y política, es
+importante transmitirla y compartirla, el poder hacer colectivo. Pero
+también debe haber posibilidad de impugnar al que transmite la
+experiencia del MTD como chamuyo, apropiándose de algo colectivo sin
+aportar concretamente a la mejora organizativa y al interior del
+movimiento de masas.</p><p>Avanzando
+caminamos y de ahí van surgiendo las dudas pero para mejorar y en el
+marco de certezas muy importantes.</p><p>El
+tema de la vanguardia:</p><p>Lo
+entendemos como un grupo que ejerce un rol de proponer a la sociedad,
+que orienta al promedio del conjunto pero que no decide sobre los
+otros. Este rol de vanguardia se da al interior de las organizaciones
+y desde las organizaciones a la sociedad. Ese rol es dinámico,
+cambia, no es siempre el mismo y para siempre. No es “EL”
+partido, o “EL” programa. Es histórico y entonces puede ser el
+MTD en un momento, brukman en otro, los motoqueros el 19 y 20, los
+militantes que nos cruzábamos en la lucha de calles el 19 y el 20 de
+diciembre.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../HOLLOWAY-DRI.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (HOLLOWAY-DRI.pdf).</footer>
+</div></body></html>

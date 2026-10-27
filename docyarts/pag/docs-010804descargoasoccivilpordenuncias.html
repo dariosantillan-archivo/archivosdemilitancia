@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Dos comunicados: manejo de los Planes de empleo</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Dos comunicados: manejo de los Planes de empleo</h1><p class="ficha-doc">Fecha: 4 de agosto de 2001 <span class="sep">|</span> 1.139 palabras</p></header>
+<main class="texto"><p>Dos comunicados:</p><p>14 de agosto de 2001</p><p>Manejo de los Planes de empleo:</p><p>Organismos acusados iniciarán acciones legales en contra de la Ministra Bullrich</p><p>El pasado jueves 9 de agosto, la Ministra de Trabajo de la Nación, Patricia Bullrich, anunció en conferencia de prensa &quot;duras sanciones&quot; a Instituciones que presentan proyectos de empleo para su aprobación ante el Ministerio, originadas por supuestas &quot;denuncias&quot; e irregularidades observadas en auditorías realizadas el día martes 7 de agosto. La Asociación Civil &quot;Unidos y Solidarios&quot; es uno de los 12 organismos mencionados en dicha denuncia. Por lo tanto nos vemos en la obligación de aclarar ante la opinión pública y las autoridades correspondientes:</p><p>1.- En el último año y medio, la Asociación Civil &quot;Unidos y Solidarios&quot; lleva aprobados por el Ministerio de Trabajo 46 proyectos de empleo. Estos proyectos están dedicados a la construcción de obras comunitarias, puesta en marcha de pequeños talleres productivos, o capacitación en oficios laborales. El Ministerio de Trabajo ha realizado, en este período, 32 inspecciones a los proyectos mencionados, siendo el resultado de todas esas inspecciones positivo. En ningún caso hemos sido intimados por irregularidades ni incumplimiento de las tareas por parte de los beneficiarios. Esto quiere decir: los proyectos que nuestra Asociación Civil gestionó, dieron por resultado obras finalizadas, tareas comunitarias con beneficios concretos para los barrios carenciados, talleres productivos y de oficios en curso. Insistimos, esto lo conoce el Ministerio por medio de las 32 inspecciones positivas realizadas a la fecha, y por eso mismo se nos continuaba renovando los proyectos.</p><p>2.- La última auditoría del día martes 7 de agosto, fue motivo, según el Ministerio, de una intimación &quot;por ausentismo&quot; hacia nuestra Institución, por lo cual se nos &quot;retirará la posibilidad de presentar proyectos&quot;, según declaraciones de la Ministra. Cabe mencionar que los auditores enviados por el Ministerio fueron a tomar asistencia a los lugares de trabajo el día en que estaba anunciada una jornada de protesta nacional, y pasaron del argumento de verificar que &quot;quienes no quisieran participar de las protestas no fueran obligados&quot;, cosa que pudieron verificar en los lugares de trabajo donde algunos pocos beneficiarios de los planes permanecían, a la sanción a la Institución responsable por no garantizar el presentismo de quienes voluntariamente decidieron movilizarse. ¿Acaso el Ministerio esperaba que como organismo responsable de los proyectos impidiéramos a quien quisiera hacerlo participar de una protesta?. Cualquier sanción originada por ese motivo, viola los más elementales derechos constitucionales a manifestarse libremente en una sociedad democrática.</p><p>3.- Más allá de las duras declaraciones mediáticas de la Ministra, como Organismo responsable no hemos sido notificados de ninguna denuncia o irregularidad, ni se nos ha permitido ningún descargo o aclaración, en caso de que las hubiere.</p><p>¿Por qué, entonces, tan duras acusaciones?</p><p>4.- Entendemos que las acusaciones dirigidas tanto a nuestra Asociación Civil como a los demás organismos, tienen el carácter de represalia por facilitar, en nuestro caso, proyectos laborales a beneficiarios que integran el Movimiento de Trabajadores Desocupados. Este Movimiento, al igual que otros, viene desarrollando luchas por la mantención de los planes de empleo y la ampliación de los cupos y las remuneraciones, reclamos que consideramos justos y legítimos.</p><p>5.- Creemos también que esta campaña &quot;sucia&quot; de denuncias, tienen por fin disimular los fuertes recortes que se aplicarán en los planes de empleo, que llegarían a 34.000 planes menos a partir de setiembre, y sin que exista garantía alguna de continuidad a partir de enero.</p><p>6.- Ante esta situación, las declaraciones del Gobierno y en especial de la Ministra Bulrich apuntan a deslegitimar la resistencia que estos recortes generan, y a debilitar las organizaciones de desocupados que luchan para que esto no suceda, sancionando a las Insituciones que somos solidarias con ellos.</p><p>7.- Por lo tanto, junto a otras Organizaciones Intermedias igualmente denunciadas, iniciaremos acciones legales contra el Ministerio de Trabajo por lo que creemos estar ante una campaña de discriminación, mentiras, persecución política y cercenamiento de las libertades individuales por parte del Gobierno.</p><p>Es triste verificar que quienes nos gobiernan priorizan la elucubración de estrategias políticas y represivas para frenar la lucha de un pueblo por mejorar sus condiciones de vida, en lugar de valorar los resultados que en muchos casos se logran con mucha voluntad y pocos recursos, como muestra el balance de nuestra colaboración sumada al esfuerzo realizado por los integrantes del Movimiento de Trabajadores Desocupados, hacia quienes ratificamos nuestra confianza y acompañamiento.</p><p>ASOCIACION CIVIL &quot;UNIDOS Y SOLIDARIOS&quot;</p><p>COMUNICADO DE PRENSA</p><p>Lunes 13 de agosto de 2001</p><p>Instituciones Sociales presentan acciones legales</p><p>contra Patricia Bullrich por falsas imputaciones</p><p>Ante las infundadas denuncias realizadas por la Ministra de Trabajo Patricia Bullrich respecto al desempeño de las Instituciones Sociales que presentamos proyectos de empleo para los desocupados, nos vemos en la obligación de aclarar:</p><p>QUE LAS DENUNICIAS EFECTUADAS POR EL MINISTERIO FUERON PURAMENTE MEDIATICAS Y DIFAMATORIAS, YA QUE NINGUNO DE LOS ORGANISMOS FUE NOTIFICADO FORMALMENTE DE LAS SUPUESTAS IRREGULARIDADES NI PERMITIDO NINGÚN DESCARGO EN CASO DE QUE LAS HUBIERA.</p><p>QUE EL PRINCIPAL ARGUMENTO DEL MINISTERIO PARA JUSTIFICAR UNA POSTERIOR SANCIÓN, ES EL AUSENTISMO REGISTRADO EL DÍA MARTES 7 Y MIÉRCOLES 8 DE AGOSTO, EN MOMENTOS EN QUE SE REALIZABA UNA PROTESTA NACIONAL, LO QUE CONSTITUYE UNA GRAVE VIOLACIÓN AL ELEMENTAL DERECHO CONSTITUCIONAL A MOVILIZARSE EN DEFENSA DE LOS INTERESES DE LOS TRABAJADORES, YA QUE NO SE TRATÓ DE VERIFICAR QUE LA GENTE NO SE MOVILIZARA BAJO SUPUESTA &quot;COACCIÓN&quot;, SINO QUE SE BUSCA SANCIONAR A LOS ORGANISMOS QUE PERMITIERON QUE QUIENES QUISIERAN HACERLO SE MOVILICEN LIBREMENTE, PRINCIPAL MOTIVO DE LAS INASISTENCIAS REGISTRADAS EN LOS LUGARES DE TRABAJO.</p><p>QUE LOS ORGANISMOS MENCIONADOS TENEMOS UNA LARGA TRAYECTORIA EN CUANTO A REALIZACION DE TAREAS COMUNITARIAS, HECHO QUE CONOCE EL MINISTERIO A TRAVÉS DE LAS INSPECCIONES POSITIVAS REALIZADAS EN LOS ÚLTIMOS DOS AÑOS.</p><p>POR ESO, AFIRMAMOS:</p><p>QUE HAN MONTADO UNA CAMPAÑA DE PERSECUCIONES, DIFAMACIÓN Y CONFUSIÓN RESPECTO A LOS PLANES DE EMPLEO, CON EL CLARO OBJETIVO DE DESPRESTIGIAR A LOS SECTORES SOCIALES EN LUCHA.</p><p>QUE ESA CAMPAÑA TIENE POR OBJETIVO DISIMULAR LOS FUERTES RECORTES QUE SE VIENEN REALIZANDO EN EL PRESUPUESTO DESTINADO A ESTOS PLANES, QUE EN EL MES DE SEPTIEMBRE IMPLICARÁ 34.OOO BAJAS DE BENEFICIARIOS, SIN QUE HAYA CERTEZA DE CONTINUIDAD DEL RESTO DE LOS PLANES A PARTIR DE DICIEMBRE.</p><p>QUE INICIAREMOS ACCIONES LEGALES EN CONTRA DEL MINISTERIO EN RESGUARDO DE LAS INSTITUCIONES QUE RESPONSABLEMENTE HEMOS TRABAJADO EN PROYECTOS DE EMPLEO, DENUNCIANDO LA PERSECUCIÓN POLÍTICA E ILEGALIDAD DE CUALQUIER TIPO DE SANCIONES SELECTIVAS QUE EL MINISTERIO INTENTA APLICAR.</p><p>QUE MÁS ALLÁ DE LAS PERSECUCIONES, INTIMIDACIONES Y REPRESIONES, SEGUIREMOS ACOMPAÑANDO CON FUERZA EL PLAN DE LUCHA EN CURSO, HASTA LOGRAR LOS OBJETIVOS DEFINIDOS EN EL ENCUENTRO NACIONAL DE LA MATANZA QUE SON DE PÚBLICO CONOCIMIENTO.</p><p>Asociación Civil &quot;UNIDOS Y SOLIDARIOS&quot; – COORDINADORA DE TRABAJADORES DESOCUPADOS &quot;ANIBAL VERON&quot; – MTD LANÚS – MTD SOLANO – MTD ALTE. BROWN – MTD FCIO. VARELA – CTD LA PLATA, LANÚS, QUILMES</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010804descargoasoccivilpordenuncias.htm" download>Descargar el archivo original</a> (docs_010804descargoasoccivilpordenuncias.htm).</footer>
+</div></body></html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La necesidad de la organización</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>La necesidad de la organización</h1><p class="ficha-doc">Fecha: diciembre de 2000 (aprox.) <span class="sep">|</span> 2.039 palabras</p></header>
+<main class="texto"><p>&quot;LA NECESIDAD DE LA ORGANIZACIÓN&quot;</p><p>En Enero de 2000, un grupo de vecinos comenzamos a juntarnos en el barrio ante una necesidad comun : &quot;EL PROBLEMA DE LA FALTA DE TRABAJO&quot;. Al principio no se sabia bien como hacer para gestionar unos &quot;SUBSIDIOS PARA LOS DESOCUPADOS&quot; , que sabiamos estaban dando vuelta por la zona.</p><p>En ese caminar para solucionar o por lo menos comenzar a combatir &quot;EL CANCER DE LA DESOCUPACION&quot;, nos topamos con la gente de la C.T.D ( Coordinadora de Trabajadores Desocupados) , que en aquel entonces nucleaba a las comiciones y Movimientos de Trabajadores Desocupados de F.Varela, Solano , La Plata , Matanza y Mte.Chingolo.</p><p>Estos compañeros ( termino nuevo para nosotros en aquel entonces) fueron quienes nos han señalado el camino y guiado en los primeros pasos : Primero , habia que convocar a los vecinos con el mismo problema y reunirnos semanalmente en &quot;ASAMBLEAS&quot; , en donde fueramos andando &quot;ENTRE TODOS&quot;. Este es el inicio de la &quot;DEMOCRACIA DIRECTA Y LA ORGANIZACIÓN DE BASE&quot;.</p><p>Luego de dar algunas vueltas , de presentar &quot;petitorios&quot; que nunca encontraban una respuesta ; despues de &quot;juntar firmas&quot; , que al fin y al cabo quedaban archibadas sin ser leidas por nadie; despues de eso y mas , los</p><p>compañeros de la C.T.D , nos invitan a participar de una &quot;movilizacion al Ministerio de Trabajo de la Nacion&quot;, en la Capital . Alli , donde participaron solo un puñado de vecinos del Barrio Don Orione , pudimos comprobar , con nuestros propios ojos , lo que los compañeros ya nos venian diciendo : Que con la &quot;accion directa&quot; , es decir ,&quot; con la lucha del pueblo&quot; , es posible &quot; arrancarle cosas al Gobierno&quot; , es posible &quot;torcerles el brazo y conquistar logros&quot;.Eran estas , las famosas &quot; pequeñas victorias de los Desocupados&quot;.</p><p>En esta marcha , Don Orine , consiguio su prime conquista : &quot; una cuadrilla de trabajo de 9 personas para un ropero comunitario&quot;.A partir de entonces surgia en el barrio el M.TD (Movimiento de Trabajadores Desocupados).</p><p>Al comienzo , la organización en Asambleas semanales , resultaba ser la mejor forma de organización; ya que alli todos podiamos opinar , participar , votar para tomar las desiciones.Lo cierto es que solo habian trabajando algunos compañeros y los desocupados no eran tantos tampoco .</p><p>Con el corte de ruta en Camino Gral Belgrano y Pasco ( 6/11/00 ), las cosas empieza a cambiar; ya que una semana mas tarde el Movimiento vuelve a la ruta, no por un reclamo concreto , sino para repudiar a un Gobierno que estaba matando compañeros desocupados que al igual que nosotros salian a las rutas a reclamar lo justo.Aquel dia (13/11/00 ), salimos a la calle mas del doble de vecinos de los que fuimos a la rotonda de Pasco ;ademas de salir solos , sin ninguno de los otros Movimientos, que a diferencia de Don Orione , tienen mas experiencia en la lucha , debemos sumarle que a los 10 diaz del segundo corte, se viene un &quot;paro activo nacional de 36 h.s&quot; , en donde el M.T.D VUELVE A LA CALLE ( haciendo una marcha por el barrio y una olla popular al costado de la ruta ); esta vez , no solo sin los otros Movimientos , sino con mucho mas gente que en el segundo corte , HACIENDONOS OIR Y SUMANDO NUESTRO GRITO , al de los trabajadores , en una jornada de lucha que tenia por objetivo , repudiar la politica de un gobierno que atado de pies y manos al capital extranjero , solo ajusta y reprime al pueblo ; encarcelando y procesando a los miles de compatriotas que a lo largo y ancho del Pais salen con la bandera celeste y blanca a pelear por la &quot;DIDNIDAD &quot; .</p><p>Con lo descripto anteriormente , podemos observar que el M.T.D en A,Bronw , tiene un crecimiento con los tres hechos ocurridos en Noviembre .Este crecimiento se expresa principalmente en tres caracteristicas :</p><p>La conquista de logros materiales , esto es , el haber conseguido mas puestos de trabajo , mas bolsones de alimentos , la renovacion por un año de los contratos de los compañeros que ya estan trabajando y un aumento de sueldo , de $120 a $ 160 .</p><p>Crecimiento en cantidad , es decir , de 45 compañeros en el primer corte a 110 en la olla del paro .</p><p>El crecimiento en calidad , expresado en la experiencia adquirida en estas tres jornadas de lucha .</p><p>Lo cierto es que este crecimiento se dio en forma muy rapida ; ademas de que no fue previsto.</p><p>A partir de esto el M.T.D se ha visto plagado de problemas , que antes al ser pocos y no haber conseguido tantas cosas , no teniamos .Pero esto no debe &quot; ni asustarnos , ni disgustarnos &quot; ; solo debemos comprender que por unos meses estaremos atravesando por una situacion que podemos caracterizar como de</p><p>&quot; crisis de crecimiento &quot; .Teniendo en claro que por unos meses estaremos atravesando una crisis , ya no nos volveremos locos ante cada problema , sino que deberemos tomarlo con serenidad , comprendiendo que cada uno de estos inconvenientes son parte de un &quot;proceso de transicion &quot; hasta que podamos &quot; consolidar el Movimiento &quot;.</p><p>Asumiendo la&quot; etapa &quot; ( crisis de crecimiento ) y el &quot; proceso &quot;( de transicion para consolidarnos ) , por el que atravezamos como Movimiento , es que comenzamos a llevar adelante la propuesta que un grupo de compañeros presento ante la Asamblea y que esta voto favorablemente.Esta propuesta , es la de &quot;ORGANIZAR Y ESTRUCTURAR EL M.T.D&quot; de forma tal de que tengamos la capacidad de poder ir &quot;previendo los problemas antes de que se nos presenten y poder solucionarlos &quot;.</p><p>Por todo esto es que se ha conformado la &quot; MESA DE DELEGADOS &quot;, compuesta por delagados de cada una de las &quot;cuadrillas de trabajo &quot; y por delegados de la &quot;comision de Organiuzacion &quot; ( y proximamente la de Prensa ); buscando de esta forma ir resolviendo las cosas de forma organizada .</p><p>&quot;SOBRE LA MESA DE DELEGADOS &quot;</p><p>&quot; LA MESA DE DELEGADOS ES UN ORGANIZADOR Y DINAMIZADOR COLECTIVO &quot; , y tiene por funcion , por un lado , tareas que tienen que ver con relacionar al Movimiento hacia Afuera ( ej : participar de la Coordinadora de M.T.D de zona Sur ; o de una multisectorial zonal , etc )</p><p>Por otro lado , tareas de tipo interno , como por ejemplo , destinar algun compañero que participe de una mesa de enlace barrial del M.T.D A. BRONW ( mesa que nuclearia , por ejemplo , a Glew y Don Orione ) ;elaborar y presentar los proyectos de trabajo ( tanto a nivel Municipal , como Pcial y Nacional ) ; elaborar los listados de quienes entran a trabajar y quienes reciben los bolsones de alimentos ( basado en los listados de asistencia a las Asambleas y actividades del M.T.D ) ; coordinar la entrega de &quot;bolsones &quot; ; establecer con anticipacion , antes de una medida de lucha , cual es el criterio con el que se va a negociar , que es lo que se negocia , que es impostergable , etc.</p><p>Como &quot; atribuciones &quot; , la &quot;mesa de delegados &quot; , es la unica que puede convocar a una &quot; Asamblaea extraordinaria &quot;; puede intervenir las &quot; cuadrillas de trabajo &quot; en caso de que estas persistan con un problema sin poder solucionarlo ; es la encargada de preparar el temario de las Asambleas , poniendo como primeros puntos los mas importantes y dejando a consideracion del conjunto de la Asamblea aquello que esta desee incorporar . Otra atribucion de la mesa , es tener &quot;niveles de decisión relativos &quot; , es decir , puede resolver cosas de urgencia , y tiene que garantizar que los &quot;criterios generales &quot; establecidos en el Movimiento sean cumplidos .</p><p>&quot;SOBRE LOS DELEGADOS DE LAS UNIDADES DE TRABAJO &quot;</p><p>El rol de los delegados es , principalmente , ser un &quot;ORGANIZADOR Y DINAMIZADOR&quot; de su grupo .Debe ocuparse de la problemática general del trabajo y de garantizar la organización y dinamica de las unidades de trabajo que esten en manos del M.T.D (Planes de Nacion )</p><p>Las &quot;unidades de trabajo &quot;, pueden ser &quot;cuadrillas &quot; (Municipales ) , &quot;Roperos Populares &quot; , &quot;Panaderias &quot;,etc.</p><p>Los delegados , son los compañeros que representan a cada &quot;unidad de trabajo&quot; en la&quot;mesa de delagados&quot;.Deben ser la &quot;correa de transmision &quot; entre &quot; la mesa &quot; y &quot; las unidades&quot; .Es decir , debe haber un ida y vuelta .Los delegados son &quot;coordinadores&quot; de los grupos y no los &quot;PATRONES&quot; , ni los &quot; JEFES&quot; . Cada delegado es elegido , mediante una votacion de los compañeros de su grupo , y este puede sacarlo en cuanto ve que el delegado no cumple con su funcion o no respeta los &quot;criterios&quot;; por lo tanto &quot;LOS DELEGADOS SON REVOCABLES&quot;.</p><p>El delegado no puede llevar propuestas en nombre de &quot;la mesa&quot; sin haber sido previamente acordado por esta; ni tampoco puede decidir por si mismo , sin consultar con su &quot;unidad de trabajo &quot;</p><p>Los delegados no pueden dejar de trabajar ( solo en casos en donde la mesa le encomiende una tarea ) , ni pueden perder el vinculo permanente y cotidiano con sus compañeros ,YA QUE ENTENDEMOS QUE ESTO ES EL GERMEN DE LA &quot; BUROCRACIA &quot;. Al contrario que en los partidos politicos , los sindicatos , las sociedades de fomento y todos esos lugares en donde se acostumbra a lucrar con los intereses de la gente , en donde ser delegado implica una tajada para uno o para su familia, en el M.T.D , los delegados deben expresar el mayor grado de compromiso , es decir , deben ser un ejemplo .DEBEMOS ROMPER CON ESA COSTUMBRE DE QUE SER DELEGADO ES PARA OBTENER ALGUN BENEFICIO PERSONAL , QUE SE ESTA PARA ROBAR , en donde solo preocupa el interes individual , sin importar lo colectivo , dejando de lado los intereses de clase.Al contrario , para nosotros , la conducta ,el compañerismo , el buscar permanentemente hacer las cosas mejor , la solidaridad , la humildad , el espiritu de sacrificio y desprendimiento ,la actitud de lucha ,la constancia cotidiana , la lealtad al Movimiento , pero por sobre todo &quot;lealtad al Pueblo&quot; , son valores que esperamos se vean expresados en los delegados ,</p><p>&quot;SOBRE LAS UNIDADES DE TRABAJO &quot;</p><p>.Las unidades de trabajo pueden resolver por si mismas solamente aquello que tenga que ver con su dinamica , ( ej: dia , horario y lugar de reunion )siempre y cuando no afecte la organización , y los criterios del conjunto ;por lo tanto &quot; LA AUTONOMIA DE LOS GRUPOS ES RELATIVA &quot; , ya que cada uno de ellos es &quot;UNA PARTE DE UN CONJUNTO , QUE ES EL MOVIMIENTO &quot;.Por eso , &quot; LO PARTICULAR ESTA SUBORDINADO A LO GENERAL &quot; y &quot;LO GENERAL SE ENCUENTRA SINTETIZADO Y CENTRALIZADO EN LA MESA DE DELEGADOS &quot;</p><p>&quot; SOBRE LAS COMISIONES &quot;</p><p>Las comiciones deben estar volcadas a garantizar el funcionamiento de lo que le corresponde como area de trabajo ; queda claro que estan subordinadas a la &quot;mesa &quot; y que su &quot; autonomia es relativa &quot;.Los criterios generales son los mismos que los de las unidades de trabajo con , la salvedad de que las comiciones cumplen una tarea especifica y no un trabajo cotidiano .</p><p>*&quot;Comision de Organización &quot; : el rol de esta comicion es garantizar la &quot; organización y seguridad &quot; de las actividades del Movimiento ; ya sea una movilizacion , una asambles , un corte de ruta , la entrega de bolsones , una pintada , una volanteada , etc .</p><p>*&quot;Comision de Prensa &quot; : tiene por funcion cubrir todas las tareas relacionadas con el area .Algunas tareas son : confeccion de volantes , folletines , comunicados de prensa , tener un inventario con los telefonos de los &quot; medios de comunicación &quot;, un archivo con los recortes de los diarios de interes para el Movimiento , etc.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_0012xxbalance1añoMTDbrown.htm" download>Descargar el archivo original</a> (articulo_0012xxbalance1añoMTDbrown.htm).</footer>
+</div></body></html>

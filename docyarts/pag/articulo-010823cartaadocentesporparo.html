@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ante la claudicación de la conducción del Suteba en la lucha por una Educación para todos</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Ante la claudicación de la conducción del Suteba en la lucha por una Educación para todos</h1><p class="ficha-doc">Fecha: 23 de agosto de 2001 <span class="sep">|</span> 660 palabras</p></header>
+<main class="texto"><p>Ante la claudicación de la conducción del Suteba en la lucha por una Educación para todos</p><p>Los padres de los chicos sin clases acompañamos a los docentes que luchan</p><p>CARTA ABIERTA DE LOS DESOCUPADOS A LOS MAESTROS QUE LUCHAN</p><p>En esta carta queremos dirigirnos a todos los docentes que se mantienen firmes en la lucha por su salario y por una Educación para todos, y están indignados por la claudicación de la dirección de su sindicato, el SUTEBA, por la decisión de abandonar la lucha sin haber conseguido prácticamente nada bueno ni para ustedes, los docentes, ni para la Educación Publica ni para nuestros hijos.</p><p>Compartimos la bronca de ustedes al ver esta lucha truncada. Saben ustedes de nuestro apoyo, que hemos manifestado en cada reunión de padres, asambleas en las escuelas a las que se nos convocó, y acompañando con agrado sus movilizaciones, a las que aplaudimos a su paso desde nuestras casas, y admiramos por su masividad como la del jueves 23 en La Plata, que fue una marcha histórica.</p><p>Nuestros pibes, ustedes lo saben, son los principales afectados, pero no por un paro docente, sino por la terrible situación social a la que han llevado el país quienes nos gobiernan. Mucho hacen ustedes para educarlos sin libros, sin lápices, y muchas veces con la pancita vacía... O comprenden ustedes cuando los chicos faltan porque nuestros barrios se inundan con cualquier tormenta, y son comprensivos cuando pasan unos días y nuestros pibes no pueden ir al colegio porque nos acompañan a nosotros, sus padres, a algún corte de ruta para reclamar por trabajo...</p><p>Así vivimos en la Provincia de Buenos Aires, así están las escuelas, la salud, los comedores... Y ante esta situación, sabemos, la única forma de revertirla es LUCHANDO.</p><p>Por eso repudiamos las declaraciones del secretario general del SUTEBA, Hugo Yasky, que justificó la claudicación de la dirección del gremio diciendo que tenían &quot;presiones de los padres y los medios de comunicación&quot;. Que no mezcle las cosas el sr. Yasky: las verdaderas presiones que recibió fueron del poder político y económico, donde sí los medios de comunicación, como parte del poder económico, tienen un rol importante en la deslegitimación de las luchas populares. ¿Pero esto a quién sorprende? Todos los que luchamos por un futuro mejor sabemos que enfrentamos intereses poderosos, y que nuestras luchas no serán fáciles, y que para ganarlas no vamos a esperar la adhesión de los poderosos, sino del pueblo. Pero para la conducción del SUTEBA parece que pesa más la &quot;imagen mediática&quot; que el real apoyo popular, que todos ustedes recibieron, por ejemplo, en la histórica movilización a La Plata del jueves 23. Tal vez el señor Yasky esté cuidando su imagen mediática pensando en un futuro cercano como candidato a algo, como su &quot;maestra&quot; Mari Sanchez hizo hace unos años. Y ya sabemos cómo siguen esas lógicas: se entregan las luchas de los trabajadores en función de ser un sindicalista &quot;políticamente correcto&quot;, y así poder ser parte, en un futuro cercano, del mismo sistema político que seguirá oprimiendo al pueblo.</p><p>Se vienen tiempos más difíciles aún, y poco podremos esperar como trabajadores y desocupados con direcciones sindicales claudicantes como éstas. Por eso saludamos todos los intentos de trasnformar la bronca en organización que, sabemos, ustedes están haciendo para seguir la lucha. Acompañamos a los docentes que se organizan como &quot;autoconvocados&quot;, a las listas opositoras que se unen para hacer fuerza a la burocracia, y pujan por mecanismos democráticos y decisiones firmes de lucha, que sume a los docentes al torrente de luchas que se ponen de pie para derrotar a este modelo económico, sin dejarnos engañar por direcciones claudicantes ni falsas opciones electorales.</p><p>Seguiremos solidarios con su lucha, que es la nuestra.</p><p>POR TRABAJO, SALUD, EDUCACIÓN, DIGNIDAD Y UN CAMBIO SOCIAL.</p><p>padres y madres de los chicos que concurren a las escuelas públicas, de COORDINADORA DE TRABAJADORES DESOCUPADOS &quot;Aníbal Verón&quot; de Lanús, Quilmes, Almirante Brown, Fcio. Varela y La Plata</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_010823cartaadocentesporparo.htm" download>Descargar el archivo original</a> (articulo_010823cartaadocentesporparo.htm).</footer>
+</div></body></html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>¿Qué es la economía?</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>¿Qué es la economía?</h1><p class="ficha-doc">Fecha: 27 de abril de 2003 (aprox.) <span class="sep">|</span> 1.076 palabras</p></header>
+<main class="texto"><p>¿QUÉ
+ES LA ECONOMÍA?</p><p>Es
+la forma en que los seres humanos nos organizamos, producimos,
+utilizando los recursos que nos brinda la naturaleza.</p><p>¿QUÉ
+ES EL TRABAJO?</p><p>Es
+la actividad que realiza el hombre para producir las RIQUEZAS
+HUMANAS.</p><p>TODO
+LO QUE NECESITAMOS PARA VIVIR LO BRINDAN LA TIERRA Y EL TRABAJO.</p><p>A
+lo largo de la historia, el hombre se relacionó de diferentes formas
+con la naturaleza para sacarle mejor provecho a las riquezas de la
+tierra:</p><p>TRABAJO
+LIBRE Y COMPARTIDO:</p><p>Es
+el que relaciona a una comunidad de hombres socialmente iguales a que
+se unan para trabajar a la par. Todo lo que producen es para
+satisfacer sus necesidades. En esa relación nace el afecto, la
+solidaridad y la paz, el hombre es hermano del hombre. Cada persona
+se une a la sociedad, es parte de ella, la constituye.</p><p>TRABAJO
+EXPLOTADO:</p><p>Es
+posible solo cuando hay hombres socialmente diferentes, pobres y
+ricos y los ricos explotan a los pobres. Con el trabajo explotado muy
+pocos viven de lo que otros producen.</p><p>Del
+trabajo explotado surgen el odio, el egoísmo y la guerra. Con el
+trabajo explotado se separa a las personas de la sociedad, se tiende
+a encerrarlos en sí mismos, unos pocos viven del “morir” de
+muchos.</p><p>El
+hombre que tenía un trabajo libre y compartido pasa a ser explotado
+por un señor que se apoderó de tierras, máquinas y herramientas. Y
+la propiedad que era colectiva, de todos pasa a ser privada, del
+señor que se apropia de ella. Quien sea el dueño de la tierra, las
+maquinas y las herramientas tendrá el poder económico.</p><p>ASI
+NACIO EL CAPITALISMO, QUE ES EL SISTEMA ECONOMICO Y SOCIAL QUE
+TENEMOS EN ARGENTINA Y EN LA MAYORIA DE LOS PAISES DEL MUNDO.</p><p>En
+el capitalismo los dueños del poder economico son los CAPITALISTAS</p><p>«...porque
+los capitalistas han apropiado no solo de las tierras, las fabricas,
+empresas, transportes y herramientas. Sino tambien a las mercancias y
+a las ganancias que producen la venta de ellas.»</p><p>En
+una ECONOMÍA
+CAPITALISTA:</p><p>-
+el objetivo de la producción es que unos pocos se enriquezcan</p><p>-los
+que gobiernan, los poderosos, los políticos, orientan la producción
+al consumo de pocos.</p><p>.</p><p>¿QUÉ
+PROVOCA LA ECONOMÍA CAPITALISTA?</p><p>-que
+muchos del pueblo no cubramos nuestras necesidades</p><p>-que
+no haya condiciones dignas de trabajo ni salarios dignos</p><p>-que
+no se respete la calidad de los productos y la salud de todos</p><p>-que
+se destruyan los recursos que nos da la naturaleza</p><p>¿QUÉ
+ECONOMÍA tenemos en ARGENTINA? ¿QUIÉN PRODUCE Y PARA QUÉ?</p><p>La
+economía, la forma de producción en nuestro país es el
+capitalismo. Muchos producen (los trabajadores) para que unos pocos
+se enriquezcan, acumulen riquezas mientras millones morimos en la
+miseria sin poder cubrir nuestras necesidades de comida, salud,
+educación, vivienda.</p><p>La
+producción de alimentos, por ejemplo, no tiene como objetivo
+alimentar a las personas, sino acumular riquezas que se lleva el
+patrón.</p><p>Uno
+pensaria que el afan de los capitalistas por ahorrar es para vender
+mas barato... pero no...</p><p>lo
+que buscan los capitalistas es siempre tener mas ganancia.</p><p>el
+capitalismo no esta basado en que el obrero trabaje a gusto y viva
+bien .. sino todo lo contario ...sacarle todo el jugo posible</p><p>Actividades
+para trabajar:
+Actividades para trabajar:</p><p>1°
+Problematizar el tema del trabajo y la producción de la riqueza.
+Preguntas en un papelógrafo ¿Qué es el trabajo? ¿Quiénes son los
+dueños de la riqueza y quiénes trabajan para generar esa riqueza?
+(todas estas preguntas las podemos hacer antes de la lectura)</p><p>2°
+Algunas preguntas para profundizar la lectura y sacar conclusiones:</p><p>¿Qué
+tipo de trabajo hay en la sociedad capitalista? Indicar diferencias
+con la forma de trabajo en el MTD.
+Puede
+usarse dos columnas para diferenciar.</p><p>¿Qué
+consecuencias de la economía capitalista vemos en el barrio?</p><p>¿Qué
+cosas diferentes hacemos en el MTD
+para vivir mejor todos?</p><p>¿Qué
+cosas reclamamos en el MTD
+cuando salimos a la lucha y por qué?</p><p>¿Cómo
+podemos mejorar nuestro trabajo en el MTD?</p><p>3°
+mirar los dibujos y analizar entre todos</p><p>ECONOMIA
+SOLIDARIA &amp; ECONOMIA CAPITALISTA</p><p>La
+producción en el MTD
+es popular y solidaria. El fin es satisfacer nuestras necesidades y
+mejorar calidad de vida de todos. Es opuesta al capitalismo que solo
+busca la acumulacion de riquezas, y esas riquezas siempre quedan en
+manos de unos pocos</p><p>Estas
+formas de produccion estan basadas en valores y actitudes tambien
+opuestos.</p><p>VALORES
+QUE SOSTENEMOS EN NUESTRA FORMA DE PRODUCIR</p><p>Para
+poder llevar adelante una economía popular solidaria basada en
+nuestro trabajo en el MTD necesitamos luchar en la calle, en el
+piquete. Pero también todos los días, con los compañeros y los
+vecinos debemos pelear contra los valores negativos que tiran para
+atrás y no nos ayudan a crecer como organización y como personas.</p><p>Debemos
+apostar a los
+BENEFICIOS COLECTIVOS y
+no a salidas individualistas buscando más SOLIDARIDAD
+y derrotando al egoísmo.</p><p>Nos
+tenemos que comprometer para llevar adelante lo que creemos dejando
+de lado las críticas destructivas Tenemos que ser HONESTOS
+y levantarnos la AUTOESTIMA.</p><p>El
+rumor y la mentira no pueden existir entre nosotros ni con los
+vecinos.</p><p>La
+ALEGRIA
+tiene que estar presente entre nosotros, la fiesta de estar
+construyendo el cambio social que nos merecemos</p><p>Para
+pensar en grupos:</p><p>1)
+Pensar los valores del capitalismo y donde los vemos expresados</p><p>2)
+Pensar los valores del MTD y donde los vemos expresados ¿Qué otros
+podriamos agregar?</p><p>Para
+pensar en grupos:</p><p>Leer
+el texto atentamente</p><p>3) ¿Que
+cosas negativas vemos en el MTD? Como las superamos?</p><p>4)
+¿Qué cosas nos comprometemos cambiar para mejorar la producción
+del MTD y nosotros como personas?</p><p>5)
+Hacer un listado de las palabras que estan en negrita y refleccionar
+sobre cada una de ellas.</p><p>1°
+Problematizar el tema del trabajo y la produccion de la riqueza.
+Preguntas en un papelografo ¿Que es el trabajo? Quienes son los
+dueños de la riqueza y quienes trabajan para generar esa riqueza?
+(todo estas preguntan las podemos hacer antes de la lectura)</p><p>2°
+Algunas preguntas para profundizar la lectura y sacar conclusiones</p><p>¿Qué
+tipo de trabajo hay en la sociedad capitalista? Indicar diferencias
+con la forma de trabajo en el MTD.
+Puede
+usarse dos columnas para diferenciar.</p><p>¿Qué
+consecuencias de la economía capitalista vemos en el barrio? ¿Qué
+cosas diferentes hacemos en el MTD
+para vivir mejor todos?</p><p>¿Qué
+cosas reclamamos en el MTD
+cuando salimos a la lucha y por qué?</p><p>¿Cómo
+podemos mejorar nuestro trabajo en el MTD?</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../trabajotextocartilla.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (trabajotextocartilla.pdf).</footer>
+</div></body></html>

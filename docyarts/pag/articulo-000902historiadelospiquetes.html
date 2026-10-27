@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>El Movimiento de Trabajadores Desocupados (MTD): por un movimento popular para la transformación social</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>El Movimiento de Trabajadores Desocupados (MTD): por un movimento popular para la transformación social</h1><p class="ficha-doc">Fecha: 2 de septiembre de 2000 <span class="sep">|</span> Publicado en Resumen Latinoamericano <span class="sep">|</span> 1.198 palabras</p></header>
+<main class="texto"><p>2 de setiembre de 2000</p><p>Artículo publicado en la Revista &quot;RESUMEN LATINOAMERICANO&quot;, NOVIEMBRE-DICIEMBRE 2001, ESPAÑA</p><p>El Movimiento de Trabajadores Desocupados (MTD):</p><p>Por un movimento popular para la transformación social</p><p>en la Argentina</p><p>Neoliberalismo y cortes de ruta</p><p>Para entender el surgimiento de las organizaciones y movimientos de desocupados que cobraron fuerza en los últimos años en nuestro País, para comprender las características de las nuevas formas de lucha, las puebladas, y el surgimiento de nuevos actores sociales y políticos, es necesario repasar brevemente las transformaciones estructurales que vienen dejando más de diez años de políticas neoliberales:</p><p>Después de diez años de menemismo y casi un año de gobierno de la Alianza, la deuda externa se triplicó, la mayor parte del patrimonio del Estado se vendió y desnacionalizó, la estructura educativa y sanitaria se degradó profundamente. El mundo del trabajo también sufrió la embestida: pérdida de conquistas históricas de la clase trabajadora, mayor explotación, y de la mano de esto, un nivel de expulsión de mano de obra sobrante, que convierte a los desocupados no ya en un &quot;ejército de reserva&quot;, sino en &quot;población exedente&quot;, millones de compatriotas que no tienen acceso a los derechos básicos de subsistencia. A la vez, la actividad política fue quedando hegemonizada por dos fuerzas subordinadas al neoliberalismo cuyo único plan es reproducir el sistema actual, con el apoyo de una importante cantidad de dirigentes sindicales que fueron cómplices de la entrega. Esto termina de pintar un panorama con una gran parte del pueblo excluído de la posibilidad de trabajar, y una brecha creciente entre este pueblo y las dirigencias políticas y sindicales tradicionales, producto de la falta de credibilidad que se supo ganar el conjunto de la clase política.</p><p>Así, sobre este panorama, adquieren su real dimensión las &quot;puebladas&quot; que cada vez más frecuentemente se dan en el interior del país, protestas masivas que hcieron del &quot;corte de ruta&quot; su arma más efectiva, y que tuvo a los desocupados como uno de los principales protagonistas. Estas protestas, que muchas veces son consideradas &quot;espontáneas&quot;, fueron generando lecciones y aprendizajes, que, aunque en forma desordenada y todavía dispersa, van dando como resultado distintos niveles de organización, y nuevos criterios de funcionamiento: la democracia de base, independencia de los partidos políticos y del Estado, la asamblea popular como forma de tomar las decisiones, etc. Estas características estuvieron presentes en los cortes de ruta a partir del 96, en Cutral-Có en General Mosconi y Tartagal, y van teniendo su expresión orgánica en los Movimientos de Trabajadores Desocupados. A partir del corte de la Ruta Nacional Nº2 en Florencio Varela (gran Buenos Aires) en agosto del 97, que le torció el brazo al Gobierno, comienzan a tener presencia en los conflictos en el gran Buenos Aires y en otros puntos del interior del país. Así surgen el M.T.D. &quot;Teresa Rodríguez&quot;, en homenaje a la trabajadora asesinada por la policía en la represión en Cutral Có, el M.T.D. &quot;General San Martín&quot; en la provincia de Chaco, y otros &quot;MTD&quot; a secas que se van conformando en las barriadas populares, como forma de darle una organización perdurable a las luchas por el trabajo. Otras expresiones como los &quot;Autoconvocados&quot; en Corrientes, los Cabildos Abiertos, surgieron también en el interior del país como ámbitos de autoorganización de los diversos sectores en lucha.</p><p>La lucha por el trabajo y los subsidios de Empleo:</p><p>Puebladas como la de Cutral- Có en el 97 le torcieron el brazo al Gobierno, venciendo con palos y gomeras a la brutal represión de una Gendarmería y Polícía cada vez más militarizadas. De esta manera, con el auxilio del Banco Mundial y con la intención de &quot;aplacar el conflicto social&quot; mientras se avanzaba con las reformas estructurales que exigían los grandes Grupos Económicos y los organismos internacionales, el gobierno de Menem anunció la implementación del &quot;Plan Trabajar&quot;, que consistía en susbidios de 120 a 200 pesos que se pagarían a cambio de la realización de tareas comunitarias.</p><p>Estos subsidios a cambio de unas pocas horas de trabajo, destinados a las zonas en las que pudieran estallar conflictos sociales, lejos están de poder ser considerados &quot;Trabajos Dignos&quot;: 120 pesos es &quot;nada&quot; para mantener un hogar, no contempla obra social, ni aportes previsionales; es decir, ante la creciente desocupación, el Estado proponía trabajos improductivos, hiper-flexibilizados, sin estabilidad, y en negro: todo una descripción de la Argentina que nos estaban dejando...</p><p>Sin embargo, la situación de extrema necesidad y la falta de mejores perspectivas para los sectores más marginados, hizo que estos Planes fueran una posibilidad concreta para subsistir. Así, desde los M.T.D. se comenzaron a organizar las luchas por la incorporación de los desocupados a los planes de empleo. Movilizaciones, ollas populares, tomas de edificios públicos y cortes de ruta, reclamos ante Municipios, Gobernaciones o el Ministerio de Trabajo, signaron estos años de lucha. Engaños, mentiras, represión y cientos de compatriotas procesados a lo largo del país, o incluso presos, como en el caso de Alí, compañero de la Unión de Vecinos Organizados de Mar del Plata, fue la respuesta tanto del gobierno anterior como el de los &quot;progresistas&quot; de la Alianza. Pero no son luchas meramente reicindicativas: tenemos consciencia de que la raíz de estas políticas antipopulares está en el orden social injusto que nos domina. Por eso, definimos para el Movimiento las banderas que unifican nuestras luchas:</p><p>TRABAJO, porque es de lo que nos privan y lo que exigimos como derecho impostergable, porque somos parte de la cultura del trabajo que con tanta lucha y sacrificio forjaron los mejores hombres de nuestra historia.</p><p>DIGNIDAD, porque sin dignidad no hay futuro. Porque a pesar de las dificultades, no perdemos nuestra dignidad, no nos rendimos ni nos entregamos, porque heredamos la dignidad de las luchas históricas de nuestros antepasados, y la mantenemos viva como principal bandera hacia el futuro que queremos para nuestros hijos.</p><p>CAMBIO SOCIAL, porque ese futuro digno deberá construirse sobre una sociedad justa e igualitaria, y para eso habrá que transformar de raíz este sistema en el que, gobierne quien gobierne y apliquen los planes que apliquen, poco cambiará si no se erradica definitivamente la explotación del hombre por el hombre.</p><p>Hacia la construcción de un poder popular</p><p>A partir de ese eje concreto y posible de objener a través de la lucha, se fueron consolidando las organizaciones de base en los barrios, y en las cuadrillas de trabajo. Esta organización de base, forjada en torno a la lucha directa y cotidiana contra las consecuencias del sistema, va generando los gérmenes del poder popular: el pueblo movilizado es protagonista directo de sus luchas y sus conquistas, y a través de su propia experiencia, va tomando consciencia de las causas que originan la situación de injusticia que padecemos. Dicha consciencia es la que nos permite proyectar nuestras luchas, buscando articular un M.T.D. a nivel nacional, e ir confluyendo con otras organizaciones del pueblo en un basto Movimiento Popular que creemos necesario para enfrentar los poderosos intereses de quienes sostienen este sistema de dominación y explotación.</p><p>TRABAJO, DIGNIDAD Y CAMBIO SOCIAL</p><p>Movimiento de Trabajadores Desocupados</p><p>MTD &quot;Teresa Rodriguez&quot; de Fortencio Varela y San Fransisco Solano, Quilmes, MTD Barrio La Fe, Lanús, MTD Barrio Don Orione, Cláypole, Alte, Brown.</p><p>e-mail: trabajadoresdesocupados@hotmail.com</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_000902historiadelospiquetes.htm" download>Descargar el archivo original</a> (articulo_000902historiadelospiquetes.htm).</footer>
+</div></body></html>

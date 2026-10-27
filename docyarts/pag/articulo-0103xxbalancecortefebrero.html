@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Marzo de 2001: nuevos cortes de los desocupados en el gran buenos aires</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Marzo de 2001: nuevos cortes de los desocupados en el gran buenos aires</h1><p class="ficha-doc">Fecha: marzo de 2001 (aprox.) <span class="sep">|</span> 1.309 palabras</p></header>
+<main class="texto"><p>Marzo de 2001</p><p>Nuevos cortes de los desocupados en el gran buenos aires:</p><p>Un balance necesario</p><p>El 12 de febrero, se produjeron 3 nuevos cortes de ruta en el Gran Buenos Aires: en la Matanza, la CCC y la CTA volvían a confluir en la organización del conflicto; en Lomas, vecinos de distintos asentamientos identificados como &quot;sin tierra&quot; se concentraban en camino de cintura para reclamar; y en Bernal, más de 1200 desocupados pertenecientes al M.T.D. &quot;Teresa Rodriguez&quot; de Solano, el M.T.D. de Lanús y el M.T.D. de Almirante Brown (Don Orione y Glew), organizábamos el corte total del &quot;triángulo&quot; de Bernal, importante cruce en la zona sur del Gran Buenos Aires. Desde hacía diez días, además, alrrededor de 800 integrantes del M.T.D. &quot;Teresa Rodríguez&quot; de Varela mantenían firme el corte a la altura de Bosques.</p><p>A diferencia de noviembre, en donde la seguidilla de cortes encontró al gobierno en una situación de debilidad de la cual las organizaciones de desocupados sacaron provecho, esta vez sabíamos que la situación sería distinta: desde el mes de diciembre, a través del Ministro del Interior Storani, el Gobierno venía denunciando &quot;la conspiración de los piqueteros&quot;, que según el discurso oficial hacen encuentros clandestinos, viajan en avión, y buscan desestabilizar la democracia. Más allá de que ese discurso difícilmente pueda influir en los sectores del pueblo hambreados y explotados por este sistema, tomábamos esas declaraciones como parte de un intento de deslegitimar las protestas sociales, que indefectiblemente volverían a producirse. Durante enero, como parte de la misma estrategia oficial, en la Matanza se producen una serie de denunicias de &quot;irregularidades&quot;, e incluso la ministra de trabajo, Patricia Bulrich Luro Pueyrredón, hace una denuncia contra dirigentes de la Federación de Tierra (FTV-CTA), por recibir un aporte voluntario de cuatro pesos por parte de los desocupados que se integran a dicha organización. La ofensiva del gobierno, además de buscar quitarle legitimidad a la protesta social, avanzaba sobre los sectores organizados, buscando privar a los desocupados del derecho a organizarse sindicalmente, adherir a determinada organización y aportar a su sostenimiento.</p><p>Pero no pueden parar la voluntad de lucha de un pueblo con amenazas y persecuciones: a pesar de esto, los cortes se produjeron, con mucha más participación popular, más duración, e incluso con niveles de coordinación superiores: en Matanza, Bernal y Lomas, sabíamos que cortaríamos coordinadamente para hacer más fuerte la lucha.</p><p>Sin embargo, la estrategia del gobierno no se quedaría sólo en la disputa declamativa: durante más de 10 días no se aceptaban los relamos de ningún sector, se apostó al desgaste de la gente, y para ello fue fundamental la complicidad de los medios de comunicación: más allá del primer día, era difícil encontrar una línea en los prinicipales medios de comunicación referida a uno de los conflictos más grandes en el Gran Buenos Aires desde hace años, como lo fueron estos cortes de ruta coordinados. A nadie debe sorprender esta actitud: las corporaciones mediáticas son parte del bloque del poder económico concentrado, el Grupo Clarín (Clarín, La Razón, Radio Mitre, Canal 13, TodoNoticias, entre otros), por ejemplo, es uno de los Grandes Grupos Económicos que se benefician de los políticas neoliberales que hambrean al pueblo, y es lógica la complicidad con un gobierno que resguarda esos intereses, a la vez que niegan la existencia de las luchas populares.</p><p>En ese contexto, fue acertada la decisión de los desocupados de La Matanza de avanzar hacia la Capital después de 10 días de corte: &quot;invadir&quot; el centro del poder político y económico, hecho que difícilmente pudiera ser ignrado por la prensa y el Gobierno.</p><p>El fracaso de las negociaciones, a pesar de la contundente demostración de fuerzas, deja algunas enseñanzas que marcarán las próximas luchas de desocupados:</p><p>A pesar de no obtener respuesta a las reivindicaciones, estas luchas forzaron al gobierno a mostrar con toda crudeza su verdadera cara: después de la indiferencia y el desprecio del Gobierno respecto a un fuerte y legítimo reclamo popular, nadie podrá con honestidad creer en el verso del Blindaje, el despegue económico, y toda la propaganda que quieran hacer: queda claro que, no habrá forma de lograr conquistas para los trabajadores y el pueblo si no se profundizan las medidas de lucha hasta quebrar el brazo de este gobierno, que eligió enfretar al pueblo sin escatimar esfuerzos. Si bien no hubo una victoria reivindicativa, políticamente queda un saldo de mayor claridad sobre el camino que deberán adquirir las próximas luchas.</p><p>Hacia lo interno, los Movimientos de Desocupados deberemos consolidar y fortalecer nuestra organización: la ofensiva del gobierno tiene por fin eliminar nuestra existencia, y la mejor forma de superar este desafío será desde organizaciones sólidas, en el plano organizativo, político e ideológico: la organización de base, la formación de compañeros, la autonomía política y el análisis político que garantice la elaboración de estrategias correctas, serán fundamentales para el desarrollo del Movimiento de Desocupados más allá de ocasionales derrotas.</p><p>También quedó demostrado que no alcanza con la fortaleza de un solo sector y una mera coordinación de fechas, como sucedió con los cortes en esta ocasión: hará falta profundizar la coordinación de los distintos sectores para definir los pasos a seguir, avanzar en la unidad donde se pueda, y convocar a la mayor cantidad de sectores sociales a discutir y ser partícipes de la lucha. Ocasiones como el paro activo del 4 y 5 de abril, más allá de quienes convoquen o aparezcan en las declaraciones mediáticas, puede ser una buena oportunidad para que todos los sectores, sin importar las particularidades, confluyamos en una jornada masiva de lucha que debilite al gobierno y vaya marcando con más claridad el único camino que le queda al pueblo para conquistar un cambio social: unirse y confrontar masivamente y en las calles contra este sistema neoliberal.</p><p>Desde los M.T.D.s:</p><p>El corte que protagonizamos en conjunto los desocupados de Quilmes, Lanús y Almirante Brown en Bernal, mostró un gran avance respecto al último corte de noviembre: la masividad y el nivel de organización de la medida son muestra de ello.</p><p>Sin embargo, no estamos exentos del contexto que describimos, y nos preparamos para las luchas que se vienen. Respecto a otras organizaciones de desocupados, una diferencia que vale la pena señalar, es que desde los MTDs reivindicamos fuertemente el concepto de autonomía: nos organizamos y definimos nuestras políticas al margen de los partidos políticos, las centrales sindicales y la iglesia. EL &quot;costo&quot; de esta autonomía se nota en lo artesanal de nuestro desarrollo, pero como contraparte nos permite nutrirnos de la adhesión y colaboración de hombres y mujeres de nuestro pueblo, no sólo desocupados, que ven en nuestra construcción una herramienta válida para avanzar hacia un cambio social. Todos tenemos un lugar en esta lucha, y el MTD está abierto a todo aquel que comparta nuestro proyecto. La afirmación de la autonomía no implica que no coordinemos con toda organización popular que exprese objetivos comunes con nuestra lucha, es decir, que enfrente el modelo neoliberal.</p><p>Nuestra consigna también incluye la aspiración a un Cambio Social: sabemos que la desocupación y la marginación, así como la explotación de los trabajadores ocupados, no son consecuencias &quot;no deseadas&quot; de este modelo, sino la razón de ser de este sistema capitalista que deberemos derrotar para construir una sociedad nueva, en la que no exista la explotación del hombre por el hombre. Elegimos un camino largo y difícil, pero el único que podrá resolver de raíz las injusticias que como pueblo padecemos. Y para recorrer ese difícil camino, los pequeños pasitos que estamos dando nos van dejando algunas enseñanzas: solo es posible avanzar cuando el pueblo, a través de la lucha, va tomando consciencia de su propio destino.</p><p>TRABAJO, DIGNIDAD Y UN CAMBIO SOCIAL</p><p>Movimiento de Trabajadores Desocupados &quot;Teresa Rodriguez&quot; de Quilmes</p><p>Movimiento de Trabajadores Desocupados de Lanús</p><p>Movimiento de Trabajadores Desocupados de Alte. Brown (Don Orione- Glew)</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_0103xxbalancecortefebrero.htm" download>Descargar el archivo original</a> (articulo_0103xxbalancecortefebrero.htm).</footer>
+</div></body></html>

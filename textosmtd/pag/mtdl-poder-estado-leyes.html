@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Intentemos enumerar algunos elementos que nos ayuden a definir estas cosas: qué es el poder?</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Intentemos enumerar algunos elementos que nos ayuden a definir estas cosas: qué es el poder?</h1><p class="ficha-doc">Fecha: 14 de diciembre de 2002 (aprox.) <span class="sep">|</span> 2.546 palabras</p></header>
+<main class="texto"><p>Del taller del sábado 16 de noviembre surgieron algunas cosas que
+quedaron como temas para profundizar y tratar de comprender un poco
+más: EL PODER, EL ESTADO, EL ESTADO ES PARTE DEL PODER O QUÉ ES?,
+EL CAPITALISMO, LAS LEYES, LAS MEDIDAS ECONÓMICAS COMO PARTE DE ESAS
+LEYES.</p><p>Intentemos enumerar algunos elementos que nos ayuden a definir estas
+cosas.</p><p>QUÉ ES EL PODER?</p><p>Según el Diccionario de Ciencias Sociales y políticas: “es la
+capacidad de producir consecuencias sobre ciertos objetos y supone
+esto la presencia de un sujeto con posibilidad de actuar. Sujetos y
+objetos son seres humanos que tienen intenciones o voluntad. El poder
+entonces, por ser una relación entre seres humanos es una relación
+social, es decir que se da en una sociedad. El poder no es abstracto
+ni tiene vida propia, el poder es siempre político porque lo hacen
+los hombres, públicamente y es constitutivo de la sociedad”</p><p>Por ser una relación social, el poder toma diferentes maneras a lo
+largo de la historia y será diferente la definición que se tenga
+según quien lo defina. No es lo mismo que defina el poder un esclavo
+a que lo haga un amo, un dueño de una fábrica o un obrero, el
+gobierno y los punteros o los desocupados.</p><p>Desde el año 1600 el PODER en el mundo lo ejercen los capitalistas o
+burgueses y fueron creando teorías o conceptos que justificaran el
+orden de ese poder, que explicaran porqué es como es y no de otra
+manera.</p><p>El más importante de los pensadores acerca del PODER DOMINANTE fue
+Max Weber, alemán de fines de los 1800 y principios del 1900. Se
+preguntó cómo se legitima el poder (no dudando que así como está
+está bien) y encontró una respuesta: el poder se legitima, es
+aceptado por “todos” a través de la burocracia del Estado. Es
+importante entender que Weber necesitaba que su país Alemania se
+impusiera como potencia y anhelaba que el Estado y la burocracia
+cumplieran esa función.</p><p>Antes que Weber, también en Alemania, Karl Marx veía al poder como
+una relación social que surge de las relaciones de producción y
+quien tenga la propiedad de los medios de producción (la tierra, las
+máquinas, las herramientas, los edificios) será quien tenga el
+poder. En el sistema capitalista, ese dominio lo tiene la burguesía
+(el capitalista) y es según Marx uno de los oponentes de una lucha
+con otra clase: el proletariado, los trabajadores. En esta lucha la
+burguesía sostiene su poder a través de la fuerza (Ejército,
+policía, ordenamiento jurídico) y por la capacidad de hacer
+aparecer sus intereses y valores (sus ideas, su ideología) como los
+de toda la sociedad, pretende que SU ideología es la de todos.</p><p>El sistema capitalista es un modo de producción (una relación
+económica y social entre los hombres) donde unos pocos son dueños
+de las mercaderías que venden quedándose con todas las ganancias,
+son dueños de las herramientas, las máquinas, los edificios. En
+tanto millones, la mayoría de las personas nada tienen más que sus
+manos para trabajar , el conocimiento, la fuerza de sus músculos (la
+fuerza de trabajo): son el proletariado o la clase trabajadora.
+Mientras el patrón (el capitalista o el burgués) se queda con la
+mayor tajada, al trabajador sólo le da un salario.</p><p>El sistema capitalista desde sus orígenes busca más y más
+ganancias para los patrones. Surge en los países europeos y la
+necesidad de tener más hace que se busque por otras partes del
+mundo. Viene la conquista y la imposición de ese sistema a todo el
+mundo conocido. Primero conviven en los países conquistados el
+capitalismo y la organización económica y social de cada punto de
+la tierra, luego, a través de los siglos y especialmente desde fines
+de los 1800 se va imponiendo y dominando el capitalismo en todo el
+mundo. Afán de riquezas y necesidad de sostener y reproducir el
+orden establecido expanden el sistema por todos lados.</p><p>Ahora bien, cómo hace la burguesía para imponer el PODER? El Estado
+es la manera más eficaz . Este Estado capitalista tiene una forma de
+gobierno (en el caso de Argentina la republicana con poder
+legislativo –Congreso-, ejectuivo –presidente y ministros- y
+judicial –jueces, fiscales y leyes-), fuerzas represivas (Ejército,
+policía, etc.) y leyes que imponen, garantizan y reproducen ese
+sistema capitalista.</p><p>Veamos entonces qué es el ESTADO?</p><p>ESTADO</p><p>Revisamos nuevamente el Diccionario de ciencias políticas y sociales
+y nos dice que se han recopilado cerca de 300 definiciones diferentes
+de ESTADO, con cambios a lo largo de la historia. Se podrían agrupar
+entre los que señalan al ESTADO:</p><p>-como una unidad de acción o unidad de autoridad de decisión.</p><p>-como los principios estructurales que definen y constituyen las
+relaciones sociales de poder y control políticos en la sociedad.</p><p>-como la estructura duradera de gobierno y mando en la sociedad</p><p>-como una unidad de asociación dotada originariamente de poder de
+dominación y formado por hombres asentados en un territorio.</p><p>Se trata de definiciones quie dan al ESTADO
+como sinónimo de AUTORIDAD, PODER,
+CONTROL, DOMINACIÓN, ESTRUCTURA. Todos
+estos elementos están presentes.</p><p>Para Marx, Engels y Lenin el Estado es:</p><p>por naturaleza de clase (instrumento de dominio de una clase social)</p><p>surge de la división antagónica (opuesta e irreconciliable) en
+ clases de una sociedad.</p><p>Por ello es “una fuerza represiva” (Lenin) y coercitiva (que
+ ejerce la fuerza) con el fin de perpetuar el dominio de la clase
+ dominante sobre las subalternas.</p><p>El ESTADO CAPITALISTA se destruirá con la dictadura del
+ proletariado que crea las condiciones para la extinción del Estado.</p><p>La lucha por la destrucción y toma del Estado, la encabeza el
+ PARTIDO de VANGUARDIA del proletariado.</p><p>Otro teórico marxista, italiano, preso por el fascismo hacia 1930,
+Antonio Gramsci, decía: “El Estado es la unidad de la sociedad
+civil y la sociedad política. No es solo un instrumento de la clase
+dominante. Es el lugar donde ésta se constituye para mantener su
+dominio por medio de la búsqueda del consenso (transmisión y
+reproducción de sus valores, su ideología)”. La sociedad civil la
+constituyen los hombres libres, la sociedad política es la forma de
+gobierno, la iglesia, la escuela, los sindicatos, las asociaciones,
+etc., todos los “aparatos” reproductores de la ideología
+dominante. Sociedad civil y sociedad política hacen el consenso y la
+hegemonía que necesita el Poder dominante para reproducirse. El
+Estado tiene como función específica la coerción y también buscar
+consenso con la sociedad civil, construir una hegemonía que le
+permita reproducir las relaciones de dominación.</p><p>Desde el punto de vista de las clases dominantes, el Estado es el
+mediador que logra que las clases dominadas (o subalternas) se
+sometan al orden social establecido, contribuyendo a su
+funcionamiento.</p><p>El Estado nunca es neutral ni pasivo en su mediación, tiene carácter
+de clase. EL PODER DEL ESTADO CENTRALIZA, TOTALIZA, REPRODUCE a la
+clase dominante y se interpone entre la clase dominante y las
+dominadas para vincularlos en la relación de explotación y
+dominación.</p><p>Es importante que conozcamos cómo nos dominan para ejercer y pensar
+estrategias de lucha, de rebeldía, de acumulación propias, de
+crecimiento, de nuevas relaciones entre nosotros, de cambio social.</p><p>Porque siempre que hay una clase dominante hay dominados, hay
+conflicto entre ellos, contradicción. Es imposible que se ejerza
+dominio sin resistencia, sin lucha. Tampoco es posible que esa lucha
+sea a ciegas, se confronta y debemos evaluar siempre qué cosas
+ganamos, qué cosas perdemos, cómo salimos de la lucha en cada
+etapa.</p><p>Para que haya lucha de clases debe haber dos partes. En esa lucha se
+avanza, se pierde, se retrocede, se vuelve a avanzar. Porque el poder
+de las clases dominantes no es una especie de monstruo gigante que
+todo lo puede, que todo lo sabe, que siempre logra lo que quiere.
+Pensemos el 26 de junio y la estrategia oficial del GOBIERNO, el
+ESTADO, el PODER. Nos costó vidas de compañeros, heridos, presos...
+pero también significó un retroceso en el plan que el PODER y el
+ESTADO habían preparado, el discurso dominante se fue
+desenmascarando por esos días.</p><p>PODER Y FUERZAS ANTISISTÉMICAS</p><p>En el capitalismo, en Argentina por ejemplo, el PODER tiene como
+características centrales: la VERTICALIDAD y la CENTRALIDAD. Con
+todos sus cientos de años mostró eficacia para garantizar su
+imposición y reproducción. No solo el Estado es así, también el
+gobierno, los partidos políticos, los punteros, las empresas
+privadas, públicas, la escuela, los sindicatos, la iglesia, la
+familia.</p><p>Pero estas características muchas veces las reproducen fuerzas
+antisistémicas que ven más la EFICACIA de la organización vertical
+que la capacidad de los sujetos. Pareciera que se ha impuesto también
+acá un centralismo piramidal como única forma de acumular poder y
+de tomar decisiones.</p><p>En estas fuerzas (los partidos de izquierda por ejemplo) el PODER
+aparece como un objeto que hay que tomar. Los sujetos, los hombres en
+lucha, en actividad, las personas portadoras de ese cambio no se
+explica bien qué hacen, cómo piensan, qué sienten, viven o qué
+necesitan. Lo importante es la “toma del poder”, se piensa que el
+poder se ejerce solo cuando se lo haya tomado, se trata de
+“arrebatar” el poder que está en algún lado (la casa Rosada, el
+Congreso, el municipio, etc.). Pero ese poder, está bien guardado,
+cuidado y su conquista es una lucha que necesita organización y
+herramientas (instrumentos que permitan llevar adelante esa lucha).</p><p>Por lo contrario, el poder por ser una relación propia de las
+relaciones humanas siempre es social y política. El poder se hace,
+se construye de la misma manera en que se construyen los sujetos.
+Éstos para crearse, empeñan una lucha a muerte por el
+reconocimiento. Esta lucha genera poder, generarse como sujeto es
+generar poder. Todo cambio, toda revolución, toda transformación
+que se proponga siempre tiene en su centro el tema del poder, que
+significa qué y cómo será reconocido. Se debe pensar al poder de
+una manera totalmente diferente a la forma piramidal, no como poder
+de dominación, no en la relación siervo-señor, sino como servicio,
+como mutuo reconocimiento de sujetos plenamente libres. Crear nuevo
+poder, crear poder popular significa crear nuevas relaciones humanas,
+nuevas relaciones sociales, nuevas relaciones políticas que no
+podrán comenzar recién cuando se “tome el aparato del Estado”,
+se van realizando en el camino, en el proceso. Si los sujetos
+portadores de esa construcción pasan a ser objeto, súbditos,
+soldados del partido o de la organización, se está reproduciendo el
+poder de dominación.</p><p>Los movimientos sociales en América Latina: MTD, MST, ZAPATISMO,
+CAMPESINOS.</p><p>Estos movimientos dan a luz en los 90, justo cuando parecía que el
+nuevo orden del capitalismo ya estaba establecido. Los sectores
+populares, las clases dominadas o subalternas, fueron encontrando
+formas de organización diferentes a las tradicionales. Pero cómo
+es una u otra? Las tradicionales son de forma triangular, el poder
+está “arriba” y baja a las “bases”. Las nuevas formas tienen
+como forma el círculo, desaparece el arriba y el abajo. Desde que
+surgen diferentes movimientos sociales hasta hoy sabemos cada vez más
+cómo no queremos vivir, nos queda avanzar un poco más en cómo sí
+los queremos, en qué poder queremos para nosotros.</p><p>El EZLN, el zapatismo mexicano avanza bastante en este sentido,
+orienta con una serie de cuestiones para discutir y tener en cuenta.
+Observemos gráficamente las diferencias entre la concepción
+antisistémica clásica y la zapatista:</p><p>CONCEPCIÓN CLÁSICA
+ANTISTÉMICA CONCEPCIÓN ZAPATISTA</p><p>CCRI</p><p>En principio el PODER para el zapatismo no es PARA ELLOS, no lo
+conciben como algo que ELLOS tomarán, el PODER ES PARA TODAS LAS
+FUERZAS DEL CAMBIO. El poder No lo toma ni un partido ni una
+vanguardia, el poder es una construcción que tiene 4 ideas fuerzas:</p><p>MANDAR-OBEDECIENDO:
+ Todos somos sujetos en iguales condiciones. Se rompe con la idea de
+ UN SUJETO (el partido) que toma decisiones y las traslada a un
+ OBJETO (las masas, la clase, etc.). Se intenta quitar la idea de
+ dirigentes-dirigidos. Se trata de tener capacidad de mandar si
+ sabemos obedecer.</p><p>PREGUNTANDO CAMINAMOS: Se
+ trata de poder ponerse en el lugar del otro porque es valioso, vive
+ la opresión como yo pero de diferente manera. Se plantea que los
+ sujetos y la teoría de la transformación, de la revolución se
+ formulan desde abajo, se constituyen y formulan en la lucha y no
+ desde afuera (el partido, o las formulaciones generales y
+ abstractas). El piketero por ejemplo, se va creando, va creando sus
+ códigos, valores, etc.</p><p>Para el zapatismo preguntar caminando significa que la revolución no
+es una respuesta que encara el partido sino una pregunta. SI LA
+REVOLUCIÓN AVANZA DICIENDO , EL PODER ESTÁ EN LOS QUE HABLAN, SI
+AVANZA PREGUNTANDO SE ROMPEN LAS RELACIONES DE PODER, SE AVANZA ENTRE
+IGUALES.</p><p>Es una revolución sin programa de antemano, se va definiendo en la
+lucha, con las propuestas de los diferentes sujetos. La lucha
+revolucionaria se desplaza del QUE al CÓMO se hace. Lo importante es
+generar nuevas relaciones entre compañeros, nueva cultura política
+y organizativa.</p><p>CAMINAR AL PASO DEL MÁS LENTO:</p><p>Es un proyecto que incluye y que incita a la participación y que
+requiere tiempo para que todos den los pasos juntos. Como decía el
+poeta español León Felipe “no es lo que importa llegar solo ni
+pronto, sino llegar con todos y a tiempo”. Nuevamente primero el
+CÓMO antes que el QUÉ. El sujeto que debemos construir es
+colectivo, a diferencia de la vanguardia que va al paso del más
+rápido y muchos quedan atrás.</p><p>ENTRE TODOS LOS SABEMOS TODO:</p><p>Pensar entre todos se aleja del marxismo ortodoxo que supone que la
+separación entre trabajo intelectual y trabajo manual será superada
+por los cambios en las relaciones de producción. Se trata de
+construir una cultura entre los sujetos que se apoye en los tres
+puntos anteriores. Los proyectos, las ideas no son algo que estén de
+antemano sino que surgen del debate colectivo. Se trata no de
+renegar de los saberes de los oprimidos, de las fuerzas del cambio,
+sino de apoyarse más en la creatividad de los sujetos pensando y
+luchando colectivamente. Se trata de ir consensuando desde cada
+realidad los puntos comunes.</p><p>La concepción zapatista del PODER es INCLUSIVA “en el mundo que
+queremos, caben todos, sin necesidad de destruir al otro o dominarlo”
+“un mundo en el que quepan todos los mundos”. Lo importante es
+combatir la dominación entre nosotros, al interior de nuestro campo.</p><p>Si analizamos por ejemplo el papel de un delegado para el zapatismo:
+“servir de puente para que vayan y vengan la palabra y la
+esperanza”. O a propósito del poder piramidal que se reproduce
+muchas veces en las fuerzas antisistémicas: “importa el
+cumplimiento de las tareas y no tanto el tamaño de la organización
+ni su facilidad de palabras”.</p><p>No quieren construir una estructura, un aparato, sino un espacio
+horizontal e igualitario donde fluya la palabra y la comunicación
+entre sujetos iguales.</p><p>Poner el acento en la participación más que en el sistema de
+ponencias de discursos que más tiene que ver con lucimientos
+individuales.</p><p>“El poder es útil si tiene el diseño repartido y articulado como
+un tejido”.</p><p>El zapatismo propone tareas o estilos de trabajo para ir logrando
+este PODER:</p><p>Servir y no servirse; representar y no suplantar; construir y no
+destruir; obedecer y no mandar; proponer y no imponer; convencer y no
+vencer; bajar y no subir.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../MTDL PODER, ESTADO, LEYES.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (MTDL PODER, ESTADO, LEYES.pdf).</footer>
+</div></body></html>

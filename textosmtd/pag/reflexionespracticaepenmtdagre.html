@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Reflexiones acerca de la práctica de educación popular en organizaciones de desocupados. Febrero 2003</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Reflexiones acerca de la práctica de educación popular en organizaciones de desocupados. Febrero 2003</h1><p class="ficha-doc">Fecha: 14 de marzo de 2003 (aprox.) <span class="sep">|</span> 3.752 palabras</p></header>
+<main class="texto"><p>REFLEXIONES ACERCA DE LA
+PRÁCTICA DE EDUCACIÓN POPULAR EN ORGANIZACIONES DE DESOCUPADOS.
+FEBRERO 2003</p><p>Los aportes que aquí se
+efectúan son realizados desde la práctica concreta de la Educación
+Popular en talleres de formación en organizaciones de desocupados.
+Se trata de una sistematización de los errores y aciertos devenidos
+de la práctica concreta, del trabajo, la reflexión, la organización
+y la producción de conocimiento con el conjunto de los compañeros
+desocupados integrados al MTD.</p><p>En la educación popular es
+importante poder socializar las conclusiones colectivas de los
+talleres, reuniones, asambleas, aquello que es producto de la
+reflexión en las organizaciones con los compañeros. Pero también
+es importante la reflexión acerca de la práctica de los compañeros
+que llevan adelante los talleres, que coordinan los mismos. Es esta
+parte la que volcaremos aquí.</p><p>SE trata de reflexiones, no de
+verdades o recetas absolutas. Son problemas y posibles soluciones que
+pueden estar presentes en la práctica de la EP. Sirven para no
+sentirnos solos, no sentir eso que más de una vez un EP siente “esto
+me pasa a mí”. No, es aportar para comprender que esas cosas que
+sentimos nos están pasando solo a nosotros, a otros les pasa
+también, que es parte de la práctica de EP. Porque como el pueblo
+tiene su historia de lucha, porque no empieza siempre de cero, la EP
+es parte de esa historia, es sobre esa historia, en ese contexto en
+el que llevamos adelante la practica.</p><p>* La Educación Popular no
+tiene recetas ni dogmas. Sí definiciones políticas, opciones
+ideológicas. La Educación popular es la pedagogía del oprimido de
+Paulo Freire. Es decir, que la EP lo que hace es construir un
+conocimiento colectivo partiendo de la realidad concreta, de la
+historia oculta por el poder que tiene el pueblo. Esa decodificación
+de conocimiento es el ingrediente básico de la EP.</p><p>La
+ educación popular se lleva delante de maneras diferentes en cada
+ tipo de organización. Lo primero es analizar en QUÉ TIPO DE
+ ORGANIZACIÓN llevaremos adelante la EP. Qué tipo de estructura
+ organizativa hay (vertical, horizontal,etc.) , cuál se quiere
+ tener, si existe alguna o hay que avanzar también con esa
+ estructura, etc. Cómo, dónde y quién/es toma las decisiones, por
+ ejemplo, es también importante a la hora de avanzar en la EP. Se
+ puede llevar adelante en cualquier tipo de organización. Claro que
+ en una organización verticalista más tarde o más temprano se
+ cuestionará el PODER DE LAS DECISIONES y seguramente se provocará
+ un cambio en el tipo de organización.
+ EN REALIDAD UNA ORGANIZACIÓN VERTICAL NO TENDRIA SENTIDO LA EP. YA
+ QUE LOS OBJETIVOS DE LA EP APUNTAN A LA DEMOCRATIZACION, LA
+ PARTICIPACION, EL RESPETO POR LAS DECISIONES COLECTIVAS. UNA
+ ORGANIZACIÓN VERTICAL O PIRAMIDAL ESTARIA EN CONTRADICCION CON
+ NUESTRA CONCEPCION DE EP.</p><p>Tampoco la EP es mágica. No
+ resuelve los problemas ni mejora la organización por sí misma. Son
+ el conjunto de las personas de esa organización las que resuelven
+ los problemas y mejoran la organización y la EP es la herramienta
+ para hacerlo, pero es eso, una herramienta que debemos tratar de
+ usar lo mejor posible, conocerla, aprender a usarla en la práctica
+ y mejorar la manera de usarla. La EP ayuda a reflexionar sobre lo
+ que se hace, cómo se hace y cómo buscar soluciones colectivas que
+ mejoren la organización y a sus integrantes como personas.</p><p>La EP está
+ concebida y tiene sentido en organizaciones populares que se
+ plantean alguna forma de lucha contra el sistema y la reflexión
+ está siempre centrada acerca de las cosas que se hicieron, cómo se
+ hicieron, para qué, con quiénes, incentivando siempre la
+ participación y el compromiso de cada vez más personas en las
+ decisiones, las prácticas, el trabajo cotidiano. Tiene sentido si
+ se reflexiona sobre la práctica concreta, de lo contrario
+ estaríamos usando herramientas de la EP (que son muy útiles) pero
+ para encontrar otras formas de exposición o de aprendizaje que no
+ necesariamente persigan ampliar la participación y buscar un
+ conocimiento colectivo. LA EP NO TIENE SENTIDO EN UNA ORGANIZACIÓN
+ O AGRUPACION QUE NO TENGA UNA PRACTICA CONCRETA DE LUCHA Y TRABAJO.
+ NO TIENE SENTIDO SI SOLO SE PONEN EN PRACTICA IDEAS SIN UNA PARCTICA
+ CONCRETAS DE CONSTRUCCION DE ESAS IDEAS.</p><p>Para efectivamente poder
+ cumplir con la mejora de la organización ampliando la
+ participación, la refelxión y las decisiones en cada vez más
+ compañeros, el facilitador o coordinador debe respetar en cada
+ instancia de práctica de EP, objetivos, acuerdos de funcionamiento
+ y de objetivos comunes a corto, mediano y largo plazo, compromisos
+ de cumplimiento de los mismos y realizar revisiones periódicas de
+ acuerdos y cumplimientos.</p><p>El
+ coordinador
+ o facilitador de las instancias de EP (talleres sobre temáticas
+ específicas, asambleas, debates, reuniones, etc.) no es el portador
+ del saber, no es el que sabe y transmite a los demás. NADIE SABE
+ TODO, NO HAY NADIE QUE NO SEPA NADA. En general no opina excepto
+ para ordenar el debate, ampliar la participación y para
+ problematizar las reflexiones, las conclusiones, los acuerdos del
+ conjunto. Por supuesto que no se trata de “desideologizarse”, de
+ ninguna manera, todo lo hace desde una definición
+ político-ideológica. Una herramienta muy enriquecedora en la
+ problematización es utilizar un “qué pasaría si...”, “cómo
+ ven esta solución que anotamos..”, “qué cosas y cómo hacemos
+ para poder cumplir con las cosas que nos proponemos”, “quiénes
+ las llevaremos adelante”, entre otras. Siempre es importante que
+ las preguntas tengan respuestas abiertas, es decir que la respuesta
+ no sea sí o no porque esto cierra la posibilidad de debate y en
+ general conduce a bajadas de línea dogmáticas que no siempre
+ ayudan mucho.</p><p>El
+ coordinador
+ es por esto un facilitador. Facilita y ayuda a la exposición de
+ ideas, pensamientos,opiniones, reflexiones, actividades pero desde
+ un igual lugar que el resto. No “baja línea”, propone pero
+ desde el mismo lugar de los demás NUNCA desde ser el poseedor del
+ saber y de la verdad. Al contrario, siempre debe salirse de ese
+ lugar donde naturalmente un grupo de personas más allá de su
+ instrucción lo colocan, es en efecto muy común que el facilitador
+ o coordinador sea el “director” y lo pongan en un lugar más
+ arriba del conocimiento todos los demás. Porque esto es a lo que
+ estamos todos acostumbrados en la educación institucional y en las
+ relaciones de poder que hay en el conjunto de la sociedad civil:
+ unos saben y otros ejecutan o repiten lo que dicen los que saben. Y
+ aún las organizaciones de izquierda tienen este lastre del sistema.
+ ESTO NO ES UN ACTITUD DE HUMILDAD, PARTE DE UN PROFUNDO
+ CONVENCIMIENTO QUE NADIE SABE TODO, Y QUE TODOS SABEMOS ALGO.</p><p>LA
+ TAREA DEL CORDINADOR ES HACER QUE ESOS CONOCIMENTOS, LOS PREVIOS Y
+ LOS ADQUIRIDOS EN LA PRACTICA FLUYEN Y QUEDEN PLASMADOS EN IDEAS .
+ EJ: LOS CROS QUE EN EL MTD ES TRABJANDO EN EMPRENDIMIENTOS
+ COMUNITARIOS ESTAN DESARROLLANDO UNA PRACTICA DE TRABAJO LIBRE Y
+ COMPARTIDO, LA EP TIENE QUE FACILITAR QUE ESOS CROS RECONOSCAN ESA
+ PRACTICA Y ENTRE TODOS LA PODAMOS DEFINIR Y DESCRIBIR, QUE ESTAMOS
+ HACIENDO UNA PRACTICA ANTICAPILALISTA. PARA ESTO HAY QUE REFLEXIONAR
+ QUE ES EL CAPITALISMO Y QUE HACEMOS NOSOTROS. ESTA REFLEXION NO
+ SURGE SOLO DE LAPRACTICA, SURGE DEL INTERCAMBIO COLECTIVO DE LA
+ PRACTICA, LA REFLEXION Y LA INFORMACION.</p><p>Uno de los objetivos que
+ SIEMPRE debe tener presente el facilitador es conseguir que la mayor
+ cantidad de personas dentro de la organización ocupen alguna vez
+ ese lugar. Es parte de la EP hacer esto. Tampoco hay que forzarlo,
+ cada grupo tiene su tiempo, su nivel de claridad y maduración.
+ Dependerá del tipo de organización, de las definiciones y
+ compromisos que vayan asumiendo cada vez más compañeros. Son
+ compañeros que aunque no coordinen un taller o una instancia de EP,
+ todos los días ponen algo para mejorar la organización, ampliar la
+ participación, crecer como grupo y como personas.</p><p>Cuando empieza a suceder
+ esto, es tiempo de dejar más solo al grupo, que se autorganice, que
+ vaya delimitando los engranajes que mejoran a todos. Es importante
+ tener en cuenta que cada grupo tiene su forma, que cada grupo elige
+ cómo organizarse mejor, comprometerse más, etc. Y estas
+ experiencias no son repetibles o copiables exactamente entodos
+ lados. Se pueden sacar enseñanzas positivas para trasladar a otros
+ lados, pero de ninguna manera forzar que se resuelva igual en
+ cualquier lugar porque esto nos conduce tarde o temprano a un
+ fracaso para todos que lo único que logra es compañeros pinchados,
+ que se alejan, que más que comprometerse, cumplen.</p><p>Sin
+ embargo durante un tiempo el grupo con el que se trabaja es normal
+ que sea coordinador-dependiente, que todavía no logre confianza en
+ sí mismo, en sus capacidades, que su autoestima esté baja y no
+ pueda ver más que las cosas que no salen, que salen mal, que
+ significan derrotas, pérdidas. El desafío del coordinador es
+ ayudar al grupo a levantar su autoestima que tenga confianza en sus
+ potencialidades. Por eso es importante plantearse objetivos
+ constantemente. Solo es posible desarrollar este desafío realizando
+ un diagnóstico de las características positivas y negativas del
+ grupo, qué personalidades son las que están más presentes, cómo
+ se reproduce la información al interior del grupo, cómo se
+ relacionan con el ámbito específico de la educación popular.
+ Paralelamente el facilitador-coordinador debe plantearse delegar en
+ otros las tareas que asume él al principio tanto sean estas
+ organizativas como de acuerdos de funcionamiento. Al principio lo
+ hace el coordinador, con el tiempo los mismos integrantes del grupo
+ van haciendo propios esos acuerdos y los trasladan al conjunto, lo
+ introducen como algo más de la vida cotidiana. El momento más
+ claro para cortar esa dependencia sea seguramente cuando por sí
+ mismo el grupo avanza, decide y se organiza y el coordinador
+ acompaña a mucha más distancia.?????????</p><p>LOS
+ OBJETIVOS A ALCANZAR. Son un auténtico problema. Debemos apostar a
+ cuestiones realizables, que sean factibles de conseguir porque de lo
+ contrario más que a la organización y el crecimiento de los
+ compañeros aportamos más al despelote, al quilombo. Deben ser
+ objetivos alcanzables y concretos teniendo en cuenta que no podemos
+ pedirle a un niño que levante un elefante. Aquello
+ que nos llevó tiempo aprender no podemos pretender que otro lo
+ entienda sólo porque se lo transmitimos. Aprender a coordinar lleva
+ tiempo, hay que despojarse de prejuicios y
+ valoraciones, por ejemplo. También requiere apreder técnicas por
+ ejemplo: dinámicas, disparadores, formas de integrar al grupo. No
+ podemos entonces pretender que otro todo esto lo aprenda de un día
+ para el otro, resumido, compendiado. La práctica y la teoría van
+ juntas, una se fortalece con la otra, se enseña y se aprende, se
+ ejecuta y de ahí se sacan nuevas prácticas, nuevas conclusiones.
+ Por ejemplo: si nos planteamos trabajar sobre el CAMBIO SOCIAL es un
+ tema demasiado abstracto y general, muy amplio y muy probablemente
+ si es leyendo una posible definición de esto que queremos avanzar,
+ nos vamos a frustrar. Ahora si por el contrario abordamos el CAMBIO
+ SOCIAL desde el todos los días es más probable que después se
+ pueda llegar a ese tratamiento abstracto. Si hablamos del cambio
+ social que significa por ejemplo para un comedor del MTD conseguir
+ la mercadería con la lucha y es desde acá desde donde
+ reflexionamos, es muy probable que lleguemos después a necesitar
+ definir el CAMBIO SOCIAL. Siempre partimos de la práctica, de las
+ vivencias cotidianas. Así si no habrá frustraciones en los
+ objetivos. Seguramente habrá que buscar nuevos, se desprenderán
+ otros temas, otros objetivos, pero no nos frustraremos si partimos
+ de la realidad.</p><p>El coordinador-facilitador
+ debe ser consecuente y constante en la realización de ámbitos de
+ educación popular con determinado grupo. De nada sirve hacer, por
+ ejemplo, 2 talleres sin continuidad, reflexión sobre conclusiones
+ anteriores, rectificaciones de la práctica, nuevas metas y
+ objetivos, replanteo de responsabilidades, etc. Debe estar
+ acompañando siempre en la reflexión crítica, buscando siempre
+ problematizar las situaciones, ayudando e impulsando el pensamiento
+ crítico individual y colectivo. Cuanto más profundicemos en los
+ problemas y más soluciones se busquen en conjunto, menos
+ posibilidad de fracaso hay.</p><p>Es importante PLANIFICAR las
+ actividades, no improvisar, tener en claro en cada reunión los
+ objetivos que se quieren obtener, revisarlos al finalizar la
+ actividad, repasar si efectivamente se logró y si realmente se hizo
+ educación popular. Hay una receta para comprobar esto: se trata de
+ la mesa y las patas. Cómo es? Bueno, una mesa tiene cuatro patas
+ para sostenerse, si solo tenemos una, imposible sostenerla, ahora
+ con dos ya podemos empezar a ver cómo ajustamos su sostenimiento.
+ En nuestro caso esas patas son: 1) provocar la indignación frente a
+ las injusticias, 2) generar rebeldía ante esas injusticias, 3)
+ levantar la autoestima del grupo y las personas y 4) generar más
+ organización. En nuestra mesa, si conseguimos al evaluar la
+ actividad de EP que al menos se hayan podido cumplir dos de las 4
+ patas, la mesa se sostendrá y debemos apuntar a tratar de mejorar y
+ hacer que se puedan conseguir una mesa con 4 patas. Una manera de
+ conseguir al menos las dos patas es tener presente lo que dice el
+ supMarcos: “debemos ir al paso del más lento” a lo que algun
+ compañero agregó “que quiera caminar”, al menos en un
+ principio.</p><p>El coordinador es importante
+ que tome nota de todos los problemas que se plantean, las opiniones
+ de los compañeros y las posibles soluciones. Usar un papelógrafo
+ para ir anotando problemas y soluciones es importante porque ayuda a
+ que entre todos vayamos centrándonos en lo que está escrito allí.
+ Es importante PLANIFICAR, es decir: OBJETIVOS (qué y para qué)
+ teniendo en cuenta A QUIEN VA DIRIGIDA LA ACTIVIDAD (características
+ del grupo, si son viejos o nuevos integrantes, edades, compromiso,
+ participación, niveles de definiciones políticas, problemas o
+ conflictos de grupo o individuales, etc.), las herramientas que
+ usaremos para conseguir ese objetivo en el desarrollo del taller
+ (CÓMO: uso de disparadores como fotos, textos, dibujos, frases,
+ etc., dinámicas de EP, etc.). Es también relevante sacar
+ conclusiones en los últimos 10 minutos con los participantes: qué
+ aprendimos para mejorar como organización y/o como personas? Qué
+ cosas podemos usar para vivir mejor? Qué aprendimos?. La conclusión
+ es importante porque allí se repasan y se fijan conceptos pero
+ también los compromisos que asumimos como grupo y cada uno de los
+ integrantes.</p><p>Otra cosa que siempre debe
+realizar el coordinador-facilitador es la MEMORIA de las actividades
+de EP. Todo lo que se dijo en los talleres como relevante,
+especialmente las cosas puestas en común, deben estar reflejadas en
+la MEMORIA que es obligatorio leer al grupo en el encuentro
+siguiente, para repasar acuerdos, definiciones, compromisos y
+objetivos en forma común. Siempre preguntando si falta algo, o sobra
+algo, si están de acuerdo en agregar o quitar algo, etc. Buscar el
+acuerdo y el consenso de todos, es aquí también la tarea.</p><p>Ahora, bien, no todo es tan
+ armonioso. Uno de los problemas con los que a menudo nos encontramos
+ es el natural crecimiento y aprendizaje desparejo, porque cada uno
+ parte de un piso diferente. Entonces nos planteamos ¿qué hacemos?
+ Seguimos el ritmo del que va más lento siempre? Sí, seguramente
+ sí, debemos ir a ese ritmo. Pero qué pasa con el que tiene más
+ inquietudes que el conjunto, el que se quiere comprometer más de lo
+ que lo hace? Lo nivelamos para abajo con los demás? O intentamos
+ buscar otra instancia de EP que satisfaga a ese compañero que
+ seguramente no será uno solo sino más.</p><p>Es decir, que hay que estar
+muy atento a las expectativas del grupo porque puede suceder que
+haya, por ejemplo, muchos compañeros preocupados (legítimamente)
+por conseguir un kilo de acelga más barata para el comedor
+comunitario y, habrá otros, que además tendrán inquietudes acerca
+de la dialéctica y la lucha de clases en Argentina. Seguramente esto
+sí es seguro, si este tema lo tratamos en el conjunto del grupo, se
+“lucirá” un compañero pero el resto, la inmensa mayoría no
+entenderá ni jota de lo que hablamos y tiene otras prioridades.
+¿Cómo resolvemos este problema que es más comun de lo que parece?</p><p>Una posible solución es crear
+una instancia distinta de formación para ese compañero que tiene
+más inquietudes, pero que debe seguir cumpliendo con la otra
+instancia colectiva. Es bueno que quien tenga más inquietudes tenga
+más responsabilidades, ayuda a la organización que más compañeros
+se comprometan con diferentes instancias, que crezcan. Si no hacemos
+esta instancia estamos contradiciendo la EP que estimula el
+crecimiento. Haremos mal el papel de coordinador-facilitador si
+seguimos el discurso del que “habla más en difícil” porque no
+necesariamente es el que más sabe acerca de lo que se está
+conversando. Pero tampoco haríamos bien si se anula a ese compañero
+con más inquietudes, es en todo caso la organización en su conjunto
+que debe resolver este tema y buscar canales de integración
+diferentes que ayuden al crecimiento de todos de acuerdo a las
+expectativas que cada uno tiene.</p><p>El coordinador entonces debe
+ser capaz de impulsar, proponer y respetar con el acuerdo de la mayor
+cantidad de compañeros, canales diferentes de participación,
+compromiso, reflexion y aprendizaje con un nuevo desafío que es
+conseguir que circule al interior de la organización la información
+y el conocimiento de las diferentes instancias, que se socialice lo
+aprendido, debe colaborar a que esto suceda para evitar que se
+conformen ciertos “núcleos de sabios” incapaces de “bajar”
+el discurso, de quedarse en el llano, con las bases.</p><p>Nunca podemos olvidarnos que
+ la EP incentiva el crecimiento organizativo del grupo pero también
+ el crecimiento individual, el aprendizaje, la superación personal
+ es una meta a tener siempre presente que debemos incentivar en cada
+ compañero según sus posibilidades. Incentivar la lectura, la
+ reflexión crítica, destacar las actitudes positivas y los
+ resultados positivos son tareas cotidianas, de todos los días. Y
+ claro, todas estas nos abren nuevos problemas, por ejemplo para leer
+ hay que saber hacerlo y muy probablemente habrá muchos que no
+ pudieron aprender. Aquí un problema que tiene soluciones con los
+ compañeros y es la creación de un espacio de lecto-escritura
+ (alfabetización) para quienes quieran concurrir que no
+ necesariamente tienen que ser los que nada saben de leer y escribir.</p><p>Una tarea esencial para el
+ coordinador-facilitador es POSITIVIZAR el pensamiento, la acción,
+ las ideas, las reflexiones, buscar las cosas buenas y destacarlas
+ siempre. Porque dejar lo negativo, lo malo, paraliza, no ayuda a
+ avanzar, a crecer al grupo y hace que el mundo que nos rodea parezca
+ omnipotente, indestructible, sin posibilidad de cambiarlo en lo más
+ mínimo, apabulla. Si dejamos que lo negativo gane, estamos dando
+ lugar a quienes pretenden que nada cambie, a quienes dan soluciones
+ mágicas, en un futuro impreciso como “ya estaremos mejor” o
+ “cuando tomemos el poder las cosas cambiarán”. Sin dudas que
+ cambiarán pero con la EP trabajamos en el “mientras tanto”, el
+ todos los días en este contexto actual y en el que pueda venir con
+ los cambios futuros. Se trata de afianzar al grupo en la
+ construcción colectiva y reflexión colectiva de las cosas, sin
+ patrones ni dirigentes.</p><p>No se trata de desconocer las
+actitudes o pensamientos negativos, de negarlos sino de luchar contra
+ellos dialécticamente, poniendo en primer plano lo positivo. Por
+ejemplo: escuchamos muy seguido “nadie participa de las asambleas”,
+“nadie trabaja”, “nadie va a la lucha”. Y eso lo dicen
+compañeros que están absolutamente comprometidos con el hacer.
+Además si estamos hablando por ejemplo, de 100 personas potenciales
+asistentes a asambleas, trabajo o lucha y van 65, no es que “nadie”
+sino que hay casi las ¾ partes que sí está comprometida. Se trata
+de destacar esto y plantearse colectivamente estrategias de
+acercamiento de los que no lo hacen, de establecer acuerdos de cómo
+combatirlo, de apuntar aquí mucho al fortalecimiento del vínculo
+humano-afectivo y no tanto el político-racional. Hablaremos de
+mejorar la participación pero no que nadie participa ni se involucra
+y esto llevado a la práctica tiene un efecto multiplicador y se dan
+saltos cualitativos en lo organizativo, en la participación, el
+compromiso, las definiciones políticas comunes.</p><p>* Impulsar la división de
+tareas, la organización más detallada de las actividades comunes es
+una tarea cotidiana también en la EP. Que todos sepamos quién se
+encarga de qué cosa, cómo lo vamos a hacer, con qué herramientas,
+etc.</p><p>Los vicios individualistas o
+ personalistas debemos combatirlos todos los días son muy nocivos
+ para crecer en conjunto. El individualista o el personalista
+ resuelve más en nombre de los otros más que con los otros. No
+ escucha mucho al grupo, adapta sus inquietudes y problemas al grupo
+ y no se hace carne de los problemas reales del grupo.</p><p>Una buena manera de
+ incentivar la participación de todos o al menos de la mayor
+ cantidad de personas, es que en los momentos de reflexión, opinión,
+ desarrollo de pensamientos, etc. El total del grupo sea dividido en
+ subgrupos pequeños, de 3 personas o 4 como máximo de manera que
+ todos puedan opinar. Esto supera la vergüenza. Es mucha la gente
+ que en un plenario o una asamblea no habla pero que en grupos más
+ pequeños dice lo que piensa, participa. Poco a poco esa persona
+ vence la vergüenza y se larga a hablar en lugares donde hay más
+ concurrentes.</p><p>En esto también juegan un
+papel primordial las dinámicas de EP, los juegos. Porque
+especialmente los sectores más pobres de las clases populares, están
+más acostumbrados a poner el cuerpo que a abstraer conceptos,
+racionalizarlos. Usan más el cuerpo que la cabeza primero. El juego
+o la propuesta del coordinador de actuar alguna cosa, hace que todos
+estén en ingualdad de condiciones porque todos están igualados en
+el desconocimiento de la técnica a utilizar. Probablemente esto sea
+más dificultoso llevarlo adelante en sectores intelectuales o
+estratos medios porque es muy común que más que comprometerse de
+entrada con poner el cuerpo se pregunten “adónde quiere llegar”
+“para qué hacemos esto”, “es una boludez”, etc. Sin embargo
+aquí también seguramente habrá estrategias de romper la
+racionalidad para pensar más desde las tripas.</p><p>El EP tiene una necesidad de
+ formarse constantemente. Siempre el educador popular debe dejar un
+ espacio para formarse él con otros. Para estudiar, pensar la
+ práctica con otros, los resultados, las dinámicas. Colectivamente
+ es necesario que se junte con otros para también intercambiar
+ conclusiones, pensamientos, conocimientos. Porque es muy bueno tanto
+ para él como para el destinatario de la práctica de EP darse
+ cuenta que no está solo en las conclusiones, que otros, en otros
+ lugares, de otras maneras están concluyendo lo mismo o cosas
+ parecidas. Aún las diferencias también ayudan, ayudan a
+ problematizar las certezas para fortalecer el pensamiento y la
+ construcción colectiva del socialismo, del cambio social, de la
+ revolución o como se la quiera llamar.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../reflexionespracticaEPenMTDAGRE.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (reflexionespracticaEPenMTDAGRE.pdf).</footer>
+</div></body></html>

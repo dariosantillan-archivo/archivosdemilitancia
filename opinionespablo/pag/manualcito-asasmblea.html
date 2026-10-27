@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Compañeros</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2002-apuntes-pablo.html">&larr; 2001-2002 — Apuntes y opiniones</a>
+<h1>Compañeros</h1><p class="ficha-doc">Fecha: 7 de diciembre de 2001 (aprox.) <span class="sep">|</span> 1.178 palabras</p></header>
+<main class="texto"><p>Compañeros:</p><p>Nuestro MOVIMIENTO DE
+TRABAJADORES DESOCUPADOS ha recorrido, hasta el momento, un
+importante camino de luchas, conquistas y también de dificultades,
+que hemos sabido llevar con fuerza y dignidad.</p><p>Lo que dimos hasta ahora son
+los primeros pasos de un camino largo y difícil: mientras vivamos en
+un sistema que se sostiene explotando y marginando al pueblo,
+tendremos grandes desafíos por delante; hasta lograr una verdadera
+liberación para todos los explotados, y que nadie viva en la
+abundancia a costas del sufrimiento del pueblo.</p><p>El paso que
+nos toca dar en este momento, es hacer
+fuerte nuestro movimiento,
+que es la herramienta que nos permitirá librar las batallas
+necesarias para conquistar el cambio
+social
+que haga efectiva la justicia y la dignidad que tanto anhelamos.</p><p>Si queremos un cambio
+social,</p><p>¡no copiemos las
+estructuras de dominación</p><p>de este sistema!</p><p>Sabemos lo que es la
+explotación, la dominación, porque lo sufrimos en carne propia: con
+los patrones cuando tenemos un laburo, con la prepotencia policial,
+con el cinismo de los políticos ante los reclamos populares. Pero
+también debemos estar alertas, porque muchas veces las formas
+jerárquicas, autoritarias, patronales, se reproducen en las
+organizaciones populares: pensemos si no en cualquier cooperativa que
+maneje algún puntero político, o en una unidad básica o comedor
+municipal.</p><p>Nosotros
+tenemos que romper con esas prácticas de dominación, y poner en
+juego
+nuevas relaciones sociales:
+donde los principios que nos guíen sean la solidaridad, el respeto
+al compañero, la igualdad de derechos y obligaciones, la valoración
+de los esfuerzos, etc. A veces esto no es fácil que se vea en el
+conjunto del movimiento: la mayoría de nosotros mismos estamos
+acostumbrados a sobrevivir en esta sociedad que pregona valores
+individualistas, egoístas, sobervios, la cultura de salvarse
+pisándole la cabeza al de al lado. Tenemos que tener en claro que
+contra eso combatimos: y que las primeras batallas hacia el cambio
+social las vamos ganando al poner en práctica estas nuevas
+relaciones sociales.</p><p>Para lograr todo esto, algunas
+cosas deben cambiar desde ahora y desde nosotros mismos; las
+relaciones sociales que pongamos en práctica</p><p>Asamblea ¿para qué sirve?</p><p>La asamblea es el lugar donde
+nos encontramos todos los compañeros, para socializar la información
+(enterarnos todo lo que está pasando) debatir las dudas y los
+problemas, y tomar decisiones.</p><p>La participación de todos:</p><p>¿qué pasa si no estamos
+todos los compañeros?</p><p>Si un compañero no viene a la
+asamblea no se entera de las cosas, no puede debatir sus dudas o
+puntos de vista y no participa en las decisiones por no estar.</p><p>Cuando a un compañero le pasa
+esto debe preguntar a otro que haya estado, informarse bien y
+respetar las decisiones que tomó la mayoría.</p><p>Tenemos que acostumbrarnos a
+participar y respetar las asambleas. ¡qué despelote se arma,
+cuando, en vez de debatir en la asamblea, las opiniones las hablan
+entre dos o tres en una esquina!</p><p>Si pasa esto, cada grupito que
+opina por fuera de la asamblea tiene una visión chiquita de las
+cosas, se piensa que tiene la verdad, sin haber escuchado a los demás
+compañeros y así aparecen los problemas, los malos entendidos y las
+puteadas. Hablando mal y pronto, hay que evitar el puterío,
+compañeros!</p><p>La asamblea es soberana:</p><p>En la asamblea participamos
+todos: cada compañero, los delegados, las comisiones de trabajo, los
+coordinadores. Para algunos temas los compañeros de las comisiones
+tendrán más información, pero eso no les da más autoridad: la
+autoridad máxima del movimiento es la asamblea, y las decisiones que
+allí se tomen, por ser tomadas por la mayoría de los compañeros,
+deben ser respetadas por todos.</p><p>La información, los debates y
+las decisiones: para debatir y tomar decisiones, es importante
+primero que todos manejemos la misma información. Si primero
+comentamos cómo está la situación del país, cómo está nuestra
+fuerza, y debatimos todos sobre eso, vamos a tener todos más
+elementos para decidir mejor una movilización, un corte, etc. Lo
+mismo pasa con cualquier decisión que haya que tomar en la asamblea
+sobre otros temas.</p><p>Si respetamos las opiniones y
+los debates una vez que ya quedan claras las distintas posturas, el
+compañero que coordina la asamblea propone que se voten las
+distintas posturas, y la que vota la mayoría de los compañeros es
+la que queda como decisón de la asamblea.</p><p>Una vez que se toma una
+decisión de esta manera, después de haber debatido entre todos,
+todos debemos respetar la decisión mayoritaria, y llevarla adelante
+entre todos, también los compañeros que votaron otras posición.
+Democracia no quiere decir que cada uno hace lo que le parece, y se
+aferra sólo a su verdad, sino que todos ponemos nuestro esfuerzo
+para llevar adelante la decisión de todos, que es lo que resuelve la
+mayoría</p><p>El temario, la lista de
+oradores, la coordinación de la asamblea:</p><p>Cuando son varios los temas a
+tratar, hay que organizar la asamblea: primero nos ponemos de acuerdo
+en el temario y anotamos los temas en una pizarra. Es importante que
+una vez que definamos el temario, todos lo respetemos y organicemos
+el debate tema por tema. Terminado un tema, recién pasamos al otro.
+Para esto es importante que un compañero coordine los debates y
+lleve la lista de oradores: cada compañero que quiera hablar levanta
+la mano, y el coordinador lo anota en la lista y espera su turno.</p><p>De esta forma organizamos la
+discusión y evitamos interrumpirnos y hablar uno encima de otro. Es
+importante, cuando empieza la asamblea, repasar los acuerdos que
+todos debemos respetar: pedir la palabra para hablar, esperar el
+turno, no interrumpirnos, y escuchar con atención al compañero que
+habla, no hablar en grupitos o sólo con el compañero de al lado, no
+opinar ofendiendo a otro. El compañero que coordina tiene los mismos
+derechos y obligaciones que el resto: si quiere opinar, debe anotarse
+en la lista de oradores y esperar su turno.</p><p>En cada lugar de trabajo, del
+MTD o de un vecino, cartel de identificación:</p><p>Proyecto de Trabajo: herrería</p><p>Lunes a viernes de 8 a 12 hs.</p><p>Conseguido con lucha, unidad y
+organización</p><p>Movimiento de Trabajadores
+Desocupados</p><p>Consolidación por barrio:</p><p>Espacio físico para asamblea</p><p>Criterios para asamblea</p><p>Condiciones del lugar</p><p>Cantidad de compañeros</p><p>Dinámica: pizarrón, temario
+y coordinador</p><p>Espacios físicos del MTD:
+referenciarlos en el barrio</p><p>Cartel fijo al frente y
+cartelera móvil para sacarla a la vereda en los momentos en que se
+usa el lugar. Con un espacio fijo y una pizarra</p><p>Cant indeterm Obra y
+asistencia lun vier 4 hs 160</p><p>8 benef productivos lun vie
+sap 6 hs 160 + 40</p><p>criterio solidario: beneficio
+para el movimiento</p><p>70 por ciento del precio de
+venta</p><p>panadería por barrio 3</p><p>precio kg pan a cros: 70 cvs o
+fiado 1$</p><p>más guardería</p><p>precio al barrio $1.-</p><p>cuero: precio al movimiento :
+70 por ciento</p><p>solidario: guantes para
+herrería , etc</p><p>un grupo de 8 cros tiene que
+hacer un exedente de $ 100 por semana, es decir $ 10 por cro por
+semana más $20 para reinversión en el movimiento</p><p>ó lo que es lo mismo, $20 por
+día</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../manualcito asasmblea.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (manualcito asasmblea.pdf).</footer>
+</div></body></html>

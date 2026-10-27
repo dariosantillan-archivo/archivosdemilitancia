@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Movimiento social y político</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Movimiento social y político</h1><p class="ficha-doc">Fecha: 29 de julio de 2003 (aprox.) <span class="sep">|</span> 1.554 palabras</p></header>
+<main class="texto"><p>Sobre UNIDAD EN LA ACCION, LIBERTAD EN LA DISCUSIÓN (CENTRALISMO
+DEMOCRÁTICO), DEMOCRACIA DE BASE, HORIZONTALIDAD y BUROCRACIA.</p><p>MOVIMIENTO SOCIAL Y POLÍTICO</p><p>Textos: Trotsky (la revolución traicionada), VENTURINI (El mito del
+centralismo democrático) y Perry Anderson.</p><p>Algunos apuntes antes de meterse con el debate de fondo:</p><p>-que es imprescindible desplegar la capacidad creativa del pueblo, es
+fundamental porque levanta la autoestima, es muy bueno sentirse feliz
+con lo que se está haciendo.</p><p>-La apatía del movimiento de masas si no se tienen en cuenta las
+alianzas más amplias puede terminar con el nazismo como pasó en
+Alemania. (acerca de los errores estratégicos)</p><p>-Como se hace para igualar los beneficios cuando hay de hecho
+diferencias físicas, de capacidad en los compañeros. No todos
+podemos hacer las mismas cosas y de la misma manera, lo que sí
+debemos diferenciar entre los que no pueden hacer algo y los que no
+quieren.</p><p>-Una cuestión importante: cómo conviven las relaciones de
+producción producto de la lucha del pueblo (no capitalistas, como el
+MTD por ejemplo) y las libertades del pueblo? Para trotsky esta
+convivencia es limitada, o surge la revolución política o se
+reinstaura el capitalismo. Y algo también importante: quien
+reinstaura el capitalismo es la burocracia. Las tendencias
+burocráticas pueden frenar la revolución o los avances radicales,
+revolucionarios del pueblo.</p><p>-La cuestion de la burocracia. Me falta el texto y el cuaderno donde
+apunté el resumen de los 4 puntos que sería bueno tenerlo anotado
+acá.</p><p>LIBERTAD DE DISCUSIÓN Y UNIDAD EN LA ACCIÓN (centralismo
+democrático)</p><p>Cualquier fuerza social y política organizada que se desarrolle y
+que quiera disputarle poder al capitalismo, tiene siempre niveles de
+democracia, de centralización.</p><p>La participación, el debate son importantes pero al momento de
+ejecutar algo, de operativizar las ideas, los acuerdos, los
+pensamientos, en el momento de accionar, se delega algo, se
+centralizan las acciones. Las asambleas son una instancia donde
+incentivar la exposición libre de ideas con un debate libre y
+abierto.</p><p>Pero es importante tener presente 2 cuestiones importantes:</p><p>debe haber igualdad de oportunidades (cualquier compañero puede ser
+ asignado a una tarea con responsabilidad, ser delegado de otros pero
+ para eso debe tener formación, debe tener una información que le
+ permita debatir con otros, escuchar, disputar).</p><p>Rotación y revocabilidad. Cualquier compañero asignado a una
+ tarea, debe rotar después de un tiempo en la misma y además si no
+ responde al mandato de las mayorías, a las decisiones y acuerdos de
+ las mayorías del movimiento, puede y debe ser revocado en sus
+ mandatos. Estos compañeros podremos llamarlos voceros, referentes
+ (delegados) del MTD hacia fuera y de instancias internas a la Mesa
+ general del movimiento. Los voceros o referentes son importantes
+ considerarlos en una forma organizativa porque si nos extendemos más
+ allá del territorio, si pensamos en una fuerza nacional entonces es
+ imposible funcionar siempre como plenario (mucho más que ahora) y
+ por tanto sería una falsa democracia.</p><p>Para que exista de VERDAD la participación igualitaria, todos
+debemos tener las mismas oportunidades y para ello debemos
+preocuparnos por desarrollar una formación en el MTD que intente que
+sea el movimiento el lugar de síntesis entre la sumisión al poder
+del conjunto de los vecinos y el crecimiento de los niveles de
+conciencia.</p><p>Con la formación se van generando espacios en los que hay igualdad
+de oportunidades y por lo tanto sí la participación es más
+conciente y real. Permite entonces la formación que cualquier
+compañero pueda asumir responsabilidades, pensar y tomar decisiones
+o definiciones que estén guiadas por los acuerdos colectivos. Así
+sí se puede rotar porque entonces serán diferentes compañeros los
+que tengan capacidad para ejecutar, operativizar las decisiones e
+impulsar discusiones.</p><p>Que ser más democrático no es una cuestión de números, de
+cantidad de personas integradas a un movimiento de masas, sino que
+tiene que ver esencialmente con el número de compañeros formados y
+especialmente con el contexto, con las relaciones de fuerza entre el
+pueblo y el poder que hay en cada momento o etapa histórica. Por eso
+no es lo mismo la acción y la discusión que se dan compañeros de
+una fábrica en un boicot obrero en epocas de la dictadura que una
+asamblea en un corte de la verón.</p><p>QUÉ ES EL MTD?</p><p>Es un movimiento social y político. No es ni un movimiento social
+puro ni un movimiento político puro (entendido como partido
+leninista, como vanguardia o guía de las masas).</p><p>El MTD tiene un proyecto político -o intenta tenerlo- que tiene que
+ver con la transformación social en general, con el cambio de
+sistema. El MTD no es corporativo, no es un proyecto de los
+desocupados sino que trasciende a los desocupados y se incluye en
+algo más grande, con otros sectores sociales.</p><p>Es entonces un proyecto político instalado en el interior del
+movimiento de masas (movimiento social). El MTD debería ser un
+movimiento de masas sólidamente estructurado y con capacidad
+política, alejado de las concepciones de partido tradicionales e
+incluso de la izquierda.</p><p>El MTD surge como organización de los desocupados al calor de las
+puebladas, se caracterizó por las asambleas y la democracia directa
+como metodología de organización, de debate y de decisión y la
+acción directa (los piketes, el corte de ruta). Acción y
+negociación imprimieron la identidad de organización del pueblo
+desocupado.</p><p>No se trata de que pongamos nombres y muy especialmente porque los
+nombres de las formas de organización tienen sentido histórico y
+contenidos concretos. Entonces se trata de que en todo caso lo que
+hacemos es DEMOCRACIA DE BASE CON GRADOS DE CENTRALIZACIÓN O UN
+NIVEL DE ACCION. No tenemos un lugar adonde llegar en el que se
+encuentra la verdad revelada, los MTD tenemos en nuestra esencia una
+concepción del tiempo y el espacio diferente al marxismo tradicional
+y estamos convencidos que hay coyunturas que te hacen actuar de
+manera diferente, no existe UNA verdad.</p><p>El MTD Lanús no tiene caudillos, pelea contra ellos, contra los
+punteros pero también expresa una forma de organización superadora
+de los partidos de izquierda tradicional.</p><p>La convivencia con las diferencias, fue también un sello de los MTD
+especialmente lo que fueron los orígenes de la verón. Construcción
+del movimiento, discusión, decisión y acción estuvieron siempre
+marcadas por el disenso (al menos en lo teórico). Es imprescindible
+levantar esta premisa una y otra vez: libertad de discusión (de
+pensar diferente) y unidad en la acción aún con los pensamientos
+diferentes. Podemos pensar diferente pero apostar al mismo espacio, a
+la misma herramienta, debe haber cabida para todos. Un ejemplo fue el
+pedido de carne a los frigoríficos: no todos los MTD querían ir,
+muchos no fueron, pero en la acción hubo unidad, hubo respeto aún
+con las diferencias. O lo mismo sucedió el 26 de junio, se vio en la
+coordinadora que era una etapa crítica, se venía de un punto de
+acumulación y de crecimiento al interior de la verón y proyectado
+en la sociedad, se crecía en el consenso y la veron hegemonizaba el
+movimiento piquetero. Con el 26 de junio se evaluó que hacia fuera
+debían ser 2 ó 3 compañeros solo los que hablaban, se cerraron los
+espacios de participación eligiendo con nombre y apellido a los
+compañeros que debían atender la prensa y las relaciones. Se
+unificó en la acción antirrepresiva aún con diferencias de
+pensamiento.</p><p>La coordinadora es un ejemplo muy claro de esta política de libertad
+de discusión y de opinión y unidad en la acción de todos los que
+apuestan a fortalecer ese espacio, a construirlo y mejorarlo.
+Analizábamos también la legitimidad de apropiarse del caudal
+político de la construcción de la coordinadora siempre que se haga
+con buena leche y no por encima de los demás, respetándose. Que
+esta es la pelea que hay hoy en la coordinadora y que lo importante
+es que respetemos el espacio, lo valoremos y no que se tire mierda si
+no hay voluntad de construir en él.</p><p>Hay otro tema de debate que es hasta dónde hay libertad de debate y
+unidad en la acción. Hay límites que es bueno saber más o menos
+por donde andan.</p><p>Otro problema de los MTD? Dónde se elabora la política?</p><p>Hoy no son todos los compañeros capaces de hacerlo, es reducido el
+espacio de decisión pero es necesario ampliarlo y que las bases
+participen como control de que se sigue caminando al paso del más
+lento que quiera caminar. También como control de que no se siga
+caminando si la mayoría va lento, porque ese caminar se aleja de las
+mayorías.</p><p>QUÉ PAPEL JUEGA LA FORMACIÓN?</p><p>Es estratégica, es necesaria porque se necesitan muchos núcleos
+formados. Pero esto no significa que el compañero formado siempre
+tenga la verdad porque muchas veces un compañero menos formado puede
+tener más razón. Todos sabemos diferente y en la comunión de los
+saberes de cada uno de nosotros nos complementamos, nos formamos y
+educamos de verdad.</p><p>Porque con la formación aspiramos no a que surjan cuadros iluminados
+sino a que cada vez más compañeros ocupen lugares de decisión
+tanto adentro como afuera del MTD reservando siempre para el conjunto
+de las bases el lugar de impugnación, de control de los voceros o
+referentes y un lugar donde se genera política. Por eso nos gusta
+hablar más de participación de las bases y no horizontalidad que es
+poco preciso al momento de la estructura organizativa.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../C,DEM-HORIZ.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (C,DEM-HORIZ.pdf).</footer>
+</div></body></html>

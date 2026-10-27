@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Notas sobre la formación con los otros MTD en base a la propuesta de Brown y de Berisso</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Notas sobre la formación con los otros MTD en base a la propuesta de Brown y de Berisso</h1><p class="ficha-doc">Fecha: 19 de junio de 2003 (aprox.) <span class="sep">|</span> 2.713 palabras</p></header>
+<main class="texto"><p>NOTAS SOBRE LA FORMACIÓN CON
+LOS OTROS MTD EN BASE A LA PROPUESTA DE BROWN Y DE BERISSO.</p><p>No
+está todavía del todo claro qué es este programa, una formación
+de qué? Ni para qué lo vamos a hacer? (si para crecer cada uno de
+los concurrentes, para socializar los debates y conclusiones con el
+conjunto de los MTD, para que los compañeros que asistan reproduzcan
+instancias similares en los MTD, para que cuenten los compañeros con
+elementos si tienen que conversar con otros, si de aquí saldrán
+dirigentes de los MTD (al estilo del MST de Brasil). Estos puntos
+siguen estando confusos. Habrá que ponerse más de acuerdo en esto.</p><p>Lo
+más claro que se dijo es que el nivel de asistencia media serán
+compañeros con responsabilidades como integrantes de la Mesas de sus
+respectivos Movimientos.</p><p>Si
+es que al decir del Sup “caminamos al paso del más lento” con el
+agregado de brown “del que quiera caminar”, es el más lento a
+quién hay que dirigir la formación que encararemos. Es decir que
+presupone que hablamos de compañeros de los barrios que tienen su
+primer experiencia político-militante en los Movimientos. Que
+algunos no tienen siquiera el primario completo, que tienen una
+limitada lectura de texto, diarios, etc.</p><p>Entonces
+lo dirigimos a esos compañeros y las dinámicas estarán acordes a
+ellos y los que entiendan que tienen más información-formación
+deberán adaptarse a ella y aportar desde ese lugar.</p><p>Respecto
+a la propuesta de expositores-especialistas, no es una metodología
+acertada para una instancia con un número importante de compañeros
+como los mencionados antes. Lo que se le puede proponer a esas
+personas que mencionaban los compañeros podrían aportar con su
+conocimiento es a sumarse como uno más a las actividades con un
+lugar destacado en lo que se refiere a las conclusiones por día de
+trabajo, a aclarar dudas teóricas, fechas históricas, hechos
+concretos, etc.</p><p>Estas
+presencias aportarían muchísimo. Pero si abordaremos el curso desde
+la educación popular entonces sería contradictorio plantear una
+“transmisión de conocimientos o saberes” de uno al resto. Porque
+de esta temática por escucharlo por la tele, haber concurrido a
+reuniones con otras organizaciones, en el país o en el exterior, por
+experiencias compartidas aquí, por la lucha, todos de los compañeros
+asistentes pueden aportar su conocimiento. En todo caso lo que
+podemos hacer es una socialización de los saberes diferentes, del
+que estudió y tiene más datos de algún tema y de lo que conocemos
+por nuestra historia y cultura.</p><p>Es
+muy acertada la conceptualización de Berisso realizada en la
+propuesta de formación. La temática de Brown está buena y va una
+propuesta de adaptación de ese programa demasiado esquemático y que
+poco se arraiga en la educación popular.</p><p>Además
+aquí , especialmente en el punto D) del programa hay muchas
+definiciones estratégicas que me pregunto si es en este ámbito
+donde se deben debatir sin abrir discusiones sobre estos temas en
+cada uno de los Movimientos. Es que si es acá donde se define,
+entonces sí estaríamos en una típica escuela de cuadros que
+proponen decisiones a las bases.</p><p>CÓMO
+HACEMOS EL CURSO?</p><p>Respetando
+todos los tiempos propuestos por brown lo readaptaría así:</p><p>EN
+ QUÉ MUNDO VIVIMOS? (Contexto mundial) 2 REUNIONES</p><p>¿DE
+ DÓNDE VENIMOS? EN QUÉ SISTEMA VIVIMOS? HAY OTRO POSIBLE? ¿CÓMO
+ ES? (estructura economico-social en Argentina) 3 REUNIONES</p><p>¿CÓMO
+ APORTAMOS LOS MTDs A CONFORMAR UN NUEVO PAÍS-CONTINENTE-MUNDO?
+ ¿QUIÉNES SON LOS ALIADOS ESTRATÉGICOS? ¿CÓMO CONFORMAMOS LA
+ UNIDAD EN LA ACCIÓN CON ESOS ALIADOS? (identidad) 5 REUNIONES</p><p>La
+cantidad de reuniones prevista es menor, quedarían 2 reuniones en
+carácter de suplentes. Es decir, si con el correr del curso surge la
+necesidad de tratar temas que no mencionamos en esta planificación o
+profundizar en algunos, entre todos los concurrentes podemos decidir
+si lo hacemos y contamos con esos dos días para hacerlo.</p><p>De
+lo contrario no está mal dejarlos para el final y probar de hacerlo
+más como campamento de formación partiendo de casi un año de
+experiencia común y de construcción común de conocimiento.</p><p>Cada
+reunión tiene la siguiente
+estructuración:</p><p>a) disparadores y debate por
+grupo por tema</p><p>b) plenario, socialización de
+conocimiento y conclusiones de cada grupo</p><p>c) Apertura de debate, dudas,
+fijación de conceptos y aclaración a partir de lo realizado por los
+grupos</p><p>d) Conclusiones y evaluación
+del desarrollo del taller: qué aprendimos? Cómo podemos
+socializarlo con más compañeros? Qué nos pareció el desarrollo y
+coordinación del encuentro?</p><p>Algunos
+temas: quiénes coordinan? Se me ocurre que sería bueno que cada
+grupo de trabajo elija en cada reunión un coordinador y que no sea
+siempre el mismo. De paso, todos nos ejercitamos en lo que es
+coordinar.</p><p>Sí
+es necesario que siempre en la parte c) debate, dudas, aclaración de
+temas y profundización de la información lo tiene que dar un
+compañero que maneje bien la cuestión que se trata. Se me ocurre
+que de hecho el nica o miguel pueden ser esas personas. Básicamente
+también porque tienen experiencia como docentes y eso ayuda mucho en
+esta parte.</p><p>Ahí
+va una planificación primera, pero que me parece que hay que reveer
+ante cada nueva reunión. Sí vale tener este nuevo esquema o
+temario.</p><p>Algunas
+otras cuestiones:</p><p>Hay
+disparadores, textos, películas, etc. Que tendríamos que pensar
+bien cuáles pueden ser entre todos.</p><p>Esta
+es una planificación general, pero las dinámicas seguramente deben
+ser revistas para llevar adelante cada reunion, y planificarse para
+cada reunión.</p><p>En
+cada nueva reunión es importante tomarse 10/15 minutos para leer la
+memoria del encuentro anterior. Si se dispone de posibilidades, sería
+interesante que todos lo compañeros o al menos 2 por MTD dispongan
+de una copia de esa memoria y se puedan armar carpetas donde sumar
+esas cosas y todo otro elemento considerado deinterés</p><p>¿EN
+ QUÉ MUNDO VIVIMOS? (CONTEXTO MUNDIAL)</p><p>REUNIÓN
+1:</p><p>Acuerdos
+generales de funcionamiento para estas reuniones.</p><p>Esto
+es prioritario y no pueden faltar: acuerdo de horario, no
+superponerse al hablar, priorizar a los compañeros que no hablaron,
+no repetirse, respetar la palabra del compañeros, levantar la mano
+para hablar, etc. Etc.</p><p>Tiempo
+estimado: 15 minutos</p><p>a)
+Se dividen los compañeros en 5 grupos, se reparten las tarjetas y
+vuelcan con ayuda de un coordinador lo que saben sobre:</p><p>TARJETAS:</p><p>EL
+ NEOLIBERALISMO: QUÉ ES EN EL MUNDO? ¿CÓMO LO VIVIMOS EN LA
+ ARGENTINA?</p><p>Como
+disparador se puede usar algún texto de Marcos del tema.</p><p>LA
+ ACUMULACIÓN CAPITALISTA. ¿QUÉ SIGNIFICA Y CÓMO ES EN LA
+ ARGENTINA?</p><p>Disparador:
+algún texto de no más de 2 páginas que hable del tema.</p><p>¿QUÉ
+ ES LA HEGEMONÍA DE LOS ESTADOS UNIDOS? ¿CÓMO SE DESARROLLA LA
+ GUERRA ANTITERRORISTA Y CÓMO LA VIVIMOS EN ARGENTINA?</p><p>Disparador:
+puede usarse algún artículo de diario que reproduzca el discurso de
+Bush de estos días respecto al porqué van a Irak.</p><p>Para
+Argentina algún diario en el que se establezca la conexión entre
+“inseguridad”=terrorismo=pobres.</p><p>Puede
+ser también algún texto que directamente hable de la hegemonía
+yanqui</p><p>¿QUÉ
+ ES EL ALCA?</p><p>Disparador:
+alguna declaración de Porto Alegre o MST.</p><p>LOS
+ RECURSOS NATURALES: UN OBJETIVO DE ESTADOS UNIDOS Y SUS ALIADOS.</p><p>Disparador:
+algún texto de Galeano de Patas para arriba por ejemplo</p><p>Tiempo
+estimado de esta parte: 1 hora y media</p><p>b)
+Socialización,plenario: 1 hora y media</p><p>c)
+debate, dudas, etc.: 1 hora</p><p>d)
+conclusión y evaluación: 15 minutos.</p><p>REUNIÓN
+2:</p><p>a)
+Lectura por grupo de textos de diarios y/o libros que hablen de los
+temas anteriores. Los grupos serán: ALCA, NEOLIBERALISMO, HEGEMONÍA
+YANQUI y ANTITERRORISMO, ACUMULACIÓN CAPITALISTA, LOS RECURSOS
+NATURALES.</p><p>Cada
+grupo contará con preguntas orientativas del texto. El coordinador
+tendrá presente la memoria de ese grupo de lo visto la reunión
+anterior de forma tal que haya continuidad de ambas reuniones.</p><p>Una
+vez leído el material se procederá a responder las preguntas y
+agregar comentarios o datos que los integrantes del grupo consideren
+importante.</p><p>Tiempo
+estimado: 1
+hora y media</p><p>b)
+Plenario de socialización de lo trabajado por grupos. Tiempo
+estimado: 1
+hora y media</p><p>c)
+Repaso, dudas, agregados, comentarios, fijación de conceotos y datos
+históricos, etc. Tiempo
+estimado: 1 hora y media</p><p>d)
+Conclusiones y evaluación del taller. Tiempo
+estimado: 30 minutos.</p><p>B)¿DE
+DÓNDE VENIMOS? ¿EN QUÉ SISTEMA VIVIMOS?</p><p>¿HAY
+OTRO POSIBLE? ¿CÓMO ES? (Estructura económico-social de la
+Argentina)</p><p>Separamos
+esta temática en tres reuniones diferentes:</p><p>REUNIÓN
+3:</p><p>¿DE
+DÓNDE VENIMOS?</p><p>a)
+Separación de los asistentes en grupos: 1) diaguitas, pampas,
+guaraníes, mapuches 2) tanos, gallegos, rusos, árabes 3)
+santiagueños, paraguayos, bolivianos, chaqueños, tucumanos 4)
+caudillos federales y montoneras 5) movimiento obrero 6)
+insurrecciones populares en Argentina.</p><p>Cada
+grupo contará con un coordinador que tomará 10 minutos para que
+cada compañero diga en pocas palabras qué sabe sobre el nombre del
+grupo. Se va anotando y se lo tiene presente para el debate posterior
+en grupos y en plenario.</p><p>Se
+utilizará para cada grupo un texto, una foto o algo que represente
+esas realidades. Se vuelcan primeras opiniones sobre el disparador.
+Luego se van respondiendo preguntas orientadoras para cada grupo
+sobre el disparador.</p><p>Tiempo
+estimado: 2 horas</p><p>b)
+plenario, socialización de conocimiento y conclusiones de cada
+grupo. Tiempo
+estimado: 1 hora y media</p><p>c)
+Repaso, dudas, agregados, comentarios, fijación de conceptos y datos
+históricos, etc. Tiempo
+estimado: 1
+hora y media</p><p>d)
+Conclusiones y evaluación del taller. Tiempo
+estimado: 30 minutos.</p><p>REUNIÓN
+4:</p><p>¿EN
+QUÉ SISTEMA VIVIMOS?</p><p>Separación
+ en grupos 1) Poder económico en Argentina 2) La acumulación
+ capitalista en Argentina 3) Deuda externa 4) Los beneficiados del
+ sistema 5) neoliberalismo</p><p>Se
+pregunta a los compañeros ¿qué sabemos del nombre de nuestro
+grupo? Con lluvia de ideas rápidamente en pocas palabras contesta
+cada compañero y se anota. Cada grupo contará con un texto breve o
+una foto, un collage o algo que sirva para disparar la discusión. Se
+tendrá para cada grupo preguntas orientadoras sobre el disparador.</p><p>Tiempo
+estimado: 1 hora y media</p><p>b)
+plenario, socialización del conocimiento, lectura de conclusiones
+por grupo. Tiempo
+estimado: 1</p><p>c)
+Repaso , dudas, agregados, comentario, fijación de conceptos y
+precisión datos históricos y sociales. Tiempo
+estimado: 1 hora y media</p><p>Conclusiones
+ y evaluación del taller. Tiempo
+ estimado: 15 minutos.</p><p>REUNIÓN
+5:</p><p>¿HAY
+OTRO PAÍS Y MUNDO POSIBLES?¿CÓMO ES Y QUIÉNES LO CONFORMAN?</p><p>Con
+esta reunión se intenta abordar la cuestión de la unidad de los que
+luchamos no sólo en nuestro país sino en otros lados de América
+Latina. El eje central es poder establecer vínculos comparativos y
+las diferencias, acercamientos a esos movimientos. Es importante
+tener presente la necesidad de pensar estratégicamente el hacia
+dónde vamos, más allá de los MTD, de los “piqueteros”.</p><p>El
+ disparador central puede ser una película sobre algún movimiento
+ social de América Latina. Sería bueno alguna del movimiento
+ piquetero con la idea de proyectar nuestra lucha con otras. Vemos
+ todos la película y luego nos separamos en grupos: 1) MST en Brasil
+ 2) LOS DESOCUPADOS EN ARGENTINA 3) EL SUP MARCOS Y EL EZLN 4)
+ TAHUANTINSUYO Y MOV. CAMPESINO BOLIVIANO 5) INSURRECIONES EN ECUADOR</p><p>En
+una intervención de no más de 3 palabras cada compañero dice lo
+que sabe del nombre de su grupo. Luego se complementa la película
+con la lectura de un texto propio de cada grupo o alguna foto que
+ayude al debate. Se van anotando las conclusiones que apuntarán a
+las diferencias y semejanzas de unos y otros.</p><p>Tiempo
+de la película: 30/40 minutos.</p><p>Tiempo
+estimado de debate por grupos: 1 hora y media</p><p>b)
+Plenario: socialización del conocimiento, lectura de conclusiones
+por grupo. Tiempo
+estimado: 1 hora</p><p>c)
+Repaso, dudas, comentarios, fijación conceptos, etc. Haciendo acá
+especial referencia a las semejanzas y diferencias (que nos une y que
+nos separa). Tiempo
+estimado: 1 hora y media</p><p>Conclusiones
+ y evaluación del taller. Tiempo
+ estimado: 15 minutos.</p><p>C)
+¿CÓMO APORTAMOS LOS MTDs A HACER OTRO PAÍS?</p><p>¿QUIÉNES
+SON LOS ALIADOS EN NUESTRO PAÍS,</p><p>AMÉRICA
+LATINA Y EL MUNDO?</p><p>¿CÓMO
+CONFORMAMOS CON ESOS SECTORES LA UNIDAD EN LA ACCIÓN?</p><p>(CONSTRUYENDO
+UNA IDENTIDAD)</p><p>REUNIÓN
+6:</p><p>TERRITORIALIDAD.</p><p>Se
+ haría una separación en grupos para tratar cada uno de los temas
+ que se enumeran más adelante. Sería bueno aquí proponer como
+ disparador una teatralización del origen de los MTD, porqué los
+ cortes, los piquetes. La identidad en el territorio, etc. Que en
+ esta teatralización participen al menos 10 compañeros y su tiempo
+ de duración efectiva será de no más de 10 minutos. El resto es
+ para la preparación.</p><p>Tiempo
+estimado de la teatralización (incluye la preparación): 1 hora.</p><p>Luego
+se separarían en grupos los compañeros para debatir con preguntas
+orientadoras:</p><p>1)
+¿QUÉ IMPORTANCIA TIENE EL TERRITORIO DONDE PELEAMOS Y NOS
+ORGANIZAMOS? ¿POR QUÉ?</p><p>2)
+¿QUÉ EXPERIENCIAS DE LUCHA Y ORGANIZACIÓN ANTERIORES A LA NUESTRA
+CONOCEMOS QUE HAYAN TENIDO SEPARACIÓN EN TERRITORIO? Semejanzas y
+diferencias</p><p>3)
+¿QUÉ ALIADOS TENEMOS QUE LLEVEN ADELANTE UNA LUCHA TERRITORIAL EN
+NUESTRO PAÍS? ¿Qué cosas nos acercan y qué cosas nos distancian?
+¿cómo acortamos las distancias?</p><p>4)
+¿QUÉ ALIADOS TENEMOS EN LA LUCHA TERRITORIAL EN AMÉRICA LATINA?
+Qué cosas nos acercan y qué cosas nos distancian? Cómo acortamos
+las distancias?</p><p>Tiempo
+estimado: 1 hora y media</p><p>Plenario,
+ socialización de debate por grupos: Tiempo
+ estimado: 1 hora</p><p>Dudas,
+ debate, preguntas, etc. Tiempo
+ estimado: 1 hora y media</p><p>Evaluación
+ y conclusiones. Tiempo
+ estimado: 15 minutos</p><p>REUNIÓN
+7:</p><p>PODER
+POPULAR, LUCHA Y ESTADO.</p><p>El
+ disparador debería ser una película o un corto de no más de 30
+ minutos que ayude a reflexionar acerca del poder popular, la lucha
+ del pueblo y la intervención del Estado en esa lucha. Se podría
+ tomar algo del 26 de junio o bien recurrir al pasado, como por
+ ejemplo el Cordobazo.</p><p>Las
+preguntas orientadoras para responder en grupo con el acompañamiento
+de un texto que complemente algún tema puntual de lo visto en la
+película deben ser en torno a:</p><p>El
+poder popular en la historia de lucha del pueblo argentino. Qué es
+el poder popular? Cómo se lo concibió en el pasado y cómo se lo
+concibe hoy? Los mtds tenemos un proyecto de poder popular? Por qué?
+Qué otros grupos políticos o sociales hablan de poder popular?
+Semejanzas y diferencias.</p><p>Cómo
+se vincula la lucha con la construcción de poder popular? Qué papel
+juega el Estado en esa Lucha?</p><p>El
+Estado es aliado o enemigo del poder popular? Por qué?</p><p>Qué
+es el Estado? Cómo se vincula el Estado con el poder a lo largo de
+la historia argentina? Siempre tuvo el mismo lugar?</p><p>Tiempo
+estimado: 1 hora y media.</p><p>Plenario,
+ socialización del debate por grupos. Tiempo estimado: 1 hora.</p><p>Dudas,
+ debate, preguntas, fijación de contexto,etc.. Tiempo estimado 1
+ hora y media</p><p>Conclusión
+ y evaluación. Tiempo estimado: 30 minutos.</p><p>REUNIÓN
+8:</p><p>LOS
+MTDs EN ARGENTINA</p><p>Historia,
+lucha, diversidad y proyectos. Perspectiva de clase, género y
+generacionales. Acá es fundamental tener presentes los talleres
+anteriores, tanto el de dónde venimos como el que mundo queremos o
+qué sistema queremos.</p><p>La
+metodología sería igual a las anteriores y la misma estructuración.</p><p>REUNIÓN
+9:</p><p>Aliados
+sociales de los MTDs.</p><p>Podemos
+solos los desocupados pelear por otro país? Quiénes son nuestros
+aliados tácticos y estratégicos? Cómo conformamos la alianza
+social, con quiénes, para qué, cómo y en qué cosas?</p><p>REUNIÓN
+10:</p><p>Economía
+alternativa.</p><p>Es
+posible otra economía? Para qué la queremos? Quiénes la integran y
+cómo?</p><p>La
+importancia del trabajo como parte del dominio de la naturaleza. La
+satisfacción de necesidades y mejora de la calidad de vida. Cómo lo
+hacemos?</p><p>Experiencias
+de los MTDs: cómo lo hicimos, cómo podemos mejorarlo, hacia dónde
+vamos, con quiénes.</p><p>Debemos
+tener respondida la pregunta inicial si es posible otra economía
+alternativa, o almenos, tener ejes para seguir discutiendo.</p><p>Acá
+debemos incluir mucho intercambio de experiencias y aportar con
+algunos elementos teóricos de economia política.</p><p>ULTIMO
+DÍA:</p><p>Lectura
+de memorias y propuestas.</p><p>El
+objetivo de este día es de evaluación y medidas de acción
+concretas con metas, fechas, objetivos etc.</p><p>Quiénes
+como y para qué de todas aquellas cosas que podemos decidir entre
+todos y avanzar.</p><p>Se
+debería respetar la estructuración hecha al principio, con la
+salvedad que acá lo más importante es el punto de evaluación y
+conclusiones.</p><p>COMENTARIOS
+REFLEXIVOS COMO FINAL DE ESTA PROPUESTA:</p><p>Cada
+uno de estos módulos presenta la posibilidad de poder llevárselo a
+cabo en los barrios con los compañeros que deseen. Sería bueno
+poder tomarse algún día de la formación por barrio entre reunión
+y reunión para recoger pensamientos de los compañeros que puedan
+aportar a los encuentros de este curso.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../PropuestaEscGlew(adri).pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (PropuestaEscGlew(adri).pdf).</footer>
+</div></body></html>

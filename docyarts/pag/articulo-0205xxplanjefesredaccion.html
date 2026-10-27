@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Las patas de la mentira: plan para jefes y jefas de familia</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Las patas de la mentira: plan para jefes y jefas de familia</h1><p class="ficha-doc">Fecha: mayo de 2002 (aprox.) <span class="sep">|</span> Publicado en Red Acción <span class="sep">|</span> 1.415 palabras</p></header>
+<main class="texto"><p>Artículo RED ACCIÓN, mayo 2002</p><p>LAS PATAS DE LA MENTIRA</p><p>Plan para jefes y jefas de familia</p><p>El plan social que tiempo atrás presentó grandilocuentemente el presidente Duhalde ofrece muchos puntos oscuros. La explicación gubernamental es bastante simple, presenta al subsidio como un plan universal, destinado a jefes y jefas de familia, que no requiere de intermediarios, y que sólo es necesario inscribirse individualmente en las dependencias municipales habilitadas para el armado de los padrones de beneficiarios. Para la asignación de los planes, se crearon Concejos de Emergencia integrados por funcionarios municipales, representantes de la Iglesia, empresarios y ONG´s que, supuestamente, garantizan la justa distribución de la exigua ayuda estatal.</p><p>El plan fue recibido de diferentes maneras por las distintas tendencias del movimiento de desocupados. El gobierno reconoció como únicos interlocutores a los dirigentes Luis D´Elía (FTV-CTA) y a Juan Carlos Alderete (CCC), quienes participaron de las negociaciones previas, y al conocerse públicamente la propuesta expresaron algunas palabras de elogio y se mostraron proclives a la participación en la co-administración de los subsidios. En cambio, el Bloque Piquetero Nacional, la CTD Aníbal Verón y el MIJD, entre otras organizaciones, tomaron distancia y expresaron su oposición.</p><p>Algo huele mal</p><p>La abundante publicidad oficial insiste en las bondades de la propuesta, sin embargo, no logra ocultar que ésta hace agua por muchos lados, y que entre sus objetivos fundamentales se propone la desarticulación de los movimientos de desocupados.</p><p>Entre los aspectos nada claros, lo primero que salta a la vista es que lo de plan &quot;universal&quot; es una falacia, ya que deja sin cobertura a millones de desocupados (y no sólo por los desocupados que no tienen hijos, sino incluso porque deja afuera a muchísimos que sí son padres o madres y tienen a su cargo a una familia).</p><p>Pero hay un punto en especial que llama la atención: no está para nada claro cómo van a obtener el dinero para financiar los planes. Inicialmente los funcionarios gubernamentales explicaron que el subsidio se financiaría con fondos que el Banco Mundial y el BID le asignaron a la Argentina para planes sociales por una cifra de 1000 millones de dólares. Sin embargo, esos fondos ya se destinaron para el pago de deuda externa, tal como confiesa una fuente del Ministerio de Economía en el matutino La Nación, en su edición del 12 de abril: &quot;la Argentina no puede tener más fondos adicionales que los que tiene, entonces lo que hacemos es que la plata asignada para programas sociales no venga al país, sino que quede en Washington para el pago de los vencimientos. Los planes sociales los financiaremos con lo que se recaude de las retenciones a las exportaciones, que serán cerca de 150 millones de pesos mensuales&quot;.</p><p>Pero más aún, lo que no cuenta el anónimo funcionario es que el cobro de las retenciones se tornará extremadamente difícil. La imposición tributaria a los productos del campo que se exportan, generó un gran malestar en el sector y el gobierno sufre las presiones de los grandes exportadores y comercializadores que ya le declararon la guerra al demorar la liquidación de divisas. Como si fuera poco, también tiene en pié de guerra a los medianos y pequeños productores que están por lanzar un plan de lucha para oponerse a la medida. Con este panorama, sería milagroso que la financiación total de los planes sociales se obtenga con la recaudación del impuesto a las exportaciones, razón por la cual es de esperar una serie interminable de atrasos e incumplimientos en el pago de los subsidios.</p><p>Por último, para descalificar a las organizaciones de desocupados el gobierno las presenta, entre otras mentiras, como &quot;intermediarios&quot; que se aprovechan de la situación de pobreza general. Pero la realidad es muy diferente a la que describen los voceros gubernamentales: en verdad, los únicos intermediarios son los &quot;punteros&quot; de los partidos tradicionales que siguen con sus conocidas prácticas clientelistas, quienes en muchísimas ocasiones integran los Concejos de Emergencia camuflados en inexistentes ONG´s.</p><p>Lejos de &quot;intermediar&quot; las organizaciones de desocupados son expresión genuina de los intereses de las personas que sufren el drama de la desocupación. Para explicar esto, nada más acertado que las palabras de un miembro del MTD de Lanús quien -al ser consultado sobre las acusaciones del gobierno- respondió, &quot;nosotros no somos intermediarios, nosotros somos el pueblo organizado&quot;.</p><p>Los desocupados tienen la palabra</p><p>Red Acción entrevistó a integrantes de diferentes organizaciones de desocupados para consultar su opinión sobre el plan de jefes y jefas de familia. Éstas son sus voces.</p><p>&quot;Es una estrategia del gobierno para sacarse de encima a las organizaciones de desocupados&quot;</p><p>Hernán, miembro de la Asamblea de Trabajadores Desocupados de Ezeiza - organización que integra el Frente de Trabajadores Combativos (FTC)- consideró que el plan para jefes y jefas de familia &quot;es una estrategia del gobierno para sacarse de encima a las organizaciones de desocupados. Fuimos al Comité de Crisis y vimos que era un acuerdo entre el intendente, la iglesia, punteros y la CGT para imponer su criterio de distribución. Por otra parte, eran sólo 180 planes para 7000 desocupados. Al final, se decidió no participar porque además no nos reconocen como Asamblea&quot;.</p><p>&quot;Quieren absorber la autogestión de los proyectos de los barrios&quot;</p><p>&quot;El municipio hizo lo imposible para que no nos den los planes de Nación y Provincia autogestionados. Nosotros hace tiempo habíamos discutido que los consejos de emergencia quieren absorber la autogestión de los proyectos de los barrios. Además, nos retrasan los papeles de cobros y hoy 70 compañeros que tenían que cobrar en mayo los pasaron para agosto, en el caso de que cobremos&quot;, afirmó un integrante del MTD de Almirante Brown.</p><p>&quot;Con respecto a la ley de penalización a los movimientos de desocupados que impulsa el gobierno, proponemos realizar un plan de lucha con los otros MTD de la Aníbal Verón y otros agrupamientos de desocupados&quot;, concluyó.</p><p>&quot;Los únicos intermediarios son ellos&quot;</p><p>Por el MTD de Solano, Alberto denunció que &quot;a través de las leyes, quieren desarmar las organizaciones populares autónomas que están en lucha desde hace un montón de tiempo. Los únicos intermediarios son ellos que dan estos subsidios de una manera clientelista, lo que nos hace pensar que está todo orientado por los diputados y por Chiche Duhalde que es una de las mentoras de esta idea. Nosotros vamos a seguir luchando y resistiendo a este tipo de políticas que atentan contra una auténtica construcción de los trabajadores desocupados y sus luchas&quot;</p><p>&quot;El PJ armó un operativo bárbaro para destruirnos&quot;</p><p>Una trabajadora desocupada del MTD de Varela explicó que en su municipio &quot;el gobierno nos está atacando de lleno; crearon las Unidades de Gestión Local (UGL) y descentralizaron todo la cuestión administrativa y lo que se tendría que hacer a nivel municipal tiene que hacerse barrio por barrio. Quieren destruir cualquier organización que tengamos y ante esto nosotros trabajamos con la gente para que entienda que pueden prometerles millones de planes, pero que nada les asegura que los cobren: están anotando la tercera tanda y ni siquiera pagaron la primera.&quot;</p><p>Respecto a la forma de enfrentar la estrategia gubernamental, el MTD de Varela tiene previsto &quot;hacer movilizaciones al municipio, para que nos reconozcan como organización y asegurarnos que los compañeros puedan cobrar. Es una lucha más que nada cotidiana, hay que aguantar a los punteros y todo eso. No es fácil, hay que trabajar mucho porque el PJ armó un operativo bárbaro para destruirnos. Pero por suerte la gente sigue firme y dispuesta a pelear, porque entiende que el movimiento no es sólo para pedir trabajo y que la cuestión de la dignidad y el cambio social no son sólo consignas, sino que son las banderas del movimiento. Los compañeros lo entienden y desde hace tiempo tomaron el compromiso de lucha&quot;.</p><p>&quot;Quieren desorganizarnos&quot;</p><p>Laura, miembro del recientemente creado MTD de Lugano, afirmó que &quot;el plan social responde a una política del gobierno para desarticular a los movimientos de desocupados. Quieren desorganizarnos y, obviamente, nosotros no estamos de acuerdo porque queremos seguir decidiendo que vamos a hacer con nuestros planes. Queremos continuar organizados y que no desarticulen la lucha que las organizaciones de desocupados vienen manteniendo&quot;.</p><p>Además explicó &quot;nosotros somos los que manejamos nuestros planes, los que decidimos qué proyecto productivo vamos a implementar. La nuestra es una organización nueva, hace apenas dos meses que surgimos, y ya tenemos proyectos incipientes con artículos de limpieza, de panadería, un posible de lácteos y funciona una biblioteca para el barrio, donde se dan clases de apoyo&quot;.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../articulo_0205xxplanjefesredaccion.htm" download>Descargar el archivo original</a> (articulo_0205xxplanjefesredaccion.htm).</footer>
+</div></body></html>

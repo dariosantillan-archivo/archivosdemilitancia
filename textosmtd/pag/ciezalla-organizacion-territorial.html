@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>La organizacion territorial: nucleo territorial</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>La organizacion territorial: nucleo territorial</h1><p class="ficha-doc">Fecha: 17 de mayo de 2003 <span class="sep">|</span> Enviado a la lista <i>mtd_afinidad</i> <span class="sep">|</span> 2.048 palabras</p></header>
+<main class="texto"><p>Sobre los MTD. Algunas conclusiones sobre nuestra práctica desde el MTD de Berisso, unas cuantas cosas que aprendimos de otros movimientos y otras que nos vienen desde mas atrás cuando aprendíamos de los que intentaban construir poder popular desde las fábricas y los barrios</p><p>La organizacion territorial.</p><p>Nucleo territorial</p><p>En los movimientos de desocupados, siguiendo una tradición de otras experiencias territoriales, se suele mencionar como unidad básica de organización al barrio. Si los miramos las practicas mas detenidamente podemos observar que en un barrio de 16 manzanas, los movimientos no alcanzan a la totalidad de barrio sino a un nucleo ligado por razones de vecindad , amistad y parentezco. Es decir tiene una localización territorial ( 4 o 5 manzanas) y una extensión por vínculos.</p><p>Correspondería mas bien considerarlos como nucleos territoriales y en ese sentido son comparables a los núcleos de campamenteros del MST de Brasil.</p><p>La distinción entre nucleo y barrio no es menor, porque de alguna manera el núcleo territorial tiene un límite preciso que es la dimensión de la asamblea. Se puede hacer asambleas de mas de cien personas, pero esta claro que medida que aumenta el número se restringe la participación. Lo habitual, me parece, son asambleas que pocas veces superan las 60 personas y no mayores de 100. Cuando se supera ese límite se plantea &quot; la necesidad de organizar otro barrio&quot;. Es decir otro núcleo territorial.</p><p>Grupo promotor</p><p>Cada nucleo territorial que empezó a organizarse necesitó de un grupo promotor que empujara los primeros pasos, organizando las primeras asambleas, proponiendo criterios, dando información sobre como encarar la lucha reivindicativa. La experiencia nos dice que los grupos promotores nunca fueron demasiado grandes ( 4 o 5 compañeros)e incluso que si el grupo promotor es de afuera, un número demasiado grande es contraproducente.</p><p>La distinción de este grupo promotor y de su capacidad a partir de su accionar ( y sus caracerísticas: experiencia anterior, compromiso) , nos permite poner en un plano secundario el hecho de que el grupo sea &quot;de afuera&quot; o natural (del barrio).</p><p>El grupo promotor prefigura de alguna manera la &quot;mesa barrial&quot; o reunión de delegados de grupos de trabajo y areas, que corresponde a un nucleo territorial mas organizado.</p><p>La cuestion sobre &quot;los de afuera &quot; y &quot; los del barrio&quot; se plantea precisamente en esa transición, porque si después de un par de años de organización el grupo promotor &quot;de afuera&quot; se convirtió en &quot; mesa barrial&quot; sin incorporar compañeros del barrio en roles de responsabilidad hay algo que esta fallando en la promoción de los compañeros de base. Y el tema no es menor porque estamos afectando la contiunuidad del trabajo. El compañero el barrio va a vivir (salvo excepciones) siempre allí, todo lo aprendido y acumulado va a quedar en ese territorio. El compañero &quot;de afuera&quot; (salvo excepciones) puede irse a otra parte. Lo aprendido y acumulado es mas volatil.</p><p>Dandole una vuelta mas a las cuestiones de los &quot;promotores&quot; es interesante conocer como funcionan entre los</p><p>Sin Tierra de Brasil.. En los nuevos campamentos, siempre el movimiento destina unos pocos compañeros con experiencia anterior para aportar a los primeros pasos de la organización. El papel de esos compañeros no es el de resolver todos los problemas sino el de aportar ideas muy generales y de tratar de evitar el fracaso de la experiencia. Es decir el movimiento a travez de sus promotores trata de poner un piso de continuidad a la experiencia. Sobre ese piso hay campamentos que andan mal,,otros regular y otros bien, y esto depende de cómo los grupos que lo conforman se van autorganizando . Lo habitual es ver que un campamento de dos meses de antiguedad es un kilombo y lo que tienen mas de un año están bien organizados. Pero esto no siempre sucede así : cada campamento como cada nucleo territorial nuestro recorre un proceso único y original de organización.</p><p>Sobre esa experiencia podemos asimilar la figura del promotor a la del militante popular ( y aquí no diferenciamos si es &quot;de afuera o del barrio&quot;. El militante popular es aquel que se ocupa de hacer el trabajo que otros, por el momento, no puede hacer. El éxito de su trabajo no esta asociado a su entronización sino a su despido. Ha cumplido su labor cuando es prescindible, lo que no quiere decir descartable porque las tareas de la militancia popular son inagotables.</p><p>Los grupos articulados</p><p>Llamamos grupos articulados a aquellos grupos que se conecta con un nucleo territorial para realizar un trabajo específico y determinado. Por ejemplo: un grupo de estudiantes que va a un MTD ha hacer apoyo escolar, un grupo de abogados que mantiene un servicio de consultas, un grupo de docentes que esta dictando un curso, un grupo de estudiantes de agronomía que asesoran en huerta, etc.</p><p>Desde nuestro punto de vista esos grupos que articulan con el MTD, no pueden participar en las decisiones politicas de los MTD y solo pueden asistir a las asambleas en condición de observadores. Esta posición que parece muy rigurosa y hasta injusta, no parece igual si invertimos los términos. Los compañeros del MTD no participan en las asambleas o los plenarios de las agrupaciones universitarias, ni en las reuniones de profesionales que colaboran. Finalmente todo el peso de las consecuencias de las decisiones tomadas en asamblea caerá en primer lugar sobre aquellos compañeros que viven en un nucleo territorial y militan cotidianamente.</p><p>Queda abierto el debate si puede articularse una experiencia de formación ( a partir de grupos de educación popular). La experiencia parece indicar que es posible y hasta muy productiva en una etapa inicial, pero que si la tarea de la formación se congela como externa, se generan conflictos que terminan desconectando las experiencias. También creo que allí habría que acudir a la idea de promoción cuyo horizonte sea la incorporación de los compañeros al movimiento o la capacitación de compañeros del movimiento para continuar la tarea.</p><p>Planes o proyectos productivos?</p><p>Desde nuestra concepción no existe una disyuntiva entre luchar por mas planes, organizar iniciativas comunitarias y asistenciales ( comedores, roperos, areas de salud) y los proyectos productivos.</p><p>Existen orientaciones generales hacia masificar los movimientos, mejorar las condiciones de vida de sus integrantes y crecer desde lo productivo favoreciendo el desarrollo de una economía solidaria.</p><p>El punto es que en cada momento hay coyunturas politicas, coyunturas de los movimientos y de cada nucleo territorial en particular que determina poner el acento e uno u otro aspecto.</p><p>Esta claro que hay etapas que resulta relativamente facil obtener planes y momentos en que se pone muy duro. Que hoy es mucho mas facil organizar un comedor que un proyecto productivo. Que el desarrollo de lo productivo y la construcción de redes de economía solidaria fortalece nuestr autonomía en relación al Estado.</p><p>Democracia de base, horizontalidad....</p><p>Los MTD son organizaciones donde se practica la democracia de base y hay asignación de responsablidades de acuerdo a las tareas necesariar para llevar adelante las decisiones politicas de la organización.</p><p>Pretendemos que los compañeros sean todos iguales tomando las mas importantes decisiones politicas en las asambleas. Decimos pretendemos porque aceptamos que existen desniveles de información para tratar algunos temas.Y tratamos de corregir esos desniveles desde una formación que utiliza como herramienta la educacion popular. Donde todos aprendemos de todos.</p><p>A tareas específicas se corresponden responsabilidades específicas y reuniones por temas específicos como participar de la coordinación de un área de alimentos, como participar de una coordinación con otras organizaciones populares autonomas.</p><p>En la ejecución de esas responsabilidados tratamos de garantizar la continuidad y promover la formacion y la rotación de los compañeros. La idea del tizón encendido que permite a la madrugada siguiente encender las pequeñas ramas, que ha sido rescatada por el Mocase de la tradición de los montes ejemplifica muy bien como se trata de combinar en todaslas responsabilidades compañeros con experiencia en el tema , con compañeros nuevos que se vayan formando y en el futuro puedan hacerse cargo de la tarea.</p><p>Mas que un esquema organizativo que se desprende de concepciones mas generales, los MTD son laboratorios de ensayo social donde verificamos cotidianamente formas organizativas que funcionan y han demostrado su utilidad y otras tantas que ensayamos . En ese sentido mas que referirnos a la discusión entre teóricos sobre la horizontalidad o el centralismo democrático , nos referimos a nuestra experiencia como pueblo, las conclusiones acumuladas por distintos ensayos historicos de organización de la lucha de nuestros trabajadores, a los aportes de otros movimientos ( como el Mocase y el MST de Brasil) , y a nuestra propia práctica.</p><p>Los tiempos, los perfiles</p><p>Hemos dicho que cada proceso de organización de un nucleo territorial es único y original. Esto tambien vale para sus tiempos y perfiles de confrontación.</p><p>Cuando desde necesidades externas ( por ejemplo las necesidades de un grupo demilitantes de poner &quot;masas en la calle &quot;para competir con otro grupo de militantes, o la necesidad de algún dirigente de radicalizar su discurso para encabezar el movimiento &quot;mas revolucionario&quot; ) se imponen tiempos y discursos</p><p>que no respetan los procesos de organización , no avanzamos sino ponemos en peligro todo lo construído anteriormente.</p><p>Esto no significa caeer en un fundamentalismo sobre los tiempos y perfiles que nos impida coordinar y reducirnos al aislamiento. Hay coyunturas que aún con los movimientos a medio vestir hay que salir a la calle y avanzar. Por ejemplo la última etapa preelectoral donde hubo que salir a conseguir los planes que evaluábamos no nos darían en los meses siguientes a la asunción del nuevo gobierno. Lo que determina la legitimidad de forzar la marcha o levantar la cabeza mas de lo aconsejable en un momento determinado es que esta decisión esta motivada por los intereses del conjunto del movimiento, no solo como necesidad</p><p>objetiva, sino de que subjetivamente estamos convencidos que tenemos que arriesgar y somos capaces de discutirlo, resolverlo en asamblea y hacernos cargo de las consecuencias de una decisión equivocada si lo fuera...</p><p>Los nuevos vinculos</p><p>Aunque el impulso inicial que mueve a los desocupados que se acercan a MTD a conseguir un plan que alivie un poco su situación de indigencia, los motivos que determinan su continuidad y participación en el movimiento no son exclusivamente económicos. Cada nucleo terrtorial y cada movimiento expresa un estadio de construcion diferente de la avanzada de una nueva sociedad, de nuevos vínculos que promocionan la dimensión humana, y privilegian la solidaridad a la ganancia.</p><p>El hecho de que todas las opiniones personales sean valoradas y decidan efectivamente sobre lo que hace o deja de hacer el movimiento, presupone una ruptura muy fuerte con una pedagogia de opresión que separa a los que saben y pueden hablar de los que no saben y solo pueden elegir entre opciones dadas.</p><p>La evidencia de que el propio aporte económico ( el fondo) permite autogestionar al movimiento, hace participe de una construcción propia y autogestionada asentada en la dignidad, rompiendo la tradicion clientelística y limosnera, fogoneada por los partidos políticos y las iglesias.</p><p>La posibilidad de organizar los trabajos estableciendo turnos, horarios, objetivos de producción, estrategias de comercialización y de provisión de materias prima y el reparto solidario de los excedentes, cuestiona una educación donde es imposible concebir la producción sin la figura del patrón.</p><p>La posibilidad de discutir la tarea misma de la formación y de la organización de la recreación, va a contramano de una sociedad donde la educación esta sacralizada y la diversión regimentada.</p><p>En realidad los MTD son (deberían ser), pequeños ensayos locales de proyección socialista que funcionan a contramano de la sociedad y la dominación política imperante. Tan a contramano como funciona, por ejemplo, Cuba en un mundo manejado por las multinacionales y amenazado por el imperialismo norteamericano.</p><p>Desde esa realidad, es muy dificil comprender a los MTD a partir de la comparación con modelos acabados, o congelando el presente. Cada nucleo territorial y cada movimiento es lo que ha podido ser hasta hoy , pero mucho mas, lo que puede ser en el futuro, valorando experiencias de organización que son búsquedas sin libreto previo y donde las secuelas de la bomba de fragmentación social que es la desocupación se van disipando con el tiempo y las pequeñas victorias que van demostrando que otros vinculos y otra sociedad es posible.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../CiezalLA ORGANIZACIÓN TERRITORIAL.eml" download>Descargar el archivo original</a> (CiezalLA ORGANIZACIÓN TERRITORIAL.eml).</footer>
+</div></body></html>

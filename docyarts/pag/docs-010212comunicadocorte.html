@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Masivo corte de ruta en la zona sur del gran Buenos Aires: basta de hambre, basta de compromisos incumplidos!!</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Masivo corte de ruta en la zona sur del gran Buenos Aires: basta de hambre, basta de compromisos incumplidos!!</h1><p class="ficha-doc">Fecha: 12 de febrero de 2001 <span class="sep">|</span> 1.356 palabras</p></header>
+<main class="texto"><p>LUNES 12 DE FEBRERO DE 2001</p><p>COMUNICADO DE PRENSA</p><p>MASIVO CORTE DE RUTA EN LA ZONA SUR DEL GRAN BUENOS AIRES:</p><p>BASTA DE HAMBRE, BASTA DE COMPROMISOS INCUMPLIDOS!!</p><p>Alrededor de mil doscientos desocupados de las localidades de Quilmes, Lanús y Almirante Brown, nos concentraremos desde esta mañana a las 10 hs. en un nuevo corte de ruta por tiempo indeterminado.</p><p>A la dramática situación de hambre y marginación en que vive hoy nuestro pueblo, hay que agregarle la burla permanente que recibimos los desocupados por parte del Gobierno Nacional, de incumplir permanentemente los acuerdos firmados en conflictos anteriores, como sucedió con el compromiso firmado en el corte de la Rotonda de Pasco, el 6 de noviembre pasado, y como sucede en otros puntos del país.</p><p>Nuevos cortes de ruta como éste son provocados por este sistema de exclusión y represión social, por la indiferencia y desprecio de la clase política hacia el pueblo, y no como declara el ministro Storani, producto de &quot;conspiraciones&quot; armadas por &quot;piqueteros profesionales que viajan en avión&quot;. ¡Que haga la experiencia el Ministro de vivir en las condiciones en que vive hoy un desocupado que corta rutas!</p><p>Es posible evitar estas situaciones: que anulen los subsidios y los privilegios a los grandes grupos económicos, que facturan millones de dólares, mientras el pueblo se muere de hambre! ¡Que rompan las cadenas de dependencia con el FMI y dejen de pagar la deuda externa para atender el genocidio que están cometiendo con el pueblo argentino!</p><p>El corte se sostendrá por tiempo indeterminado hasta que den respuesta a los siguientes reclamos:</p><p>Incorporación de 1200 desocupados a los planes de empleo. Rechazamos y denunciamos la rebaja en los planes nacionales y provinciales de 200 a 160 y 120 pesos. ¡De la Rua y Ruckauf se pusieron de acuerdo para generar más miseria! Exigimos que aumenten los planes de empleo a 250$.</p><p>Maquinaria y herramientas para hacer viables los proyectos productivos que propone el Gobierno Nacional a cambio de los Planes Trabajar. ¡Queremos generar trabajo y nos niegan la ayuda para hacerlo!</p><p>Asistencia alimentaria para 1200 personas, a razón de 20 kg de alimentos frescos por persona, incluyendo 10 kg. de carne y verduras, según lo acordado por el Gobierno Nacional en noviembre, acuerdo que no fue cumplido.</p><p>La entrega de útiles escolares, guardapolvos y zapatillas para 5000 chicos, que de lo contrario no podrán empezar el ciclo lectivo.</p><p>Entrega de medicamentos básicos al Movimiento de Trabajadores Desocupados, porque las salitas vecinales están devastadas por la falta de presupuesto y el mal manejo de los municipios.</p><p>La implementación de un plan de Documentación Gratuito en los barrios, ya que muchas personas no pueden ser incorporadas a los planes de empleo por no tener planta para regularizar su documentación.</p><p>La implementación de una tarifa social que abarque los servicios básicos, como la luz y el agua. ¡Las multinacionales facturan millones y dejan sin luz y agua a familias desocupadas por falta de pago!</p><p>La implementación de un boleto gratuito para el transporte público, que sea otorgado por ley a los desocupados.</p><p>Repetimos: la miseria que provoca el modelo económico que cada vez profundizan más, el desprecio que demuestran los políticos al incumplir los acuerdos, son lo generan los cortes de ruta. ¡Vamos a seguir luchando por TRABAJO, DIGNIDAD Y UN CAMBIO SOCIAL!.</p><p>Exigimos también el desprocesamiento de más de 2500 trabajadores y desocupados, y la libertad de Emilio Alí, preso en Mar del Plata por reclamar alimentos frente a un supermercado. También denunciamos la presión judicial sobre el Dr. Matozo, acosado legalmente por acompañar a quienes luchan en los cientos de asentamientos del Gran Buenos Aires por el derecho a una vivienda digna. Se equivocan si piensan que pueden detener las luchas populares encarcelando y procesando a los trabajadores y los desocupados, o con represiones sangrientas como las que produjeron las muertes de Teresa Rodríguez en Neuquén, Aníval Verón en Salta o Ramón Molina en Chaco. ¡Esos compañeros, muertos por reclamar justicia, son banderas de lucha de todos los Movimientos de Desocupados!.</p><p>Exigimos establecer una mesa de negociación directamente con representantes del Gobierno Nacional (Ministerio de Trabajo y de Acción Social) y del Gobierno Provincial, con poder de decisión. No aceptamos la intervención de los Municipios, ya que no permitiremos que nuestros reclamos queden trabados en la red de corrupción que hoy expresan los punteros políticos con los que se manejan los gobiernos municipales.</p><p>El corte se realiza en el &quot;Triángulo de Bernal&quot;, cruce de la Av. Calchaquí y Acceso Sudeste</p><p>TEL 15- 5634- 5406</p><p>15- 5134 - 2025</p><p>Movimeinto de Trabajadores Desocupados &quot;Teresa Rodríguez&quot; de Solano - Quilmes .</p><p>Movimiento de Trabajadores Desocupados de Lanús,</p><p>Movimiento de Trabajadores Desocupados de Don Orione, Glew y Burzaco, Alte. Brown</p><p>Trabajadores de las cuadrillas del los planes Trabajar, Barrios Bonaerenses y PEL.</p><p>Segundo día de corte</p><p>MARTES 13 DE FEBRERO DE 2001</p><p>COMUNICADO DE PRENSA</p><p>URGENTE</p><p>NUEVOS CORTES EN BERNAL:</p><p>CRECE LA PROTESTA DE DESOCUPADOS</p><p>Después de un día en el que alrredor de 1200 desocupados de las localidades de Quilmes, Lanús y Almirante Brown, mantenemos cortado el cruce de la Avenida Dardo Rocha con la bajada del Acceso Sudeste, en Bernal, sur del Gran Buenos Aires, nuevos cortes se realizan desde esta madrugada.</p><p>Durante la jornada de ayer lunes, a pesar de la contundencia de la protesta, NUNGUN FUNCIONARIO NACIONAL O PROVINCIAL SE PRESTÓ A OFRECER ALGUNA RESPUESTA.</p><p>Ante esta indiferencia, desde esta madrugada se efectuaron nuevos cortes en el Acceso Sudeste, y otros en la Avenida Calchaquí, Partido de Avellaneda.</p><p>La masiva asamblea realizada ratificó la decisión de mantener el corte por tiempo indeterminado, hasta lograr solución a los siguientes puntos:</p><p>Incorporación de 1200 desocupados a los planes de empleo. Rechazamos y denunciamos la rebaja en los planes nacionales y provinciales de 200 a 160 y 120 pesos. ¡De la Rua y Ruckauf se pusieron de acuerdo para generar más miseria! Exigimos que aumenten los planes de empleo a 250$.</p><p>Maquinaria y herramientas para hacer viables los proyectos productivos que propone el Gobierno Nacional a cambio de los Planes Trabajar. ¡Queremos generar trabajo y nos niegan la ayuda para hacerlo!</p><p>Asistencia alimentaria para 1200 personas, a razón de 20 kg de alimentos frescos por persona, incluyendo 10 kg. de carne y verduras, según lo acordado por el Gobierno Nacional en noviembre, acuerdo que no fue cumplido.</p><p>La entrega de útiles escolares, guardapolvos y zapatillas para 5000 chicos, que de lo contrario no podrán empezar el ciclo lectivo.</p><p>Entrega de medicamentos básicos al Movimiento de Trabajadores Desocupados, porque las salitas vecinales están devastadas por la falta de presupuesto y el mal manejo de los municipios.</p><p>La implementación de un plan de Documentación Gratuito en los barrios, ya que muchas personas no pueden ser incorporadas a los planes de empleo por no tener planta para regularizar su documentación.</p><p>La implementación de una tarifa social que abarque los servicios básicos, como la luz y el agua. ¡Las multinacionales facturan millones y dejan sin luz y agua a familias desocupadas por falta de pago!</p><p>La implementación de un boleto gratuito para el transporte público, que sea otorgado por ley a los desocupados.</p><p>Repetimos: la miseria que provoca el modelo económico que cada vez profundizan más, el desprecio que demuestran los políticos al incumplir los acuerdos, son lo generan los cortes de ruta. ¡Vamos a seguir luchando por TRABAJO, DIGNIDAD Y UN CAMBIO SOCIAL!.</p><p>Exigimos establecer una mesa de negociación directamente con representantes del Gobierno Nacional (Ministerio de Trabajo y de Acción Social) y del Gobierno Provincial, con poder de decisión. No aceptamos la intervención de los Municipios, ya que no permitiremos que nuestros reclamos queden trabados en la red de corrupción que hoy expresan los punteros políticos con los que se manejan los gobiernos municipales.</p><p>El corte principal se realiza en el &quot;Triángulo de Bernal&quot;, cruce de la Av. Calchaquí y Acceso Sudeste</p><p>TEL 15- 5634- 5406</p><p>15- 5134 - 2025</p><p>Movimeinto de Trabajadores Desocupados &quot;Teresa Rodríguez&quot; de Solano - Quilmes .</p><p>Movimiento de Trabajadores Desocupados de Lanús,</p><p>Movimiento de Trabajadores Desocupados de Don Orione, Glew y Burzaco, Alte. Brown</p><p>Trabajadores de las cuadrillas del los planes Trabajar, Barrios Bonaerenses y PEL.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010212comunicadocorte.htm" download>Descargar el archivo original</a> (docs_010212comunicadocorte.htm).</footer>
+</div></body></html>

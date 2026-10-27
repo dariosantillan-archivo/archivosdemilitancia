@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Cortes de ruta el gobierno garantizo los planes trabajar tras el bloqueo a puentes</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Cortes de ruta el gobierno garantizo los planes trabajar tras el bloqueo a puentes</h1><p class="ficha-doc">Fecha: 21 de noviembre de 2001 <span class="sep">|</span> Publicado en Télam <span class="sep">|</span> 659 palabras</p></header>
+<main class="texto"><p>CORTES DE RUTA 
+ EL GOBIERNO GARANTIZO LOS PLANES TRABAJAR TRAS EL BLOQUEO A 
+ PUENTES</p><p>Buenos Aires, 21 de noviembre (Télam).- El gobierno reiteró hoy que 
+ garantiza la continuidad de los planes Trabajar a representantes de la 
+ Coordinadora de Desocupados Aníbal Verón y el Movimiento Independiente de 
+ Jubilados y Pensionados, que hoy protestaron mediante cortes en accesos a la 
+ Capital Federal.</p><p>Delegados de las dos organizaciones que bloquearon 
+ siete puentes en los accesos sur y oeste a la Capital acudieron esta tarde a 
+ la sede del Ministerio de Trabajo para reunirse con el secretario de Empleo, 
+ Enrique Martínez, encuentro al que asistió, de manera imprevista y por algunos 
+ minutos, también el titular de la cartera, José Dumón.</p><p>En la reunión, presenciada por la prensa, uno de los delegados piqueteros le 
+ pidió al ministro Dumón que hiciera &quot;algo para que no mueran más chicos de 
+ hambre en los barrios&quot;. 
+ &quot;¿Nos puede garantizar los 
+ planes de trabajo? Estamos a favor del diálogo, pero no queremos firmar 
+ papeles que después no se cumplen&quot;, dijo Lucas Dafuncho, de la Coordinadora 
+ Aníbal Verón de Florencio Varela. 
+ Dumón le respondió 
+ que &quot;acá ustedes no van a quedar desprotegidos de ninguna manera. Pero hay 
+ confusión por el financiamiento de los Planes Trabajar. Yo les digo que hay 
+ continuación de la ayuda, no con financiamiento externo sino con recursos 
+ propios. Nosotros vamos a hacer lo imposible por mantener las partidas 
+ presupuestarias&quot;. 
+ Desde media mañana, desocupados y 
+ jubilados cortaban los accesos a los puentes Pueyrredón, De la Noria, Nicolás 
+ Avellaneda, Uriburu, Vélez Sársfield y la avenida General Paz en sus 
+ intersecciones con las avenidas San Martín y Rivadavia, para reclamar la 
+ continuidad de los planes laborales, alimentos y la libertad de piqueteros 
+ presos. 
+ Dumón y Martínez se reunieron con una 
+ delegación de piqueteros encabezados por Dafuncho, Pablo Solana (Lanús), Meca 
+ Jara (Solano), Angel Ibáñez (La Plata) y Nina Peloso, dirigente de los 
+ jubilados y esposa del detenido Raúl Castells. 
+ Los 
+ piqueteros se retiraron conformes de la reunión en la cartera laboral y 
+ destacaron la &quot;buena predisposición de los funcionarios para buscar soluciones 
+ con diálogo&quot;. 
+ &quot;Nosotros reafirmamos el diálogo y 
+ pedimos disculpas si levantamos la voz -le dijo Dafuncho a Martínez-, queremos 
+ diálogo pero si no hay respuestas habrá cortes de ruta&quot;.</p><p>El platense Ibáñez, en declaraciones a Télam, subrayó 
+ que &quot;nos vamos medianamente satisfechos, hay una propuesta y hay que ver lo 
+ que deciden los compañeros en los puentes&quot;. 
+ Por su 
+ parte, Dumón relató a la prensa que ofreció a los desocupados &quot;un diálogo 
+ permanente&quot; y les trasmitió &quot;la decisión del gobierno y del Presidente de no 
+ desamparar a ningún segmento de la población. Vamos a continuar con todas las 
+ tareas como hasta hora&quot;. 
+ &quot;No dejé de aclararles las 
+ dificultades que tenemos, porque los propios planes de los cuales ellos son 
+ beneficiarios dependen de un crédito del Banco Mundial que tenemos enormes 
+ dudas si va a continuar o no&quot;, agregó. 
+ &quot;El Presidente 
+ ha hecho poner partidas en el Presupuesto para poder abastecer la emergencia. 
+ Si hace falta, vamos a sacar recursos de las partidas que hagan falta para 
+ mantener la paz social hasta que podamos poner en marcha un sistema más 
+ eficiente que éste&quot;, añadió. 
+ Los planes Trabajar, dijo 
+ Dumón, &quot;están garantizados dentro de la ley de Déficit Cero, no vamos a 
+ repartir lo que no tenemos&quot;. 
+ Por su parte, Martínez 
+ subrayó que &quot;en realidad el gobierno nunca dejó de garantizar las partidas. 
+ Estamos convencidos de que, si lo programas están aprobados, los planes hay 
+ que pagarlos&quot;. 
+ Reiteró además la intención 
+ gubernamental de sostener &quot;un fuerte trabajo de diálogo con las organizaciones 
+ sociales. Lo que no podemos controlar es a la gente que anuncia cambios de 
+ políticas de gobierno sin tener el sustento adecuado&quot;, agregó en alusión a la 
+ ex ministra Patricia Bullrich. 
+ &quot;Creemos que ha sido un 
+ grave error anunciar que desaparecían los planes Trabajar sin estar 
+ convencidos que eso era así, habría que haber llamado a las organizaciones y 
+ explicar por qué se los reemplazaba&quot;, concluyó. (Télam).-</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_011121cortepuentescontinuidadplanes.htm" download>Descargar el archivo original</a> (docs_011121cortepuentescontinuidadplanes.htm).</footer>
+</div></body></html>

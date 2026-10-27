@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Presentación</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>Presentación</h1><p class="ficha-doc">Fecha: 12 de junio de 2002 (aprox.) <span class="sep">|</span> 1.157 palabras</p></header>
+<main class="texto"><p>PRESENTACIÓN:</p><p>Como integrantes del MTD, luchamos
+contra la injusticia
+y la dominación,
+perseguimos la justicia
+y la libertad.
+Porque en el andar vemos que hay algo más profundo para cambiar que
+nuestra necesidad inmediata.</p><p>Hay una idea FUNDAMENTAL para los que vamos a seguir firmes en esta
+lucha:</p><p>La dominación y la injusticia no solamente se nos impone desde
+el bando contrario, es decir, no solamente &quot;los poderosos&quot;
+dominan y explotan &quot;al pueblo&quot;, sino que hay relaciones de
+dominación e injusticia entre nosotros, que si no se superan, poco
+podremos cambiar de esta sociedad...</p><p>Pensemos: ¿queremos que haya otros &quot;poderosos&quot; en la
+sociedad en lugar de éstos?¿y si aunque sean del pueblo, se
+convierten en nuevos dominadores?</p><p>Si hay poderosos, hay un poder que orpime, y por lo tanto hay
+oprimidos... Por eso para superar esta situación de injusticia, no
+alcanza con que &quot;gobierne el pueblo&quot;, si el que gobierna
+aunque sea del pueblo reproduce las injusticias y la dominación. Y
+la única garantía para que esto no suceda, es que deje de haber
+injusticias y dominación entre nosotros, desde ahora mismo...</p><p>No nos resulta fácil: EL SISTEMA CAPITALISTA QUE ORGANIZA NUESTRA
+SOCIEDAD tiene varios siglos de experiencia generando injusticia y
+dominación. Y los pueblos, o parte de ellos, muchas veces adoptamos
+la forma de proceder de quienes nos dominan, y la reproducimos entre
+nosotros. Así, en nuestras propias relaciones cotidianas, muchas
+veces reproducimos la injusticia y la dominación.</p><p>LA
+DOMINACIÓN es la
+imposición de la voluntad de uno sobre los otros, y también a veces
+se ejerce la dominación entre nosotros. ¿Qué es si no el
+autoritarismo con que en muchos casos el &quot;hombre de la casa&quot;
+&quot;manda&quot; en nuestros hogares, aún ejerciendo la violencia
+sobre la mujer o los chicos? Eso es parte de las relaciones de
+dominación e injusticia que, sin ser del todo conscientes,
+reproducimos entre nosotros. Esa dominación que ejerce el patrón,
+el juez, el policía, el funcionario, abusando de su autoridad sobre
+nosotros, y que tanta bronca y odio nos da, es la misma dominación
+que muchas veces reproducimos en nuestras relaciones sociales entre
+vecinos, amigos o compañeros...</p><p>Para charlar en grupo, anotar y después compartir con el conjunto...</p><p>(
+salto
+de ABUSO
+también es imponerle la voluntad de uno a otros. Porque aunque nos
+proponemos ser todos iguales, siempre alguien momentáneamente tiene
+una información, un documento de importancia, o plata que es de
+todos... Y si quien momentáneamente tiene esa responsabilidad entre
+nosotros se abusa de ello, usando la información para compartirla
+sólo con algunos, o disponiendo de la plata que no le pertenece sin
+autorización de todos, lo que está haciendo es abusándose del
+poder circunstancial que pasó por sus manos, es decir, imponiendo su
+voluntad por encima de los demás, ejerciendo la dominación sobre el
+resto de sus compañeros...</p><p>Para charlar en grupo, anotar y después compartir con el conjunto...</p><p>Injusticia
+es que en la sociedad unos pocos se enriquezcan del trabajo y la
+marginación de muchos, que viven en la pobreza. Ya sabemos que eso
+es injusto... Y que por más que le den vueltas, no tiene
+justificación.</p><p>Sin embargo muchas veces justificamos pequeñas injusticias que nos
+rodean, y muchas veces, por callar o no meternos, nos convertimos en
+cómplices, y reproducimos la injusticia. ¿no es injusto que un
+vecino ponga los parlantes en la vereda con la música al máximo
+volúmen, para que todos la escuchen aunque no quieran? Injusticias
+de este tipo no dependen ya de lo que hagan &quot;los poderosos&quot;,
+sino que están entre nosotros, y resolverlas también está entre
+nosotros...</p><p>Para charlar en grupo, anotar y después compartir con el conjunto...</p><p>LOS PRIVILEGIOS
+también son una forma de la injusticia: cuando en el país algunos
+políticos cobran jubiliaciones de 7000 pesos, &quot;de privilegio&quot;,
+mientras nuestros viejos se mueren por no peder comprar remedios... 
+Pero, cuando se debate en el movimiento una sanción a un compañero
+que es amigo o pariente nuestro, ¿no lo defendemos aunque no
+tengamos razón? ¿no nos gustaría verlo favorecido aunque haya que
+hacer una exepción del resto? De estos privilegios tampoco faltan
+entre nosotros, y son parte de la injusticia...</p><p>Para charlar en grupo, anotar y después compartir con el conjunto...</p><p>EL INDIVIDUALISMO
+ES LA BASE DEL CAPITALISMO QUE GENERA DOMINACIÓN E INJUSTICIAS, AÚN
+ENTRE NOSOTROS</p><p>Si miramos un poco por debajo de la superficie, en cada uno de los
+ejemplos que se nos ocurran de actos de DOMINACIÓN e INJUSTICIA, hay
+un elemento común a todas las acciones de injusticia y dominación
+que están entre nosotros:</p><p>EL INDIVIDUALISMO.</p><p>Cuando ejercemos la autoridad, hay un poder INDIVIDUAL que se impone
+sobre los demás, ya sean nuestros hijos, nuestros compañeros más
+nuevos en el MTD, etc.</p><p>La persona que pone los parlantes en la puerta molestando a todos los
+vecinos, está imponiendo su gusto individual por la música a un
+montón de gente a la que nadie le preguntó si quería escuchar la
+música que se mete en cada rincón de su casa...</p><p>Cuando buscamos sostener algo que es injusto para beneficiar a un
+amigo o pariente, estamos poniendo por encima nuestro interés
+INDIVIDUAL (o el de el amigo o pariente) por sobre los criterios de
+justicia que establecimos parejos para todos.</p><p>Siempre que se impone una actitud INDIVIDUALISTA, se impone el
+DESPRECIO POR LOS DEMÁS: ese desprecio por los demás es la base de
+la dominación y la injusticia.</p><p>Para conversar en el grupo:</p><p>1- ¿hay valores que sean &quot;individualistas&quot;?</p><p>¿cuáles son los valores contrarios al individualismo? ¿en qué
+situaciones que participamos los encontramos?</p><p>Para trabajar entre todos, después de la exposición de las
+conclusiones a las que llegó el grupo...</p><p>2_ Para ayudarnos, vamos a anotar, bien mezclados, muchos valores y
+frases que expresan valores, que están permenentemente entre
+nosotros, en nuestro Barrio:</p><p>honestidad; no meterse en problemas ajenos; el compromiso; el
+privilegio; &quot;los problemas afuera de mi casa no son mis
+problemas&quot;; la colaboración; no dar lo que nos costó plata;
+&quot;el salón comunitario también es nuestro&quot;; &quot;el salón
+comunitario no es mío, es de todos ustedes&quot;; sinceridad;
+&quot;respetar los acuerdos por sobre todo&quot;; &quot;ver cada caso
+porque la mayoria de las veces hay que hacer una exepción&quot;. &quot;Lo
+que importa es ser bueno uno, aunque el resto de los compañeros
+tengan maldad&quot;. &quot;trabajar solo trae menos problemas que
+trabajar en grupo&quot;. &quot;nunca voy a confiar en un policía que
+me pase una información sobre el movimiento&quot;. &quot;aunque
+nunca devuelve los préstamos, si necesita para sus hijos hay que
+darle&quot;. &quot;no le des trabajo a tu prójimo, enséñale a
+pescar&quot;. &quot;si los pibitos roban tiene la culpa la familia
+que no los educó&quot;. &quot;yo voy a seguir siendo su amigo aunque
+haya robado lo de todos&quot;. &quot;a algunos pibes jóvenes hay que
+darles una segunda oportunidad, porque la culpa es del sistema que no
+les da oportunidad&quot;</p><p>y las anotamos debajo de los actos de DOMINACIÓN E INJUSTICIA, o
+debajo de los actos de LIBERTAD Y JUSTICIA...</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../libertadyjusticia.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (libertadyjusticia.pdf).</footer>
+</div></body></html>

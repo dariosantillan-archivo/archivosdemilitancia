@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>LA HORIZONTALIDAD: como componente de una nueva relación social</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../2001-2003-formacion-mtd.html">&larr; 2001-2003 — Textos de formaci&oacute;n del MTD</a>
+<h1>LA HORIZONTALIDAD: como componente de una nueva relación social</h1><p class="ficha-doc">Fecha: 28 de septiembre de 2002 (aprox.) <span class="sep">|</span> 1.371 palabras</p></header>
+<main class="texto"><p>LA
+HORIZONTALIDAD: como componente de una nueva relación social</p><p>El
+capitalismo se ha convertido en un sistema que ha dejado de
+contemplar a la inmensa mayoría de los seres humanos; ni siquiera
+nos contiene como elementos de explotación, o como animales.
+Privilegia la exclusión social, la desigualdad, la discriminación y
+la condena a muerte de millones.</p><p>La
+sociedad capitalista en la que vivimos, es una sociedad que ha
+llevado los términos del poder dominante a su máxima expresión.
+Los ha condensado en el conjunto de las relaciones sociales
+garantizando su constante reproducción.</p><p>El Estado, como producto de
+esas relaciones las expresa con sus formas de dominación. También
+en todas las instituciones del capitalismo se expresan estas
+estructuras de la subordinación a través de la representación. 
+En los partidos políticos, los sindicatos, los gemios, las
+cooperativas, las cooperadoras, las sociedades de fomento, los
+clubes, las escuelas, la familia con el patriarcado, etc. En ellas la
+constante es la existencia de una cabeza centralizadora y
+representante del conjunto social. Lo mas importante entonces que ha
+hecho el capitalismo para dominarnos, es que ha impregnado de estos
+valores a cada persona, a toda la sociedad y en nuestros días al
+mundo, extendiendo el capitalismo hasta universalizarlo.</p><p>En la cultura del
+capitalismo en la que nos hemos formado, todo lo pensamos desde estos
+valores. Es decir pensamos verticalmente. Pensamos siempre en la
+necesidad de la representación, en la centralización y en la
+construcción de estructuras siempre burocráticas: las conducciones,
+las direcciones, etc., que expropian el pensamiento colectivo y que
+no permiten el surgimiento de nuevos valores, solidarios, colectivos,
+verdaderamente democráticos, cuestionadores y participativos. 
+Estos valores son los únicos constructores de caminos para encontrar
+la plena libertad y la emancipación de todas las formas de la
+dominación. Son busquedas para que todas las personas se realicen
+íntegramente como tales, sin condicionamientos, sin excluidos ni
+discriminados, ni encasillados en jerarquias, clases sociales,
+castas, clanes, o ciudadanos de primera, de segunda o tercera
+categoría.</p><p>Dicho de
+otra manera, para el pensamiento autónomo que busca y lucha por un
+cambio social, uno de los principios más importantes para su
+constitución, es el de la ruptura profundamente cuestionadora que se
+expresa en la horizontalidad.</p><p>Un
+pensamiento vertical, esquemático o lineal puede llegar a suponer
+que la horizontalidad es una cosa que se parece a una línea recta
+que está acostada, en un solo plano. Compuesta por sucesivos puntos,
+todos iguales, uno al costado del otro. Se puede llegar a creer que
+cuando hablamos de horizontalidad nos estamos refiriendo a una cosa
+geométrica. O se puede llegar a creer también que cuando hablamos
+de horizontalidad estamos hablando de una forma de organización
+solamente. En realidad cuando hablamos de horizontalidad estamos
+hablando de algo mucho más profundo, nos estamos refiriendo a los
+valores que constituyen una Nueva Relación Social. De cómo
+valoramos a los demás y como nos integramos y nos pensamos en un
+colectivo o en una nueva sociedad. De cómo nos relacionamos entre
+compañeros en el movimiento, o con compañeros de otros movimientos
+populares. O como valoramos a los seres humanos. De una forma de
+constitución del pensamiento, de los sentimientos, de los saberes y
+valores. De cómo tomamos resoluciones. De una forma de construcción
+y extensión de la autonomía. De como pensamos que debemos avanzar
+en el cambio social. De cómo tenemos que luchar para terminar con el
+Imperio, etc.</p><p>Es
+cierto que la observación más inmediata de los compañeros es
+referir la horizontalidad al hecho de que estamos todos en la
+Asamblea y con una participación extendida resolvemos la cosa más
+importantes, entre
+todos y para todos.</p><p>Más
+que eso, la horizontalidad es el componente de una relación social
+que está presente como tal en todos los órdenes de la vida de una
+persona y de un movimiento autónomo. Tiene que ver con el como se
+piensa la política del movimiento, como acciona, como lucha, como se
+organiza y como se extiende el movimiento, y hasta en como se piensa
+que se va a terminar con el Estado opresor. Es decir también hay una
+forma de pensar desde la horizontalidad y para la horizontalidad.
+COMO PENSAR DESDE TODOS PARA TODOS. Esta es la esencia de la nueva
+racionalidad del pensamiento autónomo.</p><p>El
+Sub-comandante Marcos decía tenemos que construir un mundo en el que
+entremos todos.</p><p>La
+horizontalidad entonces es antes que nada una nueva práctica social
+que crea, se enfrenta y rompe con los valores de la verticalidad y
+centralidad capitalista,</p><p>Muchas
+veces, el hecho de que estemos todos juntos no es garantía de que
+decidamos en función del conjunto, si lo hacemos pensando desde una
+individualidad o desde afuera del colectivo o solo en función de
+unos pocos. Se puede decidir verticalmente, excluyentemente, cuando 
+aun estando juntos muchas personas, no prima un sentido social o
+colectivo.</p><p>La
+horizontalidad resulta entonces una práctica de libertad. O sea se
+piensa sin los condicionamientos de los valores del capitalismo. De
+allí que la horizontalidad sea fundamentalmente una forma libertaria
+de construcción de un pensamiento colectivo para el colectivo. Una
+de las principales vías para avanzar hacia la emancipación y el
+cambio social.</p><p>La
+horizontalidad es en definitiva, la constitución colectiva de una
+nueva relación integradora de desiguales que tienen las mismas
+atribuciones y libertades.</p><p>Por
+un lado debemos comprender que no somos todos iguales, que tenemos
+diferencias de personalidad, de carácter, de formación, de
+composición natural, etc. Y que cuando nos integramos a un
+colectivo lo hacemos con todas estas características. Es decir
+concientes que tenemos diferencias, que no somos todos iguales. Pero
+que ninguna de estas diferencias nos da derecho a que tengamos mas
+atribuciones que otros. La horizontalidad contiene la necesaria
+diferencia con un sentido integrador, constituyente del colectivo,
+nunca desintegrador.</p><p>Todos
+tenemos que tener las mismas atribuciones, gozar de las mismas
+libertades, los mismos accesos a todo, porque todo lo creado por el
+hombre es siempre un producto social y nunca, nunca jamás, un logro
+simplemente individual. Y sino busquemos los ejemplos que quieran,
+para observar que hasta nosotros mismos, somos siempre seres
+sociales.</p><p>Es
+decir que la horizontalidad es la negación de la discriminación y
+exclusión social, que son una de las características más
+aberrantes del capitalismo y su verticalidad jerárquica y
+burocrática.</p><p>Por
+eso decimos que nuestra construcción, no va de arriba para abajo, ni
+de abajo para arriba, porque de esta forma seguiremos metidos en la
+verticalidad dominante. Porque siempre habrá un arriba y un abajo o
+un centro arriba, una conducción o un Estado. Para no ser nosotros
+mismos reproductores y reconstructores permanentes de estas formas de
+la verticalidad dominante, tenemos que pensar y actuar construyendo 
+horizontalmente. Nuestra construcción social se extiende
+lateralmente antes que nada. Hacia los costados, en un plano de
+igualdad entre compañeros. Busca extenderse de esta manera al
+conjunto social más amplio. Por eso no aceptamos la centralización
+de las conducciones que acaparan el manejo del conocimiento y la
+información para terminar subordinando a la mayoría.
+Definitivamente, el pensamiento autónomo y con él la horizontalidad
+es lo que posibilita la destrucción de la pirámide capitalista,
+cuestionándola radicalmente, para avanzar en el cambio social.</p><p>Nuestra
+libertad consiste en poder pensarnos como generadores de valores y
+formas de vida que estén comprendidas en las nuevas relaciones
+horizontales.</p><p>Hay
+quienes critican desde la verticalidad a las formas horizontales del
+pensamiento autónomo, atribuyéndole lentitud para tomar
+resoluciones al no moverse con rapidez. En primer lugar, solamente la
+horizontalidad otorga la posibilidad del poder hacer de conjunto y en
+eso radica la potencia de los movimientos autónomos y la
+multiplicidad contenida en sus formas de articulación y
+coordinación. Además acentúa la autonomía, porque los tiempos son
+los nuestros, no los de la coyuntura ni los del Estado, que es lo
+mismo que decir los tiempos de las corporaciones para la reproducción
+del capital, de la acumulación, la productividad o los del
+desarrollo. Además la Horizontalidad, entendida como las formas de
+una nueva relación social, profundiza la posibilidad de la libertad
+de poder ser y hacer desde un nosotros, exterminando a la sociedad
+del centralismo, del individuo, que es el capitalismo. Entonces lo
+más profundo de la identidad es la compenetración e identificación
+con estas nuevas relaciones sociales que vamos constituyendo desde el
+pensamiento autónomo.</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../LA HORIZONTALIDADr.n.pdf" target="_blank" rel="noopener">Ver el documento en PDF</a> (LA HORIZONTALIDADr.n.pdf).</footer>
+</div></body></html>

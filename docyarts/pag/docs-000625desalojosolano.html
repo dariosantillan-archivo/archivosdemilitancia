@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Otra vez, la cruz y la espada</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Otra vez, la cruz y la espada</h1><p class="ficha-doc">Fecha: 25 de junio de 2000 <span class="sep">|</span> 1.085 palabras</p></header>
+<main class="texto"><p>Convocatoria a resistir en la plaza ante desalojo, &quot;Otra vez, la cruz y la espada&quot;
+Carta del Padre Alberto al Obispo Novak</p><p>Domingo 25, a las 9 hs. Frente a la Parroquia</p><p>&quot;OTRA VEZ, LA CRUZ Y LA ESPADA&quot;</p><p>En el año 1997 se formó el Movimiento de Trabajadores Desocupados Teresa Rodríguez y un hogar para los sin techo
+ en el seno de la Parroquia de las Lágrimas en San Francisco Solano con el acompañamiento del padre Alberto Spagnolo. Desde
+ entonces el Movimiento intervino activamente en los reclamos de trabajo y vivienda de la comunidad. El 31 de Marzo de este año 
+participó en la toma de tierras en &quot;La Matera&quot;. Este compromiso con los trabajadores y el pueblo molestó al poder eclesial y 
+político de Quilmes cuyo malestar se expresó en el pedido judicial de desalojo de la parroquia y el hostigamiento por medio de la 
+violencia de &quot;patotas&quot; en el asentamiento de &quot;La Matera&quot;.</p><p>El día de ayer, jueves 22 de Junio a las 9:00 hs. ingresó violentamente a la parroquia la guardia de infantería 
+encabezada por representantes del obispado y sacerdotes de la diócesis de Quilmes violando el acuerdo existente entre el 
+obispado, el municipio de Quilmes y las familias que estaban viviendo en la Parroquia de Las Lágrimas. El ingreso de esta patota 
+uniformada con gran exhibición de armas pesadas para desalojar a chicos,ancianos, padres y madres de familia y al propio 
+padre Alberto fue acompañada por el ingreso de otra patota de civil, armada también, de conocidos punteros de la zona. Los 
+enviados de la diócesis no exhibieron armas a su ingreso. Este &quot;procedimiento&quot;, que recuerda otros, fue solicitado y llevado 
+adelante por un Obispo que durante mucho tiempo levantó la bandera de los Derechos Humanos y de la ocupación de tierras y 
+que hoy aparece comandando las fuerzas de la represión. Una vez más confirmamos el contraste entre el discurso y la práctica 
+del Obispo Novak. Ayer éramos hermanos y compañeros, hoy, cuando la necesidad nos lleva a ejercer nuestros derechos 
+esenciales de vivienda y trabajo, somos &quot;agitadores... agentes motivados por el odio&quot; como lo expresa el propio Novak en la última 
+circular. Repudiamos enérgicamente el uso de la fuerza y el carácter violento del procedimiento eclesial-civico-militar contra 
+familias indefensas. Los grupos de choque &quot;civiles&quot; que han incendiado ranchos de vecinos de La Matera, golpeado a 
+compañeros del MTD y amenazado de muerte a otros son los que hoy están instalados dentro de la iglesia, junto con policía 
+armada y el recién llegado sacerdote Christian Moore.</p><p>Nosotros estamos en la calle, frente a la parroquia, a la intemperie pero con dignidad y esperanza y dispuestos a 
+seguir la lucha.</p><p>Para el domingo, anunciaron la presencia del Obispo Novak en la misa, para &quot;bendecir&quot; la acción represiva. Por eso 
+convocamos a todos los vecinos y organizaiones populares a que nos acompañen solidariamente, para repudiar lo sucedido y 
+reclamar con firmeza soluciones concretas a la falta de vivienda y de trabajo. Nos encontramos a las 9 hs., en la Plaza en la 
+que estamos acampando, frente a la Parroquia (Av. SanMartín al 1800).
+Celular del Padre Alberto: 15 5634 5406</p><p>Organizaciones populares que convocan y adhieren:</p><p>Movimiento de Trabajadores Desocupados &quot;Teresa Rodríguez&quot; de San Francisco Solano - 
+Asociación Madres de Plaza de Mayo - Movimiento de Trabajadores Desocupados &quot;Teresa 
+Rodríguez&quot; de Florencio Varela - Vecinos Autoconvocados por los Derechos en Glew - 
+Coordinadora de Trabajadores Desocupados de Berazategui - Red Acción Zona Sur - Comisión 
+de Trabajadores Desocupados de Barrio La Fe, Lanús - Movimiento de Trabajadores Desocupados 
+de Barrio Don Orione, Cláypole - Grupo Sur – Arbolito – Barriando - Regional Sur del 
+Encuentro de Organizaciones Sociales - Retruco.</p><p>Parroquia &quot;Las Lágrimas&quot;</p><p>Calle 929 Nº 1870 – San Francisco Solano</p><p>Quilmes – Pcia. de Buenos Aires</p><p>Quilmes, 11 de junio de 2000</p><p>A Monseñor Jorge Novak:</p><p>Nos dirijimos a Usted para responderle la carta circular enviada a lo que &quot;usted llama&quot; Comunidad de Las Lágrimas.</p><p>Sentimos dolor en los corazones por el maltrato que Usted nos está dando. Nos llama: &quot;grupo minúsculo, mentes ofuscadas, violentos, burlones, secuestradores, vandálicos; elementos motivados por el odio, y que hemos llevado la iglesia a las ruinas.</p><p>Su lenguaje es de la dictadura: violento y ofensivo. Usted nos hiere y condena. ¡Usted será responsable por la violencia que ya se está ejerciendo hacia nosotros por parte del poder: amenazas de muerte, insultos, golpes que le han dado a miembros de nuestra comunidad en reiteradas ocasiones! Usted y el &quot;Padre&quot; Cristian Moores están dando un mensaje que deja la puerta abierta para que esta violencia se materialice. (En el asentamiento de la Matera, incendiaron la casa de una familia por estar con el Padre Alberto, se golpeó violentamente a tres miembros del M.T.D.)</p><p>La ruina de la iglesia no es causada por luchar contra los opresores. Es por el mal testimonio de los obispos corruptos, como Ogñañovich, Toledo, Colinos, Von Vernich, etc. Que han traicionado el proyecto de Jesús, que es la causa de los pobres.</p><p>Usted se queja de estar como peregrino por el desierto, Monseñor, la Iglesia que Usted administra es rica en bienes, los peregrinos son las miles de familias a las que les han sacado todo. Mientras exista una familia en la calle &quot;todo derecho de propiedad será ilegítimo&quot;, &quot;en la necesidad, todos los bienes son comunes&quot; (Santo Tomás). ¿De quiénes son los bienes de la Iglesia? ¿De los Obispos? &quot;La avaricia distribuyó los derechos de propiedad&quot; (San Ambrosio). &quot;Todas las cosas que hay en el mundo deberían ser de uso común entre los hombres. Sin embargo, injustamente llamó éste a esto suyo; y aquel a lo otro, de donde se originó la división entre los mortales&quot; (Clemente Romano). &quot;¿Acaso, no eres ladrón? Lo que recibiste para administrar ¿no lo has convertido en propiedad tuya? Al que roba un vestido se lo llama ladrón y el que pudiendo no viste al desnudo ¿no merece igual denominación? Pues, el pan que tú retienes pertenece a los ambrientos, el vestido que guardas en tus armarios pertenece a los desnudos, los zapatos que pasan de moda en tus arcas son de los descalzos y el dinero que tienes en el banco es de los necesitados, de modo que has faltado a la justicia con todos aquellos a los que podías ayudar&quot; (San Basilio).</p><p>Monseñor Novak: no se equivoque, no es el odio lo que nos mueve. Es la causa del Evangelio. Y que muchos Obispos han abandonado.</p><p>+ Padre ALBERTO SPAGNOLO</p><p>Comunidad Parroquial LAS LÁGRIMAS</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_000625desalojosolano.htm" download>Descargar el archivo original</a> (docs_000625desalojosolano.htm).</footer>
+</div></body></html>

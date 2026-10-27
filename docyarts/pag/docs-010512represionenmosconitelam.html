@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Salta-piqueteros se corto el dialogo entre los piqueteros y las autoridades</title><style>:root{--ground:#F5F5F1;--surface:#FCFCFA;--ink:#1A1B18;--muted:#6C6F66;--rule:#DCDCD4;
+ --rule-strong:#C4C5BB;--oxide:#993022;--slate:#33505E;--hi:#FBEFA6;--panel:#EDEDE6}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{background:var(--ground);color:var(--ink);
+ font:15px/1.55 "Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+ -webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:1180px;margin:0 auto;padding:0 26px 90px}
+header{padding:40px 0 20px;border-bottom:2px solid var(--ink)}
+.volver{display:inline-block;margin-bottom:14px;font-size:13px;color:var(--muted);
+ text-decoration:none;border-bottom:1px solid var(--rule-strong)}
+.volver:hover{color:var(--oxide);border-color:var(--oxide)}
+h1{margin:0;font-size:30px;letter-spacing:-.01em;font-weight:600}
+.sub{margin:8px 0 0;color:var(--muted);font-size:14px;max-width:70ch}
+.cols{display:grid;grid-template-columns:238px minmax(0,1fr);gap:0;align-items:start}
+.side{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;
+ padding:22px 26px 30px 0}
+main{min-width:0;padding:22px 0 0 30px;border-left:1px solid var(--rule)}
+input[type=search]{font:inherit;font-size:14px;padding:7px 11px;width:100%;
+ border:1px solid var(--rule-strong);border-radius:3px;background:var(--surface);color:var(--ink)}
+input[type=search]:focus{outline:none;border-color:var(--slate)}
+#count{display:block;margin:10px 0 0;color:var(--muted);font-size:12.5px}
+#count b{color:var(--ink)}
+.chip{font:inherit;font-size:13px;padding:5px 11px;border:1px solid var(--rule-strong);
+ border-radius:999px;background:var(--surface);color:var(--ink);cursor:pointer}
+#reset{margin:10px 0 0;font-size:12.5px;padding:4px 12px;color:var(--muted)}
+#reset:hover{color:var(--oxide);border-color:var(--oxide)}
+.grp{margin:24px 0 0;padding-top:16px;border-top:1px solid var(--rule)}
+.grp .lbl,.buscar-lbl{margin:0 0 9px;font-size:10.5px;letter-spacing:.11em;
+ text-transform:uppercase;color:var(--muted);font-weight:600}
+#years,#tags{display:flex;flex-direction:column;gap:2px}
+#years .chip,#tags .tag-chip{display:flex;justify-content:space-between;align-items:baseline;
+ gap:10px;width:100%;text-align:left;border-radius:3px;padding:5px 9px;line-height:1.35;
+ border:1px solid transparent;background:transparent;cursor:pointer;font:inherit}
+#years .chip{font-size:13px;color:var(--ink)}
+#years .chip:hover{background:var(--panel)}
+#years .chip[aria-pressed=true]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+#tags .tag-chip{font-size:12.5px;color:var(--slate);font-weight:600}
+#tags .tag-chip:hover{background:rgba(51,80,94,.09)}
+#tags .tag-chip[aria-pressed=true]{background:var(--slate);color:#fff;border-color:var(--slate)}
+.n{font-weight:400;opacity:.62;font-variant-numeric:tabular-nums;flex:none}
+.yearband{display:flex;align-items:baseline;gap:12px;margin:30px 0 6px;
+ border-bottom:1px solid var(--rule-strong);padding-bottom:5px}
+.yearband:first-child{margin-top:0}
+.yearband h2{margin:0;font-size:19px;font-weight:600}
+.yearband .n{color:var(--muted);font-size:12.5px;opacity:1}
+.entry{display:block;padding:14px 0 15px;border-bottom:1px solid var(--rule)}
+.thumb{flex:none;width:74px}
+.thumb img{display:block;width:100%;height:auto;border:1px solid var(--rule-strong);
+ background:var(--surface)}
+.body{flex:1;min-width:0}
+.etitle{margin:0 0 5px;font-size:15.5px;font-weight:600;overflow-wrap:anywhere}
+.etitle a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;
+ text-decoration-color:var(--rule-strong);text-underline-offset:3px}
+.etitle a:hover{text-decoration-color:var(--oxide)}
+.ficha{margin:0;font-size:13px;color:var(--muted);line-height:1.85}
+.ficha a{color:var(--slate);text-decoration:none;border-bottom:1px solid rgba(51,80,94,.35)}
+.ficha a:hover{color:var(--oxide);border-color:var(--oxide)}
+.ficha .sep{color:var(--rule-strong);padding:0 .38em}
+.hit{margin:7px 0 0;padding:7px 10px;background:var(--surface);border:1px solid var(--rule);
+ border-radius:3px;color:var(--muted);font-size:12.5px;overflow-wrap:anywhere}
+.hit mark{background:var(--hi);color:var(--ink);padding:0 1px}
+.empty{padding:40px 0;color:var(--muted)}
+.note{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--oxide);
+ padding:13px 16px;margin:22px 0 0;font-size:13.5px;color:var(--muted);line-height:1.6}
+footer{margin-top:46px;padding-top:16px;border-top:1px solid var(--rule);color:var(--muted);font-size:12.5px}
+@media (max-width:900px){
+ .cols{grid-template-columns:1fr}
+ .side{position:static;max-height:none;overflow:visible;padding:16px 0 18px;
+  border-bottom:1px solid var(--rule)}
+ main{padding:20px 0 0;border-left:0}
+ .grp{margin:16px 0 0;padding-top:13px}
+ #years,#tags{flex-direction:row;flex-wrap:wrap;gap:6px}
+ #years .chip,#tags .tag-chip{width:auto;border-radius:999px;border-color:var(--rule-strong)}
+ #tags .tag-chip{border-radius:3px;border-color:var(--slate)}
+ #count{display:inline-block;margin-right:14px}}
+@media (max-width:640px){.wrap{padding:0 15px 60px}h1{font-size:24px}
+ .thumb{width:56px}.entry{gap:12px}}
+.entry{padding:13px 0 14px}
+.etitle{font-size:16px}
+.ficha .pal{font-variant-numeric:tabular-nums}
+.wrap.doc{max-width:760px}
+.wrap.doc header{padding:36px 0 18px}
+.ficha-doc{margin:10px 0 0;font-size:13px;color:var(--muted)}
+.ficha-doc .sep{color:var(--rule-strong)}
+main.texto{padding:26px 0 0;border:0;font-size:16px;line-height:1.72}
+main.texto p{margin:0 0 1.05em;overflow-wrap:break-word}
+.wrap.doc footer{margin-top:40px}
+.wrap.doc footer a{color:var(--slate)}
+@media (max-width:640px){main.texto{font-size:15.5px}}
+</style></head><body><div class="wrap doc">
+<header><a class="volver" href="../1998-2002-documentos-articulos.html">&larr; 1998-2002 — Documentos y art&iacute;culos</a>
+<h1>Salta-piqueteros se corto el dialogo entre los piqueteros y las autoridades</h1><p class="ficha-doc">Fecha: 12 de mayo de 2001 <span class="sep">|</span> Publicado en Télam <span class="sep">|</span> 1.379 palabras</p></header>
+<main class="texto"><p>SALTA-PIQUETEROS SE CORTO EL DIALOGO ENTRE LOS PIQUETEROS Y LAS AUTORIDADES</p><p>General Mosconi, 11 de mayo (Télam, por Rodolfo Colángelo, enviado especial).- Unas 4.000 personas se concentraron esta tarde en los dos piquetes que cortan la ruta nacional número 34, en General Mosconi, cuando se supo que se había dado la orden a la Gendarmería y a efectivos policiales de Salta para que desalojen a los piqueteros.</p><p>La decisión de movilizar a los 800 gendarmes enviados a esta localidad y a los 650 policías para desalojar a los piqueteros fue tomada por las autoridades cuando se interrumplió el diálogo entre los líderes de la protesta y el Comité de Crisis que se formó en la provincia y que encabezan el secretario Ejecutivo del Consejo de Seguridad Interior, Luis Uriondo, y el ministro de Gobierno salteño, Gilberto Oviedo.</p><p>En horas de la mañana se estuvo a punto de llegar a un acuerdo cuando el Comité de Crisis envió un fax a los piqueteros aceptando tres de sus cinco propuestas.</p><p>Las autoridades convinieron en aceptar el pago de los meses de abril y marzo que se adeudan a quienes están en el plan Trabajar, la continuación de dicho plan incorporando a quienes quedaron cesantes y la creación de una oficina técnica en la zona, para avanzar en propuestas de desarrollo.</p><p>En cambio no aceptaron otras dos demandas de los piqueteros, como no perseguir judicialmente a quienes cortaron la ruta y pagar un salario de 200 pesos a los incluídos en el plan Trabajar.</p><p>Juan Domingo Javier, uno de los máximos dirigentes de los piqueteros, convocó a una asamblea para informar sobre este preacuerdo.</p><p>Dispuso además, junto a otros dirigentes, que se despejara parcialmente la ruta 34 para que se pudiera desplazar hasta el lugar el ministro Oviedo y así empezar las negociaciones para arribar a un acuerdo definitivo, mediante el cual los piqueteros pensaban levantar definitivamente el corte de la ruta.</p><p>Minutos después, Javier aseguró que &quot;se cortó el diálogo ya que el ministro pretende que antes de negociar se levante totalmente el corte de la ruta y que todos nos volvamos a casa&quot;.</p><p>Los piqueteros, ante la posición del ministro Oviedo, decidieron continuar con el corte de la ruta 34, lo que provocó la orden de que la Gendarmería y la Policía avanzara para despejar el camino.</p><p>A las 13.15 la sirena de los bomberos locales alertó a la población sobre el avance de las fuerzas de seguridad e inmediantemente los piqueteros corrieron hacia las barricadas para tomar posición.</p><p>Al mismo tiempo se desencadenó un fenómeno masivo, ya que miles de habitantes de General Mosconi, Tartagal y otras localidades vercinas comenzaron a movlizarse hacia la ruta y se unieron a los piqueteros en el área de las dos barricadas levantadas desde hace 10 días.</p><p>Mujeres con sus hijos, maestros, gente en bicicleta, en camniones o a pie marcharon hacia los piquetes dispuestos a resistir la llegada de los gendarmes y la policía, según decía.</p><p>La movilizacíon, de gran magnitud para esta localidad de 16.000 habitantes, hizo decir a muchos que más que una acción de piquetes la protesta se había transformado en una pueblada.</p><p>Las fuerzas de seguridad partieron desde Cornejo, pero todavía no habían tomado contacto con los piqueteros y la población y se suponía que retrasaban la decisión de no reprimir hasta el momento, por la gran cantidad de gente concentrada en los piquetes.</p><p>Javier reiteró que &quot;se ha cortado el diálogo y ahora que venga lo que tiene que venir, nosotros vamos a resistir&quot;.</p><p>Con palos, piedras, hondas y algunas bombas molotov que se podían ver, los piqueteros esperaban la llegada de gendarmes y policía.</p><p>En tanto, en Tartagal, el hospital Juan Perón dispuso un operativo especial, alerta ante un eventual enfrentamiento. (Télam).-</p><p>PIQUETEROS HAY NUEVE HERIDOS EN LA REPRESION DE SALTA Y UN MUERTO EN UN HECHO NO ACLARADO</p><p>General Mosconi, 12 de mayo (Télam, enviado especial).- Diez heridos entre civiles y policías, entre ellos un periodista de Télam, y un camionero que murió en un episodio no aclarado habían causado hasta este mediodía los enfrentamientos entre tropas de la Gendarmería y piqueteros que mantenían cortada la ruta nacional 34 en el norte de Salta.</p><p>Luego de la represión para desbaratar el corte de la ruta, que comenzaron a las 5.30 de hoy los gendarmes, los enfretamientos se desplazaron hacia el interior de la localidad de General Mosconi, donde grupos de piqueteros provocaron incendios en el edificio de la Municipalidad y en el de Rentas.</p><p>El foco de la tensión retornó más tarde en la ruta, cuando una nutrida columna de manifestantes provenientes de Tartagal, con una extensión de cinco kilómetros, avanzó hacia la localidad de General Mosconi para solidarizarse con la protesta de los piqueteros.</p><p>Durante la represión a la columna proveniente de Tartagal fue herido en una pierna, por el impacto de un proyectil, al parecer de goma, el periodista Rodolfo Colángelo, de la agencia Télam, quien se econtraba fuera de peligro.</p><p>Pobladores de General Mosconi, que desde hace diez días mantenían cortada la ruta nacional 34 -que vincula Argentina con Bolivia-, reclaman la continuidad de los planes Trabajar con sueldos de 200 pesos garantizados durante dos años.</p><p>Si bien las negociaciones entre el Comité de Crisis y los piqueteros parecían encaminarse ayer hacia una vía de solución, ya al mediodía el diálogo había quedado virtualmente cortado cuando los líderes de la protesta rechazaron la condición de levantar definitivamente la protesta para formalizar las tratativas.</p><p>Hasta ayer a la noche, tanto el secretario del Consejo de Seguridad Interior, Luis Uriondo, como el vicegobernador de Salta, Walter Wayar, habían asegurado que si bien las fuerzas policiales y de Gendarmería estaban listas para iniciar el desalojo de la ruta, se iban a intentar agotar todas las vías pacíficas de solución.</p><p>La Gendarmería afirmó que la muerte de un camionero mendocino -identificado como Víctor Yofre- en el marco de un altercado cerca de las 2 de madrugada en la ruta 34 desencadenó la decisión de poner en marcha el operativo para el desalojo de los piqueteros.</p><p>El propio jefe de Gendermería Nacional, comandante Hugo Miranda, fue el que dio esta versión al asegurar que, a partir de ese hecho, &quot;se aceleraron los tiempos&quot; para disponer el despeje de la ruta porque, según afirmó, no se podía esperar &quot;que se siguieran acumulando víctimas inocentes&quot;.</p><p>Cerca del mediodía, millares de manifestantes provenientes de Tartagal, General Mosconi y otras localidades vecinas resistían sobre la ruta nacional 34 los embates esporádicos que emprendía la Gendarmería con el disparo de gases lacrimógenos y balas de goma con el fin de despejar nuevamente la ruta.</p><p>Mientras el panorama en de General Mosconi era tenso y al mismo tiempo desolador debido a los incendios provocados en edificios públicos, en Tartagal los habitantes resolvieron paralizar las actividades para trasladarse a la ciudad vecina y solidarizarse con los piqueteros duramente reprimidos.</p><p>La gran cantidad de manifestantes que llegó hasta General Mosconi, sumada a las personas que ya se encontraban movilizadas en esa localidad, desbordó a los gendarmes que se encontraban apostados sobre la ruta, quienes reclamaban la presencia de la policía salteña, desplegada por las calles del pueblo.</p><p>Los disturbios y los movimientos de represión más fuertes se dieron durante la mañana por las calles de General Mosconi, donde algunos piqueteros arrojaban piedras y papeles en llamas al edificio de la Municipalidad y al de Rentas, mientras otros cargaban la imagen de la Virgen de Fátima en procesión por la ciudad.</p><p>En tanto, el gobierno nacional decidió este mediodía enviar una nueva delegación oficial a General Mosconi integrada por los secretarios de Empleo, Horacio Viqueira; de Políticas Sociales, Eduardo Bustelo; de Provincias, Walter Ceballos; de Relaciones Institucionales y de la Comunidad, Lautaro García Batallán y el subsecretario de Interior, Daniel Martucchi.</p><p>Según informó a la prensa el secretario de Cultura y Comunicación, Darío Lopérfido, el presidente Fernando de la Rúa seguía con &quot;mucha atención&quot; los hechos que se registraban en la ciudad salteña de General Mosconi.</p><p>El secretario de Relaciones con las Provincias, Walter Ceballos, aseguró hoy que el gobierno nacional no analiza la posibilidad de intervenir Salta y remarcó que, en un momento de la negociación, los piqueteros &quot;triplicaron sus reclamos&quot;, lo que provocó la &quot;imposibilidad&quot; de dar respuesta a sus demandas, según afirmó. (Télam).-</p></main>
+<footer>Transcripci&oacute;n del documento original, sin correcciones.
+<a href="../docs_010512represionenMosconitelam.htm" download>Descargar el archivo original</a> (docs_010512represionenMosconitelam.htm).</footer>
+</div></body></html>
