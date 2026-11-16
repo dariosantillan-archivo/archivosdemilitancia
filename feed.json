@@ -10,34 +10,6 @@
     },
     "items": [
         {
-            "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/cuaderno-marcha-venezuela/",
-            "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/cuaderno-marcha-venezuela/",
-            "title": "Presentación del Cuaderno Nº 2 de Marcha: Venezuela",
-            "summary": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/fpds/originales/cuaderno-marcha-venezuela.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/fpds/mini/cuaderno-marcha-venezuela.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">2013 (aprox.)</p>\n<p class=\"nota\">Volante de la presentación en ATE Capital, con José Seoane del Grupo de Estudios sobre América Latina, la brigada argentina «Che Guevara» en Venezuela, integrantes venezolanos del comando de campaña y el documental «Retratos de lucha» de Vive TV.</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/fpds/originales/cuaderno-marcha-venezuela.pdf\">Abrir o descargar el original en PDF</a></p>\n",
-            "content_html": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/fpds/originales/cuaderno-marcha-venezuela.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/fpds/mini/cuaderno-marcha-venezuela.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">2013 (aprox.)</p>\n<p class=\"nota\">Volante de la presentación en ATE Capital, con José Seoane del Grupo de Estudios sobre América Latina, la brigada argentina «Che Guevara» en Venezuela, integrantes venezolanos del comando de campaña y el documental «Retratos de lucha» de Vive TV.</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/fpds/originales/cuaderno-marcha-venezuela.pdf\">Abrir o descargar el original en PDF</a></p>\n",
-            "author": {
-                "name": "Historia"
-            },
-            "tags": [
-            ],
-            "date_published": "2013-06-01T08:26:00-03:00",
-            "date_modified": "2013-06-01T08:26:00-03:00"
-        },
-        {
-            "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/sobre-gustos/",
-            "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/sobre-gustos/",
-            "title": "Sobre gustos: escribir",
-            "summary": "<p class=\"ficha\">Octubre de 2002 (aprox.) &middot; 381 palabras &middot; nota personal</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/opinionespablo/pag/sobre-gustos.html\">Leer el texto completo</a></p>\n",
-            "content_html": "<p class=\"ficha\">Octubre de 2002 (aprox.) &middot; 381 palabras &middot; nota personal</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/opinionespablo/pag/sobre-gustos.html\">Leer el texto completo</a></p>\n",
-            "author": {
-                "name": "Historia"
-            },
-            "tags": [
-            ],
-            "date_published": "2002-10-09T07:29:00-03:00",
-            "date_modified": "2002-10-09T07:29:00-03:00"
-        },
-        {
             "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/apuntes-de-agosto/",
             "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/apuntes-de-agosto/",
             "title": "El movimiento: es la herramienta de organización del pueblo. Desde allí el pueblo encara sus luchas reivindicativas",
@@ -64,20 +36,6 @@
             ],
             "date_published": "2001-12-07T06:24:00-03:00",
             "date_modified": "2001-12-07T06:24:00-03:00"
-        },
-        {
-            "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/presentacion-del-libro-de-nilda-susana-romero/",
-            "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/presentacion-del-libro-de-nilda-susana-romero/",
-            "title": "Presentación del Libro de Nilda Susana Romero: el compromiso político y la literatura&quot;: Rodolfo Walsh. Argentina (1960-1977)",
-            "summary": "<p class=\"ficha\">Noviembre de 2001 (aprox.) &middot; 48 palabras &middot; nota personal</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/opinionespablo/pag/presentacion-del-libro-de-nilda-susana-romero.html\">Leer el texto completo</a></p>\n",
-            "content_html": "<p class=\"ficha\">Noviembre de 2001 (aprox.) &middot; 48 palabras &middot; nota personal</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/opinionespablo/pag/presentacion-del-libro-de-nilda-susana-romero.html\">Leer el texto completo</a></p>\n",
-            "author": {
-                "name": "Historia"
-            },
-            "tags": [
-            ],
-            "date_published": "2001-11-13T06:19:00-03:00",
-            "date_modified": "2001-11-13T06:19:00-03:00"
         },
         {
             "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/medidas-economicas-y-luchas-de-desocupados/",
@@ -148,6 +106,48 @@
             ],
             "date_published": "1999-08-01T04:28:00-03:00",
             "date_modified": "1999-08-01T04:28:00-03:00"
+        },
+        {
+            "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-11/",
+            "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-11/",
+            "title": "Vencer Nº 11 — junio-julio de 1999",
+            "summary": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-11.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-11.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">Junio-julio de 1999</p>\n<p class=\"nota\">Ocho páginas, con Juana Azurduy y Rodolfo Walsh en portada —«hombre que siempre fue coherente entre lo que pensaba, decía y hacía»— y la consigna «organizarse y luchar».</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-11.pdf\">Abrir o descargar el original en PDF</a></p>\n",
+            "content_html": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-11.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-11.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">Junio-julio de 1999</p>\n<p class=\"nota\">Ocho páginas, con Juana Azurduy y Rodolfo Walsh en portada —«hombre que siempre fue coherente entre lo que pensaba, decía y hacía»— y la consigna «organizarse y luchar».</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-11.pdf\">Abrir o descargar el original en PDF</a></p>\n",
+            "author": {
+                "name": "Historia"
+            },
+            "tags": [
+            ],
+            "date_published": "1999-06-01T04:25:00-03:00",
+            "date_modified": "1999-06-01T04:25:00-03:00"
+        },
+        {
+            "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-10/",
+            "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-10/",
+            "title": "Vencer Nº 10 — marzo-abril-mayo de 1999",
+            "summary": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-10.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-10.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">Marzo-mayo de 1999</p>\n<p class=\"nota\">Ocho páginas. La tapa lleva la cita del Che sobre el amor del revolucionario: «no es sentimentalería romántica ni pretexto literario». Es el único número que abarca tres meses, señal de las dificultades de salida.</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-10.pdf\">Abrir o descargar el original en PDF</a></p>\n",
+            "content_html": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-10.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-10.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">Marzo-mayo de 1999</p>\n<p class=\"nota\">Ocho páginas. La tapa lleva la cita del Che sobre el amor del revolucionario: «no es sentimentalería romántica ni pretexto literario». Es el único número que abarca tres meses, señal de las dificultades de salida.</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-10.pdf\">Abrir o descargar el original en PDF</a></p>\n",
+            "author": {
+                "name": "Historia"
+            },
+            "tags": [
+            ],
+            "date_published": "1999-03-01T04:24:00-03:00",
+            "date_modified": "1999-03-01T04:24:00-03:00"
+        },
+        {
+            "id": "https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-09/",
+            "url": "https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-09/",
+            "title": "Vencer Nº 9 — noviembre-diciembre de 1998",
+            "summary": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-09.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">Noviembre-diciembre de 1998</p>\n<p class=\"nota\">Ocho páginas, encabezadas por Manuel Dorrego y una cita de Bernardo Monteagudo sobre la diferencia entre amar a la patria y tener patriotismo. Es el primer número con dirección de correo electrónico impresa.</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf\">Abrir o descargar el original en PDF</a></p>\n",
+            "content_html": "<div class=\"facsimil\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf\" title=\"Abrir o descargar el original en PDF\"><figure class=\"post__image\"><img loading=\"lazy\" src=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-09.jpg\" alt=\"Primera hoja del original\"  data-is-external-image=\"true\"></figure></a></div>\n<p class=\"ficha\">Noviembre-diciembre de 1998</p>\n<p class=\"nota\">Ocho páginas, encabezadas por Manuel Dorrego y una cita de Bernardo Monteagudo sobre la diferencia entre amar a la patria y tener patriotismo. Es el primer número con dirección de correo electrónico impresa.</p>\n<p class=\"descarga\"><a href=\"https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf\">Abrir o descargar el original en PDF</a></p>\n",
+            "author": {
+                "name": "Historia"
+            },
+            "tags": [
+            ],
+            "date_published": "1998-11-01T04:18:00-03:00",
+            "date_modified": "1998-11-01T04:18:00-03:00"
         }
     ]
 }
