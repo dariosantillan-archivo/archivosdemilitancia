@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
-    <title>Archivos de militancia</title>
+    <title>Los 90 - Archivos de militancia</title>
     <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/feed.xml" rel="self" />
     <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia" />
     <updated>1999-10-01T04:30:00-03:00</updated>
@@ -66,6 +66,34 @@
         </content>
     </entry>
     <entry>
+        <title>Letras para el afiche del comedor Juan Pablo II, Wilde</title>
+        <author>
+            <name>Historia</name>
+        </author>
+        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/afiche-comedor-juan-pablo-ii/"/>
+        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/afiche-comedor-juan-pablo-ii/</id>
+
+        <updated>1999-07-01T04:27:00-03:00</updated>
+            <summary type="html">
+                <![CDATA[
+                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/afiche-comedor-juan-pablo-ii.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/afiche-comedor-juan-pablo-ii.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">Julio de 1999 (aprox.) &middot; 2 hojas &middot; PDF, 19 KB &middot; archivo original: <code>letras afiche wilde1.doc</code></p>
+<p class="nota">No es un documento sino el archivo de las letras de un afiche: una peña a beneficio del comedor Juan Pablo II, en J. D. Perón y Raposo, Wilde. La fecha y la hora están dibujadas con letras deformadas en la segunda hoja —el facsímil que se ve acá— y por eso no aparecen en el texto plano. El 14 de agosto cayó sábado en 1999 y la fecha del archivo es el 24 de julio de ese año.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/afiche-comedor-juan-pablo-ii.pdf">Abrir o descargar el original en PDF</a></p>
+
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/afiche-comedor-juan-pablo-ii.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/afiche-comedor-juan-pablo-ii.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">Julio de 1999 (aprox.) &middot; 2 hojas &middot; PDF, 19 KB &middot; archivo original: <code>letras afiche wilde1.doc</code></p>
+<p class="nota">No es un documento sino el archivo de las letras de un afiche: una peña a beneficio del comedor Juan Pablo II, en J. D. Perón y Raposo, Wilde. La fecha y la hora están dibujadas con letras deformadas en la segunda hoja —el facsímil que se ve acá— y por eso no aparecen en el texto plano. El 14 de agosto cayó sábado en 1999 y la fecha del archivo es el 24 de julio de ese año.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/afiche-comedor-juan-pablo-ii.pdf">Abrir o descargar el original en PDF</a></p>
+
+            ]]>
+        </content>
+    </entry>
+    <entry>
         <title>Vencer Nº 11 — junio-julio de 1999</title>
         <author>
             <name>Historia</name>
@@ -122,171 +150,141 @@
         </content>
     </entry>
     <entry>
-        <title>Vencer Nº 9 — noviembre-diciembre de 1998</title>
+        <title>Dos trabajadores encadenados frente al Municipio y en huelga de hambre</title>
         <author>
             <name>Historia</name>
         </author>
-        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-09/"/>
-        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-09/</id>
+        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/encadenados-y-en-huelga-de-hambre/"/>
+        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/encadenados-y-en-huelga-de-hambre/</id>
 
-        <updated>1998-11-01T04:18:00-03:00</updated>
+        <updated>1999-03-01T04:23:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-09.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">Noviembre-diciembre de 1998</p>
-<p class="nota">Ocho páginas, encabezadas por Manuel Dorrego y una cita de Bernardo Monteagudo sobre la diferencia entre amar a la patria y tener patriotismo. Es el primer número con dirección de correo electrónico impresa.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf">Abrir o descargar el original en PDF</a></p>
+                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/encadenados-y-en-huelga-de-hambre.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/encadenados-y-en-huelga-de-hambre.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">22 de marzo de 1999 (aprox.) &middot; 1 hoja &middot; PDF, 20 KB &middot; archivo original: <code>comunicado 22 marzo.DOC</code></p>
+<p class="nota">Huelga de hambre por tiempo indeterminado de dos trabajadores del Plan Trabajar, encadenados frente a la Municipalidad de Avellaneda, sin cobrar desde enero. &lt;b&gt;Atención con la fecha&lt;/b&gt;: el documento está encabezado «Lunes 22 de marzo de 1998», pero el 22 de marzo de 1998 fue domingo y el de 1999 sí fue lunes; la fecha de modificación del archivo es el domingo 21 de marzo de 1999, la víspera. Además uno de los dos firmantes reaparece en las notas de febrero de 1999. Todo indica que el año tipeado quedó del año anterior. El comunicado consigna los números de documento de ambos.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/encadenados-y-en-huelga-de-hambre.pdf">Abrir o descargar el original en PDF</a></p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-09.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">Noviembre-diciembre de 1998</p>
-<p class="nota">Ocho páginas, encabezadas por Manuel Dorrego y una cita de Bernardo Monteagudo sobre la diferencia entre amar a la patria y tener patriotismo. Es el primer número con dirección de correo electrónico impresa.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-09.pdf">Abrir o descargar el original en PDF</a></p>
+                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/encadenados-y-en-huelga-de-hambre.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/encadenados-y-en-huelga-de-hambre.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">22 de marzo de 1999 (aprox.) &middot; 1 hoja &middot; PDF, 20 KB &middot; archivo original: <code>comunicado 22 marzo.DOC</code></p>
+<p class="nota">Huelga de hambre por tiempo indeterminado de dos trabajadores del Plan Trabajar, encadenados frente a la Municipalidad de Avellaneda, sin cobrar desde enero. &lt;b&gt;Atención con la fecha&lt;/b&gt;: el documento está encabezado «Lunes 22 de marzo de 1998», pero el 22 de marzo de 1998 fue domingo y el de 1999 sí fue lunes; la fecha de modificación del archivo es el domingo 21 de marzo de 1999, la víspera. Además uno de los dos firmantes reaparece en las notas de febrero de 1999. Todo indica que el año tipeado quedó del año anterior. El comunicado consigna los números de documento de ambos.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/encadenados-y-en-huelga-de-hambre.pdf">Abrir o descargar el original en PDF</a></p>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>Vencer Nº 8 — septiembre-octubre de 1998</title>
+        <title>Villa Corina y barrio La Fe: la situación de los desocupados</title>
         <author>
             <name>Historia</name>
         </author>
-        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-08/"/>
-        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/vencer-08/</id>
+        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/villa-corina-y-barrio-la-fe/"/>
+        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/villa-corina-y-barrio-la-fe/</id>
 
-        <updated>1998-09-01T04:16:00-03:00</updated>
+        <updated>1999-02-01T04:22:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-08.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-08.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">Septiembre-octubre de 1998</p>
-<p class="nota">Ocho páginas. Abre con Juana Azurduy, «la Pachamama, la esposa del comandante Manuel Ascencio Padilla». El número más extenso de los conservados en texto: la contratapa histórica, el editorial y las notas de coyuntura conviven en el mismo pliego, con precio solidario de un peso y un teléfono para mensajes.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-08.pdf">Abrir o descargar el original en PDF</a></p>
+                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/villa-corina-y-barrio-la-fe.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/villa-corina-y-barrio-la-fe.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">Febrero de 1999 (aprox.) &middot; 2 hojas &middot; PDF, 22 KB &middot; archivo original: <code>Villa Corina la Fe.doc</code></p>
+<p class="nota">Dos notas en un mismo archivo. La primera anuncia la asamblea de vecinos del 19 de febrero en Villa Corina y la creación de una comisión de madres para reclamar guardapolvos y útiles. La segunda cuenta la movilización de cincuenta vecinos del barrio La Fe, Monte Chingolo, a la Municipalidad de Lanús, y el propósito de organizarse «sin depender de ningún puntero político de ningún partido». La firma de la primera nota quedó cortada en el original. No lleva fecha: la del archivo es el 17 de febrero de 1999.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/villa-corina-y-barrio-la-fe.pdf">Abrir o descargar el original en PDF</a></p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-08.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/mini/vencer-08.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">Septiembre-octubre de 1998</p>
-<p class="nota">Ocho páginas. Abre con Juana Azurduy, «la Pachamama, la esposa del comandante Manuel Ascencio Padilla». El número más extenso de los conservados en texto: la contratapa histórica, el editorial y las notas de coyuntura conviven en el mismo pliego, con precio solidario de un peso y un teléfono para mensajes.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/vencer/originales/vencer-08.pdf">Abrir o descargar el original en PDF</a></p>
+                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/villa-corina-y-barrio-la-fe.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/villa-corina-y-barrio-la-fe.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">Febrero de 1999 (aprox.) &middot; 2 hojas &middot; PDF, 22 KB &middot; archivo original: <code>Villa Corina la Fe.doc</code></p>
+<p class="nota">Dos notas en un mismo archivo. La primera anuncia la asamblea de vecinos del 19 de febrero en Villa Corina y la creación de una comisión de madres para reclamar guardapolvos y útiles. La segunda cuenta la movilización de cincuenta vecinos del barrio La Fe, Monte Chingolo, a la Municipalidad de Lanús, y el propósito de organizarse «sin depender de ningún puntero político de ningún partido». La firma de la primera nota quedó cortada en el original. No lleva fecha: la del archivo es el 17 de febrero de 1999.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/villa-corina-y-barrio-la-fe.pdf">Abrir o descargar el original en PDF</a></p>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>Basta de hambre, miseria y entrega</title>
+        <title>Ante el traslado de compañeros del Plan Barrios Bonaerenses</title>
         <author>
             <name>Historia</name>
         </author>
-        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/basta-de-hambre-miseria-y-entrega/"/>
-        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/basta-de-hambre-miseria-y-entrega/</id>
+        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/ante-el-traslado-del-plan-barrios/"/>
+        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/ante-el-traslado-del-plan-barrios/</id>
 
-        <updated>1997-05-01T04:00:00-03:00</updated>
+        <updated>1999-02-01T04:21:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/basta-de-hambre-miseria-y-entrega.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/basta-de-hambre-miseria-y-entrega.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">1º de mayo (aprox.)</p>
-<p class="nota">Volante del Día del Trabajador: «no existe democracia con millones de familias empujadas a la desocupación y a la marginación». No lleva año; está fechado sólo por la fecha de la jornada.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/basta-de-hambre-miseria-y-entrega.pdf">Abrir o descargar el original en PDF</a></p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/archivosdemilitancia/laboca/originales/basta-de-hambre-miseria-y-entrega-impreso.pdf">Versión impresa: escaneo de la carpeta de volantes de la agrupación (dos copias)</a> &middot; PDF, 812 KB</p>
+                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/ante-el-traslado-del-plan-barrios.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/ante-el-traslado-del-plan-barrios.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">16 de febrero de 1999 &middot; 1 hoja &middot; PDF, 20 KB &middot; archivo original: <code>Ante la situación del traslado de compañeros del Plan Barr(1).doc</code></p>
+<p class="nota">Tres puntos de disconformidad con el traslado a nuevos obradores —lejos del barrio, sin herramientas, con obras sin terminar en los pasillos de Villa Corina— y la denuncia de que los compañeros «son tratados como ganado». Resuelven no presentarse a los nuevos destinos y seguir dando el presente en los obradores anteriores. El original quedó sin firmar.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/ante-el-traslado-del-plan-barrios.pdf">Abrir o descargar el original en PDF</a></p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/basta-de-hambre-miseria-y-entrega.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/basta-de-hambre-miseria-y-entrega.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">1º de mayo (aprox.)</p>
-<p class="nota">Volante del Día del Trabajador: «no existe democracia con millones de familias empujadas a la desocupación y a la marginación». No lleva año; está fechado sólo por la fecha de la jornada.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/basta-de-hambre-miseria-y-entrega.pdf">Abrir o descargar el original en PDF</a></p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/archivosdemilitancia/laboca/originales/basta-de-hambre-miseria-y-entrega-impreso.pdf">Versión impresa: escaneo de la carpeta de volantes de la agrupación (dos copias)</a> &middot; PDF, 812 KB</p>
+                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/ante-el-traslado-del-plan-barrios.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/ante-el-traslado-del-plan-barrios.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">16 de febrero de 1999 &middot; 1 hoja &middot; PDF, 20 KB &middot; archivo original: <code>Ante la situación del traslado de compañeros del Plan Barr(1).doc</code></p>
+<p class="nota">Tres puntos de disconformidad con el traslado a nuevos obradores —lejos del barrio, sin herramientas, con obras sin terminar en los pasillos de Villa Corina— y la denuncia de que los compañeros «son tratados como ganado». Resuelven no presentarse a los nuevos destinos y seguir dando el presente en los obradores anteriores. El original quedó sin firmar.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/ante-el-traslado-del-plan-barrios.pdf">Abrir o descargar el original en PDF</a></p>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>El comedor cumple un año: invitación a la fiesta popular</title>
+        <title>Carta al intendente por el traspaso al Plan Nación</title>
         <author>
             <name>Historia</name>
         </author>
-        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/primer-aniversario-del-comedor/"/>
-        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/primer-aniversario-del-comedor/</id>
+        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/carta-por-el-traspaso-al-plan-nacion/"/>
+        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/carta-por-el-traspaso-al-plan-nacion/</id>
 
-        <updated>1997-05-01T03:59:00-03:00</updated>
+        <updated>1999-02-01T04:20:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/primer-aniversario-del-comedor.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/primer-aniversario-del-comedor.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">Mayo de 1997 (aprox.)</p>
-<p class="nota">Invitación al primer aniversario, el 25 de mayo de 1997. «El 25 de mayo cumplimos un año de luchas y alegrías.» Hace el balance de los doce meses —«tenemos mejores posibilidades de resolver problemas comunes si caminamos juntos»— y anuncia a las murgas del Grupo de Teatro Catalinas Sur y Atrevidos por Costumbre.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/primer-aniversario-del-comedor.pdf">Abrir o descargar el original en PDF</a></p>
+                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/carta-por-el-traspaso-al-plan-nacion.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/carta-por-el-traspaso-al-plan-nacion.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">15 de febrero de 1999 &middot; 1 hoja &middot; PDF, 19 KB &middot; archivo original: <code>viejo-luis-chino.doc</code></p>
+<p class="nota">Tres trabajadores del Plan Barrios firman con nombre y apellido: por errores administrativos del traspaso quedaron sin cobrar febrero y marzo, «nos resulta imposible subsistir 3 meses con 200 pesos». El nombre del archivo, &lt;code&gt;viejo-luis-chino.doc&lt;/code&gt;, son los apodos de los tres.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/carta-por-el-traspaso-al-plan-nacion.pdf">Abrir o descargar el original en PDF</a></p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/primer-aniversario-del-comedor.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/primer-aniversario-del-comedor.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">Mayo de 1997 (aprox.)</p>
-<p class="nota">Invitación al primer aniversario, el 25 de mayo de 1997. «El 25 de mayo cumplimos un año de luchas y alegrías.» Hace el balance de los doce meses —«tenemos mejores posibilidades de resolver problemas comunes si caminamos juntos»— y anuncia a las murgas del Grupo de Teatro Catalinas Sur y Atrevidos por Costumbre.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/primer-aniversario-del-comedor.pdf">Abrir o descargar el original en PDF</a></p>
+                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/carta-por-el-traspaso-al-plan-nacion.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/carta-por-el-traspaso-al-plan-nacion.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">15 de febrero de 1999 &middot; 1 hoja &middot; PDF, 19 KB &middot; archivo original: <code>viejo-luis-chino.doc</code></p>
+<p class="nota">Tres trabajadores del Plan Barrios firman con nombre y apellido: por errores administrativos del traspaso quedaron sin cobrar febrero y marzo, «nos resulta imposible subsistir 3 meses con 200 pesos». El nombre del archivo, &lt;code&gt;viejo-luis-chino.doc&lt;/code&gt;, son los apodos de los tres.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/carta-por-el-traspaso-al-plan-nacion.pdf">Abrir o descargar el original en PDF</a></p>
 
             ]]>
         </content>
     </entry>
     <entry>
-        <title>Que no privaticen La Boca (segunda versión)</title>
+        <title>Después de dos años de trabajo en el MTD: balance y propuestas</title>
         <author>
             <name>Historia</name>
         </author>
-        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/que-no-privaticen-la-boca-2/"/>
-        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/que-no-privaticen-la-boca-2/</id>
+        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/balance-de-dos-anios/"/>
+        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/balance-de-dos-anios/</id>
 
-        <updated>1997-05-01T03:58:00-03:00</updated>
+        <updated>1998-12-01T04:19:00-03:00</updated>
             <summary type="html">
                 <![CDATA[
-                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/que-no-privaticen-la-boca-2.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/que-no-privaticen-la-boca-2.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">12 de mayo de 1997</p>
-<p class="nota">Versión posterior y más breve del mismo afiche, con el reclamo concentrado en tres consignas: condiciones dignas de vida, soluciones humanas para las familias del barrio y no a los desalojos.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/que-no-privaticen-la-boca-2.pdf">Abrir o descargar el original en PDF</a></p>
+                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/balance-de-dos-anios.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/balance-de-dos-anios.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">Diciembre de 1998 (aprox.) &middot; 3 hojas &middot; PDF, 28 KB &middot; archivo original: <code>cesar.doc</code></p>
+<p class="nota">Hoja de discusión interna sobre la crisis y el aislamiento de la comisión: falta de organización, reuniones sin continuidad, trabajo demasiado «agitativo». Propone organizar por delegados a los trabajadores de los planes y repartir áreas de trabajo —relaciones, bolsón, propaganda, murga, programa de radio, finanzas—. El archivo &lt;code&gt;Después de dos años de trabajo en el MTD es necesario hacer.doc&lt;/code&gt; es una versión anterior, cortada por la mitad, y no tiene ficha propia. No lleva fecha: la del archivo es el 8 de diciembre de 1998.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/balance-de-dos-anios.pdf">Abrir o descargar el original en PDF</a></p>
 
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/que-no-privaticen-la-boca-2.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/que-no-privaticen-la-boca-2.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">12 de mayo de 1997</p>
-<p class="nota">Versión posterior y más breve del mismo afiche, con el reclamo concentrado en tres consignas: condiciones dignas de vida, soluciones humanas para las familias del barrio y no a los desalojos.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/que-no-privaticen-la-boca-2.pdf">Abrir o descargar el original en PDF</a></p>
-
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>1977 - 25 de marzo - 1997: compañero Rodolfo Walsh</title>
-        <author>
-            <name>Historia</name>
-        </author>
-        <link href="https://dariosantillan-archivo.github.io/archivosdemilitancia/rodolfo-walsh-1997/"/>
-        <id>https://dariosantillan-archivo.github.io/archivosdemilitancia/rodolfo-walsh-1997/</id>
-
-        <updated>1997-03-01T03:57:00-03:00</updated>
-            <summary type="html">
-                <![CDATA[
-                    <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/rodolfo-walsh-1997.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/rodolfo-walsh-1997.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">25 de marzo de 1997</p>
-<p class="nota">Volante a veinte años del asesinato de Rodolfo Walsh. Casi todo el texto está dentro del arte de la pieza.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/rodolfo-walsh-1997.pdf">Abrir o descargar el original en PDF</a></p>
-
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/rodolfo-walsh-1997.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/mini/rodolfo-walsh-1997.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
-<p class="ficha">25 de marzo de 1997</p>
-<p class="nota">Volante a veinte años del asesinato de Rodolfo Walsh. Casi todo el texto está dentro del arte de la pieza.</p>
-<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/laboca/originales/rodolfo-walsh-1997.pdf">Abrir o descargar el original en PDF</a></p>
+                <div class="facsimil"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/balance-de-dos-anios.pdf" title="Abrir o descargar el original en PDF"><figure class="post__image"><img loading="lazy" src="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/mini/balance-de-dos-anios.jpg" alt="Primera hoja del original"  data-is-external-image="true"></figure></a></div>
+<p class="ficha">Diciembre de 1998 (aprox.) &middot; 3 hojas &middot; PDF, 28 KB &middot; archivo original: <code>cesar.doc</code></p>
+<p class="nota">Hoja de discusión interna sobre la crisis y el aislamiento de la comisión: falta de organización, reuniones sin continuidad, trabajo demasiado «agitativo». Propone organizar por delegados a los trabajadores de los planes y repartir áreas de trabajo —relaciones, bolsón, propaganda, murga, programa de radio, finanzas—. El archivo &lt;code&gt;Después de dos años de trabajo en el MTD es necesario hacer.doc&lt;/code&gt; es una versión anterior, cortada por la mitad, y no tiene ficha propia. No lleva fecha: la del archivo es el 8 de diciembre de 1998.</p>
+<p class="descarga"><a href="https://dariosantillan-archivo.github.io/DarioSantillan/mtd/originales/balance-de-dos-anios.pdf">Abrir o descargar el original en PDF</a></p>
 
             ]]>
         </content>
